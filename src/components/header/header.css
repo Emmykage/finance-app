@@ -1,0 +1,129 @@
+header{
+    background: linear-gradient(black, var(--header-bg));
+    min-height: 380px;
+}
+.nav{
+    background-color: black;
+    position: relative;
+
+}
+.logo h2{
+    color: aliceblue;
+}
+nav a{
+    font-size: 18px;
+    color: var(--color-white);
+}
+nav .nav{
+    display: flex;
+}
+.nav .nav-bar{
+
+}
+.nav .nav-bar .nav-links{
+    display: flex ;
+    flex: 3;
+    
+}
+
+.nav .logo {
+    flex: 1;
+    border: 1px solid black;
+
+}
+.nav .nav-bar{
+    flex: 4;
+    border: 1px solid black;
+}
+.nav .log-in{
+    flex: 1;
+    border: 1px solid black;
+
+}
+.heroBanner-inner-container{
+    width: 75%;
+    margin: auto;
+    flex-wrap: wrap;
+  
+}
+.heroBanner-inner-container > div{
+    flex-basis: 50%;
+    
+}
+.heroBanner-left .content-holder  *{
+    text-align: left;
+}
+.heroBanner-inner-container .heroBanner-right{
+    /* background-color: yellow; */
+    width: 100%;
+}
+.heroBanner-inner-container .heroBanner-right ul{
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    /* background-color: red; */
+}
+.heroBanner-right{
+  
+}
+.heroBanner-inner-container .heroBanner-right div div{
+    /* background-color: green; */
+}
+.heroBanner-inner-container .heroBanner-right ul li{
+    background: rgba(0,0,0, 0.3);
+    padding: 50px 12px;
+    margin: 8px auto;
+    width: 100%;
+
+}
+nav .menu, nav .close-menu{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .nav .nav-bar{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        max-width: 600px;
+        background: var(--color-dark);
+        height: 100vh;
+        padding: 80px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+    }
+    .nav .nav-bar.toggleMenu{
+        position: fixed;
+        left: 0;
+       
+    }
+    .nav .nav-bar .nav-links{
+        display: block;
+        /* background-color: red; */
+        flex: 3;
+        width: 100%;
+    }
+    .nav .nav-bar .nav-links li{
+        margin: 12px 0;
+        /* background: green; */
+        padding: 16px 8px;
+    }
+    .nav .nav-bar .nav-links li:hover{
+        background: var(--color-dark-variant) ;
+    }
+    .log-in{
+        /* display: block; */
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .log-in div{
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+    nav .menu, nav .close-menu{
+        display: block;
+    }
+  }

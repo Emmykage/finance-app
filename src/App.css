@@ -1,38 +1,96 @@
-.App {
+*{
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  padding: 0;
+}
+h4{
+  font-size: 24px;
+}
+:root{
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --header-bg: #026777;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949 ;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radium-3: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1:1.2rem;
+  --box-shadow: 0 2rem 3rem var(--color-light)
+}
+
+.dark-theme-variable{
+  --color-backgroun: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4)
+  --box-shadow: 0 2rem 3rem var(var(--color-light))
+}
+
+.text-center{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  user-select: none;
+  overflow-x: hidden ;
+  font-size: 1rem;
+  font-family: poppins, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  color: var(--color-white);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-justify-space{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  align-items: center ;
+}
+.flex-justify-center{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center ;
 }
-
-.App-link {
-  color: #61dafb;
+.flex-justify-start{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center ;
+  flex-wrap: wrap;
 }
+ul{
+  list-style: none;
+  /* background-color: #111e88; */
+}
+a{
+  text-decoration: none;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.p-li{
+  padding: 7px 35px;
+}
+nav .menu{
+  display: none;
+}
+.icon-menu{
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 768px){
+  .flex-justify-space,  .flex-justify-center{
+    flex-direction:column;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+ 
+  nav .menu{
+    display: block;
   }
 }
