@@ -51,9 +51,26 @@ body{
   height: 100vh;
   color: var(--color-white);
 }
+.flex-justify{
+  display: flex;
+  justify-content: space-between;
+}
 .flex-justify-space{
   display: flex;
   justify-content: space-between;
+  
+}
+.check{
+  flex: 1;
+  text-align: left;
+}
+.nav-info{
+  flex: 6;
+}
+.marker{
+  flex: 0;
+}
+.center{
   align-items: center ;
 }
 .flex-justify-center{
@@ -66,6 +83,9 @@ body{
   justify-content:flex-start;
   align-items: center ;
   flex-wrap: wrap;
+}
+.align{
+  align-items: center;
 }
 ul{
   list-style: none;

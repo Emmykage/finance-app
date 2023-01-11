@@ -46,6 +46,9 @@ nav .nav{
     flex-wrap: wrap;
   
 }
+.heroBanner-right p{
+    font-size: 1.5rem;
+}
 .heroBanner-inner-container > div{
     flex-basis: 50%;
     
@@ -71,10 +74,18 @@ nav .nav{
 }
 .heroBanner-inner-container .heroBanner-right ul li{
     background: rgba(0,0,0, 0.3);
-    padding: 50px 12px;
+    padding: 30px 12px;
     margin: 8px auto;
     width: 100%;
 
+}
+.heroBanner-inner-container .heroBanner-right ul li:hover{
+    background: rgba(255,255,255, 0.1)
+}
+.heroBanner-inner-container .heroBanner-right ul li svg.r-icon{
+    font-size: 2.8rem;}
+.r-icon{
+    /* font-size: 1.8rem; */
 }
 nav .menu, nav .close-menu{
     display: none;
@@ -124,6 +135,6 @@ nav .menu, nav .close-menu{
         width: 100%;
     }
     nav .menu, nav .close-menu{
-        display: block;
+        display: flex;
     }
   }
