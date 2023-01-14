@@ -28,7 +28,7 @@ const Home = () => {
         <div>
           <h2>Latest deals on the platform</h2>
           <div className='flex-justify gap-5'>
-            <div className='border-black flex-grid flex-justify' >
+            <div className='platform flex-grid flex-justify' >
               <div className='icon-image'>
                 <img src={OFFERING}/>
               </div>
@@ -39,7 +39,7 @@ const Home = () => {
                 <p>Open offerings</p>
               </div>
             </div>
-            <div className='border-black flex-grid flex-justify'>
+            <div className='platform flex-grid flex-justify'>
               <div className='icon-image'>
                 <img src={ASSET} alt='chart'/>
               </div>
@@ -50,7 +50,7 @@ const Home = () => {
                 <p>Open assets classes</p>
               </div>
             </div>
-            <div className='border-black flex-grid flex-justify'>
+            <div className='platform flex-grid flex-justify'>
               <div className='icon-image'>
                 <img src={OFFERING}/>
               </div>
@@ -62,7 +62,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className='border-black flex-grid flex-justify'>
+            <div className='platform flex-grid flex-justify'>
               <div className='icon-image'>
                 <img src={TOTAL}/>
               </div>
@@ -129,7 +129,7 @@ const Home = () => {
         </table>
         </div>
         <div className='flex-justify'>
-          <div className='flex-1'>
+          <div className='flex-0'>
             <img src={CHART_PIC} alt='chart'/>
           </div>
           <div className='flex-3'>

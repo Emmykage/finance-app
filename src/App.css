@@ -4,6 +4,10 @@
   padding: 0;
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); 
+.container{
+  max-width: 1800px;
+  margin: auto;
+}
 h2{
   font-size: 1.8rem;
 }
@@ -194,9 +198,11 @@ nav .menu{
 
   
 }
+.platform{
+  background: var(--color-white);
+}
 .home-banner-icon{
   min-width: 250px ;
-  border: 1px solid blue;
   display: flex;
 justify-content: center;
 align-items: center;
@@ -263,6 +269,7 @@ footer{
   background: var(--color-white);  
   padding: 2rem 0;
   margin-top: 1.5rem;
+  padding-left: 1rem;
 }
 /* ========================HOME==================== */
 
