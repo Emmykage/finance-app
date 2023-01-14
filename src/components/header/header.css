@@ -74,7 +74,7 @@ nav .nav{
 }
 .heroBanner-inner-container .heroBanner-right ul li{
     background: rgba(0,0,0, 0.3);
-    padding: 30px 12px;
+    padding: 20px 12px;
     margin: 8px auto;
     width: 100%;
 
@@ -84,12 +84,15 @@ nav .nav{
 }
 .heroBanner-inner-container .heroBanner-right ul li svg.r-icon{
     font-size: 2.8rem;}
-.r-icon{
-    /* font-size: 1.8rem; */
-}
+
 nav .menu, nav .close-menu{
     display: none;
 }
+.icon-image{
+    width: 3.4rem;
+    border: 1px solid black;
+}
+
 @media screen and (max-width: 768px) {
     .nav .nav-bar{
         position: fixed;

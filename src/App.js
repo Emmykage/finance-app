@@ -1,11 +1,17 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './components/header/Header';
+// import Header from './components/header/Header';
+import MainLayout from './layouts/mainLayout';
+import Home from './pages/users/Home';
 // import Nav from './components/header/Nav';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Routes>
+        <Route path='/' element={<MainLayout><Home/></MainLayout> }></Route>
+      </Routes>
+
     </div>
   );
 }
