@@ -10,7 +10,7 @@ import ICONCHART from "../../assets/image/advice-chart.svg"
 const Home = () => {
   return (
     <div className='sub-container' >
-      <div className='inner-container'>
+      <div className='inner-container black'>
         <div className='home-banner flex-justify'>
           <div className="home-banner-icon">
             <img src={ICONCHART} />
