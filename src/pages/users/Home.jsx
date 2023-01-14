@@ -28,7 +28,7 @@ const Home = () => {
         <div>
           <h2>Latest deals on the platform</h2>
           <div className='flex-justify gap-5'>
-            <div className='platform flex-grid flex-justify' >
+            <div className='platform flex-grid flex-justify-row' >
               <div className='icon-image'>
                 <img src={OFFERING}/>
               </div>
@@ -39,7 +39,7 @@ const Home = () => {
                 <p>Open offerings</p>
               </div>
             </div>
-            <div className='platform flex-grid flex-justify'>
+            <div className='platform flex-grid flex-justify-row'>
               <div className='icon-image'>
                 <img src={ASSET} alt='chart'/>
               </div>
@@ -50,7 +50,7 @@ const Home = () => {
                 <p>Open assets classes</p>
               </div>
             </div>
-            <div className='platform flex-grid flex-justify'>
+            <div className='platform flex-grid flex-justify-row'>
               <div className='icon-image'>
                 <img src={OFFERING}/>
               </div>
@@ -62,7 +62,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className='platform flex-grid flex-justify'>
+            <div className='platform flex-grid flex-justify-row'>
               <div className='icon-image'>
                 <img src={TOTAL}/>
               </div>
@@ -154,18 +154,18 @@ const Home = () => {
           <h2>Frequently asked questions</h2>
           <div>
             <ul>
-              <li className='flex-justify-space'>
+              <li className='flex-justify-space row'>
                 <span>How does YieldStreet get paid?</span><span><ArrowForwardIosOutlined/></span>
                 
               </li>
-              <li className='flex-justify-space'><span>How do i make my first investment?</span><span><ArrowForwardIosOutlined/></span> </li>
-                <li className='flex-justify-space'><span>Haw are investments offering structured</span><span><ArrowForwardIosOutlined/></span> 
+              <li className='flex-justify-space row'><span>How do i make my first investment?</span><span><ArrowForwardIosOutlined/></span> </li>
+                <li className='flex-justify-space row'><span>Haw are investments offering structured</span><span><ArrowForwardIosOutlined/></span> 
                 </li>
-                <li className='flex-justify-space'><span>What is Yieldstreet traack record?</span><span><ArrowForwardIosOutlined/></span> 
+                <li className='flex-justify-space row'><span>What is Yieldstreet traack record?</span><span><ArrowForwardIosOutlined/></span> 
                 </li>
-                <li className='flex-justify-space'><span>what assets classes does YieldStreet offer?</span><span><ArrowForwardIosOutlined/></span> 
+                <li className='flex-justify-space row'><span>what assets classes does YieldStreet offer?</span><span><ArrowForwardIosOutlined/></span> 
                 </li>
-                <li className='flex-justify-space'><span>What is YieldStreets due deliggence process</span><span><ArrowForwardIosOutlined/></span> </li>
+                <li className='flex-justify-space row'><span>What is YieldStreets due deliggence process</span><span><ArrowForwardIosOutlined/></span> </li>
             </ul>
           </div>
         </div>

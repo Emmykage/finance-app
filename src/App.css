@@ -55,6 +55,9 @@ h4{
 .gap-5{
   gap: 5%;
 }
+.gap-2{
+  /* gap: ; */
+}
 :root{
   --color-primary: #7380ec;
   --color-danger: #ff7782;
@@ -108,8 +111,12 @@ table{
 }
 table td, table th{
   border: 1px solid #202528;
-  padding: 0.5rem;
+  padding: 1.5rem;
 }
+/* table tr{
+  padding-top: 1.5rem ;
+  padding-bottom: 1.5rem;
+} */
 table tr:hover{
   background-color: #ddd;
 }
@@ -129,7 +136,7 @@ table th {
   gap: 3%;
 
 }
-.flex-justify{
+.flex-justify-row{
   display: flex;
   align-items: center;
 }
@@ -262,6 +269,9 @@ footer{
 .inner-footer-container >div a:hover{
   margin-left: 23px;
 }
+.inner-footer-container >div:last-child{
+  border: none;
+}
 .question-bar{
 
 }
@@ -274,12 +284,55 @@ footer{
 /* ========================HOME==================== */
 
 @media screen and (max-width: 768px){
+  body{
+    font-size: 1rem;
+  }
   .flex-justify-space,  .flex-justify-center{
     flex-direction:column;
     align-items: flex-start;
   }
- 
+  .container{
+    width: 100%;
+  }
+  .flex-justify{
+    flex-direction: column
+  };
+ .inner-container{
+  width: 95%;
+ }
+ .platform{
+  width: 100%;
+  margin-bottom: 1rem;
+ }
+ .flex-justify-row{
+  flex-direction: row;
+ }
   nav .menu{
     display: block;
+  }
+  .gap-5{
+    gap: 2%;
+  }
+  .table-div{
+    display: none;
+  }
+  .row{
+    flex-direction: row;
+  }
+  footer{
+    width: 100%;
+  }
+  .inner-footer-container{
+  
+    grid-template-columns: auto;
+    gap: 1%;
+  
+  }
+  .inner-footer-container >div{
+    border-right: none;
+
+    border-bottom: 1px solid #181a1e;
+    align-items: stretch;
+    padding-left: 2.8rem;
   }
 }

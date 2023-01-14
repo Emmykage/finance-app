@@ -102,7 +102,7 @@ nav .menu, nav .close-menu{
         max-width: 600px;
         background: var(--color-dark);
         height: 100vh;
-        padding: 80px 10px;
+        padding: 20px 10px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -122,10 +122,22 @@ nav .menu, nav .close-menu{
     .nav .nav-bar .nav-links li{
         margin: 12px 0;
         /* background: green; */
-        padding: 16px 8px;
+        padding: 1px 8px;
+        /* line-height: 40px; */
     }
-    .nav .nav-bar .nav-links li:hover{
+    .nav .nav-bar .nav-links li a{
+        display: flex;
+        font-size: 1rem;
+        /* background-color: green; */
+        width: 100%;
+        line-height: 100%;
+        align-items: center;
+        padding: 20px;
+        transition: all 0.3s ease ;
+    }
+    .nav .nav-bar .nav-links li a:hover{
         background: var(--color-dark-variant) ;
+        padding-left: 27px;
     }
     .log-in{
         /* display: block; */
