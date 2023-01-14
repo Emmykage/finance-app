@@ -2,6 +2,7 @@ import React from 'react'
 import {Menu, Close} from '@mui/icons-material/';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleMenu } from '../../redux/menu';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
   const dispatch = useDispatch()
@@ -21,8 +22,8 @@ const Nav = () => {
 
           </div>
           <ul className="nav-links flex-justify-start">
-            <li className='p-li'><a>offerings</a></li>
-            <li className='p-li'><a>portfolio</a></li>
+            <li className='p-li'><NavLink to="/offerings">offerings</NavLink></li>
+            <li className='p-li'><NavLink to="/">portfolio</NavLink></li>
             <li className='p-li'><a>activities</a></li>
             <li className='p-li'><a>account</a></li>
             <li className='p-li'><a>learn</a></li>

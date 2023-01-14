@@ -92,7 +92,14 @@ nav .menu, nav .close-menu{
     width: 3.4rem;
     border: 1px solid black;
 }
+.offer-card{
+    background: rgba(0,0,0, 0.3);
+    padding: 20px 12px;
+    margin: 8px auto;
+    width: 100%;
+    /* padding:1.5rem ; */
 
+}
 @media screen and (max-width: 768px) {
     .nav .nav-bar{
         position: fixed;

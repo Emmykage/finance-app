@@ -8,6 +8,11 @@
   max-width: 1800px;
   margin: auto;
 }
+.main-container{
+  min-height: 100vh;
+  /* background-color: green; */
+  position: relative;
+}
 h2{
   font-size: 1.8rem;
 }
@@ -196,8 +201,11 @@ nav .menu{
 .inner-container{
   width: 80%;
   margin: auto;
-  color: #181a1e;
+
 }
+.black{
+  color: #181a1e;
+ }
 .home-banner{
   margin: 3rem auto;
   background-color: var(--color-white);
@@ -233,12 +241,15 @@ align-items: center;
 }
 /* ===================================footer========================== */
 footer{
-  background:var(--color-dark)
+  background:var(--color-dark);
+  position: relative;
+  bottom: 0;
+  /* background-color: red; */
 }
 .footer-container{
   width: 100%;
   padding-top: 33px;
-  height: 570px;
+
 
 }
 .inner-footer-container{
@@ -299,6 +310,11 @@ footer{
   };
  .inner-container{
   width: 95%;
+ }
+ .content-container{
+  width: 90%;
+  margin: auto;
+
  }
  .platform{
   width: 100%;
