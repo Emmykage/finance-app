@@ -5,9 +5,9 @@ const AccountRoutes = () => {
     const activeLink = "link-decor"
     const normalLink = 'normal'
   return (
-    <div className='account-nav border'>
-    <ul className='flex-justify-space border'>
-        <li className=' border'>
+    <div className='account-nav'>
+    <ul className='flex-justify-space_around'>
+        <li className=''>
             <NavLink
             className={({isActive}) => (isActive ? activeLink : normalLink )} 
             to='/account/investor_account'>
@@ -17,7 +17,7 @@ const AccountRoutes = () => {
         <li className=''>
             <NavLink 
                 className={({isActive}) => (isActive ? activeLink : normalLink )} 
-                to={'/account/bank_account'}>Bank accoiunts accounts
+                to='/account/bank_account'>Bank accoiunts accounts
             </NavLink>
         </li> 
         <li className=''>

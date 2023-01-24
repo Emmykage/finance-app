@@ -114,7 +114,7 @@ body{
   background-color: var(--color-info-light);
 }
 .bg-black{
-  /* background-color: green; */
+  background-color: white;
 }
 table{
   width: 100%;
@@ -154,6 +154,12 @@ table th {
 .flex-justify-space{
   display: flex;
   justify-content: space-between;
+  
+  
+}
+.flex-justify-space_around{
+  display: flex;
+  justify-content: space-around;
   
   
 }
@@ -239,6 +245,9 @@ align-items: center;
 .flex-1{
   flex: 1;
   min-width: 3rem;
+}
+.flex-2{
+  flex: 2;
 }
 .flex-3{
   flex: 3

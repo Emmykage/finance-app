@@ -4,6 +4,7 @@ import BankAccount from './components/Accounts/BankAccount';
 import InvestmentPreference from './components/Accounts/InvestmentPreference';
 import InvestorAccount from './components/Accounts/InvestorAccount';
 import RecurringDeposit from './components/Accounts/RecurringDeposit';
+import Wallet from './components/Accounts/Wallet';
 // import OfferingHeader from './components/header/OfferingHeader';
 // import Header from './components/header/Header';
 import MainLayout from './layouts/mainLayout';
@@ -22,12 +23,14 @@ function App() {
         <Route path='/' element={<MainLayout><Home/></MainLayout> }></Route>
         <Route path='/offerings' element={<OfferLayout><Offerings/></OfferLayout>} />
         <Route path="signup" element={<SignUp/>}/>
-        <Route path='account' element={<Nobanner><Account/></Nobanner>}>
-        <Route path='bank_account' element={<BankAccount/>}/>
-          <Route path='investment_preference' element={<InvestmentPreference/>}/>
-          <Route path='investor_account' element={<InvestorAccount/>}/>
-          <Route path='recurring_deposit' element={<RecurringDeposit/>}/>
-          <Route path='wallet' element={<Account/>}/>
+        <Route path='account' >
+          <Route path='bank_account' element={<Account><BankAccount/></Account> }/>
+          <Route path='investment_preference' element={<Account><InvestmentPreference/></Account>}/>
+          <Route path='investor_account' element={<Account><InvestorAccount/></Account>}/>
+          <Route path='recurring_deposit' element={<Account><RecurringDeposit/></Account>}/>
+          <Route path='' element={<Account><Wallet/></Account>}/>
+          <Route path='wallet' element={<Account><Wallet/></Account>}/>
+
         </Route>
 
       </Routes>
