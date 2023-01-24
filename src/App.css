@@ -46,6 +46,9 @@ h4{
 .mx-4{
   margin: auto 2.0rem;
 }
+.p-tx5{
+  padding-top: 4rem;
+}
 .btn{
   width: fit-content;
   padding: 0.8rem 0.5rem;
@@ -110,6 +113,9 @@ body{
   color: var(--color-white);
   background-color: var(--color-info-light);
 }
+.bg-black{
+  /* background-color: green; */
+}
 table{
   width: 100%;
   border-collapse: collapse;
@@ -138,6 +144,9 @@ table th {
   gap: 3%;
 
 }
+.border{
+  border: 1px solid black;
+}
 .flex-justify-row{
   display: flex;
   align-items: center;
@@ -145,6 +154,7 @@ table th {
 .flex-justify-space{
   display: flex;
   justify-content: space-between;
+  
   
 }
 .check{
@@ -233,6 +243,46 @@ align-items: center;
 .flex-3{
   flex: 3
 }
+
+/* =======================ACCOUNT================= */
+.account-container{
+  color: var(--color-dark);
+}
+.account-nav{
+  width: 100%;
+  color: var(--color-dark);
+  }
+.account-container h1{
+  font-size: 3.4rem;
+  color: var(--color-dark);
+}
+.account-nav a{
+  color: var(--color-dark);
+  font-weight: 600;
+  display: flex;
+  padding: 7px 27px;
+
+  /* padding: 7px 17px; */
+
+
+}
+.account-nav ul li{
+  background: var(--color-white);
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--color-dark);
+  /* flex: 1; */
+}
+.normal{
+  
+}
+.link-decor{
+  background: black;
+  color: white !important;
+ 
+
+
+}
+
 /* ===================================footer========================== */
 footer{
   background:var(--color-dark);
@@ -310,7 +360,7 @@ box-shadow: var(--box-shadow);}
   width: 100%;
   height: 100%;
 }
-/
+
 @media screen and (max-width: 768px){
   body{
     font-size: 1rem;

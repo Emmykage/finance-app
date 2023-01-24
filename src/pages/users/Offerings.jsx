@@ -3,7 +3,7 @@ import OFFER from "../../assets/image/advice-chart.svg"
 
 const Offerings = () => {
   return (
-    <div className='content-container'>
+    <div className='content-container p-tx5'>
         <div className='offer-cards'>
             <div className='card black'>
                 <div className='card-img'>
