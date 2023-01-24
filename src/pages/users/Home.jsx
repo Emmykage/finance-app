@@ -2,14 +2,14 @@ import React from 'react'
 import CHART_PIC from '../../assets/image/barchart.svg'
 // import {ArrowForwardIosOutlinedI} from '@mui/icons-material/';
 import TOTAL from "../../assets/image/total.svg"
-import RATE from "../../assets/image/rate.svg"
+// import RATE from "../../assets/image/rate.svg"
 import {ArrowForwardIosOutlined} from '@mui/icons-material/';
 import ASSET from "../../assets/image/asset.svg"
 import OFFERING from "../../assets/image/offering.svg"
 import ICONCHART from "../../assets/image/advice-chart.svg"
 const Home = () => {
   return (
-    <div className='sub-container' >
+    <div className='sub-container'>
       <div className='inner-container black'>
         <div className='home-banner flex-justify'>
           <div className="home-banner-icon">
@@ -18,7 +18,7 @@ const Home = () => {
           <div className="home-banner-details">
             <h3 className='m-4'>Access tailored private market recommendations</h3>
             <p className='m-4'>
-            Tap into the collective wisdom of our investment teams. Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
+              Tap into the collective wisdom of our investment teams. Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
 
             </p>
             <a className='banner-button btn'>Unlock recommendations</a>
