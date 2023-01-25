@@ -154,7 +154,7 @@ table th {
 .flex-justify-space{
   display: flex;
   justify-content: space-between;
-  
+  /* padding: 30px; */
   
 }
 .flex-justify-space_around{
@@ -252,7 +252,10 @@ align-items: center;
 .flex-3{
   flex: 3
 }
+.wallet-container{
+  margin-bottom: 23px;
 
+}
 /* =======================ACCOUNT================= */
 .account-container{
   color: var(--color-dark);
@@ -274,6 +277,17 @@ align-items: center;
   /* padding: 7px 17px; */
 
 
+}
+.wallet{
+  /* padding: 22px;
+  border: 1px solid black; */
+}
+
+.wallet-container .wallet div{
+  padding: 23px;
+}
+.wallet-container .wallet .border-left{
+  border-right: 1px solid #202528;
 }
 .account-nav ul li{
   background: var(--color-white);
