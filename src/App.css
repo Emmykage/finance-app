@@ -51,9 +51,22 @@ h4{
 }
 .btn{
   width: fit-content;
-  padding: 0.8rem 0.5rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 0.6rem;
-  background: var(--color-success);
+   /* background: var(--color-success); */
+  min-width: 180px;
+padding: 13px 24px;
+font-size: 16px;
+line-height: 22px;
+font-weight: 600;
+position: relative;
+text-align: center;
+outline: none;
+transition: all 0.2s ease-in-out 0s;
+background-color: rgb(171, 247, 228);
+border: 1px solid rgb(171, 247, 228);
+border-radius: 6px;
+color: rgb(16, 92, 78);
 }
 .border-black{
   border: 1px solid black;
@@ -305,7 +318,50 @@ align-items: center;
 
 
 }
+/* ==========================investment==================== */
+.investment{
+  flex-wrap: wrap;
+}
+.investment h1{
+  font-size: 52px;
+}
+.investment-left-banner{
+  padding: 3rem;
+}
+.investment-left-banner p{
+  margin-bottom: 34px;
+}
+.investment-left-banner .btn{
 
+padding: 13px 24px;
+cursor: pointer;
+font-family: Linik Sans, Arial, sans-serif;
+font-size: 16px;
+line-height: 22px;
+
+}
+.investment-left-banner{
+  flex: 1;
+}
+.investment-right-banner{
+  flex: 1;
+}
+.investment-cards{
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2%;
+  height: max-content;
+}
+.investment-card {
+  background: rgba(0,0,0, 0.3);
+  padding: 20px 12px;
+  margin: 8px auto;
+  width: 100%;
+}
+.investment-card:hover{
+  background: rgba(255,255,255, 0.1)
+}
 /* ===================================footer========================== */
 footer{
   background:var(--color-dark);
@@ -383,6 +439,8 @@ box-shadow: var(--box-shadow);}
   width: 100%;
   height: 100%;
 }
+
+
 
 @media screen and (max-width: 768px){
   body{

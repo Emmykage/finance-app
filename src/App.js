@@ -10,9 +10,11 @@ import Wallet from './components/Accounts/Wallet';
 import MainLayout from './layouts/mainLayout';
 import Nobanner from './layouts/Nobanner';
 import OfferLayout from './layouts/offeringLayout';
+import VisitorLayout from './layouts/VisitoLayout';
 import SignUp from './pages/SingUp';
 import Account from './pages/users/Account';
 import Home from './pages/users/Home';
+import VHome from './pages/visitor/Home';
 import Offerings from './pages/users/Offerings';
 // import Nav from './components/header/Nav';
 
@@ -32,7 +34,8 @@ function App() {
           <Route path='wallet' element={<Account><Wallet/></Account>}/>
 
         </Route>
-
+        {/* <Route path='/investment' element={<Ho} */}
+        <Route path='/investment' element={<VisitorLayout><VHome/></VisitorLayout>}/>
       </Routes>
 
     </div>
