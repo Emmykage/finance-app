@@ -5,6 +5,8 @@ header{
 .nav{
     background-color: black;
     position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
 
 }
 .logo h2{
@@ -21,7 +23,6 @@ nav .nav{
 
 } */
 .nav .nav-bar .nav-links{
-    display: flex ;
     flex: 3;
     
 }
@@ -87,6 +88,41 @@ nav .nav{
 
 nav .menu, nav .close-menu{
     display: none;
+}
+.w{
+    border: 1px solid white;
+}
+.log-in{
+  
+}
+.login{
+    /* background-color: yellow; */
+    column-gap: 1%;
+    width: 100%;
+
+}
+
+.nav .nav-bar .log-in{
+    min-width: 350px;
+    flex: 1;
+
+    display: flex ;
+    flex: auto;
+    gap: 1%;
+    justify-content: space-around;
+
+}
+nav .log-in a{
+    padding: 12px;
+    border: 1px solid white;
+    transition: alll 0.3s ease;
+}
+nav .log-in a:first-child{
+    border: none;
+}
+nav .log-in a:hover{
+    background: rgba(255,255,255, 0.1);
+    border: none;
 }
 .icon-image{
     width: 3.4rem;

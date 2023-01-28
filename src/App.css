@@ -170,10 +170,7 @@ table th {
 .border{
   border: 1px solid black;
 }
-.flex-justify-row{
-  display: flex;
-  align-items: center;
-}
+
 .flex-justify-row{
   display: flex;
   align-items: center;

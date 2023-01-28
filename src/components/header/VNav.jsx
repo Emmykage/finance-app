@@ -31,14 +31,14 @@ const VNav = () => {
 
 
           </ul>
-          <div className='log-in flex-justify-space'>
-            <a>Help Center</a>
-            <div>
+          <div className='log-in flex-justify w'>
+          <a>Help Center</a>
               <a>Sign Up</a>
-            </div>
-            <div>
-            <a>login</a>
-            </div>
+              <a>login</a>
+            {/* <div className="login flex-justify-space">
+           
+            </div> */}
+         
         
     
         </div>
