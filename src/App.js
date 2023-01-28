@@ -16,6 +16,8 @@ import Account from './pages/users/Account';
 import Home from './pages/users/Home';
 import VHome from './pages/visitor/Home';
 import Offerings from './pages/users/Offerings';
+import HowItWorks from './pages/visitor/HowItWorks';
+import WorkLayout from './layouts/WorkLayout';
 // import Nav from './components/header/Nav';
 
 function App() {
@@ -36,6 +38,7 @@ function App() {
         </Route>
         {/* <Route path='/investment' element={<Ho} */}
         <Route path='/investment' element={<VisitorLayout><VHome/></VisitorLayout>}/>
+        <Route path="/how-it-works" element={<WorkLayout><HowItWorks/></WorkLayout>}/>
       </Routes>
 
     </div>

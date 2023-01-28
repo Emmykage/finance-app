@@ -13,6 +13,12 @@
   /* background-color: green; */
   position: relative;
 }
+.content-container{
+  max-width: 1450px;
+  margin: 50px auto;
+
+}
+
 h2{
   font-size: 1.8rem;
 }
@@ -68,6 +74,10 @@ border: 1px solid rgb(171, 247, 228);
 border-radius: 6px;
 color: rgb(16, 92, 78);
 }
+.btn:hover{
+  background: rgb(56, 153, 132) ;
+  color: #fff;
+}
 .border-black{
   border: 1px solid black;
 }
@@ -78,7 +88,7 @@ color: rgb(16, 92, 78);
   gap: 5%;
 }
 .gap-2{
-  /* gap: ; */
+  gap: 2% ;
 }
 :root{
   --color-primary: #7380ec;
@@ -163,6 +173,16 @@ table th {
 .flex-justify-row{
   display: flex;
   align-items: center;
+}
+.flex-justify-row{
+  display: flex;
+  align-items: center;
+}
+.flex-justify-left{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1%;
 }
 .flex-justify-space{
   display: flex;
@@ -292,8 +312,9 @@ align-items: center;
 
 }
 .wallet{
-  /* padding: 22px;
-  border: 1px solid black; */
+  /* padding: 22px; */
+  
+  border: 1px solid black;
 }
 
 .wallet-container .wallet div{
@@ -309,7 +330,7 @@ align-items: center;
   /* flex: 1; */
 }
 .normal{
-  
+  color: #363949;
 }
 .link-decor{
   background: black;
@@ -407,7 +428,7 @@ footer{
   border: none;
 }
 .question-bar{
-
+  color: inherit;
 }
 .question-bar ul li{
   background: var(--color-white);  
@@ -439,9 +460,70 @@ box-shadow: var(--box-shadow);}
   width: 100%;
   height: 100%;
 }
+.offer-cards ul{
+  width: 100%;
 
+}
+.offer-cards ul li{
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-dark);
+}
+.offer-cards ul li:last-child{
+  border-bottom: none;
+}
 
+.lock{
+  background: white;
+  padding: 12px 20px;
+}
 
+.lock-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(193, 192, 192);
+  padding: 24px;
+}
+.lock-icon svg{
+  font-size: 80px;
+}
+.lock .info{
+  padding: 0 12px;
+  flex: auto;
+  color: var(--color-dark);
+  font-weight: 600;
+}
+.prev-offer{
+  color: black;
+}
+.prev-offer .offer-link {
+  display: flex;
+  
+}
+.prev-offer .offer-link span {
+  padding: 6px;
+  background: var(--color-info-dark);
+  font-size: 1rem;
+}
+.prev-offer a{
+  margin-bottom: 30px;
+}
+.small-info{
+  text-align: justify;
+  font-size: 14px;
+}
+.prev-offer .btn{
+  font-size: 20px;
+}
+.prev-offer-btn-div{
+  padding: 23px;
+  margin: 20px auto;
+}
 @media screen and (max-width: 768px){
   body{
     font-size: 1rem;
@@ -462,7 +544,7 @@ box-shadow: var(--box-shadow);}
  }
  .content-container{
   width: 90%;
-  margin: auto;
+  margin: auto ;
 
  }
  .platform{

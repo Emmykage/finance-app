@@ -17,9 +17,9 @@ nav a{
 nav .nav{
     display: flex;
 }
-.nav .nav-bar{
+/* .nav .nav-bar{
 
-}
+} */
 .nav .nav-bar .nav-links{
     display: flex ;
     flex: 3;
@@ -66,12 +66,12 @@ nav .nav{
     margin: auto;
     /* background-color: red; */
 }
-.heroBanner-right{
+/* .heroBanner-right{
   
-}
-.heroBanner-inner-container .heroBanner-right div div{
+} */
+/* .heroBanner-inner-container .heroBanner-right div div{ */
     /* background-color: green; */
-}
+/* } */
 .heroBanner-inner-container .heroBanner-right ul li{
     background: rgba(0,0,0, 0.3);
     padding: 20px 12px;
