@@ -28,13 +28,12 @@ const Nav = () => {
             <li className='p-li'><NavLink to={'/account'}>account</NavLink></li>
             <li className='p-li'><a>learn</a></li>
             <li  className='p-li' ><a>support</a></li>
-            {/* <li ><a>support</a></li> */}
-
+  
 
           </ul>
           <div className='log-in flex-justify-space'>
-            <div>
-            <a>login</a>
+            <div className='flex-justify'>
+            <NavLink to={"/investment"}>log out</NavLink>
             </div>
         
     
