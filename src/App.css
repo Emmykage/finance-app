@@ -1,9 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); 
+
+
 *{
   box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 300;
   /* border: 1px solid red; */
   padding: 0;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); 
+:root{
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --header-bg: #026777;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949 ;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+  --color-background-dark: rgb(26, 27, 29);
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radium-3: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1:1.2rem;
+  --box-shadow: 0 2rem 3rem var(--color-light)
+}
+
+.dark-theme-variable{
+  --color-backgroun: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4)
+  --box-shadow: 0 2rem 3rem var(var(--color-light))
+}
+body{
+  user-select: none;
+  overflow-x: hidden ;
+  font-size: 1rem;
+  font-family: "poppins",  sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  width: 100vw;
+  height: 100vh;
+  color: var(--color-white);
+  background-color: var(--color-info-light);
+}
+
 .container{
   max-width: 1800px;
   margin: auto;
@@ -17,6 +65,11 @@
   max-width: 1450px;
   margin: 50px auto;
 
+}
+
+.container-fit{
+  max-width: 1250px;
+  margin: auto;
 }
 
 h2{
@@ -84,58 +137,24 @@ color: rgb(16, 92, 78);
 .flex-grid{
   flex: 1;
 }
+.flex-grid-2{
+  flex: 2;
+}.flex-grid-3{
+  flex: 3;
+}
 .gap-5{
   gap: 5%;
 }
 .gap-2{
   gap: 2% ;
 }
-:root{
-  --color-primary: #7380ec;
-  --color-danger: #ff7782;
-  --color-success: #41f1b6;
-  --header-bg: #026777;
-  --color-warning: #ffbb55;
-  --color-white: #fff;
-  --color-info-dark: #7d8da1;
-  --color-info-light: #dce1eb;
-  --color-dark: #363949 ;
-  --color-light: rgba(132, 139, 200, 0.18);
-  --color-primary-variant: #111e88;
-  --color-dark-variant: #677483;
-  --color-background: #f6f6f9;
-  --card-border-radius: 2rem;
-  --border-radius-1: 0.4rem;
-  --border-radius-2: 0.8rem;
-  --border-radium-3: 1.2rem;
-  --card-padding: 1.8rem;
-  --padding-1:1.2rem;
-  --box-shadow: 0 2rem 3rem var(--color-light)
-}
 
-.dark-theme-variable{
-  --color-backgroun: #181a1e;
-  --color-white: #202528;
-  --color-dark: #edeffd;
-  --color-dark-variant: #a3bdcc;
-  --color-light: rgba(0, 0, 0, 0.4)
-  --box-shadow: 0 2rem 3rem var(var(--color-light))
-}
 
 .text-center{
   text-align: center;
 }
 
-body{
-  user-select: none;
-  overflow-x: hidden ;
-  font-size: 1.125rem;
-  font-family: poppins, sans-serif;
-  width: 100vw;
-  height: 100vh;
-  color: var(--color-white);
-  background-color: var(--color-info-light);
-}
+
 .bg-black{
   background-color: white;
 }
@@ -184,6 +203,7 @@ table th {
 .flex-justify-space{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   /* padding: 30px; */
   
 }
@@ -379,6 +399,16 @@ line-height: 22px;
 }
 .investment-card:hover{
   background: rgba(255,255,255, 0.1)
+}
+/* ======================How-It_works============================== */
+.howitwork-content{
+  max-width: 1250px;
+  margin: 0px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgb(216, 220, 226);
+  color: #181a1e;
+
 }
 /* ===================================footer========================== */
 footer{

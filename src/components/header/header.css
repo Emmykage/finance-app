@@ -132,6 +132,15 @@ nav .log-in a:hover{
     width: 100%;
 
 }
+header img {
+    width: 100%;
+}
+.investment-right-banner{
+    background-image: linear-gradient(rgba(6, 14, 48, 0.7),rgba(4,9,30, 0.7)), url("/public/images/how-it-works.jpg");
+    background-size: contain;
+    /* background-image: url('/public/images/how-it-works.jpg'); */
+
+}
 @media screen and (max-width: 768px) {
     .nav .nav-bar{
         position: fixed;

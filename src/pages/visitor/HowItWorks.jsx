@@ -1,8 +1,13 @@
 import React from 'react'
+import ExploreInvestment from '../../components/visitors/ExploreInvestment'
 
 const HowItWorks = () => {
   return (
-    <div>HowItWorks</div>
+    <>
+    
+    <div>HowItWorkhghhggygs</div>
+    <ExploreInvestment />
+    </>
   )
 }
 

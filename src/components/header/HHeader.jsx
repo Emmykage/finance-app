@@ -1,5 +1,6 @@
 import React from 'react'
 import VNav from './VNav'
+import investmentPhoto from '../../assets/image/investment-photos/how-it-works.jpg'
 
 const HHeader = () => {
   return (
@@ -17,19 +18,18 @@ const HHeader = () => {
           How it works
         </h1>
         <p>
-        Diversify your portfolio with private market investment offerings once only reserved for the 1%.
-
+          Diversify your portfolio with private market investment offerings once only reserved for the 1%.
         </p>
         <a className='btn'>
+
           Get Started
 
         </a>
 
           </div>
           <div className='investment-right-banner border'>
-            <h1>
-                Images
-            </h1>
+            
+            {/* <img src={investmentPhoto} alt="" /> */}
 
           </div>
         
