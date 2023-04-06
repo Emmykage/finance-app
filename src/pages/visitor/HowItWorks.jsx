@@ -5,7 +5,7 @@ const HowItWorks = () => {
   return (
     <>
     
-    <div>HowItWorkhghhggygs</div>
+    {/* <div>HowItWorkhghhggygs</div> */}
     <ExploreInvestment />
     </>
   )

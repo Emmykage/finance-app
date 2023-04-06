@@ -1,203 +1,257 @@
-header{
-    background: linear-gradient(black, var(--header-bg));
-    min-height: 380px;
+header {
+  background: linear-gradient(black, var(--header-bg));
+  min-height: 380px;
 }
-.nav{
-    background-color: black;
-    position: relative;
-    padding-left: 20px;
-    padding-right: 20px;
 
+.nav {
+  background-color: black;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-.logo h2{
-    color: aliceblue;
+
+.logo h2 {
+  color: aliceblue;
 }
-nav a{
-    font-size: 18px;
-    color: var(--color-white);
+
+nav a {
+  font-size: 18px;
+  color: var(--color-white);
 }
-nav .nav{
-    display: flex;
+
+nav .nav {
+  display: flex;
 }
+
 /* .nav .nav-bar{
 
 } */
-.nav .nav-bar .nav-links{
-    flex: 3;
-    
+.nav .nav-bar .nav-links {
+  flex: 3;
 }
 
 .nav .logo {
-    flex: 1;
-    border: 1px solid black;
+  flex: 1;
+  border: 1px solid black;
+}
 
+.nav .nav-bar {
+  flex: 4;
+  border: 1px solid black;
 }
-.nav .nav-bar{
-    flex: 4;
-    border: 1px solid black;
-}
-.nav .log-in{
-    flex: 1;
-    border: 1px solid black;
 
+.nav .log-in {
+  flex: 1;
+  border: 1px solid black;
 }
-.heroBanner-inner-container{
-    width: 75%;
-    margin: auto;
-    flex-wrap: wrap;
-  
+
+.heroBanner-inner-container {
+  width: 75%;
+  margin: auto;
+  flex-wrap: wrap;
 }
-.heroBanner-right p{
-    font-size: 1.5rem;
+
+.heroBanner-right p {
+  font-size: 1.5rem;
 }
-.heroBanner-inner-container > div{
-    flex-basis: 50%;
-    
+
+.heroBanner-inner-container > div {
+  flex-basis: 50%;
 }
-.heroBanner-left .content-holder  *{
-    text-align: left;
+
+.heroBanner-left .content-holder * {
+  text-align: left;
 }
-.heroBanner-inner-container .heroBanner-right{
-    /* background-color: yellow; */
-    width: 100%;
+
+.heroBanner-inner-container .heroBanner-right {
+  /* background-color: yellow; */
+  width: 100%;
 }
-.heroBanner-inner-container .heroBanner-right ul{
-    max-width: 600px;
-    width: 100%;
-    margin: auto;
-    /* background-color: red; */
+
+.heroBanner-inner-container .heroBanner-right ul {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+
+  /* background-color: red; */
 }
+
 /* .heroBanner-right{
-  
+
 } */
+
 /* .heroBanner-inner-container .heroBanner-right div div{ */
-    /* background-color: green; */
+
+/* background-color: green; */
+
 /* } */
-.heroBanner-inner-container .heroBanner-right ul li{
-    background: rgba(0,0,0, 0.3);
-    padding: 20px 12px;
-    margin: 8px auto;
-    width: 100%;
-
-}
-.heroBanner-inner-container .heroBanner-right ul li:hover, .offer-details .offer-card:hover{
-    background: rgba(255,255,255, 0.1)
-}
-.heroBanner-inner-container .heroBanner-right ul li svg.r-icon{
-    font-size: 2.8rem;}
-
-nav .menu, nav .close-menu{
-    display: none;
-}
-.w{
-    border: 1px solid white;
-}
-.login{
-    /* background-color: yellow; */
-    column-gap: 1%;
-    width: 100%;
-
+.heroBanner-inner-container .heroBanner-right ul li {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px 12px;
+  margin: 8px auto;
+  width: 100%;
 }
 
-.nav .nav-bar .log-in{
-    min-width: 350px;
-    flex: 1;
+.heroBanner-inner-container .heroBanner-right ul li svg.r-icon {
+  font-size: 2.8rem;
+}
 
-    display: flex ;
-    flex: auto;
-    gap: 1%;
-    justify-content: space-around;
+nav .menu,
+nav .close-menu {
+  display: none;
+}
 
+.w {
+  border: 1px solid white;
 }
-nav .log-in a{
-    padding: 12px;
-    border: 1px solid white;
-    transition: alll 0.3s ease;
-}
-nav .log-in a:first-child{
-    border: none;
-}
-nav .log-in a:hover{
-    background: rgba(255,255,255, 0.1);
-    border: none;
-}
-.icon-image{
-    width: 3.4rem;
-    /* border: 1px solid black; */
-}
-.offer-card{
-    background: rgba(0,0,0, 0.3);
-    padding: 20px 12px;
-    margin: 8px auto;
-    width: 100%;
 
+.login {
+  /* background-color: yellow; */
+  column-gap: 1%;
+  width: 100%;
 }
+
+.nav .nav-bar .log-in {
+  min-width: 350px;
+  flex: 1;
+  display: flex;
+
+  /* flex: auto; */
+  gap: 1%;
+  justify-content: space-around;
+}
+
+nav .log-in a {
+  padding: 12px;
+  border: 1px solid white;
+  transition: alll 0.3s ease;
+}
+
+nav .log-in a:first-child {
+  border: none;
+}
+
+nav .log-in a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+}
+
+.icon-image {
+  width: 3.4rem;
+
+  /* border: 1px solid black; */
+}
+
+.offer-card {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px 12px;
+  margin: 8px auto;
+  width: 100%;
+}
+
+.heroBanner-inner-container .heroBanner-right ul li:hover,
+.offer-details .offer-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 header img {
-    width: 100%;
+  width: 100%;
 }
-.investment-right-banner{
-    background-image: linear-gradient(rgba(6, 14, 48, 0.7),rgba(4,9,30, 0.7)), url("/public/images/how-it-works.jpg");
-    background-size: contain;
-    /* background-image: url('/public/images/how-it-works.jpg'); */
 
+.investment {
+  gap: 4%;
 }
+
+.investment-right-banner.howitworks {
+  position: relative;
+  background-image: linear-gradient(rgba(6, 14, 48, 0.7), rgba(4, 9, 30, 0.7)), url("/public/images/how-it-works.jpg");
+  background-size: contain;
+
+  /* background-image: url('/public/images/how-it-works.jpg'); */
+}
+
+.investment-right-banner.howitworks .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+}
+
+.investment-right-banner.howitworks img {
+  filter: grayscale(70%);
+}
+
 @media screen and (max-width: 768px) {
-    .nav .nav-bar{
-        position: fixed;
-        left: -100%;
-        top: 0;
-        width: 100%;
-        max-width: 600px;
-        background: var(--color-dark);
-        height: 100vh;
-        padding: 20px 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: all 0.3s ease;
-    }
-    .nav .nav-bar.toggleMenu{
-        position: fixed;
-        left: 0;
-       
-    }
-    .nav .nav-bar .nav-links{
-        display: block;
-        /* background-color: red; */
-        flex: 3;
-        width: 100%;
-    }
-    .nav .nav-bar .nav-links li{
-        margin: 12px 0;
-        /* background: green; */
-        padding: 1px 8px;
-        /* line-height: 40px; */
-    }
-    .nav .nav-bar .nav-links li a{
-        display: flex;
-        font-size: 1rem;
-        /* background-color: green; */
-        width: 100%;
-        line-height: 100%;
-        align-items: center;
-        padding: 20px;
-        transition: all 0.3s ease ;
-    }
-    .nav .nav-bar .nav-links li a:hover{
-        background: var(--color-dark-variant) ;
-        padding-left: 27px;
-    }
-    .log-in{
-        /* display: block; */
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-    .log-in div{
-        display: block;
-        text-align: left;
-        width: 100%;
-    }
-    nav .menu, nav .close-menu{
-        display: flex;
-    }
+  .nav .nav-bar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    max-width: 600px;
+    background: var(--color-dark);
+    height: 100vh;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
   }
+
+  .nav .nav-bar.toggleMenu {
+    position: fixed;
+    left: 0;
+  }
+
+  .nav .nav-bar .nav-links {
+    display: block;
+
+    /* background-color: red; */
+    flex: 3;
+    width: 100%;
+  }
+
+  .nav .nav-bar .nav-links li {
+    margin: 12px 0;
+
+    /* background: green; */
+    padding: 1px 8px;
+
+    /* line-height: 40px; */
+  }
+
+  .nav .nav-bar .nav-links li a {
+    display: flex;
+    font-size: 1rem;
+
+    /* background-color: green; */
+    width: 100%;
+    line-height: 100%;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .nav .nav-bar .nav-links li a:hover {
+    background: var(--color-dark-variant);
+    padding-left: 27px;
+  }
+
+  .log-in {
+    /* display: block; */
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .log-in div {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+
+  nav .menu,
+  nav .close-menu {
+    display: flex;
+  }
+}
