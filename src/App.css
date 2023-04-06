@@ -3,10 +3,6 @@
 * {
   box-sizing: border-box;
   font-size: 1rem;
-
-  /* font-weight: 300; */
-
-  /* border: 1px solid red; */
   padding: 0;
 }
 
@@ -76,6 +72,9 @@ body {
 .container-fit {
   max-width: 1250px;
   margin: auto;
+}
+h1{
+  font-size: 45px;
 }
 
 h2 {
@@ -434,7 +433,7 @@ nav .menu {
 
 .investment-left-banner {
   flex: 1;
-  padding: 3rem;
+  padding: 1rem;
 }
 
 .investment-right-banner {
@@ -454,6 +453,8 @@ nav .menu {
   padding: 20px 12px;
   margin: 8px auto;
   width: 100%;
+  border-radius: 8px;
+
 }
 
 .investment-card:hover {
@@ -787,6 +788,7 @@ footer {
 .lock {
   background: white;
   padding: 12px 20px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 }
 
 .lock-icon {
@@ -825,8 +827,10 @@ footer {
 }
 
 .small-info {
+  padding: 28px 1rem;
   text-align: justify;
-  font-size: 14px;
+  font-size: 12px;
+  /* background-color: #026777; */
 }
 
 .prev-offer-btn-div {
@@ -835,6 +839,31 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .investment h1{
+    font-size: 30px;
+  }
+  .investment-left-banner .btn{
+    display: block;
+    width: 100%;
+  }
+  .investment-cards{
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
+  .investment-card{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 5px;
+    margin: 0;
+    /* background-color: #dce1eb; */
+
+  }
+  .investment-card span{
+    padding: 9px;
+  }
   body {
     font-size: 1rem;
   }

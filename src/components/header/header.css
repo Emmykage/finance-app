@@ -52,12 +52,12 @@ nav .nav {
 }
 
 .heroBanner-right p {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
-.heroBanner-inner-container > div {
+/* .heroBanner-inner-container > div {
   flex-basis: 50%;
-}
+} */
 
 .heroBanner-left .content-holder * {
   text-align: left;
@@ -72,22 +72,12 @@ nav .nav {
   max-width: 600px;
   width: 100%;
   margin: auto;
-
-  /* background-color: red; */
 }
 
-/* .heroBanner-right{
 
-} */
-
-/* .heroBanner-inner-container .heroBanner-right div div{ */
-
-/* background-color: green; */
-
-/* } */
 .heroBanner-inner-container .heroBanner-right ul li {
   background: rgba(0, 0, 0, 0.3);
-  padding: 20px 12px;
+  padding: 6px 12px;
   margin: 8px auto;
   width: 100%;
 }
@@ -115,8 +105,6 @@ nav .close-menu {
   min-width: 350px;
   flex: 1;
   display: flex;
-
-  /* flex: auto; */
   gap: 1%;
   justify-content: space-around;
 }
@@ -189,6 +177,7 @@ header img {
     left: -100%;
     top: 0;
     width: 100%;
+    z-index: 1;
     max-width: 600px;
     background: var(--color-dark);
     height: 100vh;
@@ -206,8 +195,6 @@ header img {
 
   .nav .nav-bar .nav-links {
     display: block;
-
-    /* background-color: red; */
     flex: 3;
     width: 100%;
   }
@@ -224,8 +211,6 @@ header img {
   .nav .nav-bar .nav-links li a {
     display: flex;
     font-size: 1rem;
-
-    /* background-color: green; */
     width: 100%;
     line-height: 100%;
     align-items: center;
@@ -238,12 +223,21 @@ header img {
     padding-left: 27px;
   }
 
-  .log-in {
-    /* display: block; */
-    flex-direction: column;
-    justify-content: flex-end;
-  }
+  .nav .nav-bar .log-in{
+        width: 100%;
+        justify-content: flex-start;
 
+  }
+ 
+  .nav .log-in a{
+    display: block;
+    width: 100%
+  }
+  .nav .log-in a:first-child{
+    display: none;
+    /* width: 100% */
+
+  }
   .log-in div {
     display: block;
     text-align: left;

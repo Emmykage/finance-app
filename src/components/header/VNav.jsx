@@ -22,12 +22,11 @@ const VNav = () => {
 
           </div>
           <ul className="nav-links flex-justify-start">
-            <li className='p-li'><NavLink to="/offerings">Investment</NavLink></li>
+            <li className='p-li'><NavLink to="/investments">Investment</NavLink></li>
             <li className='p-li'><NavLink to="/how-it-works">How it works</NavLink></li>
             <li className='p-li'><NavLink to={'/account'}>account</NavLink></li>
             <li className='p-li'><NavLink to={"/about"}>About</NavLink></li>
-            {/* <li  className='p-li' ><a>support</a></li> */}
-            {/* <li ><a>support</a></li> */}
+          
 
 
           </ul>
@@ -35,13 +34,7 @@ const VNav = () => {
           <a>Help Center</a>
               <NavLink>Sign Up</NavLink>
               <NavLink to={"/"}>login</NavLink>
-            {/* <div className="login flex-justify-space">
-           
-            </div> */}
-         
-        
-    
-        </div>
+          </div>
         </div>
        
       </div>

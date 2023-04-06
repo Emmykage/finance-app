@@ -7,10 +7,10 @@ import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutl
 <header>
   <Nav />
   <div className='heroBanner-outer-container flex-justify-space'>
-    <div className='heroBanner-inner-container flex-justify-space'>
+    <div className='heroBanner-inner-container flex-justify-space gap-2'>
 
 
-    <div className='heroBanner-left'>
+    <div className='heroBanner-left flex-grid'>
       <div className="content-holder">
         <div>
         <h1 className=''>
@@ -26,7 +26,7 @@ import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutl
       </div>
 
     </div>
-    <div className='heroBanner-right'>
+    <div className='heroBanner-right flex-grid'>
       <div>
         <div>
           <ul>

@@ -27,7 +27,7 @@ const VisitorHeader = () => {
 
           </div>
           <div className='investment-right-banner border'>
-            <div className='flex-justify investment-cards'>
+            <div className='investment-cards'>
               <div className='investment-card'>
               <span> 12.72%</span>
               <p>

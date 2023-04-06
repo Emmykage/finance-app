@@ -37,7 +37,7 @@ function App() {
 
         </Route>
         {/* <Route path='/investment' element={<Ho} */}
-        <Route path='/investment' element={<VisitorLayout><VHome/></VisitorLayout>}/>
+        <Route path='/investments' element={<VisitorLayout><VHome/></VisitorLayout>}/>
         <Route path="/how-it-works" element={<WorkLayout><HowItWorks/></WorkLayout>}/>
       </Routes>
 

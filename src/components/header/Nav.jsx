@@ -33,7 +33,7 @@ const Nav = () => {
           </ul>
           <div className='log-in flex-justify-space'>
             <div className='flex-justify'>
-            <NavLink to={"/investment"}>log out</NavLink>
+            <NavLink to={"/investments"}>log out</NavLink>
             </div>
         
     
