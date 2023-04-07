@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import VisitorOffer from '../../components/offering/VisitorOffer'
 import {LockOutlined} from '@mui/icons-material/';
 import OFFER from '../../assets/image/advice-chart.svg'
+import { useDispatch } from 'react-redux';
+import { toggleMenuClose } from '../../redux/model/nav';
 const VHome = () => {
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(toggleMenuClose())
+  },[])
   return (
     <div className='content-container'>
       <VisitorOffer/>
