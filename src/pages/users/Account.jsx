@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import AccountRoutes from '../../components/Accounts/AccountRoutes'
 import Nav from '../../components/header/Nav'
 import Footer from '../../footer/Footer'
+import { toggleMenuClose } from '../../redux/model/nav'
 const Account = ({children}) => {
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(toggleMenuClose())
+  },[])
   return (
     <div className='main-container'>
         <Nav/>

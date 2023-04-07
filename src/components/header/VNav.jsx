@@ -3,22 +3,23 @@ import {Menu, Close} from '@mui/icons-material/';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleMenu } from '../../redux/menu';
 import { NavLink } from 'react-router-dom';
+import { toggleMenuClose, toggleMenuOpen } from '../../redux/model/nav';
 
 const VNav = () => {
   const dispatch = useDispatch()
-  const {isOpen} = useSelector((state) => state.menu)
+  const {navOpen} = useSelector((state) => state.nav_toggle)
   return (
     <nav>
       <div className='nav flex-justify-center'>
         <div className='menu'>
-        <Menu onClick={()=> dispatch(toggleMenu(console.log("opened")))} sx={{fontSize: 39}}/> 
+        <Menu onClick={()=> dispatch(toggleMenuOpen(console.log("opened")))} sx={{fontSize: 39}}/> 
         </div>
         <div  className='logo flex-justify-center'>
             <h2>YieldShield</h2>
         </div>
-        <div className={isOpen ? "nav-bar flex-justify-space toggleMenu" : "nav-bar flex-justify-space" }>
+        <div className={navOpen ? "nav-bar flex-justify-space toggleMenu" : "nav-bar flex-justify-space" }>
           <div className='close-menu'>
-            <Close className='icon-menu' onClick={()=> dispatch(toggleMenu())} sx={{fontSize: 39}} />
+            <Close className='icon-menu' onClick={()=> dispatch(toggleMenuClose())} sx={{fontSize: 39}} />
 
           </div>
           <ul className="nav-links flex-justify-start">
