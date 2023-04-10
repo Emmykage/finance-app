@@ -6,6 +6,8 @@ import { NavLink } from 'react-router-dom';
 import { toggleMenuClose, toggleMenuOpen } from '../../redux/model/nav';
 
 const Nav = () => {
+  const activeLink = "active"
+  const normalLink = ""
   const dispatch = useDispatch()
   // const {isOpen} = useSelector((state) => state.menu)
   const {navOpen} = useSelector(state => state.nav_toggle)
@@ -24,12 +26,12 @@ const Nav = () => {
 
           </div>
           <ul className="nav-links flex-justify-start">
-            <li className='p-li'><NavLink to="/offerings">offerings</NavLink></li>
-            <li className='p-li'><NavLink to="/">portfolio</NavLink></li>
-            <li className='p-li'><a>activities</a></li>
-            <li className='p-li'><NavLink to={'/account'}>account</NavLink></li>
-            <li className='p-li'><a>learn</a></li>
-            <li  className='p-li' ><a>support</a></li>
+            <li className='p-li'><NavLink to="/offerings" className={({isActive}) => (isActive ?  activeLink : normalLink)}>offerings</NavLink></li>
+            <li className='p-li'><NavLink to="/"  className={({isActive}) => (isActive ?  activeLink : normalLink)}>portfolio</NavLink></li>
+            <li className='p-li'><NavLink to={"/activities"} className={({isActive}) => (isActive ?  activeLink : normalLink)} >activities</NavLink></li>
+            <li className='p-li'><NavLink to={'/account'}  className={({isActive}) => (isActive ?  activeLink : normalLink)}>account</NavLink></li>
+            <li className='p-li'><NavLink to="/learn" className={({isActive}) => (isActive ?  activeLink : normalLink)}>learn</NavLink></li>
+            <li  className='p-li' ><a  className={({isActive}) => (isActive ?  activeLink : normalLink)}>support</a></li>
   
 
           </ul>

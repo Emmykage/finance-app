@@ -13,8 +13,8 @@ const Header = () => {
 
     <div className='heroBanner-left flex-grid'>
       <div className="content-holder">
-        <div>
-        <h1 className=''>
+        <div  className='user-name'>
+        <h1>
           Yankee
         </h1>
         </div>

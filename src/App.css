@@ -185,6 +185,10 @@ h5 {
   text-align: center;
 }
 
+.align-strecth{
+  align-items: stretch;
+}
+
 .bg-black {
   background-color: white;
 }
@@ -224,6 +228,10 @@ table th {
 .border {
   border: 1px solid black;
 }
+.flex-space{
+  display: flex;
+  justify-content: space-between;
+}
 
 .flex-justify-row {
   display: flex;
@@ -242,7 +250,7 @@ table th {
   justify-content: space-between;
   align-items: center;
 
-  /* padding: 30px; */
+ 
 }
 
 .flex-justify-space_around {
@@ -657,9 +665,9 @@ nav .menu {
 }
 
 .footbanner {
-  margin: auto;
-  max-width: 720px;
-  padding: 2.5rem;
+  margin: 3rem auto;
+  max-width: 1220px;
+  padding: 2.5rem 0 5rem;
   color: #fff;
   background-color: var(--color-dark);
   border-radius: var(--border-radius-2);
@@ -843,6 +851,8 @@ footer {
 
 .performance {
   color: #181a1e;
+  margin: 2rem auto;
+  padding: 0rem 0 3rem
 }
 
 .performance h1,
@@ -854,13 +864,9 @@ footer {
 
 .performance .insight .flex-left {
   display: flex;
-
-  /* background-color: #026777; */
 }
 
-/* .performance .chart-table{
 
-} */
 
 .performance .chart-table .title {
   display: flex;
@@ -925,7 +931,12 @@ padding: 8px 12px;
 .performance .offering .offering-tabs > div p {
   margin-left: 8px;
 }
+.performance .investor-insights .insight{
+  height: 120px;
+  margin-bottom: 3rem;
 
+
+}
 @media screen and (max-width: 768px) {
   .investment h1 {
     font-size: 30px;
@@ -961,18 +972,34 @@ padding: 8px 12px;
     font-size: 1rem;
   }
 
-  .flex-justify-space,
-  .flex-justify-center {
+  .flex-justify-space,  .flex-justify-center {
     flex-direction: column;
     align-items: flex-start;
   }
+  .performance .investor-insights .insight h3{
+    font-size: 18px;
+    color: #026777;
+  }
+  .performance .investor-insights .insight .flex-justify-center {
+    align-items: center;
+
+  }
 
   .container {
+    font-size: 1rem;
     width: 100%;
 
     /* background-color: red; */
   }
-
+  .container{
+    
+  }
+  .container h2, .container h4, .container p{
+    margin: 9px;
+  }
+  .container h2{
+    font-size: 26px;
+  }
   .flex-justify {
     flex-direction: column;
   }
@@ -982,7 +1009,8 @@ padding: 8px 12px;
   }
 
   .content-container {
-    width: 90%;
+    width: 100%;
+    padding: 10px;
     margin: auto;
   }
 
@@ -1071,9 +1099,7 @@ padding: 8px 12px;
   .testimonials .right {
     order: 1;
     width: 100%;
-
-    /* position: absolute; */
-  }
+    }
 
   .testimonials .left .cont .flex-justify-space {
     flex-direction: row;
@@ -1087,6 +1113,19 @@ padding: 8px 12px;
   .testimonials .testimonial-card {
     margin: auto;
     background-color: green;
+  }
+  .offering .offering-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .performance .chart-table .title span{
+    font-size: 0.85rem;
+  }
+  .performance .chart-table .title{
+    justify-content: center;
+  }
+  .behind-the-scenes .advantage{
+    grid-template-columns: auto;
+    row-gap: 12px;
   }
 }
 

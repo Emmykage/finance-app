@@ -90,6 +90,53 @@ const PerformancePlatform = () => {
 
         </div>
     </div>
+    <div className="investor-insights">
+        <h2>Investor Insights</h2>
+        <p>OUr members rate us as one of the best investing platforms in the game</p>
+        <div className='flex-space gap-2 '>
+            <div className='flex-grid text-center order insight'>
+                <div className='border insight flex-justify-center'>
+                <h3 className='align-center'>
+                    430,851
+                </h3>
+
+                </div>
+                <p>TOTAL MEMBERS</p>
+                
+            </div>
+            <div className='flex-grid text-center insight'>
+                <div className='border insight flex-justify-center'>
+                <h3>
+                   8.3
+                </h3>
+
+                </div>
+                <p>AVERAGE # OF INVESTMENTS PER INVESTOR</p>
+                
+            </div>
+            <div className='flex-grid text-center'>
+                <div className='border insight flex-justify-center'>
+                <h3>
+                Real Estate, Short Term Notes,<br/> Private Credit
+                </h3>
+
+                </div>
+                <p>POPULAR ASSET CLASSES</p>
+                
+            </div>
+        </div>
+    </div>
+    <div className='footbanner'>
+            <div className='creed text-center'>
+
+            
+            <h2>
+                evolve your wealth
+            </h2>
+            
+            <a className='btn banner' href="">Get started</a>
+            </div>
+        </div>
     </div>
 
   )

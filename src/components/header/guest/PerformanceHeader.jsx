@@ -5,6 +5,7 @@ import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutl
 
 
 const PerformanceHeader = () => {
+
   return (
     <header>
       <div className='heroBanner-outer-container flex-justify-space'>
@@ -13,13 +14,13 @@ const PerformanceHeader = () => {
     
         <div className='heroBanner-left flex-grid'>
           <div className="content-holder">
-            <div>
+            <div  className='user-name'>
             <h1 className=''>
               Yankee
             </h1>
             </div>
             
-            <div className='hero-details'>
+            <div className='hero-details user-name'>
               <h4 className=''>Welcome to your dashboard</h4>
               <p className='' >Completing your account setup is the first step in the process of investing outside the stock market. If you’re new to alternatives and want to learn more, explore our educational resources.</p>
     
@@ -30,28 +31,28 @@ const PerformanceHeader = () => {
         <div className='heroBanner-right flex-grid'>
           <div>
             <div>
-              <ul>
+              <ul className='performance-list'>
                 <li>
-                  <div className='flex-justify align'>
-                    <div className='check'><CheckCircleOutlinedIcon className='r-icon'/></div>
-                    <div className='nav-info'><p>Account type selection</p></div>
-                    <div className='arror marker'><ArrowForwardIosOutlinedIcon/></div>
+                  <div className='align'>
+                    <div className='check'><p>TOTAL INVESTED</p></div>
+                    <div className='nav-info'><h3>$3,473,914,383</h3></div>
+                    {/* <div className='arror marker'><ArrowForwardIosOutlinedIcon/></div> */}
                    
                   </div>
                 </li>
                 <li>
-                  <div className='flex-justify align'>
-                    <div className='check'><CheckCircleOutlinedIcon className='r-icon'/></div>
-                    <div className='nav-info'><p>verify your identity <br/>Tell us a bit about yourself</p></div>
-                    <div className='arror marker'><ArrowForwardIosOutlinedIcon/></div>
+                  <div className='align'>
+                    <div className='check'><p>NET ANNUALIZED RETURN</p></div>
+                    <div className='nav-info'><h3>9.8% </h3></div>
+                    {/* <div className='arror marker'><ArrowForwardIosOutlinedIcon/></div> */}
                    
                   </div>
                 </li>
                 <li>
-                  <div className='flex-justify align'>
-                    <div className='check'><CheckCircleOutlinedIcon className='r-icon'/></div>
-                    <div className='nav-info'><p>make your first investment</p></div>
-                    <div className='arror marker'><ArrowForwardIosOutlinedIcon/></div>
+                  <div className='align'>
+                    <div className='check'><p> INVESTOR RETURNS*</p></div>
+                    <div className='nav-info'><h3>$2,090,868,825</h3></div>
+                    {/* <div className='arror marker'><ArrowForwardIosOutlinedIcon/></div> */}
                    
                   </div>
                 </li>

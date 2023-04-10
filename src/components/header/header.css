@@ -23,9 +23,7 @@ nav .nav {
   display: flex;
 }
 
-/* .nav .nav-bar{
 
-} */
 .nav .nav-bar .nav-links {
   flex: 3;
 }
@@ -38,6 +36,21 @@ nav .nav {
 .nav .nav-bar {
   flex: 4;
   border: 1px solid black;
+}
+.nav .nav-links li a::after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-success);
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.nav .nav-links li a.active::after{
+  width: 100%;
+  /* color: green; */
+}
+.nav .nav-links li a:hover::after{
+  width: 100%
 }
 
 .nav .log-in {
@@ -55,9 +68,7 @@ nav .nav {
   font-size: 1rem;
 }
 
-/* .heroBanner-inner-container > div {
-  flex-basis: 50%;
-} */
+
 
 .heroBanner-left .content-holder * {
   text-align: left;
@@ -154,7 +165,6 @@ header img {
   background-image: linear-gradient(rgba(6, 14, 48, 0.7), rgba(4, 9, 30, 0.7)), url("/public/images/how-it-works.jpg");
   background-size: contain;
 
-  /* background-image: url('/public/images/how-it-works.jpg'); */
 }
 
 .investment-right-banner.howitworks .overlay {
@@ -169,8 +179,41 @@ header img {
 .investment-right-banner.howitworks img {
   filter: grayscale(70%);
 }
+/* =========================performance header ============================= */
+.heroBanner-inner-container .heroBanner-right ul.performance-list li{
+  padding: 8px 12px;
+}
+ 
+.heroBanner-inner-container .heroBanner-right ul.performance-list li p{
+
+  margin: 0;
+  color: var(--color-dark-variant);
+  /* background-color: antiquewhite; */
+
+}
+.heroBanner-inner-container .heroBanner-right ul.performance-list li h3{
+  margin: 0;
+  font-weight: 400 ;
+}
 
 @media screen and (max-width: 768px) {
+  .heroBanner-inner-container {
+    width: 100%;
+    padding: 0 12px;
+
+  }
+  .heroBanner-inner-container h1, .heroBanner-inner-container h4{
+    margin: 0;
+    padding: 0;
+  }
+  .heroBanner-inner-container h1{
+    font-size: 30px;
+  }
+  .heroBanner-inner-container h4{
+    font-size: 23px;
+  }
+
+  
   .nav .nav-bar {
     position: fixed;
     left: -100%;
