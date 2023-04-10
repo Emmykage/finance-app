@@ -2,7 +2,8 @@ import React from 'react'
 import './header.css'
 import Nav from './Nav'
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
-import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';const Header = () => {
+import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
+const Header = () => {
   return (
 <header>
   <Nav />

@@ -74,7 +74,6 @@ nav .nav {
   margin: auto;
 }
 
-
 .heroBanner-inner-container .heroBanner-right ul li {
   background: rgba(0, 0, 0, 0.3);
   padding: 6px 12px;
@@ -208,6 +207,17 @@ header img {
     /* line-height: 40px; */
   }
 
+  .nav .log-in a {
+    display: block;
+    width: 100%;
+  }
+
+  .nav .log-in a:first-child {
+    display: none;
+
+    /* width: 100% */
+  }
+
   .nav .nav-bar .nav-links li a {
     display: flex;
     font-size: 1rem;
@@ -223,21 +233,15 @@ header img {
     padding-left: 27px;
   }
 
-  .nav .nav-bar .log-in{
-        width: 100%;
-        justify-content: flex-start;
+  .nav .nav-bar .log-in {
+    width: 100%;
+    justify-content: flex-start;
+  }
 
-  }
- 
-  .nav .log-in a{
-    display: block;
-    width: 100%
-  }
-  .nav .log-in a:first-child{
-    display: none;
-    /* width: 100% */
 
-  }
+
+
+
   .log-in div {
     display: block;
     text-align: left;

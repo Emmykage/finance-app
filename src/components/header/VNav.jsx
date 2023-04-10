@@ -25,7 +25,9 @@ const VNav = () => {
           <ul className="nav-links flex-justify-start">
             <li className='p-li'><NavLink to="/investments">Investment</NavLink></li>
             <li className='p-li'><NavLink to="/how-it-works">How it works</NavLink></li>
-            <li className='p-li'><NavLink to={'/account'}>account</NavLink></li>
+            {/* <li className='p-li'><NavLink to={'/account'}>account</NavLink></li> */}
+            <li className='p-li'><NavLink to={'/performance'}>Performance</NavLink></li>
+
             <li className='p-li'><NavLink to={"/about"}>About</NavLink></li>
           
 

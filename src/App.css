@@ -73,7 +73,8 @@ body {
   max-width: 1250px;
   margin: auto;
 }
-h1{
+
+h1 {
   font-size: 45px;
 }
 
@@ -454,7 +455,6 @@ nav .menu {
   margin: 8px auto;
   width: 100%;
   border-radius: 8px;
-
 }
 
 .investment-card:hover {
@@ -515,7 +515,7 @@ nav .menu {
   background-color: rgb(171, 247, 228);
 }
 
-.explore-cards .left h3 {
+.explore-cards h3 {
   font-family: sans-serif;
   margin: 0;
   font-weight: 400;
@@ -629,7 +629,7 @@ nav .menu {
   margin-top: 0;
 }
 
-.testimonial-card .bottom h3 {
+.testimonial-card h3 {
   padding: 0;
 
   /* background-color: red; */
@@ -650,7 +650,7 @@ nav .menu {
   padding: 0;
 }
 
-.advantage .add-card .ad-write h4 {
+.advantage h4 {
   margin: 0;
   font-size: 20px;
   font-weight: 500;
@@ -742,7 +742,7 @@ footer {
   background: var(--color-white);
   padding: 1rem 0 1rem 1rem;
   margin-top: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) ;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* ========================Offering==================== */
@@ -830,6 +830,7 @@ footer {
   padding: 28px 1rem;
   text-align: justify;
   font-size: 12px;
+
   /* background-color: #026777; */
 }
 
@@ -838,32 +839,124 @@ footer {
   margin: 20px auto;
 }
 
+/* ===================Performance========================= */
+
+.performance {
+  color: #181a1e;
+}
+
+.performance h1,
+.performance h2,
+.performance h3,
+.performance h4 {
+  font-weight: 400;
+}
+
+.performance .insight .flex-left {
+  display: flex;
+
+  /* background-color: #026777; */
+}
+
+/* .performance .chart-table{
+
+} */
+
+.performance .chart-table .title {
+  display: flex;
+  justify-content: flex-end;
+
+  /* background-color: #04aa6d; */
+}
+
+.performance .chart-table .title span {
+  border-radius: var(--border-radius-1);
+  padding: 6px 12px;
+  margin-left: 6px;
+  border: 1px solid var(--color-dark);
+}
+
+.performance .chart-table .title span.active {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.performance .chart-table .title span:hover {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+hr {
+  color: #181a1e;
+
+  /* border: 1px solid #000; */
+}
+
+.platform-performance {
+  /* color: #000; */
+}
+
+.offering .offering-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 32px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  row-gap: 48px;
+  column-gap: 2%;
+}
+
+/* /* .performance  */
+.offering .offering-tabs > div {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.26);
+  background-color: #04aa6d;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+/* .performance .offering .offering-tabs > div a{
+  background-color: #026777;
+  width: 100%;
+  display: flex;
+align-items: center;
+padding: 8px 12px;
+} */
+.performance .offering .offering-tabs > div p {
+  margin-left: 8px;
+}
+
 @media screen and (max-width: 768px) {
-  .investment h1{
+  .investment h1 {
     font-size: 30px;
   }
-  .investment-left-banner .btn{
+
+  .investment-left-banner .btn {
     display: block;
     width: 100%;
   }
-  .investment-cards{
-    padding: 10px;
 
+  .investment-cards {
+    padding: 10px;
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
   }
-  .investment-card{
+
+  .investment-card {
     display: flex;
+
     /* justify-content: center; */
     align-items: center;
     padding: 5px;
     margin: 0;
-    /* background-color: #dce1eb; */
 
+    /* background-color: #dce1eb; */
   }
-  .investment-card span{
+
+  .investment-card span {
     padding: 9px;
   }
+
   body {
     font-size: 1rem;
   }

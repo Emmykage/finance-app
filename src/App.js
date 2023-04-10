@@ -18,6 +18,8 @@ import VHome from './pages/visitor/Home';
 import Offerings from './pages/users/Offerings';
 import HowItWorks from './pages/visitor/HowItWorks';
 import WorkLayout from './layouts/WorkLayout';
+import Performance from './pages/visitor/Performance';
+import GuestLayOut from './layouts/GuestLayout';
 // import Nav from './components/header/Nav';
 
 function App() {
@@ -34,11 +36,12 @@ function App() {
           <Route path='recurring_deposit' element={<Account><RecurringDeposit/></Account>}/>
           <Route path='' element={<Account><Wallet/></Account>}/>
           <Route path='wallet' element={<Account><Wallet/></Account>}/>
-
+            {/* visitors layouts */}
         </Route>
         {/* <Route path='/investment' element={<Ho} */}
         <Route path='/investments' element={<VisitorLayout><VHome/></VisitorLayout>}/>
         <Route path="/how-it-works" element={<WorkLayout><HowItWorks/></WorkLayout>}/>
+        <Route path="/performance" element={<GuestLayOut><Performance /> </GuestLayOut>}/>
       </Routes>
 
     </div>
