@@ -7,13 +7,13 @@ const HHeader = () => {
     <header>
         <VNav/>
         <div className='offeringBanner-outer-container'>
-          <div className='offeringBanner-inner-container inner-container'>
+          <div className='offeringBanner-inner-container howitworks inner-container'>
 
 
     <div className='InvestmentBanner'>
       <div className="content-holder">
         <div className='investment flex-justify-space'>
-          <div className='investment-left-banner border'>
+          <div className='investment-left-banner'>
           <h1 className=''>
           How it works
         </h1>

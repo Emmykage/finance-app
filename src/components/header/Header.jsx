@@ -28,11 +28,11 @@ const Header = () => {
 
     </div>
     <div className='heroBanner-right flex-grid'>
-      <div>
-        <div>
+      {/* <div>
+        <div> */}
           <ul>
             <li>
-              <div className='flex-justify align'>
+              <div className='flex-justify-row align'>
                 <div className='check'><CheckCircleOutlinedIcon className='r-icon'/></div>
                 <div className='nav-info'><p>Account type selection</p></div>
                 <div className='arror marker'><ArrowForwardIosOutlinedIcon/></div>
@@ -40,7 +40,7 @@ const Header = () => {
               </div>
             </li>
             <li>
-              <div className='flex-justify align'>
+              <div className='flex-justify-row align'>
                 <div className='check'><CheckCircleOutlinedIcon className='r-icon'/></div>
                 <div className='nav-info'><p>verify your identity <br/>Tell us a bit about yourself</p></div>
                 <div className='arror marker'><ArrowForwardIosOutlinedIcon/></div>
@@ -48,7 +48,7 @@ const Header = () => {
               </div>
             </li>
             <li>
-              <div className='flex-justify align'>
+              <div className='flex-justify-row align'>
                 <div className='check'><CheckCircleOutlinedIcon className='r-icon'/></div>
                 <div className='nav-info'><p>make your first investment</p></div>
                 <div className='arror marker'><ArrowForwardIosOutlinedIcon/></div>
@@ -59,8 +59,8 @@ const Header = () => {
            
 
           </ul>
-        </div>
-      </div>
+        {/* </div>
+      </div> */}
 
     </div>
 

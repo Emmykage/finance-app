@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CHART_PIC from '../../assets/image/barchart.svg'
 // import {ArrowForwardIosOutlinedI} from '@mui/icons-material/';
 import TOTAL from "../../assets/image/total.svg"
@@ -7,7 +7,13 @@ import {ArrowForwardIosOutlined} from '@mui/icons-material/';
 import ASSET from "../../assets/image/asset.svg"
 import OFFERING from "../../assets/image/offering.svg"
 import ICONCHART from "../../assets/image/advice-chart.svg"
+import { useDispatch } from 'react-redux';
+import { toggleMenuClose } from '../../redux/model/nav';
 const Home = () => {
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(toggleMenuClose())
+  },[])
   return (
     <div className='sub-container'>
       <div className='inner-container black'>
