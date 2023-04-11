@@ -27,7 +27,11 @@ const Home = () => {
               Tap into the collective wisdom of our investment teams. Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
 
             </p>
+            <div className='btn-div'>
             <a className='banner-button btn'>Unlock recommendations</a>
+
+
+            </div>
           </div>
             
         </div>

@@ -13,11 +13,11 @@ const Nav = () => {
   const {navOpen} = useSelector(state => state.nav_toggle)
   return (
     <nav>
-      <div className='nav flex-justify-center'>
+      <div className='nav'>
         <div className='menu'>
         <Menu onClick={()=> dispatch(toggleMenuOpen())} sx={{fontSize: 39}}/> 
         </div>
-        <div  className='logo flex-justify-center'>
+        <div  className='logo'>
             <h2>YieldShield</h2>
         </div>
         <div className={navOpen ? "nav-bar flex-justify-space toggleMenu" : "nav-bar flex-justify-space" }>
@@ -35,10 +35,13 @@ const Nav = () => {
   
 
           </ul>
-          <div className='log-in flex-justify-space'>
+          <div className='log-in flex-justify'>
             <div className='flex-justify'>
             <NavLink to={"/investments"}>log out</NavLink>
+            <NavLink to={"/investments"}>log out</NavLink>
+
             </div>
+
         
     
         </div>
