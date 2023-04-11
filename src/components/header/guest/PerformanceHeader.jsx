@@ -29,8 +29,8 @@ const PerformanceHeader = () => {
     
         </div>
         <div className='heroBanner-right flex-grid'>
-          <div>
-            <div>
+          {/* <div>
+            <div> */}
               <ul className='performance-list'>
                 <li>
                   <div className='align'>
@@ -60,8 +60,8 @@ const PerformanceHeader = () => {
                
     
               </ul>
-            </div>
-          </div>
+            {/* </div>
+          </div> */}
     
         </div>
     

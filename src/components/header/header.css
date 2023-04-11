@@ -62,7 +62,8 @@ nav .nav {
   width: 75%;
   margin: auto;
   flex-wrap: wrap;
-}
+  padding: 0;
+  }
 
 .heroBanner-right p {
   font-size: 1rem;
@@ -75,10 +76,13 @@ nav .nav {
 }
 
 .heroBanner-inner-container .heroBanner-right {
-  /* background-color: yellow; */
+  display: flex;
+  /* justify-content: flex-end; */
   width: 100%;
 }
-
+.heroBanner-inner-container.about .heroBanner-right {
+  justify-content: flex-end;
+}
 .heroBanner-inner-container .heroBanner-right ul {
   max-width: 600px;
   width: 100%;
@@ -195,7 +199,70 @@ header img {
   margin: 0;
   font-weight: 400 ;
 }
+.heroBanner-left.about{
+  max-width: 475px;
+  /* background-color: red; */
+}
+.heroBanner-left.about .content-holder{
+  /* background-color: green; */
+}
 
+.about-right{
+  display: flex;
+  justify-content: flex-end;
+  -webkit-box-pack: end;
+  position: relative;
+  width: 100%;
+  height: 479px;
+  width: 650px;
+  background-color: rgb(57, 61, 72);
+  border-radius: var(--border-radius-1);
+}
+.about .btn-div{
+  padding: 13px;
+  /* background-color: red; */
+}
+
+.about-right .about-image{
+  position: absolute;
+  right: 5%;
+  width: 650px;
+  height: 450px;
+  /* background-color: red; */
+  transform: translateY(-50%);
+  top: 50%;
+  border-radius: var(--border-radius-1);
+  overflow: hidden;
+}
+.about-right .about-image img{
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 1365px) {
+  .heroBanner-inner-container {
+    width: 85%;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  .about-right{
+   
+    height: 379px;
+    width: 450px;
+  }
+  .about-right .about-image{
+    position: absolute;
+    right: 2%;
+    width: 450px;
+    height: 350px;
+  
+  }
+  .about-right .about-image img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  }
 @media screen and (max-width: 768px) {
   .heroBanner-inner-container {
     width: 100%;
@@ -281,9 +348,24 @@ header img {
     justify-content: flex-start;
   }
 
+  .about-right{
+ 
+    height: 379px;
+    width: 100%;
+  }
 
 
-
+  .about-right .about-image{
+    right: 0%;
+    width: 100%;
+    height: 100%;
+  
+  }
+  .about-right .about-image img{
+    width: 100%;
+    height: 100%;
+  }
+  
 
   .log-in div {
     display: block;
@@ -294,5 +376,10 @@ header img {
   nav .menu,
   nav .close-menu {
     display: flex;
+  }
+  .about .btn-div .btn{
+    width: 100%;
+    display: block;
+    text-align: center;
   }
 }

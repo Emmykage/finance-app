@@ -67,7 +67,46 @@ body {
 .content-container {
   max-width: 1450px;
   margin: 50px auto;
+  color: var(--color-dark);
 }
+.content-container h4, .content-container h2, .content-container h3{
+  font-weight: 400;
+}
+.max-width-md{
+  max-width: 800px;
+}
+.grid-display{
+  display: grid;
+}
+/* ======================About========================== */
+.about .reveals{
+  padding: 96px 115px;
+  background-color: rgb(247, 248, 249);
+  border-radius: var(--border-radius-3);
+
+}
+.about .reveals .grid-display{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 32px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  row-gap: 48px; 
+  column-gap: 2%;
+}
+.about .reveals .grid-display > div{
+  padding: 20px;
+  border-radius: var(--border-radius-2);
+}
+.about .reveals h4, .about .reveals p{
+  margin: 2px 0;
+}
+.about .mission{
+  margin: 23px auto;
+  padding: 20px;
+
+
+} 
 
 .container-fit {
   max-width: 1250px;
@@ -669,11 +708,15 @@ nav .menu {
   max-width: 1220px;
   padding: 2.5rem 0 5rem;
   color: #fff;
+  text-align: center;
   background-color: var(--color-dark);
   border-radius: var(--border-radius-2);
 }
+.footbanner .btn-div{
+  margin: 12px auto;
+}
 
-.howitwork-content .footbanner .btn {
+.footbanner .btn {
   background-color: rgb(171, 247, 228);
   color: rgb(16, 92, 78);
 }
