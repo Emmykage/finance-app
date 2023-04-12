@@ -37,8 +37,8 @@ const Nav = () => {
           </ul>
           <div className='log-in flex-justify'>
             <div className='flex-justify'>
-            <NavLink to={"/investments"}>log out</NavLink>
-            <NavLink to={"/investments"}>log out</NavLink>
+            {/* <NavLink to={"/investments"}>log out</NavLink> */}
+            <NavLink to={"/investments"} >log out</NavLink>
 
             </div>
 

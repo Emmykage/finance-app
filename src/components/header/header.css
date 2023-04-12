@@ -332,7 +332,7 @@ header img {
     width: 100%;
   }
 
-  .nav .log-in a:first-child {
+.mobile-only  {
     display: none;
 
     /* width: 100% */
