@@ -25,7 +25,7 @@ const VNav = () => {
 
           </div>
           <ul className="nav-links flex-justify-start">
-            <li className='p-li'><NavLink to="/investments" className={({isActive}) => ( isActive ? activeLink : normalLink)}>Investment</NavLink></li>
+            <li className='p-li'><NavLink to="/" className={({isActive}) => ( isActive ? activeLink : normalLink)}>Investment</NavLink></li>
             <li className='p-li'><NavLink to="/how-it-works" className={({isActive}) => (isActive ?  activeLink : normalLink)}>How it works</NavLink></li>
             {/* <li className='p-li'><NavLink to={'/account'}>account</NavLink></li> */}
             <li className='p-li'><NavLink to={'/performance'} className={({isActive}) => (isActive ?  activeLink : normalLink)}>Performance</NavLink></li>
@@ -38,7 +38,7 @@ const VNav = () => {
           <div className='log-in flex-justify w'>
           <a className='mobile-only'>Help Center</a>
               <NavLink>Sign Up</NavLink>
-              <NavLink to={"/"}>login</NavLink>
+              <NavLink to={"/home"}>login</NavLink>
           </div>
         </div>
        

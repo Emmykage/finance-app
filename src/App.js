@@ -21,13 +21,19 @@ import WorkLayout from './layouts/WorkLayout';
 import Performance from './pages/visitor/Performance';
 import GuestLayOut from './layouts/GuestLayout';
 import About from './pages/visitor/About';
+// import Percentage from './components/charts/Percentage.tsx';
+// import PieChart from './components/charts/Percentage.jsx';
+// import ParentSize from '@visx/responsive/lib/components/ParentSize';
+import PercentageChat from './components/charts/Percentage';
+
 // import Nav from './components/header/Nav';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<MainLayout><Home/></MainLayout> }></Route>
+        <Route path={'/chart'} element={<PercentageChat/>}></Route>
+        <Route path='/home' element={<MainLayout><Home/></MainLayout> }></Route>
         <Route path='/offerings' element={<OfferLayout><Offerings/></OfferLayout>} />
         <Route path="signup" element={<SignUp/>}/>
         <Route path='account' >
@@ -40,7 +46,7 @@ function App() {
             {/* visitors layouts */}
         </Route>
         {/* <Route path='/investment' element={<Ho} */}
-        <Route path='/investments' element={<VisitorLayout><VHome/></VisitorLayout>}/>
+        <Route path='/' element={<VisitorLayout><VHome/></VisitorLayout>}/>
         <Route path="/how-it-works" element={<WorkLayout><HowItWorks/></WorkLayout>}/>
         <Route path="/performance" element={<GuestLayOut><Performance /> </GuestLayOut>}/>
         <Route path="/about" element={<GuestLayOut><About /></GuestLayOut>} />

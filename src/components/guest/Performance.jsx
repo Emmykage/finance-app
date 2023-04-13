@@ -9,6 +9,8 @@ import StructuredNote from "../../assets/image/svg-icon/structured-notes.svg"
 import DiversifiedFunds from "../../assets/image/svg-icon/diversified-funds.svg"
 import Transportation from "../../assets/image/svg-icon/transportation.svg"
 import Art from "../../assets/image/svg-icon/art.svg"
+import PercentageChat from '../charts/Percentage'
+import AnnualReturn from '../charts/AnnualReturn'
 
 
 
@@ -28,8 +30,9 @@ const PerformancePlatform = () => {
         <div className='right flex-grid'>
             <h4>Portfolio overview</h4>
             <span>By dollars invested</span>
-            <div>
-                <h2 className='center'>Portfolio overview chart</h2>
+            <div className=' portfolio-chart'>
+                {/* <h2 className='center'>Portfolio overview chart</h2> */}
+                <PercentageChat/>
             </div>
         </div>
         
@@ -62,7 +65,8 @@ const PerformancePlatform = () => {
             </div>
            
             <div className='text-center'>
-                <h2>Insights Chart</h2>
+                {/* <h2>Insights Chart</h2> */}
+                <AnnualReturn/>
             </div>
         </div>
     </div>

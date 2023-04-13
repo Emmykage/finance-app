@@ -263,13 +263,14 @@ Opportunities are evaluated first by a dedicated team for each asset class. From
                 
             </div>
         </div>
-        <div>
+        <div className='max-width-md'>
+           
             <h3>
-Investment managers like BlackRock recommend supplementing your portfolio of stocks and bonds with up to 20% private market alternatives.
-            </h3>
-            <p>
             How much should I allocate to private markets?
 
+            </h3>
+            <p>
+Investment managers like BlackRock recommend supplementing your portfolio of stocks and bonds with up to 20% private market alternatives.
             </p>
         </div>
         <div className='footbanner'>

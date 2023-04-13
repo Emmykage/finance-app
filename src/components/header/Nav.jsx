@@ -27,7 +27,7 @@ const Nav = () => {
           </div>
           <ul className="nav-links flex-justify-start">
             <li className='p-li'><NavLink to="/offerings" className={({isActive}) => (isActive ?  activeLink : normalLink)}>offerings</NavLink></li>
-            <li className='p-li'><NavLink to="/"  className={({isActive}) => (isActive ?  activeLink : normalLink)}>portfolio</NavLink></li>
+            <li className='p-li'><NavLink to="/home"  className={({isActive}) => (isActive ?  activeLink : normalLink)}>portfolio</NavLink></li>
             <li className='p-li'><a to={"/activities"} className={({isActive}) => (isActive ?  activeLink : normalLink)} >activities</a></li>
             <li className='p-li'><NavLink to={'/account'}  className={({isActive}) => (isActive ?  activeLink : normalLink)}>account</NavLink></li>
             <li className='p-li'><a to="/learn" className={({isActive}) => (isActive ?  activeLink : normalLink)}>learn</a></li>
