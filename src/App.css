@@ -59,8 +59,6 @@ body {
 
 .main-container {
   min-height: 100vh;
-
-  /* background-color: green; */
   position: relative;
 }
 
@@ -68,6 +66,8 @@ body {
   max-width: 1450px;
   margin: 50px auto;
   color: var(--color-dark);
+  padding: 1.8rem;
+  
 }
 .content-container h4, .content-container h2, .content-container h3{
   font-weight: 400;
@@ -103,6 +103,7 @@ body {
   margin: 2px 0;
 }
 .about .mission{
+  border-radius: var(--border-radius-2);
   margin: 23px auto;
   padding: 20px;
 
