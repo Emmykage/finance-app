@@ -816,13 +816,71 @@ footer {
   box-shadow: var(--box-shadow);
 }
 
-.card-img {
+.card-img{
   display: flex;
   background: var(--color-info-light);
   align-items: center;
   height: 130px;
 }
+.offer-card-div {
+  border-radius: var(--border-radius-1);
+  padding: 8px;
+  transition: 0.3s all ease;
+  overflow: hidden;
+  position: relative;
+  /* background: url("../public/images/background/3lioEEoPbj5HzbPGetcbF2t5.webp"); */
 
+}
+.offer-card-div::before{
+  content: "";
+  display: block;
+  position: absolute;
+  /* width: 100%; */
+  background: url("../public/images/background/3lioEEoPbj5HzbPGetcbF2t5.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  inset: 0px;
+
+  scale: 1.05;
+}
+.xyz{
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background: rgb(26, 27, 29, 0.2);
+    transition: all 0.4s ease 0s;
+    /* opacity: 0.2; */
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    padding: 9px;
+}
+.tiny-icon-div{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+  gap: 8px;
+  max-width: 100%;
+  overflow-y: auto;
+}
+.tiny-c{
+  background: rgb(255, 255, 255);
+    border: 1px solid rgb(216, 220, 226);
+    border-radius: 4px;
+    padding: 5px 10px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    min-height: 26px;
+    /* z-index: 909; */
+}
+.tiny-c p{
+  margin: 0;
+}
 .card-img img {
   width: 100%;
   height: 100%;

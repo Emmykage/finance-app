@@ -7,8 +7,17 @@ function VisitorOffer() {
         <div className='offer-cards'>
             {offers.map((offer) =>(
                 <div className='card black'>
-                <div className='card-img'>
-                    <img src={OFFER}/>
+                    <div className='card-img offer-card-div'>
+                        <div className='xyz'>
+                            <div className='tiny-icon-div'>
+                                <div className='tiny-c'>
+                                    <p>New</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    {/* <img src={OFFER}/> */}
                 </div>
                 <div>
                     <h3>Access tailored private market recommendations</h3>
