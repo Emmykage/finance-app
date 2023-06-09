@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+## InvestEdge-Finance
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The investment app is a user-friendly mobile application designed to provide individuals with a convenient and accessible platform to manage their investments. With this app, users can easily track and monitor their investment portfolios, stay updated with real-time market data, and make informed investment decisions.
 
-## Available Scripts
+## Usage
 
-In the project directory, you can run:
+- To use the app as a shopper refer to the link [INVESTEDGE](https://admirable-wisp-900f98.netlify.app/)
 
-### `npm start`
+-This whole app has been solely and entirely built by myself
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Our Kanban board
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
+- React
+- Redux
+- Ruby on Rails
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Live Demo & Screenshots
 
-### `npm run build`
+> [InvestEdge](https://admirable-wisp-900f98.netlify.app/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<table>
+<tr>
+<td><img src="/src/assets/image/investedge.PNG" alt="Home page"></td>
+<!-- <td><img src="src/assets/images/melisport_products.PNG " alt="Product details page"></td>
+<td><img src="src/assets/images/melisport_adminPage.PNG" alt="admin page"></td> -->
+</tr>
+</table>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get a local copy up and running follow these simple example steps.
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Any web browser (e.g. Google Chrome)
+- Any Code Editor (e.g. Vscode)
+-
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Create a new folder.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+mkdir folder
+```
 
-## Learn More
+- Move to the folder:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd folder
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Clone the repo:
 
-### Code Splitting
+```bash
+git clone https://github.com/Emmykage/finance-app
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Install
 
-### Analyzing the Bundle Size
+- Install the dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+npm install
+```
 
-### Making a Progressive Web App
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Start a live development server:
 
-### Advanced Configuration
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Run tests
 
-### Deployment
+- Run tests:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+npm test
+```
 
-### `npm run build` fails to minify
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 👤 Menanya Morris
+
+- GitHub: [@emmykage](https://github.com/emmykage)
+- Twitter: [@emmykage](https://twitter.com/mennydev)
+- LinkedIn: [Menanya Morris](https://www.linkedin.com/in/morris-menanya-a51985104/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+y
+This project is [MIT](./MIT.md) licensed.

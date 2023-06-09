@@ -17,7 +17,7 @@ const VNav = () => {
         <Menu onClick={()=> dispatch(toggleMenuOpen(console.log("opened")))} sx={{fontSize: 39}}/> 
         </div>
         <div  className='logo'>
-            <h2>YieldShield</h2>
+            <h2>InvestEdge</h2>
         </div>
         <div className={navOpen ? "nav-bar flex-justify-space toggleMenu" : "nav-bar flex-justify-space" }>
           <div className='close-menu'>

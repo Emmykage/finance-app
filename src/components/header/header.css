@@ -118,7 +118,7 @@ nav .close-menu {
 }
 
 .nav .nav-bar .log-in {
-  min-width: 350px;
+  /* min-width: 350px; */
   flex: 1;
   display: flex;
   gap: 1%;
