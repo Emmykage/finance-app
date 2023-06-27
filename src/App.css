@@ -53,6 +53,7 @@ body {
 
 .container {
   max-width: 1800px;
+  min-height: calc(100vh - 175px);
   margin: auto;
   background-color: var(--color-white);
 }
@@ -413,7 +414,10 @@ nav .menu {
 
 /* =======================ACCOUNT================= */
 .account-container {
+  padding: 2rem;
   color: var(--color-dark);
+  max-width: 1400px;
+  width: 100%;
 }
 
 .account-nav {
@@ -425,12 +429,47 @@ nav .menu {
   font-size: 3.4rem;
   color: var(--color-dark);
 }
+.account-container h5{
+  font-weight: 600;
+}
 
 .account-nav a {
   color: var(--color-dark);
   font-weight: 600;
   display: flex;
   padding: 7px 27px;
+}
+.account-container .investor table{
+  margin-bottom: 2rem;
+}
+.account-container .investor tr{
+  border-bottom: 1px solid var(--color-dark-variant);
+
+}
+.account-notice{
+  padding: 2rem;
+}
+
+.assets{
+  flex-flow: row wrap;
+  gap: 3%;
+  /* flex-wrap: wrap; */
+
+}
+.assets span{
+  border: 1px solid var(--color-dark);
+  margin-bottom: 24px;
+  white-space: nowrap;
+  padding: 8px 12px;
+  border-radius: 4px;
+
+}
+.assets span:hover{
+  background-color: var(--color-dark);
+  color: white;
+}
+.InvestmentPreference{
+  
 }
 
 .wallet {

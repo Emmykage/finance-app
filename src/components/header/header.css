@@ -126,7 +126,8 @@ nav .close-menu {
 }
 
 nav .log-in a {
-  padding: 12px;
+width: max-content; 
+ padding: 12px 6px;
   border: 1px solid white;
   transition: alll 0.3s ease;
 }

@@ -1,0 +1,86 @@
+.activity{
+    color: black;
+}
+.activities-container{
+    max-width: 1800px;
+    margin: auto;
+
+}
+.activity-container{
+    color: var(--color-background-dark);
+}
+.activities-container .top-header {
+    padding: 23px;
+    color: black;
+
+
+}
+.activities-container .nav-links ul{
+
+}
+.activities-container .nav-links li {
+    background-color: var(--color-white);
+
+    margin: 0 12px;
+    border-radius: 4px;
+    border: 1px solid var(--color-background-dark);
+}
+
+
+
+.activities-container .nav-links li:hover {
+  background-color: var(  --color-background) ;
+}
+.activities-container .nav-links li a{
+    color: var(--color-background-dark);
+    padding: 14px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.activities-container .nav-links li a span{
+    margin-left: 12px;
+   
+    inline-size: min-content ;
+    white-space: nowrap;
+
+}
+.activities-container .nav-links li a.active-link{
+    background-color: var(--color-background-dark);
+    color: white;
+
+}
+/* .activities-container .nav-links li a */
+.activity{
+    width: 1400px;
+    max-width: 100%;
+    margin: auto;
+    /* background-color: blue; */
+    padding: 3rem ;
+
+}.act{
+    column-gap: 3%;
+    font-weight: 600;
+}
+.activity-container .act-link{
+    flex-basis: 40%;
+    /* gap: 4%; */
+    margin: 12px 4px;
+    padding: 22px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4)
+}
+.activities-container .top{
+    background-color: white;
+    padding: 9px 14px;
+
+    box-shadow: var( --box-shadow);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3)
+
+}
+.activities-container .bottom{
+    background-color: white;
+    margin-top: 2rem;
+    padding: 9px 14px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}

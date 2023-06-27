@@ -25,6 +25,11 @@ import About from './pages/visitor/About';
 // import PieChart from './components/charts/Percentage.jsx';
 // import ParentSize from '@visx/responsive/lib/components/ParentSize';
 import PercentageChat from './components/charts/Percentage';
+import Messages from './components/activities/Messages';
+import InvestmentUpdates from './components/activities/InvestmentUpdates';
+import Payments from './components/activities/Payments';
+import Important from './components/activities/Important';
+import Activities from './pages/users/Activities';
 
 // import Nav from './components/header/Nav';
 
@@ -36,6 +41,14 @@ function App() {
         <Route path='/home' element={<MainLayout><Home/></MainLayout> }></Route>
         <Route path='/offerings' element={<OfferLayout><Offerings/></OfferLayout>} />
         <Route path="signup" element={<SignUp/>}/>
+        <Route path="activities" element={<Activities/>}>
+          <Route path='' element={<Messages/>} />
+          <Route path='investment_updates' element={<InvestmentUpdates/>} />
+          <Route path='payments' element={<Payments/>} />
+          <Route path='important' element={<Important/>} />
+
+
+        </Route>
         <Route path='account' >
           <Route path='bank_account' element={<Account><BankAccount/></Account> }/>
           <Route path='investment_preference' element={<Account><InvestmentPreference/></Account>}/>
@@ -46,6 +59,7 @@ function App() {
             {/* visitors layouts */}
         </Route>
         {/* <Route path='/investment' element={<Ho} */}
+
         <Route path='/' element={<VisitorLayout><VHome/></VisitorLayout>}/>
         <Route path="/how-it-works" element={<WorkLayout><HowItWorks/></WorkLayout>}/>
         <Route path="/performance" element={<GuestLayOut><Performance /> </GuestLayOut>}/>

@@ -1,7 +1,6 @@
 import React from 'react'
 import {Menu, Close} from '@mui/icons-material/';
 import { useDispatch, useSelector } from 'react-redux';
-// import { toggleMenu } from '../../redux/menu';
 import { NavLink } from 'react-router-dom';
 import { toggleMenuClose, toggleMenuOpen } from '../../redux/model/nav';
 
@@ -28,7 +27,7 @@ const Nav = () => {
           <ul className="nav-links flex-justify-start">
             <li className='p-li'><NavLink to="/offerings" className={({isActive}) => (isActive ?  activeLink : normalLink)}>offerings</NavLink></li>
             <li className='p-li'><NavLink to="/home"  className={({isActive}) => (isActive ?  activeLink : normalLink)}>portfolio</NavLink></li>
-            <li className='p-li'><a to={"/activities"} className={({isActive}) => (isActive ?  activeLink : normalLink)} >activities</a></li>
+            <li className='p-li'><NavLink to={"/activities"} className={({isActive}) => (isActive ?  activeLink : normalLink)} >activities</NavLink></li>
             <li className='p-li'><NavLink to={'/account'}  className={({isActive}) => (isActive ?  activeLink : normalLink)}>account</NavLink></li>
             <li className='p-li'><a to="/learn" className={({isActive}) => (isActive ?  activeLink : normalLink)}>learn</a></li>
             <li  className='p-li' ><a  className={({isActive}) => (isActive ?  activeLink : normalLink)}>support</a></li>
