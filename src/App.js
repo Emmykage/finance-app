@@ -30,6 +30,8 @@ import InvestmentUpdates from './components/activities/InvestmentUpdates';
 import Payments from './components/activities/Payments';
 import Important from './components/activities/Important';
 import Activities from './pages/users/Activities';
+import AdminLayout from './layouts/AdminLayout'; 
+import AHome from './pages/Admin/AdminHome';
 
 // import Nav from './components/header/Nav';
 
@@ -46,8 +48,6 @@ function App() {
           <Route path='investment_updates' element={<InvestmentUpdates/>} />
           <Route path='payments' element={<Payments/>} />
           <Route path='important' element={<Important/>} />
-
-
         </Route>
         <Route path='account' >
           <Route path='bank_account' element={<Account><BankAccount/></Account> }/>
@@ -56,14 +56,17 @@ function App() {
           <Route path='recurring_deposit' element={<Account><RecurringDeposit/></Account>}/>
           <Route path='' element={<Account><Wallet/></Account>}/>
           <Route path='wallet' element={<Account><Wallet/></Account>}/>
-            {/* visitors layouts */}
         </Route>
-        {/* <Route path='/investment' element={<Ho} */}
 
         <Route path='/' element={<VisitorLayout><VHome/></VisitorLayout>}/>
         <Route path="/how-it-works" element={<WorkLayout><HowItWorks/></WorkLayout>}/>
         <Route path="/performance" element={<GuestLayOut><Performance /> </GuestLayOut>}/>
         <Route path="/about" element={<GuestLayOut><About /></GuestLayOut>} />
+
+        <Route path='admin'>
+          <Route path='dashboard' element={<AdminLayout><AHome /></AdminLayout>} />
+          
+        </Route>
       </Routes>
 
     </div>
