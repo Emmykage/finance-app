@@ -8,18 +8,23 @@ import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { userLog } from '../../redux/auth/user_authentication';
+import { userSession } from '../../redux/actions/auth';
 // import { Copyright } from './Copyright';
 
 function Copyright(props) {
+
     return (
       <Typography variant="body2" color="text.secondary" align="center" {...props}>
         {'Copyright © '}
         <Link color="inherit" href="https://mui.com/">
-          Your Website
+          Vortech
         </Link>{' '}
         {new Date().getFullYear()}
         {'.'}
@@ -29,14 +34,30 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignUp() {
+  const navigation = useNavigate()
+  const dispatch = useDispatch()
+  const {user, error, message, loading} = useSelector((state) => state.user)
+
+  useEffect(() => {
+    dispatch(userLog())
+  },[])
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    const formInput = {
+      user: {
+    email: data.get('email'),
+    password: data.get('password'),
+      }
+  }
+    console.log(formInput);
+    dispatch(userSession(formInput))
+
   };
+  if (user == null || user == undefined){
+
+ 
 
   return (
     <ThemeProvider theme={theme}>
@@ -50,35 +71,14 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
+          <NavLink to={'/'}>Visit Site</NavLink>
+         
           <Typography component="h1" variant="h5">
-            Sign up
+            Login 
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  autoComplete="given-name"
-                  name="firstName"
-                  required
-                  fullWidth
-                  id="firstName"
-                  label="First Name"
-                  autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
-                />
-              </Grid>
+              
               <Grid item xs={12}>
                 <TextField
                   required
@@ -117,9 +117,13 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
-                  Already have an account? Sign in
+                <NavLink to="/auth/sign_up">
+
+                
+                <Link variant="body2">
+                  Do not have an account? Sign Up
                 </Link>
+                </NavLink>
               </Grid>
             </Grid>
           </Box>
@@ -128,4 +132,7 @@ export default function SignUp() {
       </Container>
     </ThemeProvider>
   );
+}else{
+  navigation("/home")
+}
 }

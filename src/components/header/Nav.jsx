@@ -1,15 +1,23 @@
 import React from 'react'
 import {Menu, Close} from '@mui/icons-material/';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { toggleMenuClose, toggleMenuOpen } from '../../redux/model/nav';
+import { userLog } from '../../redux/auth/user_authentication';
 
 const Nav = () => {
   const activeLink = "active"
   const normalLink = ""
   const dispatch = useDispatch()
+  const navigation = useNavigate()
+
   // const {isOpen} = useSelector((state) => state.menu)
   const {navOpen} = useSelector(state => state.nav_toggle)
+  const handleLogout = () => {
+    localStorage.setItem("edge_auth", null)
+    dispatch(userLog())
+    navigation('/auth/login')
+  }
   return (
     <nav>
       <div className='nav'>
@@ -37,7 +45,7 @@ const Nav = () => {
           <div className='log-in flex-justify'>
             <div className='flex-justify'>
             {/* <NavLink to={"/investments"}>log out</NavLink> */}
-            <NavLink to={"/"} >log out</NavLink>
+            <a onClick={handleLogout} >log out</a>
 
             </div>
 

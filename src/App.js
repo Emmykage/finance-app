@@ -11,7 +11,6 @@ import MainLayout from './layouts/mainLayout';
 import Nobanner from './layouts/Nobanner';
 import OfferLayout from './layouts/offeringLayout';
 import VisitorLayout from './layouts/VisitoLayout';
-import SignUp from './pages/SingUp';
 import Account from './pages/users/Account';
 import Home from './pages/users/Home';
 import VHome from './pages/visitor/Home';
@@ -32,6 +31,8 @@ import Important from './components/activities/Important';
 import Activities from './pages/users/Activities';
 import AdminLayout from './layouts/AdminLayout'; 
 import AHome from './pages/Admin/AdminHome';
+import Login from './pages/authentication/login';
+import Signup from './pages/authentication/SingUp';
 
 // import Nav from './components/header/Nav';
 
@@ -42,7 +43,7 @@ function App() {
         <Route path={'/chart'} element={<PercentageChat/>}></Route>
         <Route path='/home' element={<MainLayout><Home/></MainLayout> }></Route>
         <Route path='/offerings' element={<OfferLayout><Offerings/></OfferLayout>} />
-        <Route path="signup" element={<SignUp/>}/>
+        {/* <Route path="signup" element={<SignUp/>}/> */}
         <Route path="activities" element={<Activities/>}>
           <Route path='' element={<Messages/>} />
           <Route path='investment_updates' element={<InvestmentUpdates/>} />
@@ -66,6 +67,11 @@ function App() {
         <Route path='admin'>
           <Route path='dashboard' element={<AdminLayout><AHome /></AdminLayout>} />
           
+        </Route>
+        <Route path='auth'>
+          <Route path='sign_up' element={<Signup/>}/>
+          <Route path='login' element={<Login/>}/>
+
         </Route>
       </Routes>
 

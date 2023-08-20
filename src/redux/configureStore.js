@@ -1,11 +1,12 @@
 import { applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import menuSlice from './menu'
+// import menuSlice from './menu'
 import navSlice from "./model/nav"
+import userSlice from "./auth/user_authentication"
 import logger from "redux-logger";
 import { configureStore } from "@reduxjs/toolkit";
 const rootReducer = combineReducers({
-    // menu: menuSlice,
+    user: userSlice,
     nav_toggle: navSlice
 })
 const store = configureStore({reducer: rootReducer}, applyMiddleware(thunk, logger))

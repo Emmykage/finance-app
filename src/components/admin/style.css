@@ -43,7 +43,7 @@
     background: var(--color-background);
     user-select: none;
     overflow-x: hidden;
-    color: var(--color-dark);
+    /* color: var(--color-dark); */
   }
   .admin.container{
     display: grid;
