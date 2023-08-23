@@ -1,14 +1,13 @@
 :root {
     /* --color-theme: rgba(92, 64, 101); */
   
-    /* --color-primary: #7380ec; */
+    --color-primary: #7380ec;
     --color-danger: #ff7782;
     --color-success: #41f1b6;
     --color-warning: #fb5;
     --color-orange: #ff4500;
     --color-theme: rgba(255, 69, 0, 1);
     --color-theme-variant: rgb(20, 56, 80);
-    --color-primary: #081d2b;
     --color-white: #fff;
     --color-info-dark: #7d8da1;
     --color-info-light: #dce1eb;
@@ -43,13 +42,14 @@
     background: var(--color-background);
     user-select: none;
     overflow-x: hidden;
-    /* color: var(--color-dark); */
   }
   .admin.container{
     display: grid;
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
+    color: var(--color-dark);
+
     /* background-color: blue; */
     grid-template-columns: 14rem auto 23rem ;
   }
@@ -153,6 +153,8 @@ display: none;
   }
   aside .side-bar a.active{
     background: var(--color-light);
+    color: var(--color-primary);
+    /* background: #7380ec; */
   }
   aside .side-bar a span{
     font-size: 1.6rem;
@@ -167,7 +169,7 @@ display: none;
     content: "";
     width: 6px;
     height: 100%;
-    background-color: var(--color-primary);
+    background: var(--color-primary);
 
   }
   aside .side-bar a.active span{
@@ -180,7 +182,7 @@ display: none;
   aside .side-bar a:hover span{
     margin-left: 1rem;
   }
-  .message-count{
+  aside .side-bar .message-count{
     background-color: var(--color-danger);
     color: var(--color-white);
     padding: 2px 10px;
@@ -224,6 +226,9 @@ padding: 0.5rem 1.6rem;
     color: var(--color-white) ;
     font-size: 2rem;
   }
+  main .insights > div.sales span{
+    background-color: coral;
+  }
   main .insights > div.expenses span{
     background: var(--color-danger);
   }
@@ -261,12 +266,12 @@ padding: 0.5rem 1.6rem;
     stroke-dashoffset: 92;
 
   }
-  main .insights .sales .progress svg circle{
+  /* main .insights .sales .progress svg circle{
     stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-  }
+    stroke-dasharray: 260;
+  } */
   main .insights .sales .progress svg circle{
-    stroke-dashoffset: 20;
+    stroke-dashoffset: 30;
     stroke-dasharray: 80;
   }
   main .insights .income .progress svg circle{
@@ -331,7 +336,6 @@ align-items: center;
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
-    background: grey;
   }
   .right .top .theme-toggler{
     background: var(--color-light);
@@ -447,6 +451,39 @@ align-items: center;
   }
   .right .sales-analytics .add-product div h3{
     font-weight: 600;
+  }
+  .asset {
+    padding: 4rem 0 0;
+    color: var(--color-dark);
+  }
+  .asset form{
+    margin: auto;
+    /* background-color: #ff4500; */
+    max-width: 1400px;
+
+  }
+  .asset form div{
+    width: 100%;
+    margin-top: 1rem;
+
+  }
+  .asset form input, .asset form select{
+    width: 100%;
+    padding: 1.2rem 0.6rem;
+    outline: #363949;
+    border: 1px solid #363949;
+    border-radius: 1rem;
+
+  }
+  .asset form option{
+    width: 100%;
+    padding: 1.2rem 0.6rem;
+  }
+  .asset form button {
+
+    margin-top: 0.8rem;
+    width: 100%;
+
   }
   @media screen and (max-width: 1200px){
     .admin.container{

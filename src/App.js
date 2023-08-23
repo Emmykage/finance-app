@@ -33,6 +33,8 @@ import AdminLayout from './layouts/AdminLayout';
 import AHome from './pages/Admin/AdminHome';
 import Login from './pages/authentication/login';
 import Signup from './pages/authentication/SingUp';
+import AddAsset from './pages/Admin/assets/AddAsset';
+import ClientsPage from './pages/Admin/clients/ClientsPage';
 
 // import Nav from './components/header/Nav';
 
@@ -66,7 +68,9 @@ function App() {
 
         <Route path='admin'>
           <Route path='dashboard' element={<AdminLayout><AHome /></AdminLayout>} />
-          
+          <Route path='add_asset' element={<AdminLayout><AddAsset/></AdminLayout>} />
+          <Route path='clients' element={<AdminLayout><ClientsPage/></AdminLayout>} />
+
         </Route>
         <Route path='auth'>
           <Route path='sign_up' element={<Signup/>}/>

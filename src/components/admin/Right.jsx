@@ -4,6 +4,7 @@ import {BsFillMoonFill} from "react-icons/bs"
 import {TfiShine} from "react-icons/tfi"
 import {AiOutlineShoppingCart} from "react-icons/ai"
 import {AiOutlinePlus} from "react-icons/ai"
+import { NavLink } from 'react-router-dom'
 const Right = () => {
   return (
     <div className='right'>
@@ -95,7 +96,7 @@ const Right = () => {
                         <AiOutlinePlus/>
 
                     </span>
-                    <h3>Add Product</h3>
+                    <NavLink to={'/admin/add_asset'}><h3>Add Product</h3></NavLink>
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@ const AHome = () => {
                             <h3>Total Sale</h3>
                             <h1>$25,000</h1>
                         </div>
-                        <div className="progress">
+                        <div  className="progress">
                             <svg>
                                 <circle cx={'38'} cy={38} r={36}>
 
@@ -34,7 +34,7 @@ const AHome = () => {
                 </div>
                 {/* <!--------- sales end ---> */}
                 <div className="expenses">
-                    <span><AutoGraphOutlinedIcon/></span><AutoGraphOutlinedIcon/>
+                    <span><AutoGraphOutlinedIcon/></span>
                     <div className="middle">
                         <div className="left">
                             <h3>Total Expense</h3>
@@ -58,7 +58,7 @@ const AHome = () => {
                 </div>
                 {/* <!--------- sales end ---> */}
                 <div className="income">
-                    <span><AutoGraphOutlinedIcon/></span><AutoGraphOutlinedIcon/>
+                    <span><AutoGraphOutlinedIcon/></span>
                     <div className="middle">
                         <div className="left">
                             <h3>Total Sale</h3>
