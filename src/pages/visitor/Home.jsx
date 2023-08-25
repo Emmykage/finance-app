@@ -41,7 +41,7 @@ Some opportunities are only visible to logged-in members.
                 <div>
                     <h3>Supply Chain Financing I.Z</h3>
                     <p>
-this offering recently closed
+                      this offering recently closed
                     </p>
                     <p>Metrics are expected in 88 days.</p>
                     

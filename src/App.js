@@ -35,6 +35,10 @@ import Login from './pages/authentication/login';
 import Signup from './pages/authentication/SingUp';
 import AddAsset from './pages/Admin/assets/AddAsset';
 import ClientsPage from './pages/Admin/clients/ClientsPage';
+import Clients from './pages/Admin/clients/Clients';
+import ConfirmAccount from './pages/authentication/confirm_account';
+import GetStarted from './pages/GetStarted';
+import AssetDetails from './pages/visitor/AssetDetails';
 
 // import Nav from './components/header/Nav';
 
@@ -65,16 +69,20 @@ function App() {
         <Route path="/how-it-works" element={<WorkLayout><HowItWorks/></WorkLayout>}/>
         <Route path="/performance" element={<GuestLayOut><Performance /> </GuestLayOut>}/>
         <Route path="/about" element={<GuestLayOut><About /></GuestLayOut>} />
-
+        <Route path='/asset-details' element={<VisitorLayout><AssetDetails/></VisitorLayout>}/>
         <Route path='admin'>
           <Route path='dashboard' element={<AdminLayout><AHome /></AdminLayout>} />
           <Route path='add_asset' element={<AdminLayout><AddAsset/></AdminLayout>} />
-          <Route path='clients' element={<AdminLayout><ClientsPage/></AdminLayout>} />
+          <Route path='client/:id' element={<AdminLayout><ClientsPage/></AdminLayout>} />
+          <Route path='clients' element={<AdminLayout><Clients/></AdminLayout>}/>
 
         </Route>
+        <Route path='/get_started' element={<GetStarted />} />
+
         <Route path='auth'>
           <Route path='sign_up' element={<Signup/>}/>
           <Route path='login' element={<Login/>}/>
+          <Route path='confirmation' element={<ConfirmAccount/>}/>
 
         </Route>
       </Routes>

@@ -1,7 +1,10 @@
 import React from 'react'
 import "./client.css"
+import { useParams } from 'react-router-dom'
 
 const ClientsPage = () => {
+const {id} = useParams()
+
   return (
     <div className='profile'>
         
@@ -32,10 +35,13 @@ const ClientsPage = () => {
         <hr />
         <div className='asset-details'>
             <div className='asset-infos'>
+                <a href=""></a>
+               
                 <div className='asset-info flex-space'>
                     <span>Crypto</span>
                     <span>$10,000</span>
                 </div>
+                
                 <div className='asset-info flex-space'>
                     <span>Real Estate</span>
                     <span>$20,000</span>

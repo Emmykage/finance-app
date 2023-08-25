@@ -80,6 +80,32 @@ body {
 .grid-display{
   display: grid;
 }
+.grid-display-3{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ====================asset details ======================= */
+
+.asset-details{
+  /* padding: 3rem; */
+}
+.asset-details  .detail-list p{
+  padding: 0.3rem 0.2rem;
+  font-weight: 500;
+}
+
+.overview ul li{
+  padding-left: 2rem;
+  list-style: disc;
+}
+.asset-details .overview p{
+  padding: 0.2rem 1rem;
+  line-height: 1.8rem;
+  margin: 0.8rem 0;
+}
+.asset-details .overview .overview-info{
+  
+}
 /* ======================About========================== */
 .about .reveals{
   padding: 96px 115px;
@@ -172,7 +198,21 @@ h5 {
 .p-tx5 {
   padding-top: 4rem;
 }
-
+.p-1{
+  padding: 1rem;
+}
+.p-2{
+  padding: 2rem;
+}
+.p-3{
+  padding: 3rem;
+}
+.basis-50{
+  flex-basis: 50%;
+}
+.b-radius-2{
+  border-radius: var(--border-radius-2);
+}
 .btn {
   width: fit-content;
   min-width: 180px;
@@ -202,6 +242,10 @@ h5 {
 .border-black {
   border: 1px solid black;
 }
+.border-light {
+  border: 1px solid rgb(216, 220, 226);
+}
+
 
 .flex-grid {
   flex: 1;
@@ -410,6 +454,10 @@ nav .menu {
 
 .wallet-container {
   margin-bottom: 23px;
+}
+
+.text-gray{
+  color: var(--color-info-dark)
 }
 
 /* =======================ACCOUNT================= */
@@ -843,6 +891,14 @@ footer {
   column-gap: 2%;
   height: max-content;
 }
+.offer-cards span.type{
+
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: rgb(177, 180, 185) !important;
+}
 
 .card {
   background: var(--color-white);
@@ -1027,6 +1083,7 @@ footer {
 
 hr {
   color: #181a1e;
+  border: 1px solid var(--color-info-dark);
 }
 
 .platform-performance {
@@ -1066,6 +1123,37 @@ hr {
 }
 .chart{
   /* height: 70px; */
+}
+.get-started{
+
+  color: var(--color-dark);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.get-started .proceed{
+  max-width: 500px ;
+  border-radius: var(--border-radius-3);
+  border: 1px solid black;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  width: 100%;
+  display: inline-block; 
+
+
+}
+.get-started .proceed:hover{
+  box-shadow: none;
+}
+
+.get-started .proceed h3{
+  font-size: 2rem;
+}
+.text-dark{
+  /* color: var(--color-backgroun); */
+  /* color: black; */
+  color: var(--color-dark);
 }
 @media screen and (max-width: 768px) {
   .m-4{
@@ -1177,7 +1265,9 @@ hr {
   .row {
     flex-direction: row;
   }
-
+.grid-display{
+  grid-template-columns: auto;
+}
   footer {
     width: 100%;
   }
