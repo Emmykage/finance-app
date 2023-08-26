@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/header/Header'
-import OfferingHeader from '../components/header/OfferingHeader'
+import OfferingHeader from '../components/guest/header/PerformanceHeader'
 import Footer from '../footer/Footer'
 
 const OfferLayout = ({children}) => {

@@ -1,6 +1,7 @@
 header {
   background: linear-gradient(black, var(--header-bg));
   min-height: 380px;
+  padding-top: 0.4rem;
 }
 
 .nav {

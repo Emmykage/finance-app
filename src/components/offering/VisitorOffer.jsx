@@ -5,14 +5,14 @@ import { useNavigate } from 'react-router-dom'
 function VisitorOffer() {
     const navigation = useNavigate()
     const getStarted = () => {
-        navigation('/get_started')
+        navigation('/asset-details')
     }
   return (
     <div>
         <div className='offer-cards'>
             {offers.map((offer) =>(
                 <div className='card black'>
-                    <a href='#'  onClick={getStarted}>
+                    <span  onClick={getStarted}>
 
                   
                     <div className='card-img offer-card-div'>
@@ -43,7 +43,7 @@ function VisitorOffer() {
                     </ul>
                     {/* <a className='btn'>Unlock recommendations</a> */}
                 </div>
-                </a>
+                </span>
             </div>
             ))}
             

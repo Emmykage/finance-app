@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/header/Header'
 import Footer from '../footer/Footer'
 
-const MainLayout = ({children}) => {
+const ClientLayout = ({children}) => {
   return (
     <div className='main-container'>
         <Header/>
@@ -16,4 +16,4 @@ const MainLayout = ({children}) => {
   )
 }
 
-export default MainLayout
+export default ClientLayout

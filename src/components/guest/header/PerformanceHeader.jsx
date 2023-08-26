@@ -1,10 +1,9 @@
 import React from 'react'
-import Nav from './Nav'
 
-const OfferingHeader = () => {
+const PerformaceHeader = () => {
   return (
     <header>
-        <Nav />
+    
         <div className='offeringBanner-outer-container'>
         <div className='offeringBanner-inner-container inner-container'>
 
@@ -12,7 +11,7 @@ const OfferingHeader = () => {
     <div className='offeringBanner'>
       <div className="content-holder">
       
-        <h1 className=''>
+        <h1 className='prioty'>
           Investment offerings
         </h1>
         <p>
@@ -64,4 +63,4 @@ const OfferingHeader = () => {
   )
 }
 
-export default OfferingHeader
+export default PerformaceHeader

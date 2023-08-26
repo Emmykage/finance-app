@@ -4,12 +4,16 @@ import {LockOutlined} from '@mui/icons-material/';
 import OFFER from '../../assets/image/advice-chart.svg'
 import { useDispatch } from 'react-redux';
 import { toggleMenuClose } from '../../redux/model/nav';
+import VisitorHeader from '../../components/guest/header/VisitorHeader';
 const VHome = () => {
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(toggleMenuClose())
   },[])
   return (
+    <>
+     <VisitorHeader/>
+
     <div className='content-container'>
       <VisitorOffer/>
       <div className='lock center flex-justify-space'>
@@ -23,7 +27,7 @@ const VHome = () => {
 Some opportunities are only visible to logged-in members.
           </p>
         </div>
-        <div>
+        <div className='reg-div'>
           <a className='btn'>
             Sign up now
           </a>
@@ -109,6 +113,7 @@ this offering recently closed
         </div>
       </div>
     </div>
+    </>
   )
 }
 

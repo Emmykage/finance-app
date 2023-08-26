@@ -3,10 +3,10 @@ import './header.css'
 import Nav from './Nav'
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
-const Header = () => {
+const Header = ({first_name}) => {
+  console.log(first_name)
   return (
 <header>
-  <Nav />
   <div className='heroBanner-outer-container flex-justify-space'>
     <div className='heroBanner-inner-container flex-justify-space gap-2'>
 
@@ -15,7 +15,7 @@ const Header = () => {
       <div className="content-holder">
         <div  className='user-name'>
         <h1>
-          Yankee
+         {first_name}
         </h1>
         </div>
         

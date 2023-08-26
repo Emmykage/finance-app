@@ -62,7 +62,7 @@ const ExploreInvestment = () => {
 
                 </p>
                 </div>
-                <div className='button-div'> 
+                <div className='button-div flex'> 
                 <a className='btn flex-grid'>
                     Browse investments
                 </a>
@@ -167,7 +167,7 @@ Investments typically pay regular income, growth at maturity, or a combination o
                         <h1>"</h1>
 
                     </div>
-                    <div className='top flex-grid'>
+                    <div className='r-top flex-grid'>
                         <p>The ease of use of the platform, and the complete transparency are top features to me </p>
                         <div className='bottom'>
                     <h3>

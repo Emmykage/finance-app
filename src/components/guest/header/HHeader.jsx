@@ -1,11 +1,10 @@
 import React from 'react'
-import VNav from './VNav'
-import investmentPhoto from '../../assets/image/investment-photos/how-it-works.jpg'
+import investmentPhoto from '../../../assets/image/investment-photos/how-it-works.jpg'
 
 const HHeader = () => {
   return (
     <header>
-        <VNav/>
+      
         <div className='offeringBanner-outer-container'>
           <div className='offeringBanner-inner-container howitworks inner-container'>
 

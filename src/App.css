@@ -93,7 +93,24 @@ body {
   padding: 0.3rem 0.2rem;
   font-weight: 500;
 }
+.asset-details .detail-foots{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 
+}
+.asset-details .detail-foots span{
+  padding: 0.4rem 0.8rem;
+  margin: 1rem;
+  border-radius: var(--border-radius-1);
+  cursor: pointer;
+  white-space: nowrap;
+  
+
+}
+.asset-details .detail-foots span:hover{
+  box-shadow: 0 0 2px rgb(193, 192, 192);
+}
 .overview ul li{
   padding-left: 2rem;
   list-style: disc;
@@ -104,7 +121,10 @@ body {
   margin: 0.8rem 0;
 }
 .asset-details .overview .overview-info{
-  
+
+}
+.asset-details .overview .overview-info .overview-img{
+  height: 300px;
 }
 /* ======================About========================== */
 .about .reveals{
@@ -136,6 +156,7 @@ body {
 
 
 } 
+
 
 .container-fit {
   max-width: 1250px;
@@ -193,6 +214,9 @@ h5 {
 
 .mx-4 {
   margin: auto 2rem;
+}
+.my-4 {
+  margin: 2rem auto;
 }
 
 .p-tx5 {
@@ -567,6 +591,24 @@ nav .menu {
   font-size: 16px;
   line-height: 22px;
 }
+.prop-width{
+  width: 80%;
+  /* background-color: red; */
+}
+.invest-prop{
+  padding: 1.4rem;
+  background: rgba(0, 0, 0, 0.3);;
+
+}
+.invest-prop h4{
+  text-align: center;
+  font-size: 1.3rem;
+  /* background-color: green; */
+}
+.prop-width .btn{
+  width: 100%;
+  display: block;
+}
 
 .investment-left-banner {
   flex: 1;
@@ -575,6 +617,7 @@ nav .menu {
 
 .investment-right-banner {
   flex: 1;
+
 }
 
 .investment-cards {
@@ -687,6 +730,7 @@ nav .menu {
   font-size: 14px;
   color: white;
   max-width: 180px;
+  /* display: block; */
 }
 
 .howitwork-content .btn.rec {
@@ -801,17 +845,20 @@ nav .menu {
 }
 .footbanner .btn-div, .btn-div{
   margin: 12px auto;
+
 }
 
 .footbanner .btn {
   background-color: rgb(171, 247, 228);
   color: rgb(16, 92, 78);
+  /* display: block; */
 }
 
 .howitwork-content .footbanner .creed {
   max-width: 450px;
   margin: auto;
   text-align: center;
+  /* background-color: red; */
 }
 
 .offer-cards ul {
@@ -989,6 +1036,7 @@ footer {
 .lock {
   background: white;
   padding: 12px 20px;
+  margin: 2px 0 ;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 }
 
@@ -1011,6 +1059,10 @@ footer {
   flex: auto;
   color: var(--color-dark);
   font-weight: 600;
+}
+
+.lock .reg-div .btn{
+  display:  block;
 }
 
 .prev-offer {
@@ -1155,6 +1207,7 @@ hr {
   /* color: black; */
   color: var(--color-dark);
 }
+
 @media screen and (max-width: 768px) {
   .m-4{
     margin: 2px;
@@ -1169,16 +1222,35 @@ hr {
   .investment h1 {
     font-size: 30px;
   }
+  .investment-right-banner{
+    width: 100%;
+  }
+  .howitwork-content .btn{
+   margin-right: 10px;
+   white-space: nowrap;
+   padding: 13px 13px ;
+   
 
+  }
+  .invest .btn{
+    display: inline-block;
+    margin: 0.6rem 0;
+  }
   .investment-left-banner .btn {
     display: block;
     width: 100%;
+
   }
 
   .investment-cards {
-    padding: 10px;
+    padding: 2rem 10px;
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .prop-width{
+    width: 100%;
+    /* background-color: red; */
   }
 
   .investment-card {
@@ -1196,6 +1268,11 @@ hr {
 
   body {
     font-size: 1rem;
+  }
+
+  .asset-details .overview .overview-info{
+    flex-direction: column;
+
   }
 
   .flex-justify-space,  .flex-justify-center {
@@ -1359,6 +1436,11 @@ hr {
   footer a{
     font-size: 0.8rem;
     font-weight: 400;
+  }
+  .footbanner .creed .btn{
+    display: block;
+    margin: auto;
+    padding: 8px;
   }
 }
 

@@ -456,10 +456,26 @@ align-items: center;
     padding: 4rem 0 0;
     color: var(--color-dark);
   }
+  .asset span{
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
   .asset form{
     margin: auto;
-    /* background-color: #ff4500; */
     max-width: 1400px;
+    height: 630px;
+    overflow: auto;
+    background-color: rgb(245, 241, 241);
+    transition: height 0.73s ease-in-out;
+
+
+  }
+  .asset form.hide-form{
+    transition: all 0.33s ease-in-out;
+    background-color: rgb(208, 208, 208);
+    height: 2px;
+    overflow: hidden;
+
 
   }
   .asset form div{

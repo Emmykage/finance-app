@@ -1,12 +1,17 @@
-import React from 'react'
-import VisitorHeader from '../components/header/VisitorHeader'
+import React, { useEffect } from 'react'
 import VNav from '../components/header/VNav'
 import Footer from '../footer/Footer'
 import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { userLog } from '../redux/auth/user_authentication'
 const GuestLayOut = ({children}) => {
+  const dispatch = useDispatch()
+
   const navigation = useNavigate()
   const {user} = useSelector(state => state.user)
+  useEffect(()=> {
+    dispatch(userLog())
+   },[])
   console.log(user)
   if(user){
     navigation("/home")

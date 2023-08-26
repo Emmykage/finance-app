@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { createAsset } from '../../../redux/actions/assets'
 
 const AddAsset = () => {
+  const [toggleForm, setToggleForm] = useState('false')
   const dispatch = useDispatch()
   const [assetForm, setAssetForm] = useState({asset_name: "", minimum_investment: "",  term: "", payment_schedule: ""})
   const  handleInput = (e) =>{
@@ -15,12 +16,13 @@ const AddAsset = () => {
   const handleSubmit = (e)=>{
     e.preventDefault()
     dispatch(createAsset(assetForm))
-    // console.log(assetForm)
+    
   }
+  console.log(toggleForm)
   return (
     <div className='asset'>
-      <h2>Add Asset</h2>
-      <form onSubmit= {handleSubmit}>
+      <span onClick={() => setToggleForm(!toggleForm)}>Add Asset</span>
+      <form onSubmit= {handleSubmit} className={toggleForm && "hide-form"}>
         <div>
           <label>Asset</label>
           <input type="text" id='asset_name' name="asset_name" value={assetForm.asset_name} onChange={handleInput} />
@@ -29,10 +31,7 @@ const AddAsset = () => {
           <label>Min. Investment</label>
           <input type="text" id='minimum_investment' name="minimum_investment" value={assetForm.minimum_investment} onChange={handleInput} />
         </div>
-        <div>
-          <label>Term</label>
-          <input type="text" name="term" id='term' value={assetForm.term} onChange={handleInput} />
-        </div>
+        
         
         <div>
           <label>payment_schedule</label>
@@ -50,8 +49,41 @@ const AddAsset = () => {
 
           </select>
         </div>
+        <h3>Details</h3>
+        <h4>Return & Management fees</h4>
+        <div> <labal>Annual MAnagement fee</labal>
+        <input type="number" name='management_fee' value={''} />
+        </div>
+        <div> <labal>Share in excess profit</labal>
+        <input type="number" name='management_fee' value={''} />
+        </div>
+      
+        <h4>Schedule</h4>
+        <div>
+          <label>Term</label>
+          <input type="text" name="term" id='term' value={assetForm.term} onChange={handleInput} />
+        </div>
+        <h4>Structure</h4>
+        <div>
+          <label>Annual flat expense</label>
+          <input type="number" name="flat_expense" id='term' value={assetForm.term} onChange={handleInput} />
+        </div>
+
+        <h3>Overview</h3>
+        <div>
+          <label>descriptione</label>
+          <textarea name="overview_description" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+          <label>over view note</label>
+          <textarea name="note" id="" cols="30" rows="10"></textarea>
+        </div>
+
+
         <button className='btn' type='submit'> create assets</button>
       </form>
+
+      <div><h2>add crypto</h2></div>
     </div>
   )
 }

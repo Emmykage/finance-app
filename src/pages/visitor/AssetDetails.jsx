@@ -1,13 +1,17 @@
 import React from 'react'
+import AssetHeader from '../../components/guest/header/AssetHeader'
 
 const AssetDetails = () => {
   return (
+    <>
+    <AssetHeader/>
+   
     <div className='asset-details text-dark'>
     <div className=' details p-3'>
         <h2>
             Details
         </h2>
-        <div className='grid-display gap-2 grid-display-3'>
+        <div className='grid-display gap-2 grid-display-3 my-4'>
             <div className='border-light p-1 b-radius-2'>
                 <h3>Returns & Management fees</h3>
                 <hr />
@@ -72,6 +76,16 @@ const AssetDetails = () => {
             </div>
             
         </div>
+        <div className='detail-foots'>
+            <span className='border-light'>Fund</span>
+            <span className='border-light'>Debt</span> 
+            <span className='border-light'>Equity</span> 
+            <span className='border-light'>Quarterly payment?</span>  
+            <span className='border-light'>Diversified</span>  
+            <span className='border-light'>Balanced</span>  
+            <span className='border-light'>IRA eligible</span>  
+           
+        </div>
     </div>
     <div className='overview p-3'>
     <div>
@@ -115,6 +129,9 @@ const AssetDetails = () => {
                 
             </div>
             <div className='basis-50 border'>
+                <div className='overview-img'>
+
+                </div>
                 <img src="#" alt="Real estate images" />
                 
             </div>
@@ -127,6 +144,7 @@ const AssetDetails = () => {
     </div>
 
     </div>
+    </>
   )
 }
 

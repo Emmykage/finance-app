@@ -1,10 +1,10 @@
 import React from 'react'
-import VNav from './VNav'
+import VNav from '../../header/VNav'
 
 const VisitorHeader = () => {
   return (
     <header>
-        <VNav />
+        
         <div className='offeringBanner-outer-container'>
           <div className='offeringBanner-inner-container inner-container'>
 
