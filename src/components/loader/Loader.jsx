@@ -3,7 +3,7 @@ import './loader.css'
 
 const Loader = () => (
   <div className="progress__container">
-    <div className="progress" />
+    <div className="load-progress" />
 
   </div>
 );

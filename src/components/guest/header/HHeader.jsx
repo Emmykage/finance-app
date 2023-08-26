@@ -29,7 +29,7 @@ const HHeader = () => {
           <div className='investment-right-banner howitworks border'>
          
             <img src={investmentPhoto} alt="" />
-            <div className='overlay'>hey</div>
+            <div className='overlay'></div>
           
 
           </div>

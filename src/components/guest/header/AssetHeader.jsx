@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const AssetHeader = () => {
   return (
@@ -33,7 +34,7 @@ const AssetHeader = () => {
                 </h4>
 
               </div>
-            <a className='btn'>Invest With Us</a>
+            <NavLink to={"/invest_asset"} className='btn'>Invest With Us</NavLink>
 
             </div>
 

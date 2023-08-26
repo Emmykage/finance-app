@@ -32,6 +32,7 @@ import GetStarted from './pages/GetStarted';
 import AssetDetails from './pages/visitor/AssetDetails';
 import UserLayout from './layouts/UserLayout';
 import Loader from './components/loader/Loader';
+import InvestAssetDetails from './pages/users/InvestAssetDetails';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
       <Routes>
         <Route path={'/chart'} element={<PercentageChat/>}></Route>
         <Route path='/home' element={<UserLayout><Home/></UserLayout> }></Route>
+        <Route path='invest_asset' element={<UserLayout><InvestAssetDetails/></UserLayout> }/>
         <Route path='/offerings' element={<UserLayout><Offerings/></UserLayout>} />
         <Route path="activities" element={<Activities/>}>
           <Route path='' element={<Messages/>} />

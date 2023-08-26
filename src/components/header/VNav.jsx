@@ -37,8 +37,11 @@ const VNav = () => {
           </ul>
           <div className='log-in flex-justify w'>
           <a className='mobile-only'>Help Center</a>
+          <div className='auth-div'>          
               <NavLink to={"/auth/sign_up"}>Sign Up</NavLink>
               <NavLink to={"/auth/login"}>login</NavLink>
+              
+          </div>
           </div>
         </div>
        

@@ -11,6 +11,7 @@
     --color-white: #fff;
     --color-info-dark: #7d8da1;
     --color-info-light: #dce1eb;
+    --color-light-grey: rgb(216, 220, 226)
     --color-dark: #363949;
     --color-light: rgba(132, 139, 200, 0.18);
     --color-primary-variant: #135092;
@@ -452,54 +453,73 @@ align-items: center;
   .right .sales-analytics .add-product div h3{
     font-weight: 600;
   }
-  .asset {
+  .asset-forms {
     padding: 4rem 0 0;
     color: var(--color-dark);
   }
-  .asset span{
+  .assets-forms span{
     font-size: 1.3rem;
     font-weight: 600;
+    border: 1px solid rgb(247, 247, 247);
+    width: 100%;
+    display: inline-block;
   }
-  .asset form{
+  .assets-forms form{
+    border-radius: var(--border-radius-2);
     margin: auto;
+    padding: 1rem;
     max-width: 1400px;
     height: 630px;
     overflow: auto;
-    background-color: rgb(245, 241, 241);
+    background-color: var(--color-background);
     transition: height 0.73s ease-in-out;
 
 
   }
-  .asset form.hide-form{
+  
+  .assets-forms form.hide-form{
     transition: all 0.33s ease-in-out;
     background-color: rgb(208, 208, 208);
     height: 2px;
     overflow: hidden;
+    padding: 0rem;
+    
 
 
   }
-  .asset form div{
+  .assets-forms form div{
     width: 100%;
     margin-top: 1rem;
 
   }
-  .asset form input, .asset form select{
+  .assets-forms form input, .assets-forms textarea, .assets-forms form select{
     width: 100%;
-    padding: 1.2rem 0.6rem;
+    padding: 0.82rem 0.6rem;
     outline: #363949;
     border: 1px solid #363949;
     border-radius: 1rem;
 
   }
-  .asset form option{
+  .assets-forms form select{
+    border-bottom-right-radius: 0 ;
+    border-bottom-left-radius: 0 ;
+  }
+  .assets-forms form option{
     width: 100%;
     padding: 1.2rem 0.6rem;
   }
-  .asset form button {
+  .assets-forms form button {
 
     margin-top: 0.8rem;
     width: 100%;
 
+  }
+  .assets-forms .asset-div{
+    margin: 1rem 0;
+    padding: 0.8rem 1rem;
+    border: 1px solid #d2e1f1;
+    border-radius: var(--border-radius-2);
+    
   }
   @media screen and (max-width: 1200px){
     .admin.container{
