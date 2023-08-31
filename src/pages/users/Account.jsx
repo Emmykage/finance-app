@@ -16,7 +16,7 @@ const Account = ({children}) => {
     <div className='container account-container'>
         <div>
             <div className='flex-justify'>
-                <h1>Accounts</h1>
+                
                 <AccountRoutes/>
             </div>
             

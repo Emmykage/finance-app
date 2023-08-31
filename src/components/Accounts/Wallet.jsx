@@ -3,7 +3,6 @@ import React from 'react'
 const Wallet = () => {
   return (
     <>
-    {/* <div>Wallet</div> */}
     <div className='wallet-container'>
     <div className='wallet flex-justify-space'>
             <div className='flex-2 border-left p-li'>

@@ -61,7 +61,7 @@ function App() {
           <Route path='investor_account' element={<Account><InvestorAccount/></Account>}/>
           <Route path='recurring_deposit' element={<Account><RecurringDeposit/></Account>}/>
           <Route path='' element={<Account><Wallet/></Account>}/>
-          <Route path='wallet' element={<Account><Wallet/></Account>}/>
+          {/* <Route path='wallet' element={<Account><Wallet/></Account>}/> */}
         </Route>
 
         <Route path='/' element={<GuestLayOut><VHome/></GuestLayOut>}/>

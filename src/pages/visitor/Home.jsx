@@ -5,11 +5,12 @@ import OFFER from '../../assets/image/advice-chart.svg'
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleMenuClose } from '../../redux/model/nav';
 import VisitorHeader from '../../components/guest/header/VisitorHeader';
+import { getAssets } from '../../redux/actions/assets';
 const VHome = () => {
   const {offers} = useSelector( state => state.assets)
-  // console.log(offers)
   const dispatch = useDispatch()
   useEffect(()=>{
+    dispatch(getAssets())
     dispatch(toggleMenuClose())
   },[])
   return (

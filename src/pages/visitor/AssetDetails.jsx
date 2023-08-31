@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import AssetHeader from '../../components/guest/header/AssetHeader'
 import { useDispatch, useSelector } from 'react-redux'
-import { getAssets } from '../../redux/assets/assets'
+// import { getAssets } from '../../redux/assets/assets'
 import { useParams } from 'react-router-dom'
+import { getAssets } from '../../redux/actions/assets'
 
 const AssetDetails = () => {
     const {id} = useParams()
@@ -30,12 +31,12 @@ const AssetDetails = () => {
                 <div className='detail-list' >
                     <p className='flex-space'>
                         <span>Ann'l management fee</span>
-                        <span>2%</span>
+                        <span>{asset.annual_mangt_fee}%</span>
 
                     </p>
                     <p className='flex-space'>
                         <span>Ann'l management fee</span>
-                        <span>2%</span>
+                        <span>{asset.annual_mangt_fee}%</span>
                         
                     </p>
                     <p className='flex-space'>
@@ -119,21 +120,21 @@ const AssetDetails = () => {
                         {asset.overview_note}
                     </p>
                 </li>
-                    <li><p>
-                        <strong> Proven business plan:</strong> Since the Sponsor acquired the property in March 2022, it has achieved a 13% organic increase in effective rent — prior to the completion of any unit renovations. Rents are expected to continue to increase as unit renovations commence.</p>
+                    <li>
+                        <p><strong>  Proven business plan:</strong> Since the Sponsor acquired the property in March 2022, it has achieved a 13% organic increase in effective rent — prior to the completion of any unit renovations. Rents are expected to continue to increase as unit renovations commence.</p>
                     </li>
                     <li>
-                        <p>
+                        {/* <p>
                        <strong>Stabilized property: </strong>
                        The property is 94% occupied and generating stable cash flows from rent income.
 
-                        </p>
+                        </p> */}
                     </li>
                     <li>
-                        <p>
+                        {/* <p>
                             <strong>Interest rate protection:</strong> The property is financed with a fixed rate loan at 3.35% through March 2025. Market rates today are approximately double, so this low cost of capital continues to enhance the investment in the current interest rate environment.
 
-                        </p>
+                        </p> */}
 
                     </li>
                     <p>More than 16 months since acquisition, consider investing in this seasoned offering with your retirement account.</p>
