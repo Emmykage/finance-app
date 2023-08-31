@@ -57,7 +57,7 @@ export default function SignUp() {
   };
   if (user == null || user == undefined){
 
- 
+ console.log(loading)
 
   return (
     <ThemeProvider theme={theme}>
@@ -107,6 +107,9 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
+            {loading && <span>loading...</span>}
+            {error && <span>{message}</span>}
+
             <Button
               type="submit"
               fullWidth

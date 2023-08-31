@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { createAsset } from '../../../redux/actions/assets'
+// import { createAsset } from '../../../redux/actions/assets'
 
 const AddAsset = () => {
   const [toggleForm, setToggleForm] = useState('false')
   const dispatch = useDispatch()
-  const [assetForm, setAssetForm] = useState({asset_name: "", minimum_investment: "",  term: "", payment_schedule: ""})
-  const [formData, setFormData] = useState({
-    title: ""
-  })
+  const [assetForm, setAssetForm] = useState({ asset_name: "", minimum_investment: null, term: "", asset_type: "other", title: "", description: "", share_in_excess: "",annual_mangt_fee: "", annual_flat_expense: "", overview_description: "", overview_note: ""})
+
+  // const [formData, setFormData] = useState({})
   const  handleInput = (e) =>{
     setAssetForm({
       
@@ -18,10 +18,11 @@ const AddAsset = () => {
   }
   const handleSubmit = (e)=>{
     e.preventDefault()
+    console.log(assetForm)
     dispatch(createAsset(assetForm))
     
   }
-  console.log(toggleForm)
+  // console.log(toggleForm)
   return (
     <div className='assets-forms'>
       <div className='asset-div border'>
@@ -32,16 +33,18 @@ const AddAsset = () => {
       <div >
           <label>Asset Type</label>
           <select
+          name='asset_type'
           onChange={handleInput}>
-            <option value={'Art'}>Art</option>
+            <option value="other"> other</option>
+            <option value={'art'}>Art</option>
             <option value={'Real Estate'}>Real Estate</option>
-            <option value={'Venture Capital'}>Venture Capital</option>
-            <option value={'Private Equity'}>Private Equity</option>
-            <option value={'Private Credit Estate'}>Private Credit Estate</option>
-            <option value={'Crypto'}>Crypto</option>
-            <option value={'Short Term Note'}>Short Term Note</option>
-            <option value={'Diversified Funds'}>Diversified Funds</option>
-            <option value={'Transportation'}>Transportation</option>
+            <option value={'venture_capital'}>Venture Capital</option>
+            <option value={'private equity'}>Private Equity</option>
+            <option value={'private_credit'}>Private Credit Estate</option>
+            <option value={'crypto'}>Crypto</option>
+            <option value={'short_term_note'}>Short Term Note</option>
+            <option value={'legal'}>Legal</option>
+            <option value={'transportation'}>Transportation</option>
           </select>
 
         </div>
@@ -72,12 +75,18 @@ const AddAsset = () => {
           </select>
         </div>
         <h3>Details</h3>
+        <div> <labal>Title</labal>
+        <input type="text" name='title' value={assetForm.title} onChange={handleInput}/>
+        </div>
+        <div> <labal>Description</labal>
+        <input type="text" name='description' value={assetForm.description} onChange={handleInput}/>
+        </div>
         <h4>Return & Management fees</h4>
         <div> <labal>Annual Management fee</labal>
-        <input type="number" name='management_fee' value={''} />
+        <input type="number" name='annual_mangt_fee' value={assetForm.annual_mangt_fee} onChange={handleInput}/>
         </div>
         <div> <labal>Share In Excess Profit</labal>
-        <input type="number" name='management_fee' value={''} />
+        <input type="number" name='share_in_excess' value={assetForm.share_in_excess} onChange={handleInput}/>
         </div>
       
         <h4>Schedule</h4>
@@ -88,17 +97,17 @@ const AddAsset = () => {
         <h4>Structure</h4>
         <div>
           <label>Annual Flat Expense</label>
-          <input type="number" name="flat_expense" id='term' value={assetForm.term} onChange={handleInput} />
+          <input type="number" name="annual_flat_expense" id='term' value={assetForm.annual_flat_expense} onChange={handleInput} />
         </div>
 
         <h3>Overview</h3>
         <div>
           <label>Description</label>
-          <textarea name="overview_description" id="" cols="30" rows="10"></textarea>
+          <textarea onChange={handleInput} name="overview_description" id="" cols="30" rows="10" value={assetForm.overview_description}></textarea>
         </div>
         <div>
           <label>Overview note</label>
-          <textarea name="note" id="" cols="30" rows="10"></textarea>
+          <textarea onChange={handleInput} name="overview_note" id="" cols="30" rows="10" value={assetForm.overview_note}></textarea>
         </div>
 
 

@@ -72,7 +72,8 @@ const userSlice = createSlice({
 
               ...state,
               logged: true,
-              user: response
+              user: response,
+              loading: false
                 }
 
             }

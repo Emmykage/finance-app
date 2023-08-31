@@ -1,6 +1,7 @@
 import React from 'react'
 import "./client.css"
 import { useParams } from 'react-router-dom'
+import default_photo from '../../../assets/user/no-profile-picture-icon-14.jpg'
 
 const ClientsPage = () => {
 const {id} = useParams();
@@ -11,7 +12,7 @@ const {id} = useParams();
     <div className='profile'>
         
         <div className='profile-top'>
-            <img src="" alt="profile pic" />
+            <img src={default_photo} alt="profile pic" />
         </div>
         <div className='profile-detail'>
             <ul className=''>
@@ -36,6 +37,15 @@ const {id} = useParams();
         </div>
         <hr />
         <div className='asset-details'>
+            <p>
+                <span>
+                total inestment 0  
+                </span>
+                <span>
+                value: 200000
+                </span>
+            </p>
+          
             <div className='asset-infos'>
                 <a href=""></a>
                
@@ -48,26 +58,17 @@ const {id} = useParams();
                     <span>Real Estate</span>
                     <span>$20,000</span>
                 </div>
-                <div>
-
-                </div>
-            </div>
-            <div>
-               
-                <div>
-
-                </div>
-            </div>
-            <div>
                 <div className='asset-info flex-space'>
-                    <span>Crypto</span>
+                <span>Crypto</span>
                     <span>$10,000</span>
-                </div>
-                <div>
 
                 </div>
             </div>
-
+                <hr />
+            
+                <span>
+                    Edit
+                </span>
         </div>
         
     </div>
