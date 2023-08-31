@@ -1,18 +1,18 @@
 import React from 'react'
-// import OFFER from "../../assets/image/advice-chart.svg"
-import offers from '../../mock/Offers'
 import { useNavigate } from 'react-router-dom'
-function VisitorOffer() {
+function VisitorOffer({assets}) {
     const navigation = useNavigate()
-    const getStarted = () => {
-        navigation('/asset-details')
+    const getStarted = (id) => {
+        navigation(`/asset-details/${id}`)
     }
   return (
     <div>
         <div className='offer-cards'>
-            {offers.map((offer) =>(
-                <div className='card black'>
-                    <span  onClick={getStarted}>
+            {assets.map((offer) =>(
+                <>
+              
+                <div className='card black' key={offer.id}>
+                    <span onClick={()=> getStarted(offer.id)}>
 
                   
                     <div className='card-img offer-card-div'>
@@ -25,15 +25,12 @@ function VisitorOffer() {
                             </div>
 
                         </div>
-                    {/* <img src={OFFER}/> */}
+                  
                 </div>
                 <div>
-                    <span className='text-gray type'>REAL ESTATE</span>
-                    <h3>Access tailored private market recommendations</h3>
-                    <p>
-                    Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
-
-                    </p>
+                    <span className='text-gray type'>{offer.asset_type}</span>
+                    <h3>{offer.title}</h3>
+                    <p>{offer.description} </p>
                     <ul>
                         <li><span>Min. investment</span><span>${offer.minimum_investment}K</span></li>
                         <li><span>Term</span><span>{offer.term} Months</span></li>
@@ -45,6 +42,7 @@ function VisitorOffer() {
                 </div>
                 </span>
             </div>
+            </>
             ))}
             
             </div>

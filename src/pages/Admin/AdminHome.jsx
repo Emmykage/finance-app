@@ -2,7 +2,7 @@ import React from 'react'
 import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined';
 const AHome = () => {
   return (
-    <main>
+    <>
         <div>
             <h1>Dashboard</h1>
             <div className="date">
@@ -140,7 +140,7 @@ const AHome = () => {
             </div>
         </div>
 
-    </main>
+    </>
   )
 }
 

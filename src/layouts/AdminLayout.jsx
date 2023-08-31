@@ -8,7 +8,10 @@ const AdminLayout = ({children}) => {
   return (
     <div className='admin container'>
       <Aside/>
+      <main>
       {children}
+      </main>
+     
       <Right/>
 
 

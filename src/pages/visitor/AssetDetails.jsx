@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AssetHeader from '../../components/guest/header/AssetHeader'
+import { useDispatch, useSelector } from 'react-redux'
+import { getAssets } from '../../redux/assets/assets'
+import { useParams } from 'react-router-dom'
 
 const AssetDetails = () => {
+    const {id} = useParams()
+    const dispatch = useDispatch()
+    const {offers} = useSelector(state => state.assets)
+    useEffect(() => {
+        dispatch(getAssets())
+    }, [])
+    
+    const asset = offers.find((asset) => asset.id == id)
+    console.log( asset)
   return (
     <>
     <AssetHeader/>
@@ -40,12 +52,12 @@ const AssetDetails = () => {
                 <div className='detail-list'>
                     <p className='flex-space'>
                         <span>Payment schedule</span>
-                        <span>2%</span>
+                        <span>{asset.payment_schedule}</span>
 
                     </p>
                     <p className='flex-space'> 
                         <span>Target term</span>
-                        <span>27 months</span>
+                        <span>{asset.term} months</span>
                         
                     </p>
                     
@@ -97,8 +109,16 @@ const AssetDetails = () => {
             <div className='basis-50'>
                 <ul>
                 <p>
-               <strong>Park45 is a Class</strong> -A multi-family complex located north of Houston. The Sponsor is making minor upgrades to drive an expected 28% per-unit increase from purchase price at time of sale in the second half of 2025.
+                    {asset.overview_description}
+
+               {/* <strong>Park45 is a Class</strong> -A multi-family complex located north of Houston. The Sponsor is making minor upgrades to drive an expected 28% per-unit increase from purchase price at time of sale in the second half of 2025. */}
+
                 </p>
+                <li>
+                    <p>
+                        {asset.overview_note}
+                    </p>
+                </li>
                     <li><p>
                         <strong> Proven business plan:</strong> Since the Sponsor acquired the property in March 2022, it has achieved a 13% organic increase in effective rent — prior to the completion of any unit renovations. Rents are expected to continue to increase as unit renovations commence.</p>
                     </li>

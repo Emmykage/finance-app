@@ -2,10 +2,12 @@ import React, { useEffect } from 'react'
 import VisitorOffer from '../../components/offering/VisitorOffer'
 import {LockOutlined} from '@mui/icons-material/';
 import OFFER from '../../assets/image/advice-chart.svg'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleMenuClose } from '../../redux/model/nav';
 import VisitorHeader from '../../components/guest/header/VisitorHeader';
 const VHome = () => {
+  const {offers} = useSelector( state => state.assets)
+  // console.log(offers)
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(toggleMenuClose())
@@ -15,7 +17,7 @@ const VHome = () => {
      <VisitorHeader/>
 
     <div className='content-container'>
-      <VisitorOffer/>
+      <VisitorOffer assets={offers}/>
       <div className='lock center flex-justify-space'>
         <div className='lock-icon'>
           <LockOutlined />

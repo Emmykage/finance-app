@@ -33,11 +33,11 @@ const Aside = () => {
                     <span><BsFillGrid1X2Fill/></span>
                     <h3>Orders</h3>                    
                 </NavLink>
-                <NavLink to="admin/analytics" className={({isActive}) => (isActive ? activeLink : normalLink)}>
+                <NavLink to="/admin/analytics" className={({isActive}) => (isActive ? activeLink : normalLink)}>
                     <span><BsFillGrid1X2Fill/></span>
                     <h3>Analytics</h3>                    
                 </NavLink>
-                <NavLink to={"/admin/message"} className={({isActive}) => (isActive ? activeLink : normalLink)}>
+                <NavLink to={"/admin/messages"} className={({isActive}) => (isActive ? activeLink : normalLink)}>
                     <span><BsFillGrid1X2Fill/></span>
                     <h3>Messages</h3>   
                     <span className='message-count' >30</span>                 

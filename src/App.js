@@ -33,10 +33,17 @@ import AssetDetails from './pages/visitor/AssetDetails';
 import UserLayout from './layouts/UserLayout';
 import Loader from './components/loader/Loader';
 import InvestAssetDetails from './pages/users/InvestAssetDetails';
+import CheckoutModal from './components/modals/CheckoutModal';
+import Orders from './pages/Admin/orders/Orders';
+import Assets from './pages/Admin/assets/Assets';
+import AlertMessages from './pages/Admin/messages/AlertMessages';
+import Analytics from './pages/Admin/analytics/Analytics';
+import Reports from './pages/Admin/reports/Reports';
 
 function App() {
   return (
     <div className="App">
+     
       <Routes>
         <Route path={'/chart'} element={<PercentageChat/>}></Route>
         <Route path='/home' element={<UserLayout><Home/></UserLayout> }></Route>
@@ -61,12 +68,17 @@ function App() {
         <Route path="/how-it-works" element={<GuestLayOut><HowItWorks/></GuestLayOut>}/>
         <Route path="/performance" element={<GuestLayOut><Performance /> </GuestLayOut>}/>
         <Route path="/about" element={<GuestLayOut><About /></GuestLayOut>} />
-        <Route path='/asset-details' element={<GuestLayOut><AssetDetails/></GuestLayOut>}/>
+        <Route path='/asset-details/:id' element={<GuestLayOut><AssetDetails/></GuestLayOut>}/>
         <Route path='admin'>
           <Route path='dashboard' element={<AdminLayout><AHome /></AdminLayout>} />
           <Route path='add_asset' element={<AdminLayout><AddAsset/></AdminLayout>} />
           <Route path='client/:id' element={<AdminLayout><ClientsPage/></AdminLayout>} />
           <Route path='clients' element={<AdminLayout><Clients/></AdminLayout>}/>
+          <Route path='orders' element={<AdminLayout><Orders /></AdminLayout>} />
+          <Route path='assets' element={<AdminLayout><Assets /></AdminLayout>} />
+          <Route path='messages' element={<AdminLayout><AlertMessages /></AdminLayout>} />
+          <Route path='analytics' element={<AdminLayout><Analytics /></AdminLayout>} />
+          <Route path='reports' element={<AdminLayout><Reports /></AdminLayout>} />
 
         </Route>
         <Route path='/get_started' element={<GetStarted />} />

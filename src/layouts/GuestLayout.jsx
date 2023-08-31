@@ -20,7 +20,7 @@ const GuestLayOut = ({children}) => {
 <div className='main-container'>
         <VNav />
         {children}
-       
+               
         <Footer/>
         
     </div>  )

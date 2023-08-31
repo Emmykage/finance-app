@@ -192,6 +192,7 @@ display: none;
   }
   main{
     margin-top: 1.4rem;
+    padding-top: 2rem;
   }
   main .date{
 display: inline-block;

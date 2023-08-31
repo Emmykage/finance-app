@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Deposite from '../../components/features/Deposite'
 
 const InvestAssetDetails = () => {
+   
   return (
     <>
     
@@ -89,6 +91,9 @@ const InvestAssetDetails = () => {
     
 
     </div>
+    <Deposite/>
+
+   
     </>
   )
 }
