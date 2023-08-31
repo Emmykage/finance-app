@@ -3,7 +3,9 @@ import "./client.css"
 import { useParams } from 'react-router-dom'
 
 const ClientsPage = () => {
-const {id} = useParams()
+const {id} = useParams();
+
+
 
   return (
     <div className='profile'>
