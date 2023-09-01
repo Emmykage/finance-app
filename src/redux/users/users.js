@@ -1,16 +1,9 @@
 import { createSlice, isFulfilled } from "@reduxjs/toolkit"
-import { listUsers } from "../actions/users"
+import { getUser, listUsers } from "../actions/users"
 
 const initialState = {
-    users: [{
-        first_name: "jon",
-        last_name: "Doe",
-        id: 1,
-    },{
-        first_name: "Jane",
-        last_name: "Doe",
-        id: 2,
-    }]
+    users: [],
+    user: {}
 }
 
 
@@ -25,17 +18,17 @@ const usersSlice = createSlice({
                 users: response.users
                 
             }
-        }
-    },
-    reducers: {
-        tempUsers: (state, action) => {
+        },
+
+    [getUser.fulfilled]:(state, action)=>{
+        // console.log(action.payload)
             return{
                 ...state,
-                users: state.users
+                user: action.payload
             }
-        }
-    }
+    },
+},
+   
 })
 
 export default usersSlice.reducer
-export const {tempUsers } = usersSlice.actions

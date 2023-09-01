@@ -5,7 +5,7 @@ const BankAccount = () => {
     <div>
       <div>
         <p>
-        You have reached our limit on number of bank accounts.If you wish to add another external account, please delete an unused external bank account and try again or contact us at investments@yieldstreet.com for assistance.
+        You have reached our limit on number of bank accounts.If you wish to add another external account, please delete an unused external bank account and try again or contact us at investments@investedge.com for assistance.
         </p>
         <div className='account-notice'>
           <h3>

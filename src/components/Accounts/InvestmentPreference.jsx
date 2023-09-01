@@ -71,7 +71,7 @@ const InvestmentPreference = () => {
         Tell us more about your employment experience and professional background.
         </p>
       </div>
-      <div className='border'>
+      <div className='btn-div'>
       <a href="" className='btn'>
         Save changes
       </a>

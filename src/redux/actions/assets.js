@@ -19,7 +19,7 @@ const createAsset = createAsyncThunk("asset/create_asset", async(data) => {
     return response
 })
 
-const getAssets = createAsyncThunk("asset/create_asset", async(data) => {
+const getAssets = createAsyncThunk("asset/get_assets", async(data) => {
     const response = await fetch(`${baseUrl}assets`,{
     method: "GET",
     headers: {

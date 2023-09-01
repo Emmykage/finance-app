@@ -55,12 +55,12 @@ function App() {
           <Route path='payments' element={<Payments/>} />
           <Route path='important' element={<Important/>} />
         </Route>
-        <Route path='account'>
-          <Route path='bank_account' element={<Account><BankAccount/></Account> }/>
-          <Route path='investment_preference' element={<Account><InvestmentPreference/></Account>}/>
-          <Route path='investor_account' element={<Account><InvestorAccount/></Account>}/>
-          <Route path='recurring_deposit' element={<Account><RecurringDeposit/></Account>}/>
-          <Route path='' element={<Account><Wallet/></Account>}/>
+        <Route path='account' element={<Account/>}>
+          <Route path='bank_account' element={<><BankAccount/></> }/>
+          <Route path='investment_preference' element={<><InvestmentPreference/></>}/>
+          <Route path='investor_account' element={<><InvestorAccount/></>}/>
+          <Route path='recurring_deposit' element={<><RecurringDeposit/></>}/>
+          <Route path='' element={<><Wallet/></>}/>
           {/* <Route path='wallet' element={<Account><Wallet/></Account>}/> */}
         </Route>
 

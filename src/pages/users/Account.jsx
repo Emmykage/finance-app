@@ -1,14 +1,23 @@
 import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import AccountRoutes from '../../components/Accounts/AccountRoutes'
 import Nav from '../../components/header/Nav'
 import Footer from '../../footer/Footer'
 import { toggleMenuClose } from '../../redux/model/nav'
-const Account = ({children}) => {
+import { Outlet } from 'react-router-dom'
+// import { getAssets } from '../../redux/actions/assets'
+import { userLog } from '../../redux/auth/user_authentication'
+import { getUser } from '../../redux/actions/users'
+const Account = () => {
+  const {user} = useSelector(state => state.users)
   const dispatch = useDispatch()
   useEffect(()=>{
+    dispatch(getUser())
+
     dispatch(toggleMenuClose())
   },[])
+  // console.log(user)
+  // dispatch(getUser())
   return (
     <div className='main-container'>
         <Nav/>
@@ -22,7 +31,7 @@ const Account = ({children}) => {
             
         </div>
         <div className='container bg-black'>
-    {children}
+    <Outlet context={[user]}/>
     </div>
     </div>
     <Footer/>

@@ -1,6 +1,9 @@
 import React from 'react'
+import { useOutletContext } from 'react-router-dom'
 
 const InvestorAccount = () => {
+  const [user] = useOutletContext()
+  console.log(user)
   return (
     <div className='investor'>
      <table>
@@ -18,7 +21,7 @@ const InvestorAccount = () => {
       <tbody>
         <tr>
           <td>
-            Ekelebe Stunner
+           {user.first_name +" "+ user.last_name}
           </td>
           <td>
             individual
