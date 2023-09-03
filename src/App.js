@@ -39,6 +39,7 @@ import Assets from './pages/Admin/assets/Assets';
 import AlertMessages from './pages/Admin/messages/AlertMessages';
 import Analytics from './pages/Admin/analytics/Analytics';
 import Reports from './pages/Admin/reports/Reports';
+import UserAssetDetails from './pages/users/AssetDetails';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Route path='/home' element={<UserLayout><Home/></UserLayout> }></Route>
         <Route path='invest_asset' element={<UserLayout><InvestAssetDetails/></UserLayout> }/>
         <Route path='/offerings' element={<UserLayout><Offerings/></UserLayout>} />
+        <Route path='/details/:id' element={<UserLayout><UserAssetDetails/></UserLayout>}/>
         <Route path="activities" element={<Activities/>}>
           <Route path='' element={<Messages/>} />
           <Route path='investment_updates' element={<InvestmentUpdates/>} />

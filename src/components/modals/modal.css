@@ -57,21 +57,22 @@
   }
 
 
-  /* table {
+  .checkout table {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  tbody {
+  .checkout tbody {
     display: flex;
     width: 800px;
     position: relative;
     align-items: stretch;
     border: 1px solid black;
+    /* background: #000; */
     
   }
-  tr {
+  .checkout tr {
     flex-basis: 33.33333333%;
     display: flex;
     flex-wrap: wrap;
@@ -80,17 +81,17 @@
    
     
   }
-  tr + tr {
+  .checkout tr + .checkout tr {
   border-left: 1px solid black;
   }
   
-  th, td {
+  .checkout th, .checkout td {
     flex-basis: 100%;
     text-align: left;
     display: flex;
     padding: 2px;
     
   }
-  th {
+  .checkout th {
     font-weight: bold;
-  } */
+  } 

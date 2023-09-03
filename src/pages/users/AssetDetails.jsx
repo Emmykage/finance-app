@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
-import AssetHeader from '../../components/guest/header/AssetHeader'
 import { useDispatch, useSelector } from 'react-redux'
-// import { getAssets } from '../../redux/assets/assets'
 import { useParams } from 'react-router-dom'
 import { getAssets } from '../../redux/actions/assets'
 import AssetComp from '../../components/AssetComponent'
+import Deposite from '../../components/features/Deposite'
 
-const AssetDetails = () => {
+const UserAssetDetails = () => {
     const {id} = useParams()
     const dispatch = useDispatch()
     const {offers} = useSelector(state => state.assets)
@@ -15,15 +14,15 @@ const AssetDetails = () => {
     }, [])
     
     const asset = offers.find((asset) => asset.id == id)
-    console.log( asset)
   return (
     <>
-    <AssetHeader/>
     <AssetComp/>
+    <Deposite/>
+
    
     
     </>
   )
 }
 
-export default AssetDetails
+export default UserAssetDetails

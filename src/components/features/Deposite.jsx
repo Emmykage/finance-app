@@ -19,7 +19,7 @@ const Deposite = () => {
     }
     console.log(toggleModal)
   return (
-    <div className='text-gray wrapper'>
+    <div className='deposit-div text-gray wrapper'>
     <div className='header'>
 
  

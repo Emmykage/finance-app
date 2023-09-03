@@ -5,36 +5,36 @@ const CheckoutModal = ({setToggleModal, toggleModal}) => {
     let display = '';
     if(toggleModal){ display = "show"}
   return (
-    <div className={`checkout modal-container dark-text flex-justify-center ${display}`} >
-        <div className="modal">
+    <div className={`modal-container dark-text flex-justify-center ${display}`} >
+        <div className="modal checkout">
             <div className='close-btn-div'><button onClick={()=>setToggleModal(!toggleModal)}>X</button></div>
-            <table>
+            <table className='checkoutModal'>
                 <thead>
                     <tr>
-                        <th>column 1</th>
-                        <th>column 2</th>
-                        <th>column 3</th>
-                        <th>column 4</th>
-                        <th>column 5</th>
-                        <th>column 6</th>
-                        <th>column 7</th>
-                        <th>column 8</th>
-                        <th>column 9</th>
+                        <th>Asset Title</th>
+                        <th>Asset Type</th>
+                        <th>Description</th>
+                        <th>Term</th>
+                        <th>Payment Schedule</th>
+                        <th>Share In Excess(%)</th>
+                        <th>Deposite 9</th>
                     </tr>
                 </thead>
                 <tbody>
                 <tr>
-                        <td>Asset Name:</td>
-                        <td></td>
+                        <td>Supply Chain Financing I.Z</td>
+                        <td>Real Estate</td>
+                        <td>Generate income via a global conglomerate's financin facility </td>
+
+                        <td>6</td>
+                        <td>event based</td>
+                        <td>3</td>
+                        <td>20000</td>
                     </tr>
                     
-                     <tr>
-                        <td>Asset Min: </td>
-                        <td></td>
-                    </tr> 
                 </tbody>
             </table>
-        CHeckout
+        Checkout
         </div>
 
     </div>

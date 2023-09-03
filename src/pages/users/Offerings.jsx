@@ -1,136 +1,22 @@
-import React from 'react'
-import OFFER from "../../assets/image/advice-chart.svg"
+import React, { useEffect } from 'react'
+// import OFFER from "../../assets/image/advice-chart.svg"
+// import VisitorOffer from '../../components/offering/VisitorOffer'
+import { useDispatch, useSelector } from 'react-redux'
+import { getAssets } from '../../redux/actions/assets'
+import { toggleMenuClose } from '../../redux/model/nav'
+import UserOffer from '../../components/offering/UserOffer'
 
 const Offerings = () => {
+    const {offers} = useSelector( state => state.assets)
+    const dispatch = useDispatch()
+    useEffect(()=>{
+      dispatch(getAssets())
+      dispatch(toggleMenuClose())
+    },[])
     
   return (
     <div className='content-container p-tx5'>
-        <div className='offer-cards'>
-            <div className='card black'>
-                <div className='card-img'>
-                    <img src={OFFER}/>
-                </div>
-                <div>
-                    <h3>Access tailored private market recommendations</h3>
-                    <p>
-                    Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
-
-                    </p>
-                    <a className='btn'>Unlock recommendations</a>
-                </div>
-            </div>
-            <div className='card black'>
-                <div className='card-img'>
-                    <img src={OFFER}/>
-                </div>
-                <div>
-                    <h3>Access tailored private market recommendations</h3>
-                    <p>
-                    Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
-
-                    </p>
-                    <a className='btn'>Unlock recommendations</a>
-                </div>
-            </div>
-            <div className='card black'>
-                <div className='card-img'>
-                    <img src={OFFER}/>
-                </div>
-                <div>
-                    <h3>Access tailored private market recommendations</h3>
-                    <p>
-                    Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
-
-                    </p>
-                    <a className='btn'>Unlock recommendations</a>
-                </div>
-            </div>
-            <div className='card black'>
-                <div className='card-img'>
-                    <img src={OFFER}/>
-                </div>
-                <div>
-                    <h3>Access tailored private market recommendations</h3>
-                    <p>
-                    Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
-
-                    </p>
-                    <a className='btn'>Unlock recommendations</a>
-                </div>
-            </div>
-            <div className='card black'>
-                <div className='card-img'>
-                    <img src={OFFER}/>
-                </div>
-                <div>
-                    <h3>Access tailored private market recommendations</h3>
-                    <p>
-                    Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
-
-                    </p>
-                    <a className='btn'>Unlock recommendations</a>
-                </div>
-            </div>
-            <div className='card black'>
-                <div className='card-img'>
-                    <img src={OFFER}/>
-                </div>
-                <div>
-                    <h3>Access tailored private market recommendations</h3>
-                    <p>
-                    Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
-
-                    </p>
-                    <a className='btn'>Unlock recommendations</a>
-                </div>
-            </div>
-            <div className='card black'>
-                <div className='card-img'>
-                    <img src={OFFER}/>
-                </div>
-                <div>
-                    <h3>Access tailored private market recommendations</h3>
-                    <p>
-                    Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
-
-                    </p>
-                    <a className='btn'>Unlock recommendations</a>
-                </div>
-            </div>
-            <div className='card black'>
-                <div className='card-img'>
-                    <img src={OFFER}/>
-                </div>
-                <div>
-                    <h3>Access tailored private market recommendations</h3>
-                    <p>
-                    Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
-
-                    </p>
-                    <a className='btn'>Unlock recommendations</a>
-                </div>
-            </div><div className='card black'>
-                <div className='card-img'>
-                    <img src={OFFER}/>
-                </div>
-                <div>
-                    <h3>Access tailored private market recommendations</h3>
-                    <p>
-                    Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
-
-                    </p>
-                    <a className='btn'>Unlock recommendations</a>
-                </div>
-            </div>
-
-            {/* <div className='offer-card'></div>
-            <div className='offer-card'></div>
-            <div className='offer-card'></div>
-            <div className='offer-card'></div>
-            <div className='offer-card'></div> */}
-
-        </div>
-      
+        <UserOffer assets={offers}/>
         
     </div>
   )
