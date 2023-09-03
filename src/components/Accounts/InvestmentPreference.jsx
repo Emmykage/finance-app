@@ -72,7 +72,7 @@ const InvestmentPreference = () => {
         </p>
       </div>
       <div className='btn-div'>
-      <a href="" className='btn'>
+      <a href="" className='btn block'>
         Save changes
       </a>
 

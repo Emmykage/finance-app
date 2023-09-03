@@ -17,7 +17,7 @@ const CheckoutModal = ({setToggleModal, toggleModal}) => {
                         <th>Term</th>
                         <th>Payment Schedule</th>
                         <th>Share In Excess(%)</th>
-                        <th>Deposite 9</th>
+                        <th> Deposit (USD)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,7 +34,12 @@ const CheckoutModal = ({setToggleModal, toggleModal}) => {
                     
                 </tbody>
             </table>
-        Checkout
+            <div>
+            <a className='btn block'>Make Payment</a>
+
+            </div>
+            
+        
         </div>
 
     </div>
