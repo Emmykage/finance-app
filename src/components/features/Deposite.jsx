@@ -3,16 +3,15 @@ import './deposite.css'
 import BasicModal from '../modals/CheckoutModal'
 import CheckoutModal from '../modals/CheckoutModal'
 
-const Deposite = () => {
-    const [price, setPrice] = useState({deposite: 0})
+const Deposite = ({portfolio, setPortfolio}) => {
     const [toggleModal, setToggleModal] = useState(false)
     const handleChange = (e) => {
         e.preventDefault()
-        setPrice({
-            ...price,
+        setPortfolio({
+            ...portfolio,
             [e.target.name]: e.target.value
         })
-        console.log(price)
+        console.log(portfolio.amount)
     }
     const handlePriceRange = () => {
 
@@ -34,7 +33,7 @@ const Deposite = () => {
         <div className="seperator">-</div>
         <div className='field'>
             <span>$</span>
-            <input name='deposite' type="number" className='input-max'  value={price.deposite} onChange={handleChange}/>
+            <input name='amount' type="number" className='input-max'  value={portfolio.amount} onChange={handleChange}/>
         </div>
         
     </div>
@@ -43,14 +42,12 @@ const Deposite = () => {
         </div>
         <div className='range-input'>
         {/* <input type="range" className='range-min' min={0} max={10000} value={2500} /> */}
-        <input type="range" name='deposite' className='range-max' min={10000} max={50000} value={price.deposite} onChange={handleChange} />
+        <input type="range" name='amount' className='range-max' min={10000} max={50000} value={portfolio.amount} onChange={handleChange} />
 
         </div>
 
         <button className='btn m-2' onClick={()=> setToggleModal(!toggleModal)}>Click to Proceed</button>
-        {/* <BasicModal/> */}
-       {/* {toggleModal &&<CheckoutModal setToggleModal={setToggleModal} toggleModal={toggleModal}/>} */}
-       <CheckoutModal setToggleModal={setToggleModal} toggleModal={toggleModal}/>
+        <CheckoutModal setToggleModal={setToggleModal} toggleModal={toggleModal} portfolio={portfolio}/>
 </div>
   )
 }
