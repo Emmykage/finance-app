@@ -15,7 +15,7 @@ const UserAssetDetails = () => {
     useEffect(() => {
         dispatch(getAssets())
     }, [])
-    
+  
     const asset = offers.find((asset) => asset.id == id)
     if(asset){
 
@@ -23,7 +23,7 @@ const UserAssetDetails = () => {
   return (
     <>
     <AssetComp asset={asset}/>
-    <Deposite portfolio={portfolio} setPortfolio={setPortfolio}/>
+    <Deposite portfolio={portfolio} setPortfolio={setPortfolio} asset={asset}/>
 
    
     

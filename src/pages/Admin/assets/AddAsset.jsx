@@ -18,11 +18,9 @@ const AddAsset = () => {
   }
   const handleSubmit = (e)=>{
     e.preventDefault()
-    console.log(assetForm)
     dispatch(createAsset(assetForm))
     
   }
-  // console.log(toggleForm)
   return (
     <div className='assets-forms'>
       <div className='asset-div border'>

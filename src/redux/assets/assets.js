@@ -125,7 +125,6 @@ const assetSlice = createSlice({
     extraReducers: {
         [createAsset.fulfilled]: (state, action) => {
             const response = action.payload;
-            console.log(response)
             return{
                 ...state,
                 assets: response.assets
@@ -150,7 +149,6 @@ const assetSlice = createSlice({
 
         },
     [getAssets.fulfilled]: (state, action) => {
-        // console.log(action.payload)
         return{
             ...state,
             offers: action.payload

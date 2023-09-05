@@ -60,6 +60,9 @@ body {
 .dark-text{
   color: var(--color-background-dark);
 }
+.red-text{
+  color: red
+}
 
 .main-container {
   min-height: 100vh;

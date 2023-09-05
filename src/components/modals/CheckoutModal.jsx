@@ -1,9 +1,20 @@
 import React from 'react'
 import './modal.css'
+import { useDispatch } from 'react-redux';
+import { createPortfolio } from '../../redux/actions/portfolio';
 
-const CheckoutModal = ({setToggleModal, toggleModal}) => {
+const CheckoutModal = ({setToggleModal, toggleModal, portfolio, asset}) => {
     let display = '';
+    const dispatch = useDispatch()
     if(toggleModal){ display = "show"}
+    const handleSubmit = () => {
+        if(portfolio.amount > asset.minimum_investment ){
+            dispatch(createPortfolio(portfolio))
+        }else{
+            return
+        }
+      
+    }
   return (
     <div className={`modal-container dark-text flex-justify-center ${display}`} >
         <div className="modal checkout">
@@ -22,20 +33,20 @@ const CheckoutModal = ({setToggleModal, toggleModal}) => {
                 </thead>
                 <tbody>
                 <tr>
-                        <td>Supply Chain Financing I.Z</td>
-                        <td>Real Estate</td>
-                        <td>Generate income via a global conglomerate's financin facility </td>
+                        <td>{asset.title}</td>
+                        <td>{asset.asset_type}</td>
+                        <td>{asset.description} </td>
 
-                        <td>6</td>
-                        <td>event based</td>
-                        <td>3</td>
-                        <td>20000</td>
+                        <td>{asset.term}</td>
+                        <td>{asset.payment_schedule}</td>
+                        <td>{asset.share_in_excess}</td>
+                        <td>{portfolio.amount < asset.minimum_investment ? <p className='red-text'>you cant proceed with this payment </p> : portfolio.amount} </td>
                     </tr>
                     
                 </tbody>
             </table>
             <div>
-            <a className='btn block'>Make Payment</a>
+            <a className='btn block' onClick={handleSubmit }>Make Payment</a>
 
             </div>
             

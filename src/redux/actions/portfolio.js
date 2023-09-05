@@ -1,11 +1,14 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import baseUrl from "../url";
+
+const token = () => JSON.parse(localStorage.getItem('edge_auth')).token;
+
 const createPortfolio = createAsyncThunk("portfolio/create_portfolios", async(data) => {
     const response = await fetch(`${baseUrl}portfolios`,{
     method: "POST",
     headers: {
         'Content-type': 'application/json',
-        Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${token()}`
 
     },
     body: JSON.stringify(data) 
@@ -20,7 +23,7 @@ const getPortfolios = createAsyncThunk("portfolio/get_portfolios", async(data) =
     method: "GET",
     headers: {
         'Content-type': 'application/json',
-        Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${token()}`
 
     }
     

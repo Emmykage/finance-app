@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./client.css"
 import { useParams } from 'react-router-dom'
 import default_photo from '../../../assets/user/no-profile-picture-icon-14.jpg'
+import { useDispatch, useSelector } from 'react-redux'
+import { getUser, listUsers } from '../../../redux/actions/users'
 
 const ClientsPage = () => {
 const {id} = useParams();
+const dispatch = useDispatch()
+const {user} = useSelector(state => state.users)
+useEffect(()=> {
+    dispatch(getUser(id))
+},[])
 
+// const user = users.find(user => user.id == id)
 
 
   return (
@@ -17,11 +25,11 @@ const {id} = useParams();
         <div className='profile-detail'>
             <ul className=''>
                 <li className='flex-space '>
-                    <span>Name: </span> <span> John Doe</span>
+                    <span>Name: </span> <span> {user.first_name} {user.last_name}</span>
 
                 </li>
                 <li className='flex-space '>
-                    <span>Email: </span> <span> Johndoe102@gmail.com</span>
+                    <span>Email: </span> <span> {user.email}</span>
 
                 </li>
                 <li className='flex-space '>

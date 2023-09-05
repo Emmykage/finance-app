@@ -51,13 +51,11 @@ export default function SignUp() {
     password: data.get('password'),
       }
   }
-    console.log(formInput);
     dispatch(userSession(formInput))
 
   };
   if (user == null || user == undefined){
 
- console.log(loading)
 
   return (
     <ThemeProvider theme={theme}>

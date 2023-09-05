@@ -1,12 +1,15 @@
 import React from 'react'
+import { useOutletContext } from 'react-router-dom'
 
 const Wallet = () => {
+  const [user] = useOutletContext()
+  console.log(user)
   return (
     <>
     <div className='wallet-container'>
     <div className='wallet flex-justify-space'>
             <div className='flex-2 border-left p-li'>
-                <h3>johnn Doe</h3>
+                <h3>{user.first_name} {user.last_name}</h3>
                 <span>Individual</span>
             </div>
             <div className='flex-3 border-right p-li'>

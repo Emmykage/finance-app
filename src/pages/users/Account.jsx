@@ -16,8 +16,7 @@ const Account = () => {
 
     dispatch(toggleMenuClose())
   },[])
-  // console.log(user)
-  // dispatch(getUser())
+
   return (
     <div className='main-container'>
         <Nav/>

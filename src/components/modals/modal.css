@@ -94,8 +94,7 @@
     
   }
   .checkout th:nth-child(3), .checkout td:nth-child(3){
-    background-color: red;
-    height: 200px;
+    min-height: 200px;
     /* align-items: stretch; */
   }
   .checkout th {

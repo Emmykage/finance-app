@@ -1,4 +1,4 @@
-import { createSlice, isFulfilled } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit"
 import { getUser, listUsers } from "../actions/users"
 
 const initialState = {
@@ -21,10 +21,10 @@ const usersSlice = createSlice({
         },
 
     [getUser.fulfilled]:(state, action)=>{
-        // console.log(action.payload)
+        console.log(action.payload)
             return{
                 ...state,
-                user: action.payload
+                user: action.payload.user
             }
     },
 },

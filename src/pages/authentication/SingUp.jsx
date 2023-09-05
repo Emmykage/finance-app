@@ -38,7 +38,6 @@ export default function SignUp() {
   const navigation = useNavigate()
   const dispatch = useDispatch()
   const {user, error, message, loading} = useSelector((state) => state.user)
-  console.log(user)
   useEffect(() => {
     dispatch(userLog())
   },[])
@@ -55,7 +54,6 @@ export default function SignUp() {
       }
 
   }
-    console.log(formInput);
     dispatch(registerUser(formInput))
 
   };

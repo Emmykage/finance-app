@@ -9,7 +9,6 @@ const registerUser = createAsyncThunk("user/register", async(data) => {
         },
         body: JSON.stringify(data)
     }).then(res => res.json())
-    console.log(response)
     return response
 
 })
@@ -22,7 +21,6 @@ const userSession = createAsyncThunk("user/session", async(data) => {
         },
         body: JSON.stringify(data)
     }).then(res => res.json())
-    console.log(response)
     return response
 
 })

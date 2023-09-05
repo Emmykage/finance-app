@@ -51,7 +51,6 @@ export default function ConfirmAccount() {
     password: data.get('password'),
       }
   }
-    console.log(formInput);
     dispatch(userSession(formInput))
 
   };

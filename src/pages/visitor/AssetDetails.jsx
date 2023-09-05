@@ -15,7 +15,6 @@ const AssetDetails = () => {
     }, [])
     
     const asset = offers.find((asset) => asset.id == id)
-    console.log( asset)
   return (
     <>
     <AssetHeader/>

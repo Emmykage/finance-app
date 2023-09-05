@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './client.css'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { listUsers } from '../../../redux/actions/users'
 
 const Clients = () => {
+  const dispatch = useDispatch()
   const {users}  = useSelector(state => state.users)
+  useEffect(()=> {
+    dispatch(listUsers())
+  }, [])
   console.log(users)
+  if(users.length < 1){
+    return(
+      <div>
+        <h1>No Clients </h1>
+      </div>
+    )
+  }else{
+
   return (
     <div className='client'>
         <div className=''>
@@ -22,6 +35,8 @@ const Clients = () => {
         </div>
     </div>
   )
+      
+}
 }
 
 export default Clients

@@ -64,7 +64,6 @@ const userSlice = createSlice({
 
           [userSession.fulfilled]: (state, action) => {
             const response = action.payload;
-            console.log(response)
             if (response.user){
                 const collect = JSON.stringify(response)
                 localStorage.setItem("edge_auth", collect)

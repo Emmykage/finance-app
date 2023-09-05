@@ -2,7 +2,6 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import baseUrl from "../url"
 
 const token = () => JSON.parse(localStorage.getItem('edge_auth')).token;
-// console.log(token())
 
 
 const createAsset = createAsyncThunk("asset/create_asset", async(data) => {
@@ -15,7 +14,6 @@ const createAsset = createAsyncThunk("asset/create_asset", async(data) => {
        },
        body: JSON.stringify(data) 
     }).then(res => res.json())
-    // console.log("first")
     return response
 })
 

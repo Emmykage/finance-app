@@ -12,7 +12,6 @@ const GuestLayOut = ({children}) => {
   useEffect(()=> {
     dispatch(userLog())
    },[])
-  console.log(user)
   if(user){
     navigation("/home")
   }

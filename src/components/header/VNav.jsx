@@ -14,7 +14,7 @@ const VNav = () => {
     <nav>
       <div className='nav'>
         <div className='menu'>
-        <Menu onClick={()=> dispatch(toggleMenuOpen(console.log("opened")))} sx={{fontSize: 39}}/> 
+        <Menu onClick={()=> dispatch(toggleMenuOpen())} sx={{fontSize: 39}}/> 
         </div>
         <div  className='logo'>
             <h2>InvestEdge</h2>
