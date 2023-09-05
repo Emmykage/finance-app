@@ -4,7 +4,6 @@ import Nav from './Nav'
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 const Header = ({first_name}) => {
-  console.log(first_name)
   return (
 <header>
   <div className='heroBanner-outer-container flex-justify-space'>

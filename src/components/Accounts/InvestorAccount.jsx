@@ -3,7 +3,6 @@ import { useOutletContext } from 'react-router-dom'
 
 const InvestorAccount = () => {
   const [user] = useOutletContext()
-  console.log(user)
   return (
     <div className='investor'>
      <table>
