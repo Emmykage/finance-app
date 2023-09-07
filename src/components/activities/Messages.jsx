@@ -5,9 +5,9 @@ const Messages = () => {
   <div className='activity-container'>
       <h5>Message</h5>
       <div className='top'>
-        <span>Important</span>
-        <p>Q3 2022 Portfolio Snapshot</p>
-        <p>Please find our Q3 2022 Portfolio Snapshot <a href=''>here</a> You can expect to recieve these update quarterly.</p>
+        {/* <span>Important</span> */}
+        <h2>Empty</h2>
+        <p>No Messages available</p>
 
       </div>
       <div className='bottom'>

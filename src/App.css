@@ -46,9 +46,9 @@ body {
   font-size: 1rem;
   font-family: "poppins", sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
   width: 100vw;
-  height: 100vh;
   color: var(--color-white);
-  background-color: var(--color-info-light);
+  user-select: none;
+  overflow-x: hidden;
 }
 
 .container {

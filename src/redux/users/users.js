@@ -13,9 +13,10 @@ const usersSlice = createSlice({
     extraReducers:{
         [listUsers.fulfilled]: (state, action) => {
             const response = action.payload
+            console.log(response)
             return{
                 ...state,
-                users: response.users
+                users: response
                 
             }
         },
@@ -24,7 +25,7 @@ const usersSlice = createSlice({
         console.log(action.payload)
             return{
                 ...state,
-                user: action.payload.user
+                user: action.payload
             }
     },
 },

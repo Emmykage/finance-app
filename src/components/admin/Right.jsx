@@ -5,6 +5,7 @@ import {TfiShine} from "react-icons/tfi"
 import {AiOutlineShoppingCart} from "react-icons/ai"
 import {AiOutlinePlus} from "react-icons/ai"
 import { NavLink } from 'react-router-dom'
+import img from '../../assets/user/no-profile-picture-icon-14.jpg'
 const Right = () => {
   return (
     <div className='right'>
@@ -24,7 +25,7 @@ const Right = () => {
                     <small className='text-muted'>Admin</small>
                 </div>
                 <div className="profile-photo">
-                    <img src='' alt="" />
+                    <img src={img} alt="" />
                 </div>
             </div>
         </div>
@@ -33,11 +34,20 @@ const Right = () => {
             <div className="updates">
                 <div className="update">
                     <div className="profile-photo">
-                        <img src="" alt="" />
+                        <img src={img} alt="" />
                     </div>
                     <div className="message">
                         <p><b>Mike Jayson</b> received his order of night lion dron</p>
                         <small className='text-muted'>2 minutes ago</small>
+                    </div>
+                </div>
+                <div className="update">
+                    <div className="profile-photo">
+                        <img src={img} alt="" />
+                    </div>
+                    <div className="message">
+                        <p><b>John Doe</b> received his order of night lion dron</p>
+                        <small className='text-muted'>7 minutes ago</small>
                     </div>
                 </div>
 
@@ -75,7 +85,7 @@ const Right = () => {
                     <h3>345</h3>
                 </div>
             </div>
-            <div className='item custumers'>
+            <div className='item customers'>
                 <div className="icon">
                     <span><AiOutlineShoppingCart/></span>
                 </div>

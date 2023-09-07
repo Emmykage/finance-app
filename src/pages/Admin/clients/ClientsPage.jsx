@@ -3,21 +3,31 @@ import "./client.css"
 import { useParams } from 'react-router-dom'
 import default_photo from '../../../assets/user/no-profile-picture-icon-14.jpg'
 import { useDispatch, useSelector } from 'react-redux'
-import { getUser, listUsers } from '../../../redux/actions/users'
-
+import { listUsers } from '../../../redux/actions/users'
+import { userLog } from '../../../redux/auth/user_authentication'
+import Loader from '../../../components/loader/Loader'
 const ClientsPage = () => {
 const {id} = useParams();
 const dispatch = useDispatch()
-const {user} = useSelector(state => state.users)
+const {users} = useSelector(state => state.users)
 useEffect(()=> {
-    dispatch(getUser(id))
+    dispatch(listUsers())
+    dispatch(userLog())
 },[])
 
-// const user = users.find(user => user.id == id)
+const user = users.find(user => user.id == id)
+console.log(user)
+
+if(user == undefined){
+    return(
+        <Loader/>
+    )
+}else{
+
 
 
   return (
-    <div className='profile'>
+    <div className='client-profile'>
         
         <div className='profile-top'>
             <img src={default_photo} alt="profile pic" />
@@ -44,35 +54,35 @@ useEffect(()=> {
 
         </div>
         <hr />
+
         <div className='asset-details'>
             <p>
                 <span>
-                total inestment 0  
+                total inestment 
                 </span>
                 <span>
                 value: 200000
                 </span>
             </p>
-          
-            <div className='asset-infos'>
-                <a href=""></a>
-               
-                <div className='asset-info flex-space'>
-                    <span>Crypto</span>
-                    <span>$10,000</span>
-                </div>
+            <hr />
+            {user.portfolios.length < 1 ? <h3>User has no Portfolios</h3> : 
+            
+            user.portfolios.map(portfolio => (
+                 <div className='asset-infos'>
+                 <a href=""></a>
                 
-                <div className='asset-info flex-space'>
-                    <span>Real Estate</span>
-                    <span>$20,000</span>
-                </div>
-                <div className='asset-info flex-space'>
-                <span>Crypto</span>
-                    <span>$10,000</span>
-
-                </div>
-            </div>
-                <hr />
+                 <div className='asset-info flex-space'>
+                     <span>{portfolio.asset.asset_type}</span>
+                     <span>${portfolio.amount}</span>
+                 </div>
+                 
+                
+             </div>
+            ))}
+        
+          
+           
+        <hr />
             
                 <span>
                     Edit
@@ -81,6 +91,7 @@ useEffect(()=> {
         
     </div>
   )
+}
 }
 
 export default ClientsPage
