@@ -32,7 +32,6 @@ const AHome = () => {
                     </small>
 
                 </div>
-                {/* <!--------- sales end ---> */}
                 <div className="expenses">
                     <span><AutoGraphOutlinedIcon/></span>
                     <div className="middle">
@@ -56,7 +55,6 @@ const AHome = () => {
                     </small>
 
                 </div>
-                {/* <!--------- sales end ---> */}
                 <div className="income">
                     <span><AutoGraphOutlinedIcon/></span>
                     <div className="middle">
@@ -80,7 +78,6 @@ const AHome = () => {
                     </small>
 
                 </div>
-                {/* <!--------- sales end ---> */}
 
             </div>
 

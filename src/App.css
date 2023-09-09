@@ -71,6 +71,7 @@ body {
 
 .content-container {
   max-width: 1450px;
+  min-height: 60vh;
   margin: 50px auto;
   color: var(--color-dark);
   padding: 1.8rem;
@@ -745,6 +746,8 @@ nav .menu {
 
 .button-div {
   margin-top: 28px;
+  display: flex;
+
 }
 
 .howitwork-content .btn {
@@ -753,7 +756,7 @@ nav .menu {
   margin-right: 18px;
   font-size: 14px;
   color: white;
-  max-width: 180px;
+  /* max-width: 180px; */
   /* display: block; */
 }
 
@@ -1227,8 +1230,6 @@ hr {
   font-size: 2rem;
 }
 .text-dark{
-  /* color: var(--color-backgroun); */
-  /* color: black; */
   color: var(--color-dark);
 }
 
@@ -1248,6 +1249,9 @@ hr {
   }
   .investment-right-banner{
     width: 100%;
+  }
+  .howitwork-content{
+    margin: 2rem;
   }
   .howitwork-content .btn{
    margin-right: 10px;
@@ -1285,6 +1289,20 @@ hr {
     margin: 0.7rem 0;
 
   }
+  .button-div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2% ;
+  }
+  
+.howitwork-content .btn {
+ 
+  font-size: 14px;
+  color: white;
+  margin-bottom: 0.7rem;
+
+}
+
 
   .investment-card span {
     padding: 9px;

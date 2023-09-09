@@ -62,7 +62,7 @@ const ExploreInvestment = () => {
 
                 </p>
                 </div>
-                <div className='button-div flex'> 
+                <div className='button-div '> 
                 <a className='btn flex-grid'>
                     Browse investments
                 </a>

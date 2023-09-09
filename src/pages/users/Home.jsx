@@ -114,27 +114,7 @@ const Home = () => {
               <td>35 Months</td>
               <td>10,000</td>
             </tr>
-            <tr>
-              <td>consumer Goods</td>
-              <td>private Credit </td>
-              <td>9%</td>
-              <td>35 Months</td>
-              <td>10,000</td>
-            </tr>
-            <tr>
-              <td>consumer Goods</td>
-              <td>private Credit </td>
-              <td>9%</td>
-              <td>35 Months</td>
-              <td>10,000</td>
-            </tr>
-            <tr>
-              <td>consumer Goods</td>
-              <td>private Credit </td>
-              <td>9%</td>
-              <td>35 Months</td>
-              <td>10,000</td>
-            </tr>
+         
           </tbody>
         </table>
         </div>

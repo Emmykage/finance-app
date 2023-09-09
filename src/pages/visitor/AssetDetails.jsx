@@ -5,20 +5,25 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { getAssets } from '../../redux/actions/assets'
 import AssetComp from '../../components/AssetComponent'
+import Loader from '../../components/loader/Loader'
 
 const AssetDetails = () => {
     const {id} = useParams()
     const dispatch = useDispatch()
-    const {offers} = useSelector(state => state.assets)
+    const {offers, loading, error} = useSelector(state => state.assets)
     useEffect(() => {
         dispatch(getAssets())
     }, [])
     
     const asset = offers.find((asset) => asset.id == id)
+    console.log(loading)
   return (
     <>
     <AssetHeader/>
-    <AssetComp/>
+    <div  className='content-container'>
+    {loading ? <Loader/> : (error ? <h2 className='text-center text-dark'> No Internet Connection </h2> : <AssetComp asset={asset}/>)}
+    </div>
+    
    
     
     </>
