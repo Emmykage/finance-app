@@ -84,3 +84,8 @@
     padding: 9px 14px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+.activity-container .activity-portfolios li{
+border-bottom: 1px solid gray;
+
+}

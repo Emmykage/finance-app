@@ -3,7 +3,9 @@ import { getUser, listUsers } from "../actions/users"
 
 const initialState = {
     users: [],
-    user: {}
+    user: {},
+    loading: true,
+    error: false
 }
 
 
@@ -25,7 +27,15 @@ const usersSlice = createSlice({
         console.log(action.payload)
             return{
                 ...state,
-                user: action.payload
+                user: action.payload,
+                loading: false
+            }
+    },
+    [getUser.pending]:(state, action)=>{
+        console.log(action.payload)
+            return{
+                ...state,
+                loading: true
             }
     },
 },

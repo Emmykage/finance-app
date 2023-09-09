@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../../components/activities/activities.css'
 import { NavLink, Outlet } from 'react-router-dom'
 import {AiOutlineInfoCircle} from 'react-icons/ai'
 import {MdPayment} from 'react-icons/md'
 import {BiStar} from 'react-icons/bi'
 import Nav from '../../components/header/Nav'
+import { useDispatch, useSelector } from 'react-redux'
+import { getUser } from '../../redux/actions/users'
 
 const Activities = () => {
+  const user = useSelector(state => state.users)
+  const dispatch = useDispatch()
+  useEffect(()=> {
+    dispatch(getUser())
+  },[])
+  
   const activeLink = "active-link"
   const normalLink = ""
+  console.log(user)
   return (
     <div className='main-container'>
       <Nav/>
@@ -29,7 +38,7 @@ const Activities = () => {
     </div>
     </div>
     <div className='activity'>
-      <Outlet/>
+      <Outlet context={[user]}/>
     </div>
     
 

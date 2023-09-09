@@ -14,7 +14,7 @@ const listUsers = createAsyncThunk("user/get_clients", async() => {
 
 })
 
-const getUser = createAsyncThunk("user/get_account", async(id) => {
+const getUser = createAsyncThunk("user/get_account", async() => {
     const response = await fetch(`${baseUrl}account`,{
     method: "GET",
     headers: {

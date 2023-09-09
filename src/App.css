@@ -246,6 +246,7 @@ h5 {
 .b-radius-2{
   border-radius: var(--border-radius-2);
 }
+
 .btn {
   width: fit-content;
   min-width: 180px;
@@ -277,6 +278,15 @@ h5 {
 }
 .border-light {
   border: 1px solid rgb(216, 220, 226);
+}
+.bold{
+  font-weight: bold;
+}
+.semi-bold{
+  font-weight: 500;
+}
+.text-xl{
+  font-size: 1.4rem;
 }
 
 
