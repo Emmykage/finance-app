@@ -1,11 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createPortfolio, getPortfolios } from "../actions/portfolio";
+import { createPortfolio, getPortfolios, makePayment } from "../actions/portfolio";
 
 const initialState={
     portfolios:[],
+    new_portfolio: {},
     loading:false,
     error: false,
-    status: ""
+    status: "",
+    paid: false
 }
 
 const portfolioSlice =createSlice({
@@ -19,16 +21,18 @@ const portfolioSlice =createSlice({
             }
         },
         [createPortfolio.fulfilled]: (state, action) => {
+            console.log(action.payload)
             return{
                 ...state,
                 status: 'succrssfully purchased an asset',
-                loading: false
+                loading: false,
+                new_portfolio: action.payload,
             }
         },
         [createPortfolio.rejected]: (state, action) => {
             return{
                 ...state,
-                status: 'failed to purchased an asset',
+                status: 'failed to purchased an asset Check your internet connection',
                 loading: false,
                 error: true
             }
@@ -40,6 +44,41 @@ const portfolioSlice =createSlice({
                 loading: true
             }
         },
+        [makePayment.fulfilled]: (state, action) => {
+            console.log(action.payload.true)
+            if(action.payload.paid){
+                return{
+                    ...state,
+                    paid: true,
+                    loading: false,
+                    error: false
+                }
+            }
+            return{
+                ...state,
+                status: '',
+                paid: false,
+                loading: false,
+                error: true, 
+                message: "something went wrong"
+            }
+        },
+        [makePayment.pending]: (state, action) => {
+            
+            return{
+                ...state,
+                loading: true,
+                error: false
+            }
+        },
+        [makePayment.rejected]: (state, action) => {
+            
+            return{
+                ...state,
+                loading: false,
+                error: true
+            }
+        }
         
     }
 })
