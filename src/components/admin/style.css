@@ -515,6 +515,9 @@ align-items: center;
   .right .top button{
     display: none;
   }
+  .asset-view{
+    
+  }
   @media screen and (max-width: 1200px){
     .admin.container{
       padding: 1rem;
@@ -565,6 +568,7 @@ align-items: center;
 
     }
   }
+
   @media screen and (max-width: 768px){
    .admin.container{
     grid-template-columns: 1fr;

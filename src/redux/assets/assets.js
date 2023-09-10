@@ -42,7 +42,7 @@ const assetSlice = createSlice({
 
         },
     [getAssets.fulfilled]: (state, action) => {
-        console.log(action.payload)
+        // console.log(action.payload)
         return{
             ...state,
             loading: false,

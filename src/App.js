@@ -40,6 +40,7 @@ import AlertMessages from './pages/Admin/messages/AlertMessages';
 import Analytics from './pages/Admin/analytics/Analytics';
 import Reports from './pages/Admin/reports/Reports';
 import UserAssetDetails from './pages/users/AssetDetails';
+import AssetView from './pages/Admin/assets/AssetView';
 
 function App() {
   return (
@@ -78,6 +79,7 @@ function App() {
           <Route path='clients' element={<AdminLayout><Clients/></AdminLayout>}/>
           <Route path='orders' element={<AdminLayout><Orders /></AdminLayout>} />
           <Route path='assets' element={<AdminLayout><Assets /></AdminLayout>} />
+          <Route path='assets/:id' element={<AdminLayout><AssetView /></AdminLayout>} />
           <Route path='messages' element={<AdminLayout><AlertMessages /></AdminLayout>} />
           <Route path='analytics' element={<AdminLayout><Analytics /></AdminLayout>} />
           <Route path='reports' element={<AdminLayout><Reports /></AdminLayout>} />

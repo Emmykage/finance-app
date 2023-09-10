@@ -7,6 +7,7 @@ import {AiOutlinePlus} from "react-icons/ai"
 import { NavLink } from 'react-router-dom'
 import img from '../../assets/user/no-profile-picture-icon-14.jpg'
 const Right = () => {
+    
   return (
     <div className='right'>
         <div className="top">

@@ -90,6 +90,14 @@ body {
 .grid-display-3{
   grid-template-columns: repeat(3, 1fr);
 }
+.grid-display-assets{
+  display: grid;
+  gap: 2%;
+  grid-template-columns: 1fr 2fr;
+}
+.border-b{
+  border-bottom: 1px solid var(--color-dark-variant)
+}
 
 /* ====================asset details ======================= */
 

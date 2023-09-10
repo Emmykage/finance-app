@@ -55,7 +55,7 @@ const usersSlice = createSlice({
         console.log(action.payload.message)
             return{
                 ...state,
-                loading: true,
+                loading: false,
                 error: true
             }
     },
