@@ -6,18 +6,15 @@ import { usd_format } from '../misc/USD';
 
 const CheckoutModal = ({setToggleModal, toggleModal, portfolio, asset}) => {
     const {loading, paid, new_portfolio} = useSelector(state => state.portfolios)
-    console.log(paid, new_portfolio)
     const handleConfirmation = () => {
         if(new_portfolio.id){
             dispatch(makePayment(new_portfolio.id))
-            console.log(new_portfolio.id)
         }
         return
     }
     let display = '';
     useEffect(()=> {
         if(paid){toggle()}  
-          console.log("first")
     },[paid])
     
     const dispatch = useDispatch()
@@ -53,6 +50,7 @@ const CheckoutModal = ({setToggleModal, toggleModal, portfolio, asset}) => {
             <a className='btn block' onClick={handleSubmit }>Make Payment</a>
 
             </div>
+            {loading && <p>Processing...</p>}
             <p>{paid && "Payment will be acknowledged when deposit has been confirmed"}</p>
             <button   className={new_portfolio.id && 'btn'} onClick={handleConfirmation }> confirm payment</button>
 

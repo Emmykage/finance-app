@@ -8,6 +8,7 @@ import Nav from '../../components/header/Nav'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from '../../redux/actions/users'
 import { userLog } from '../../redux/auth/user_authentication'
+import { toggleMenuClose } from '../../redux/model/nav'
 
 const Activities = () => {
   const user = useSelector(state => state.users)
@@ -16,6 +17,8 @@ const Activities = () => {
   const handleLogout = () => {
     localStorage.setItem("edge_auth", null)
     dispatch(userLog())
+    dispatch(toggleMenuClose())
+
     navigation('/auth/login')
   }
   useEffect(()=> {
@@ -24,7 +27,6 @@ const Activities = () => {
   
   const activeLink = "active-link"
   const normalLink = ""
-  console.log(user)
   if(user.error){
     return(
       <div><h4 className='text-center text-dark'>Something went wrong please <a onClick={handleLogout}>sign in</a></h4></div>

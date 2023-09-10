@@ -9,7 +9,6 @@ const Assets = () => {
   useEffect(()=> {
     dispatch(getAssets())
   }, [])
-  // console.log(assets)
   return (
     <div>
         <ul>

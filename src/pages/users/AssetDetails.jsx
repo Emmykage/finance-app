@@ -5,6 +5,7 @@ import { getAssets } from '../../redux/actions/assets'
 import AssetComp from '../../components/AssetComponent'
 import Deposite from '../../components/features/Deposite'
 import Loader from '../../components/loader/Loader'
+import { toggleMenuClose } from '../../redux/model/nav'
 
 const UserAssetDetails = () => {
     const {id} = useParams()
@@ -14,6 +15,8 @@ const UserAssetDetails = () => {
     const {offers} = useSelector(state => state.assets)
     useEffect(() => {
         dispatch(getAssets())
+        dispatch(toggleMenuClose())
+
     }, [])
   
     const asset = offers.find((asset) => asset.id == id)

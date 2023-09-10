@@ -10,7 +10,6 @@ const Clients = () => {
   useEffect(()=> {
     dispatch(listUsers())
   }, [])
-  console.log(users)
   if(users.length < 1){
     return(
       <div>

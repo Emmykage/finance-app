@@ -21,7 +21,6 @@ const portfolioSlice =createSlice({
             }
         },
         [createPortfolio.fulfilled]: (state, action) => {
-            console.log(action.payload)
             return{
                 ...state,
                 status: 'succrssfully purchased an asset',
@@ -45,7 +44,6 @@ const portfolioSlice =createSlice({
             }
         },
         [makePayment.fulfilled]: (state, action) => {
-            console.log(action.payload.true)
             if(action.payload.paid){
                 return{
                     ...state,

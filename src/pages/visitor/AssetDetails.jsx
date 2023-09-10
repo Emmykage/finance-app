@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom'
 import { getAssets } from '../../redux/actions/assets'
 import AssetComp from '../../components/AssetComponent'
 import Loader from '../../components/loader/Loader'
+import { toggleMenuClose } from '../../redux/model/nav'
 
 const AssetDetails = () => {
     const {id} = useParams()
@@ -13,10 +14,11 @@ const AssetDetails = () => {
     const {offers, loading, error} = useSelector(state => state.assets)
     useEffect(() => {
         dispatch(getAssets())
+        dispatch(toggleMenuClose())
+
     }, [])
     
     const asset = offers.find((asset) => asset.id == id)
-    console.log(loading)
   return (
     <>
     <AssetHeader/>

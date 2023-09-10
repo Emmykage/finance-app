@@ -34,7 +34,6 @@ const userSlice = createSlice({
     extraReducers: {
         [registerUser.fulfilled]: (state, action) => {
             const response = action.payload;
-            console.log(response.error)
             if (response.user){
                 const collect = JSON.stringify(response)
                 localStorage.setItem("edge_auth", collect)

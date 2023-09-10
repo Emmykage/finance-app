@@ -10,7 +10,6 @@ const InvestmentUpdates = () => {
     currency: 'USD',
   });
 
-  // console.log(user.loading)
   return (
     <div className='activity-container'>
     <h5>Investments</h5>

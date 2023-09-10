@@ -15,7 +15,6 @@ const usersSlice = createSlice({
     extraReducers:{
         [listUsers.fulfilled]: (state, action) => {
             const response = action.payload
-            console.log(response)
             return{
                 ...state,
                 users: response
@@ -24,7 +23,6 @@ const usersSlice = createSlice({
         },
 
     [getUser.fulfilled]:(state, action)=>{
-        console.log(action.payload)
         if(action.payload.message){
 
      
@@ -43,16 +41,14 @@ const usersSlice = createSlice({
             }
         }
     },
-    [getUser.pending]:(state, action)=>{
-        console.log(action.payload)
+    [getUser.pending]:(state)=>{
             return{
                 ...state,
                 loading: true,
                 error: false
             }
     },
-    [getUser.rejected]:(state, action)=>{
-        console.log(action.payload.message)
+    [getUser.rejected]:(state)=>{
             return{
                 ...state,
                 loading: false,

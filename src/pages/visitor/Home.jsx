@@ -14,7 +14,6 @@ const VHome = () => {
     dispatch(getAssets())
     dispatch(toggleMenuClose())
   },[])
-  console.log(offers)
   return (
     <>
      <VisitorHeader/>
