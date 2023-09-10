@@ -7,13 +7,15 @@ import usersSlice from "./users/users"
 import assetSlice from "./assets/assets"
 import faqSlice from './questions/question'
 import logger from "redux-logger";
+import portfolioSlice from "./portfolio/portfolio"
 import { configureStore } from "@reduxjs/toolkit";
 const rootReducer = combineReducers({
     user: userSlice,
     assets: assetSlice,
     nav_toggle: navSlice,
     users: usersSlice,
-    questions: faqSlice
+    questions: faqSlice,
+    portfolios: portfolioSlice
 })
 const store = configureStore({reducer: rootReducer}, applyMiddleware(thunk, logger))
 export default store;

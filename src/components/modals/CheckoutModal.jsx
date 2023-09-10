@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './modal.css'
-import { useDispatch } from 'react-redux';
-import { createPortfolio } from '../../redux/actions/portfolio';
+import { useDispatch, useSelector } from 'react-redux';
+import { createPortfolio, makePayment } from '../../redux/actions/portfolio';
 import { usd_format } from '../misc/USD';
 
 const CheckoutModal = ({setToggleModal, toggleModal, portfolio, asset}) => {
+    const {loading, paid, new_portfolio} = useSelector(state => state.portfolios)
+    console.log(paid, new_portfolio)
+    const handleConfirmation = () => {
+        if(new_portfolio.id){
+            dispatch(makePayment(new_portfolio.id))
+            console.log(new_portfolio.id)
+        }
+        return
+    }
     let display = '';
+    useEffect(()=> {
+        if(paid){toggle()}  
+          console.log("first")
+    },[paid])
     
     const dispatch = useDispatch()
     if(toggleModal){ display = "show"}
@@ -17,10 +30,15 @@ const CheckoutModal = ({setToggleModal, toggleModal, portfolio, asset}) => {
         }
       
     }
+   
+    const toggle =()=> {
+        setToggleModal(!toggleModal)
+    }
+    
   return (
     <div className={`modal-container dark-text flex-justify-center ${display}`} >
         <div className="modal checkout">
-            <div className='close-btn-div'><button onClick={()=>setToggleModal(!toggleModal)}>X</button></div>
+            <div className='close-btn-div'><button onClick={toggle}>X</button></div>
             <div className='checkoutModal '>
                 <div className='grid-display-assets border-b p-1'> <span>Asset Title</span> <span>{asset.title}</span></div>
                 <div className='grid-display-assets border-b p-1'> <span>Asset Type</span><span> {asset.asset_type}</span> </div>
@@ -35,8 +53,12 @@ const CheckoutModal = ({setToggleModal, toggleModal, portfolio, asset}) => {
             <a className='btn block' onClick={handleSubmit }>Make Payment</a>
 
             </div>
-            
-        
+            <p>{paid && "Payment will be acknowledged when deposit has been confirmed"}</p>
+            <button   className={new_portfolio.id && 'btn'} onClick={handleConfirmation }> confirm payment</button>
+
+        </div>
+
+        <div>
         </div>
 
     </div>

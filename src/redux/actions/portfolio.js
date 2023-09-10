@@ -18,7 +18,7 @@ const createPortfolio = createAsyncThunk("portfolio/create_portfolios", async(da
     return response
 })
 
-const getPortfolios = createAsyncThunk("portfolio/get_portfolios", async(data) => {
+const getPortfolios = createAsyncThunk("portfolio/get_portfolios", async() => {
     const response = await fetch(`${baseUrl}portfolios`,{
     method: "GET",
     headers: {
@@ -31,5 +31,18 @@ const getPortfolios = createAsyncThunk("portfolio/get_portfolios", async(data) =
     return response
 })
 
+const makePayment = createAsyncThunk('portfolio/make_payment',async(id) => {
+    const response = await fetch(`${baseUrl}portfolios/${id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-type": "application/json",
+            Authorization: `Bearer ${token()}`
+        },
+        body: JSON.stringify({paid: true}) 
 
-export {createPortfolio, getPortfolios}
+    }).then(res => res.json())
+    return response
+})
+
+
+export {createPortfolio, getPortfolios, makePayment}
