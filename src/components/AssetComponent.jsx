@@ -1,6 +1,5 @@
 import React from 'react'
 const AssetComp = ({asset}) => {
-   console.log(asset)
   return (
     <>
 
