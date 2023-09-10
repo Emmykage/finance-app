@@ -24,7 +24,7 @@ function Copyright(props) {
       <Typography variant="body2" color="text.secondary" align="center" {...props}>
         {'Copyright © '}
         <Link color="inherit" href="https://mui.com/">
-          Vortech
+          Volta
         </Link>{' '}
         {new Date().getFullYear()}
         {'.'}
@@ -105,9 +105,9 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
-            {loading && <span>loading...</span>}
-            {error && <span>{message}</span>}
-
+            {loading && <p>loading...</p>}
+            {error && <p className='text-red py-1'>{message}</p>}
+           
             <Button
               type="submit"
               fullWidth

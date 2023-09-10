@@ -130,6 +130,8 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
+            {loading && <p>loading...</p>}
+            {error && <p className='text-red py-1'>{message}</p>}
             <Button
               type="submit"
               fullWidth

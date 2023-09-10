@@ -34,32 +34,50 @@ const userSlice = createSlice({
     extraReducers: {
         [registerUser.fulfilled]: (state, action) => {
             const response = action.payload;
+            console.log(response.error)
             if (response.user){
                 const collect = JSON.stringify(response)
                 localStorage.setItem("edge_auth", collect)
+                
                 return {
 
               ...state,
               logged: true,
-              user: response
+              user: response,
+              loading: false
                 }
 
             }
+            else if(response.error){
+               return{
+                ...state,
+                loading: false,
+                error: true,
+                message: "Enter a valid email"
+            
+            }
+
+            }else{
+
+           
             return{
                 ...state,
                 logged: true,
                 error: true,
                 message: response.error 
             }
+        }
         },
         [registerUser.pending]: (state, action)=>({
           ...state,
-          loading: true  
+          loading: true,
+          error: false  
         }),
         [registerUser.rejected]: (state, action)=>({
             ...state,
             message: "No internet connection",
-            loading: false  
+            loading: false,
+            error: true
           }),
 
           [userSession.fulfilled]: (state, action) => {
