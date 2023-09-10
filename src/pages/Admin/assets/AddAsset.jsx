@@ -8,7 +8,6 @@ const AddAsset = () => {
   const dispatch = useDispatch()
   const [assetForm, setAssetForm] = useState({ asset_name: "", minimum_investment: null, term: "", asset_type: "other", title: "", description: "", share_in_excess: "",annual_mangt_fee: "", annual_flat_expense: "", overview_description: "", overview_note: ""})
 
-  // const [formData, setFormData] = useState({})
   const  handleInput = (e) =>{
     setAssetForm({
       

@@ -247,7 +247,12 @@ h5 {
 .b-radius-2{
   border-radius: var(--border-radius-2);
 }
-
+.shadow{
+  box-shadow: 0 0 8px rgb(193, 192, 192)
+}
+.radius{
+  border-radius: 1rem;
+}
 .btn {
   width: fit-content;
   min-width: 180px;
@@ -322,6 +327,19 @@ h5 {
 .bg-black {
   background-color: white;
 }
+.text-dark{
+  color: var(--color-dark);
+}
+ .hide-display{
+  height: 0;
+  overflow: hidden;
+  transition: all 3s ease;
+
+ }
+ .rotate{
+  transition: all 0.3s ease;
+  transform: rotate(90deg);
+ }
 
 table {
   width: 100%;
@@ -952,7 +970,7 @@ footer {
 
 .question-bar ul li {
   background: var(--color-white);
-  padding: 1rem 0 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   margin-top: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
@@ -1229,9 +1247,7 @@ hr {
 .get-started .proceed h3{
   font-size: 2rem;
 }
-.text-dark{
-  color: var(--color-dark);
-}
+
 
 @media screen and (max-width: 768px) {
   .m-4{

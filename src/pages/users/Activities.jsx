@@ -1,16 +1,23 @@
 import React, { useEffect } from 'react'
 import '../../components/activities/activities.css'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import {AiOutlineInfoCircle} from 'react-icons/ai'
 import {MdPayment} from 'react-icons/md'
 import {BiStar} from 'react-icons/bi'
 import Nav from '../../components/header/Nav'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from '../../redux/actions/users'
+import { userLog } from '../../redux/auth/user_authentication'
 
 const Activities = () => {
   const user = useSelector(state => state.users)
   const dispatch = useDispatch()
+  const navigation = useNavigate()
+  const handleLogout = () => {
+    localStorage.setItem("edge_auth", null)
+    dispatch(userLog())
+    navigation('/auth/login')
+  }
   useEffect(()=> {
     dispatch(getUser())
   },[])
@@ -18,6 +25,11 @@ const Activities = () => {
   const activeLink = "active-link"
   const normalLink = ""
   console.log(user)
+  if(user.error){
+    return(
+      <div><h4 className='text-center text-dark'>Something went wrong please <a onClick={handleLogout}>sign in</a></h4></div>
+    )
+  }
   return (
     <div className='main-container'>
       <Nav/>

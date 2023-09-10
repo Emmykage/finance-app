@@ -25,17 +25,38 @@ const usersSlice = createSlice({
 
     [getUser.fulfilled]:(state, action)=>{
         console.log(action.payload)
+        if(action.payload.message){
+
+     
+            return{
+                ...state,
+                error: true,
+                loading: false
+            }
+        }else{
             return{
                 ...state,
                 user: action.payload,
-                loading: false
+                loading: false,
+                error: false
+               
             }
+        }
     },
     [getUser.pending]:(state, action)=>{
         console.log(action.payload)
             return{
                 ...state,
-                loading: true
+                loading: true,
+                error: false
+            }
+    },
+    [getUser.rejected]:(state, action)=>{
+        console.log(action.payload.message)
+            return{
+                ...state,
+                loading: true,
+                error: true
             }
     },
 },

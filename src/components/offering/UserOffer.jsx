@@ -5,6 +5,7 @@ function UserOffer({assets}) {
     const getStarted = (id) => {
         navigation(`/details/${id}`)
     }
+    console.log(assets)
   return (
     <div>
         <div className='offer-cards'>

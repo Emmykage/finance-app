@@ -3,16 +3,20 @@ import CHART_PIC from '../../assets/image/barchart.svg'
 // import {ArrowForwardIosOutlinedI} from '@mui/icons-material/';
 import TOTAL from "../../assets/image/total.svg"
 // import RATE from "../../assets/image/rate.svg"
-import {ArrowForwardIosOutlined} from '@mui/icons-material/';
 import ASSET from "../../assets/image/asset.svg"
 import OFFERING from "../../assets/image/offering.svg"
 import ICONCHART from "../../assets/image/advice-chart.svg"
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleMenuClose } from '../../redux/model/nav';
+import Questions from '../../components/faq/Questions';
+import { getQuestions } from '../../redux/questions/question'
 const Home = () => {
+  const {faqs} = useSelector(state => state.questions)
+
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(toggleMenuClose())
+    dispatch(getQuestions())
   },[])
   return (
     <div className='sub-container'>
@@ -144,18 +148,11 @@ const Home = () => {
           <h2>Frequently asked questions</h2>
           <div>
             <ul>
-              <li className='flex-justify-space row'>
-                <span>How does YieldStreet get paid?</span><span><ArrowForwardIosOutlined/></span>
-                
-              </li>
-              <li className='flex-justify-space row'><span>How do i make my first investment?</span><span><ArrowForwardIosOutlined/></span> </li>
-                <li className='flex-justify-space row'><span>Haw are investments offering structured</span><span><ArrowForwardIosOutlined/></span> 
-                </li>
-                <li className='flex-justify-space row'><span>What is Yieldstreet traack record?</span><span><ArrowForwardIosOutlined/></span> 
-                </li>
-                <li className='flex-justify-space row'><span>what assets classes does YieldStreet offer?</span><span><ArrowForwardIosOutlined/></span> 
-                </li>
-                <li className='flex-justify-space row'><span>What is YieldStreets due deliggence process</span><span><ArrowForwardIosOutlined/></span> </li>
+            {faqs.map(faq => (
+
+              <Questions faq={faq}/>
+            )
+            )}
             </ul>
           </div>
         </div>
