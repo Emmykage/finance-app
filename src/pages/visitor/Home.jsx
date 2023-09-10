@@ -7,6 +7,7 @@ import { toggleMenuClose } from '../../redux/model/nav';
 import VisitorHeader from '../../components/guest/header/VisitorHeader';
 import { getAssets } from '../../redux/actions/assets';
 import TopInfo from '../component/TopInfo';
+import { NavLink } from 'react-router-dom';
 const VHome = () => {
   const {offers} = useSelector( state => state.assets)
   const dispatch = useDispatch()
@@ -39,9 +40,9 @@ Some opportunities are only visible to logged-in members.
           </p>
         </div>
         <div className='reg-div'>
-          <a className='btn'>
+          <NavLink to={'/auth/login'} className='btn'>
             Sign up now
-          </a>
+          </NavLink>
         </div>
 
       </div>
