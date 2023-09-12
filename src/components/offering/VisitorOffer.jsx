@@ -9,6 +9,7 @@ function VisitorOffer({ assets }) {
   return (
     <div>
       <div className="offer-cards">
+        {assets.length < 1 && <h2>No offers available check with us in a few days</h2>}
         {assets.map((offer) => (
           <>
 

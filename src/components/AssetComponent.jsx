@@ -1,4 +1,5 @@
 import React from 'react';
+import commercial from '../assets/image/investment-photos/realestate/Commercial-real-estate.webp'
 
 const AssetComp = ({ asset }) => (
   <>
@@ -100,7 +101,7 @@ const AssetComp = ({ asset }) => (
         </div>
         <div>
 
-          <div className="overview-info flex-space gap-5">
+          <div className="overview-info flex-stretch gap-5">
             <div className="basis-50">
               <ul>
                 <p>
@@ -125,9 +126,10 @@ const AssetComp = ({ asset }) => (
               </ul>
 
             </div>
-            <div className="basis-50 border">
-              <div className="overview-img" />
-              <img src="#" alt="Real estate images" />
+            <div className="basis-50">
+              <div className="overview-img" >
+              <img src={commercial} alt="Real estate images" />
+              </div>
 
             </div>
           </div>

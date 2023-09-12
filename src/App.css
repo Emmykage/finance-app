@@ -57,6 +57,9 @@ body {
   margin: auto;
   background-color: var(--color-white);
 }
+img{
+  width: 100%;
+}
 
 .dark-text {
   color: var(--color-background-dark);
@@ -106,6 +109,13 @@ body {
 
 .border-b {
   border-bottom: 1px solid var(--color-dark-variant);
+}
+
+.flex-stretch{
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: stretch; */
+
 }
 
 /* ====================asset details ======================= */
