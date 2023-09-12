@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const RecurringDeposit = () => {
-  return (
-    <div>ReccurringDeposit</div>
-  )
-}
+const RecurringDeposit = () => (
+  <div>ReccurringDeposit</div>
+);
 
-export default RecurringDeposit
+export default RecurringDeposit;

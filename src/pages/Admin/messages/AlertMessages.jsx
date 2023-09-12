@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const AlertMessages = () => {
-  return (
-    <div>Messages</div>
-  )
-}
+const AlertMessages = () => (
+  <div>Messages</div>
+);
 
-export default AlertMessages
+export default AlertMessages;

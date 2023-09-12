@@ -1,26 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-const FootBanner = ({children}) => {
-  return (
-    <div className='footbanner'>
-    <div className='creed'>
+const FootBanner = ({ children }) => (
+  <div className="footbanner">
+    <div className="creed">
 
-    
-    <h2>
+      <h2>
         evolve your wealth
-    </h2>
-    <p>
-    {children}
+      </h2>
+      <p>
+        {children}
 
-    </p>
-    <div className='btn-div'>
-    <a className='btn banner' href="">Get started</a>
+      </p>
+      <div className="btn-div">
+        <a className="btn banner" href="">Get started</a>
 
-
+      </div>
     </div>
-    </div>
-</div>
-  )
-}
+  </div>
+);
 
-export default FootBanner
+export default FootBanner;

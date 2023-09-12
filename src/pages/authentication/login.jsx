@@ -19,65 +19,64 @@ import { userSession } from '../../redux/actions/auth';
 // import { Copyright } from './Copyright';
 
 function Copyright(props) {
-
-    return (
-      <Typography variant="body2" color="text.secondary" align="center" {...props}>
-        {'Copyright © '}
-        <Link color="inherit" href="https://mui.com/">
-          Volta
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
+  return (
+    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Volta
+      </Link>
+      {' '}
+      {new Date().getFullYear()}
+      .
+    </Typography>
+  );
+}
 const theme = createTheme();
 
 export default function SignUp() {
-  const navigation = useNavigate()
-  const dispatch = useDispatch()
-  const {user, error, message, loading} = useSelector((state) => state.user)
+  const navigation = useNavigate();
+  const dispatch = useDispatch();
+  const {
+    user, error, message, loading,
+  } = useSelector((state) => state.user);
 
   useEffect(() => {
-    dispatch(userLog())
-  },[])
+    dispatch(userLog());
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const formInput = {
       user: {
-    email: data.get('email'),
-    password: data.get('password'),
-      }
-  }
-    dispatch(userSession(formInput))
-
+        email: data.get('email'),
+        password: data.get('password'),
+      },
+    };
+    dispatch(userSession(formInput));
   };
-  if (user == null || user == undefined){
+  if (user == null || user == undefined) {
+    return (
+      <ThemeProvider theme={theme}>
+        <Container component="main" maxWidth="xs">
+          <CssBaseline />
+          <Box
+            sx={{
+              marginTop: 8,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <NavLink to="/">Visit Site</NavLink>
 
+            <Typography component="h1" variant="h5">
+              Login
+            </Typography>
+            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+              <Grid container spacing={2}>
 
-  return (
-    <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box
-          sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <NavLink to={'/'}>Visit Site</NavLink>
-         
-          <Typography component="h1" variant="h5">
-            Login 
-          </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-            <Grid container spacing={2}>
-              
-              <Grid item xs={12}>
+                <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
@@ -87,7 +86,7 @@ export default function SignUp() {
                   autoComplete="email"
                 />
               </Grid>
-              <Grid item xs={12}>
+                <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
@@ -98,42 +97,40 @@ export default function SignUp() {
                   autoComplete="new-password"
                 />
               </Grid>
-              <Grid item xs={12}>
+                <Grid item xs={12}>
                 <FormControlLabel
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
                   label="I want to receive inspiration, marketing promotions and updates via email."
                 />
               </Grid>
-            </Grid>
-            {loading && <p>loading...</p>}
-            {error && <p className='text-red py-1'>{message}</p>}
-           
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
+              </Grid>
+              {loading && <p>loading...</p>}
+              {error && <p className="text-red py-1">{message}</p>}
+
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
               Login
-            </Button>
-            <Grid container justifyContent="flex-end">
-              <Grid item>
+              </Button>
+              <Grid container justifyContent="flex-end">
+                <Grid item>
                 <NavLink to="/auth/sign_up">
 
-                
-                <Link variant="body2">
-                  Do not have an account? Sign Up
-                </Link>
+                  <Link variant="body2">
+                    Do not have an account? Sign Up
+                  </Link>
                 </NavLink>
               </Grid>
-            </Grid>
+              </Grid>
+            </Box>
           </Box>
-        </Box>
-        <Copyright sx={{ mt: 5 }} />
-      </Container>
-    </ThemeProvider>
-  );
-}else{
-  navigation("/home")
-}
+          <Copyright sx={{ mt: 5 }} />
+        </Container>
+      </ThemeProvider>
+    );
+  }
+  navigation('/home');
 }

@@ -1,28 +1,26 @@
-import React from 'react'
+import React from 'react';
 
-const BankAccount = () => {
-  return (
+const BankAccount = () => (
+  <div>
     <div>
-      <div>
-        <p>
+      <p>
         You have reached our limit on number of bank accounts.If you wish to add another external account, please delete an unused external bank account and try again or contact us at investments@investedge.com for assistance.
-        </p>
-        <div className='account-notice'>
-          <h3>
+      </p>
+      <div className="account-notice">
+        <h3>
           You have not yet created an investor account.
 
-          </h3>
-          <p>
-            Please complete your account set-up to invest on Yieldstreet.
+        </h3>
+        <p>
+          Please complete your account set-up to invest on Yieldstreet.
 
-          </p>
-          <a href="" className='btn'>
-            Get Started
-          </a>
-        </div>
+        </p>
+        <a href="" className="btn">
+          Get Started
+        </a>
       </div>
     </div>
-  )
-}
+  </div>
+);
 
-export default BankAccount
+export default BankAccount;

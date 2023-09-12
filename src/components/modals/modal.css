@@ -5,107 +5,112 @@
 
 } */
 .modal-container {
-    position: fixed;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    top: 0;
-    left: 0;
-    height: 100vh;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.4s ease-in;
-  }
-  .modal-container.show{
-    opacity: 1;
-    pointer-events: auto;
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-in;
+}
 
-  }
-  td{
-    border: 1px solid black;
-  }
-  
-  .modal {
-    max-width: 700px;
-    width: 100%;
-    z-index: 99;
-    text-align: center;
-    background-color: white;
-    padding: 1.2rem;
-    border-radius: 1rem;
-    min-height: 680px;
-  }
-  
-  .modal h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin: 1rem;
-  }
-  
-  .modal .btn-container {
-    margin: auto;
-    width: 500px;
-    display: flex;
-    justify-content: space-around;
-    gap: 4%;
-  }
-  .modal .close-btn-div{
-    text-align: end;
-    margin: 0.5rem 0;
+.modal-container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
-  }
-  .modal .close-btn-div button{
-    font-size: 2rem;
+td {
+  border: 1px solid black;
+}
 
-  }
+.modal {
+  max-width: 700px;
+  width: 100%;
+  z-index: 99;
+  text-align: center;
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  min-height: 680px;
+}
 
+.modal h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem;
+}
 
-  .checkout table {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .checkout tbody
-  ,.checkout thead
-  {
-    display: flex;
-    width: 800px;
-    position: relative;
-    align-items: stretch;
+.modal .btn-container {
+  margin: auto;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  gap: 4%;
+}
 
-  }
-  .checkout tr {
-    display: flex;
-    flex-wrap: wrap;
-  
-   
-    
-  }
-  /* .checkout tr + .checkout tr {
+.modal .close-btn-div {
+  text-align: end;
+  margin: 0.5rem 0;
+}
+
+.modal .close-btn-div button {
+  font-size: 2rem;
+}
+
+.checkout table {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.checkout tbody,
+.checkout thead {
+  display: flex;
+  width: 800px;
+  position: relative;
+  align-items: stretch;
+}
+
+.checkout tr {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .checkout tr + .checkout tr {
   border-left: 1px solid black;
   } */
-  
-  .checkout th, .checkout td {
-    flex-basis: 100%;
-    text-align: left;
-    display: flex;
-    border: none;
-    /* adjusst this to adjust row height */
-    /* min-height: 80px; */
-    
-  }
-  .checkout th:nth-child(3), .checkout td:nth-child(3){
-    min-height: 200px;
-    /* align-items: stretch; */
-  }
-  .checkout th {
-    font-weight: bold;
-    align-items: center;
-    border: 1px solid black;
-  } 
-  .checkout .btn{
-    margin-top: 10px;
-    width: 100%;
-    /* background-color: rgb(13, 13, 72);
-    color: white; */
 
-  }
+.checkout th,
+.checkout td {
+  flex-basis: 100%;
+  text-align: left;
+  display: flex;
+  border: none;
+
+  /* adjusst this to adjust row height */
+
+  /* min-height: 80px; */
+}
+
+.checkout th:nth-child(3),
+.checkout td:nth-child(3) {
+  min-height: 200px;
+
+  /* align-items: stretch; */
+}
+
+.checkout th {
+  font-weight: bold;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.checkout .btn {
+  margin-top: 10px;
+  width: 100%;
+
+  /* background-color: rgb(13, 13, 72);
+    color: white; */
+}
