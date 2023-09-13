@@ -58,7 +58,7 @@ body {
   background-color: var(--color-white);
 }
 img{
-  width: 100%;
+  /* width: 100%; */
 }
 .warn-info{
   font-size: 28px;
