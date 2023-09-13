@@ -60,6 +60,10 @@ body {
 img{
   width: 100%;
 }
+.warn-info{
+  font-size: 28px;
+  font-weight: 600;
+}
 
 .dark-text {
   color: var(--color-background-dark);

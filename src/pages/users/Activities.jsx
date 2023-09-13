@@ -11,7 +11,10 @@ import { userLog } from '../../redux/auth/user_authentication';
 import { toggleMenuClose } from '../../redux/model/nav';
 
 const Activities = () => {
+  const auth_user = useSelector((state) => state.user);
   const user = useSelector((state) => state.users);
+
+
   const dispatch = useDispatch();
   const navigation = useNavigate();
   const handleLogout = () => {
@@ -24,16 +27,15 @@ const Activities = () => {
   useEffect(() => {
     dispatch(getUser());
   }, []);
-
+  auth_user.user == null && navigation('/auth/login')
   const activeLink = 'active-link';
   const normalLink = '';
   if (user.error) {
     return (
-      <div>
-        <h4 className="text-center text-dark">
-          Something went wrong please
-          <a onClick={handleLogout}>sign in</a>
-        </h4>
+      <div className='warn-info'>
+        <span className="text-center text-dark block p-4">
+          Something went wrong please <NavLink onClick={handleLogout}>sign in</NavLink>
+        </span>
       </div>
     );
   }

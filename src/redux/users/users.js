@@ -5,7 +5,7 @@ const initialState = {
   users: [],
   user: {},
   loading: true,
-  error: false,
+  error: false,message: null
 };
 
 const usersSlice = createSlice({
@@ -14,9 +14,30 @@ const usersSlice = createSlice({
   extraReducers: {
     [listUsers.fulfilled]: (state, action) => {
       const response = action.payload;
+      console.log(response)
+      if(response.message){
+        console.log('error message exists')
+       return{
+        ...state,
+        error: true,
+        loading:false
+       }
+      }
       return {
         ...state,
         users: response,
+        error: false,
+        loading:false
+
+      };
+    },
+    [listUsers.rejected]: (state, action) => {
+      const response = action.payload;
+      console.log(response)
+      return {
+        ...state,
+        error:true,
+        loading: false
 
       };
     },

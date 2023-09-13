@@ -5,17 +5,21 @@ import Right from '../components/admin/Right';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUser } from '../redux/actions/users';
 import Loader from '../components/loader/Loader';
+import { userLog } from '../redux/auth/user_authentication';
+import { useNavigate } from 'react-router-dom';
 
 const AdminLayout = ({ children }) => {
   const dispatch = useDispatch();
-  const { users, loading, error } = useSelector((state) => state.users);
+  const { user, loading, error } = useSelector((state) => state.user);
+  const navigation = useNavigate()
   useEffect(() => {
     dispatch(getUser());
+    dispatch(userLog())
   }, []);
+  // console.log(user)
   if (loading) {
     return (<Loader />);
   }
-
   if (error) {
     <div>
       {' '}
@@ -23,6 +27,11 @@ const AdminLayout = ({ children }) => {
       {' '}
     </div>;
   }
+  if(user == null){
+    (navigation('/auth/admin_login '))
+  }else{
+
+    user.role === "admin" && <h1 className='text-gray'>You are not Authorized to view this page</h1>
 
   return (
     <div className="admin container">
@@ -36,5 +45,9 @@ const AdminLayout = ({ children }) => {
     </div>
   );
 };
+    
+}
+
+
 
 export default AdminLayout;

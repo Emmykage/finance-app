@@ -14,6 +14,7 @@ const UserLayout = ({ children }) => {
   useEffect(() => {
     dispatch(userLog());
   }, []);
+  console.log("first")
   if (user === null) { (navigation('/auth/login')); } else {
     return (
       <div>

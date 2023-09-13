@@ -41,6 +41,8 @@ import Analytics from './pages/Admin/analytics/Analytics';
 import Reports from './pages/Admin/reports/Reports';
 import UserAssetDetails from './pages/users/AssetDetails';
 import AssetView from './pages/Admin/assets/AssetView';
+import AdminSignUp from './pages/authentication/AdminSignUp';
+import AdminLogin from './pages/authentication/AdminLogin';
 
 function App() {
   return (
@@ -98,6 +100,8 @@ function App() {
         <Route path="auth">
           <Route path="sign_up" element={<Signup />} />
           <Route path="login" element={<Login />} />
+          <Route path="admin_login" element={<AdminLogin />} />
+          <Route path="admin_sign_up" element={<AdminSignUp />} />
           <Route path="confirmation" element={<ConfirmAccount />} />
 
         </Route>
