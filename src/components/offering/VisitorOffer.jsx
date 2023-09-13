@@ -1,13 +1,19 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
-function VisitorOffer({ assets }) {
+import Loader from "../loader/Loader"
+function VisitorOffer({ assets, loading }) {
   const navigation = useNavigate();
   const getStarted = (id) => {
     navigation(`/asset-details/${id}`);
   };
+  if(loading){
+    return(
+      <Loader/>
+    )
+  }
   return (
     <div>
+      
       <div className="offer-cards">
         {assets.length < 1 && <h2>No offers available check with us in a few days</h2>}
         {assets.map((offer) => (
