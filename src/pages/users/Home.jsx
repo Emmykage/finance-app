@@ -8,7 +8,7 @@ import ASSET from '../../assets/image/asset.svg';
 import OFFERING from '../../assets/image/offering.svg';
 import ICONCHART from '../../assets/image/advice-chart.svg';
 import { toggleMenuClose } from '../../redux/model/nav';
-import Questions from '../../components/faq/Questions';
+import Questions from '../../components/pageComponents/Questions';
 import { getQuestions } from '../../redux/questions/question';
 
 const Home = () => {

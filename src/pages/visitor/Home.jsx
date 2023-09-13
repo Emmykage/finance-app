@@ -7,7 +7,7 @@ import OFFER from '../../assets/image/advice-chart.svg';
 import { toggleMenuClose } from '../../redux/model/nav';
 import VisitorHeader from '../../components/guest/header/VisitorHeader';
 import { getAssets } from '../../redux/actions/assets';
-import TopInfo from '../component/TopInfo';
+import TopInfo from '../../components/pageComponents/TopInfo';
 
 const VHome = () => {
   const { offers } = useSelector((state) => state.assets);
