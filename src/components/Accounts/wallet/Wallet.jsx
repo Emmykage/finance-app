@@ -1,5 +1,5 @@
 import React from 'react';
-import { useOutletContext } from 'react-router-dom';
+import { NavLink, Outlet, useOutletContext } from 'react-router-dom';
 import {IoMdArrowRoundForward} from 'react-icons/io'
 const Wallet = () => {
   const [user] = useOutletContext();
@@ -33,23 +33,23 @@ const Wallet = () => {
             <span>Wallet</span>
             <h2 className='m-1'>$00.00</h2>
             <div className='flex-justify w-info'>
-            <span className='w-info'>Wallet</span> <span className='flex-justify'><IoMdArrowRoundForward/></span>
+            <NavLink to={'/account/wallet/details'} className='w-info'>Wallet</NavLink> <span className='flex-justify'><IoMdArrowRoundForward/></span>
 
             </div>
           </div>
-          {/* <div className='box-shadow p-1 b-radius-1'>
-            <span>Wallet</span>
+           <div className='box-shadow p-1 b-radius-1'>
+            <span>Investment</span>
             <h2 className='m-1'>$00.00</h2>
             <div className='flex-justify w-info'>
-            <span className='w-info'>Wallet</span> <span className='flex-justify'><IoMdArrowRoundForward/></span>
+            <span className='w-info'>Investments</span> <span className='flex-justify'><IoMdArrowRoundForward/></span>
 
             </div>
-          </div> */}
+          </div>
           <div className='box-shadow p-1 b-radius-1'>
             <span>Earnings</span>
             <h2 className='m-1'>$00.00</h2>
             <div className='flex-justify w-info'>
-            <span className='w-info'>Transactions</span> <span className='flex-justify'><IoMdArrowRoundForward/></span>
+            <NavLink  to={'/account/wallet/earnings'} className='w-info'>Transactions</NavLink> <span className='flex-justify'><IoMdArrowRoundForward/></span>
 
             </div>
           </div>
@@ -57,7 +57,7 @@ const Wallet = () => {
             <span>Royalties</span>
             <h2 className='m-1'>$00.00</h2>
             <div className='flex-justify w-info'>
-            <span className='w-info'>Bonuses</span> <span className='flex-justify'><IoMdArrowRoundForward/></span>
+            <NavLink  to={'/account/wallet/royalties'} className='w-info'>Bonuses</NavLink> <span className='flex-justify'><IoMdArrowRoundForward/></span>
 
             </div>
           </div>
@@ -66,6 +66,7 @@ const Wallet = () => {
           
           </div>
           <hr />
+          <Outlet/>
 
 
 

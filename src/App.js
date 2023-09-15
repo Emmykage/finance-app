@@ -4,7 +4,7 @@ import BankAccount from './components/Accounts/BankAccount';
 import InvestmentPreference from './components/Accounts/InvestmentPreference';
 import InvestorAccount from './components/Accounts/InvestorAccount';
 import RecurringDeposit from './components/Accounts/RecurringDeposit';
-import Wallet from './components/Accounts/Wallet';
+import Wallet from './components/Accounts/wallet/Wallet';
 
 import Account from './pages/users/Account';
 import Home from './pages/users/Home';
@@ -44,6 +44,9 @@ import AssetView from './pages/Admin/assets/AssetView';
 import AdminSignUp from './pages/authentication/AdminSignUp';
 import AdminLogin from './pages/authentication/AdminLogin';
 import Timer from './components/misc/Timer';
+import Earnings from './components/Accounts/wallet/Earnings';
+import Royalties from './components/Accounts/wallet/Royalties';
+import WalletDetails from './components/Accounts/wallet/WalletDetails';
 
 function App() {
   return (
@@ -66,8 +69,12 @@ function App() {
           <Route path="investment_preference" element={<><InvestmentPreference /></>} />
           <Route path="investor_account" element={<><InvestorAccount /></>} />
           <Route path="recurring_deposit" element={<><RecurringDeposit /></>} />
-          <Route path="wallet" element={<><Wallet /></>} />
-          <Route path="" element={<><Wallet /></>} />
+          {/* <Route path="wallet" element={<><Wallet /></>} /> */}
+          <Route path="wallet" element={<Wallet />}>
+            <Route path="details" element={<WalletDetails />} />
+            <Route path="earnings" element={<Earnings />} />
+            <Route path="royalties" element={<Royalties />} />
+          </Route>
           {/* <Route path='wallet' element={<Account><Wallet/></Account>}/> */}
         </Route>
 

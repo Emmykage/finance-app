@@ -690,8 +690,6 @@ h6 {
 .assets {
   flex-flow: row wrap;
   gap: 3%;
-
-  /* flex-wrap: wrap; */
 }
 
 .assets span {
