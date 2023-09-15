@@ -110,14 +110,18 @@ button{
 .grid-display {
   display: grid;
 }
-
+.grid-display-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
 .grid-display-3 {
   grid-template-columns: repeat(3, 1fr);
 }
 .grid-display-4 {
   grid-template-columns: repeat(4, 1fr);
 }
-
+.bg-white{
+  background: white;
+}
 .grid-display-assets {
   display: grid;
   gap: 2%;
@@ -620,17 +624,49 @@ nav .menu {
   
 
 }
+.intro span{
+  font-size: 1.3rem;
+}
 .wallet-card{
   
 }
+.wallet-container .wallet {
+  padding: 23px;
+}
+
+.wallet-info select, .wallet-info input{
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 0.7rem;
+  color: var(--color-dark-variant);
+  
+}
+.wallet-info input[type="text"]{
+  /* background-color: #026777; */
+}
+.wallet-info select:focus{
+  outline: none;
+}
+
 .b-radius-2
 
 .text-gray {
   color: var(--color-info-dark);
 }
+.text-light-gray {
+  color: var(--color-dark-variant);
+}
 
 .text-light {
   color: rgb(164, 164, 164);
+}
+.text-white {
+  color: white
+}
+.text-norm{
+  font-size: 0.9rem;
+  color: #677483;
 }
 
 .text-red {
@@ -640,7 +676,31 @@ nav .menu {
 h6 {
   font-size: 0.8rem;
 }
+.bg-light{
+  background: #f8f8f8;
+}
+.w-full{
+  width: 100%;
+}
+.bg-semi{
+  background: var(--color-semi);
+}
+.text-semi{
+  color: var(--color-semi);
+}
+.name{
+  font-size: 1.6rem;
+  font-weight: bold;
 
+}
+.wallet{
+  color: var(--color-dark-variant);
+  font-size: 1rem;
+}
+.wallet .welcome{
+  font-weight: 500;
+  font-size: 1.2rem;
+}
 /* =======================ACCOUNT================= */
 .account-container {
   padding: 2rem;
@@ -1646,6 +1706,3 @@ hr {
   }
 }
 
-.wallet-container .wallet div {
-  padding: 23px;
-}

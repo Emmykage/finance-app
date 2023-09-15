@@ -7,16 +7,20 @@ const Wallet = () => {
     <>
       <div className="wallet-container">
         <div className="wallet box-shadow flex-justify-space">
-          <div className="flex-2 p-li">
+          <div className="flex-2">
           
-            <h3>
-            <span>Welcome, </span> 
+            <div className='py-1' >
+            <span className='welcome'>Welcome, </span> 
              
-              {user.first_name}
-              {' '}
-              {user.last_name}
-            </h3>
+             <span className='name text-semi'>
+             {user.first_name}
+              </span> 
+        
+            </div>
+            <div>
             <span>Individual</span>
+            </div>
+            
           </div>
           <div className="flex-3 border-right p-li">
             <small>Cash Wallet</small>
@@ -38,10 +42,10 @@ const Wallet = () => {
             </div>
           </div>
            <div className='box-shadow p-1 b-radius-1'>
-            <span>Investment</span>
+            <span>Investments/Portfolio</span>
             <h2 className='m-1'>$00.00</h2>
             <div className='flex-justify w-info'>
-            <span className='w-info'>Investments</span> <span className='flex-justify'><IoMdArrowRoundForward/></span>
+            <NavLink to={'/account/wallet/investment'} className='w-info'>Investments</NavLink> <span className='flex-justify'><IoMdArrowRoundForward/></span>
 
             </div>
           </div>

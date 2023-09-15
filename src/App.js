@@ -47,6 +47,7 @@ import Timer from './components/misc/Timer';
 import Earnings from './components/Accounts/wallet/Earnings';
 import Royalties from './components/Accounts/wallet/Royalties';
 import WalletDetails from './components/Accounts/wallet/WalletDetails';
+import Investments from './components/Accounts/wallet/Investments';
 
 function App() {
   return (
@@ -73,6 +74,7 @@ function App() {
           <Route path="wallet" element={<Wallet />}>
             <Route path="details" element={<WalletDetails />} />
             <Route path="earnings" element={<Earnings />} />
+            <Route path="investment" element={<Investments />} />
             <Route path="royalties" element={<Royalties />} />
           </Route>
           {/* <Route path='wallet' element={<Account><Wallet/></Account>}/> */}
