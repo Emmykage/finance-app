@@ -30,7 +30,7 @@ const Account = () => {
           </div>
 
         </div>
-        <div className="container bg-black">
+        <div className="container">
           <Outlet context={[user]} />
         </div>
       </div>

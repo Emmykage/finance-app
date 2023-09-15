@@ -43,6 +43,7 @@ import UserAssetDetails from './pages/users/AssetDetails';
 import AssetView from './pages/Admin/assets/AssetView';
 import AdminSignUp from './pages/authentication/AdminSignUp';
 import AdminLogin from './pages/authentication/AdminLogin';
+import Timer from './components/misc/Timer';
 
 function App() {
   return (
@@ -65,6 +66,7 @@ function App() {
           <Route path="investment_preference" element={<><InvestmentPreference /></>} />
           <Route path="investor_account" element={<><InvestorAccount /></>} />
           <Route path="recurring_deposit" element={<><RecurringDeposit /></>} />
+          <Route path="wallet" element={<><Wallet /></>} />
           <Route path="" element={<><Wallet /></>} />
           {/* <Route path='wallet' element={<Account><Wallet/></Account>}/> */}
         </Route>
@@ -105,6 +107,8 @@ function App() {
           <Route path="confirmation" element={<ConfirmAccount />} />
 
         </Route>
+        <Route path="/timer" element={<Timer />} />
+
       </Routes>
 
     </div>

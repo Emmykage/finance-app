@@ -1,14 +1,17 @@
 import React from 'react';
 import { useOutletContext } from 'react-router-dom';
-
+import {IoMdArrowRoundForward} from 'react-icons/io'
 const Wallet = () => {
   const [user] = useOutletContext();
   return (
     <>
       <div className="wallet-container">
-        <div className="wallet flex-justify-space">
-          <div className="flex-2 border-left p-li">
+        <div className="wallet box-shadow flex-justify-space">
+          <div className="flex-2 p-li">
+          
             <h3>
+            <span>Welcome, </span> 
+             
               {user.first_name}
               {' '}
               {user.last_name}
@@ -25,6 +28,48 @@ const Wallet = () => {
 
           </div>
         </div>
+        <div className='m-3 gap-2 grid-display grid-display-4'>
+          <div className='box-shadow p-1 b-radius-1'>
+            <span>Wallet</span>
+            <h2 className='m-1'>$00.00</h2>
+            <div className='flex-justify w-info'>
+            <span className='w-info'>Wallet</span> <span className='flex-justify'><IoMdArrowRoundForward/></span>
+
+            </div>
+          </div>
+          {/* <div className='box-shadow p-1 b-radius-1'>
+            <span>Wallet</span>
+            <h2 className='m-1'>$00.00</h2>
+            <div className='flex-justify w-info'>
+            <span className='w-info'>Wallet</span> <span className='flex-justify'><IoMdArrowRoundForward/></span>
+
+            </div>
+          </div> */}
+          <div className='box-shadow p-1 b-radius-1'>
+            <span>Earnings</span>
+            <h2 className='m-1'>$00.00</h2>
+            <div className='flex-justify w-info'>
+            <span className='w-info'>Transactions</span> <span className='flex-justify'><IoMdArrowRoundForward/></span>
+
+            </div>
+          </div>
+          <div className='box-shadow p-1 b-radius-1'>
+            <span>Royalties</span>
+            <h2 className='m-1'>$00.00</h2>
+            <div className='flex-justify w-info'>
+            <span className='w-info'>Bonuses</span> <span className='flex-justify'><IoMdArrowRoundForward/></span>
+
+            </div>
+          </div>
+
+        
+          
+          </div>
+          <hr />
+
+
+
+        
       </div>
     </>
 

@@ -56,7 +56,16 @@ td {
 }
 
 .modal .close-btn-div button {
-  font-size: 2rem;
+  line-height: 1.2rem;
+  width: 2rem;
+  
+ background-color: rgb(244, 242, 242);
+ font-weight: 800;
+  
+}
+.close-btn{
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .checkout table {

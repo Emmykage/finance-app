@@ -102,7 +102,7 @@ const AssetComp = ({ asset }) => (
         <div>
 
           <div className="overview-info flex-stretch gap-5">
-            <div className="basis-50">
+            <div className="flex-grid">
               <ul>
                 <p>
                     {asset.overview_description}
@@ -126,7 +126,7 @@ const AssetComp = ({ asset }) => (
               </ul>
 
             </div>
-            <div className="basis-50">
+            <div className="flex-grid">
               <div className="overview-img" >
               <img src={commercial} alt="Real estate images" />
               </div>

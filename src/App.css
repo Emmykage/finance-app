@@ -11,6 +11,8 @@
   --color-danger: #ff7782;
   --color-success: #41f1b6;
   --header-bg: #026777;
+  --color-semi: #026777;
+
   --color-warning: #fb5;
   --color-white: #fff;
   --color-info-dark: #7d8da1;
@@ -55,20 +57,28 @@ body {
   max-width: 1800px;
   min-height: calc(100vh - 175px);
   margin: auto;
-  background-color: var(--color-white);
+  /* background-color: var(--color-white); */
 }
-img{
-  /* width: 100%; */
+
+button{
+  background-color: white;
+  border: 1px solid rgb(227, 224, 224);
+  padding: 0.1rem;
+  border-radius: 0.61rem;
 }
 .warn-info{
   font-size: 28px;
   font-weight: 600;
 }
-
+.box-shadow{
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6) ;
+}
 .dark-text {
   color: var(--color-background-dark);
 }
-
+.grid-card{
+  grid-template-columns: ;
+}
 .red-text {
   color: red;
 }
@@ -103,6 +113,9 @@ img{
 
 .grid-display-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+.grid-display-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .grid-display-assets {
@@ -164,6 +177,10 @@ img{
 
 .asset-details .overview .overview-info{
 
+}
+
+.asset-details .overview .overview-info img{
+  width: 100%;
 }
 
 .asset-details .overview .overview-info .overview-img {
@@ -297,12 +314,15 @@ h5 {
   padding: 4rem;
 }
 
-.basis-50 {
+/* .basis-50 {
   flex-basis: 50%;
-}
+} */
 
 .b-radius-2 {
   border-radius: var(--border-radius-2);
+}
+.b-radius-1 {
+  border-radius: var(--border-radius-1);
 }
 
 .shadow {
@@ -595,6 +615,15 @@ nav .menu {
 .wallet-container {
   margin-bottom: 23px;
 }
+.wallet-container .w-info{
+  color: var(--color-semi);
+  
+
+}
+.wallet-card{
+  
+}
+.b-radius-2
 
 .text-gray {
   color: var(--color-info-dark);
@@ -618,6 +647,11 @@ h6 {
   color: var(--color-dark);
   max-width: 1400px;
   width: 100%;
+  background: url("../public/images/background/bg-logo.jpeg");
+  background-position: center;
+  backdrop-filter: var(--color-info-dark);
+  /* opacity: 0.75;   */
+  background-repeat: no-repeat;
 }
 
 .account-nav {
@@ -677,11 +711,6 @@ h6 {
   display: block;
 }
 
-.wallet {
-  /* padding: 22px; */
-
-  border: 1px solid black;
-}
 
 .wallet-container .wallet .border-left {
   border-right: 1px solid #202528;
