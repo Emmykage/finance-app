@@ -53,7 +53,7 @@ const Wallet = () => {
             <span>Earnings</span>
             <h2 className='m-1'>$00.00</h2>
             <div className='flex-justify w-info'>
-            <NavLink  to={'/account/wallet/earnings'} className='w-info'>Transactions</NavLink> <span className='flex-justify'><IoMdArrowRoundForward/></span>
+            <NavLink to={'/account/wallet/earnings'} className='w-info'>Transactions</NavLink> <span className='flex-justify'><IoMdArrowRoundForward/></span>
 
             </div>
           </div>
