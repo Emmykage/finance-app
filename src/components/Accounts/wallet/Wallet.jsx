@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink, Outlet, useOutletContext } from 'react-router-dom';
 import {IoMdArrowRoundForward} from 'react-icons/io'
+import { useDispatch, useSelector } from 'react-redux';
+import { getWallet } from '../../../redux/actions/wallet';
+import { userLog } from '../../../redux/auth/user_authentication';
 const Wallet = () => {
   const [user] = useOutletContext();
+  const {wallet, loading} = useSelector(state => state.wallet)
+  const dispatch = useDispatch()
+  useEffect(()=> {
+    dispatch(userLog())
+    dispatch(getWallet())
+ 
+  },[])
+  console.log(wallet, loading)
   return (
     <>
       <div className="wallet-container">
@@ -35,7 +46,7 @@ const Wallet = () => {
         <div className='m-3 gap-2 grid-display grid-display-4'>
           <div className='box-shadow p-1 b-radius-1'>
             <span>Wallet</span>
-            <h2 className='m-1'>$00.00</h2>
+            <h2 className='m-1'>${wallet.balance}</h2>
             <div className='flex-justify w-info'>
             <NavLink to={'/account/wallet/details'} className='w-info'>Wallet</NavLink> <span className='flex-justify'><IoMdArrowRoundForward/></span>
 

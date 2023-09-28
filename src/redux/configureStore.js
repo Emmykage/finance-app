@@ -9,6 +9,8 @@ import usersSlice from './users/users';
 import assetSlice from './assets/assets';
 import faqSlice from './questions/question';
 import portfolioSlice from './portfolio/portfolio';
+import transactionSlice from './wallet/transaction'
+import walletSlice from "./wallet/wallet"
 
 const rootReducer = combineReducers({
   user: userSlice,
@@ -17,6 +19,8 @@ const rootReducer = combineReducers({
   users: usersSlice,
   questions: faqSlice,
   portfolios: portfolioSlice,
+  transactions: transactionSlice,
+  wallet: walletSlice
 });
 const store = configureStore({ reducer: rootReducer }, applyMiddleware(thunk, logger));
 export default store;
