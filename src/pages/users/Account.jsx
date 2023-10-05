@@ -5,8 +5,7 @@ import AccountRoutes from '../../components/Accounts/AccountRoutes';
 import Nav from '../../components/header/Nav';
 import Footer from '../../footer/Footer';
 import { toggleMenuClose } from '../../redux/model/nav';
-// import { getAssets } from '../../redux/actions/assets'
-import { userLog } from '../../redux/auth/user_authentication';
+
 import { getUser } from '../../redux/actions/users';
 
 const Account = () => {
@@ -14,7 +13,6 @@ const Account = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getUser());
-
     dispatch(toggleMenuClose());
   }, []);
 

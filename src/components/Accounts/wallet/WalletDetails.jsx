@@ -1,69 +1,52 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import { createTransaction, getWallet } from '../../../redux/actions/wallet'
+import { useDispatch, useSelector } from 'react-redux'
+import { usd_format } from '../../misc/USD'
+import Loader from '../../loader/Loader'
+import Deposit from './Deposit'
+import Withdrawal from './Withdrawal'
 const WalletDetails = () => {
+    const {wallet, loading} = useSelector(state => state.wallet)
+    const transaction_loading = useSelector(state => state.transactions)
+
+   const dispatch = useDispatch()
+   
+    useEffect(()=> {
+       dispatch(getWallet())
+    },[transaction_loading.loading])
+ 
+    if(loading) {return(
+        <Loader/>
+    )}
   return (
     <div className='wallet-info'>
-        <div className='grid-display grid-display-2 gap-2 m-4'>
-            <div className='bg-white box-shadow p-3 b-radius-1'>
-            <h3>Add Funds</h3>
-                <div className='m-3'>
+         <div className='grid-display grid-display-2 gap-2 m-4'>
 
-                    
-                    <label className='block m-1'>Select Coin</label> 
-                    <select>
-                    <option value="">USD THETHER</option>
-                    <option value="">BITCOIN</option>
-                    <option value="">ETHERUM (ERC-20)</option>
-                    </select>
-                </div>
-                <div>
-                    <label className='block m-1' htmlFor="amount">Enter Amount</label>
-                    <input type="number" placeholder='Enter Amount in USD'/>
-
-                </div>
-                <div className='m-2'>
-                    <p className='text-red text-center'>Pay to the following Wallet Address</p>
-                    <span className='block text-center bg-light p-2 b-radius-1'>bc1qusn333vtanazyywdvr5u5mwk5eq32h5n5lpchr</span>
-
-                </div>
-                <hr />
-                <p className='text-norm'>Kindly make your deposit to the wallet address above, then click on continue to submit your payment screenshot</p>
-                <button className='btn w-full bg-semi text-white'>continue</button>
-               
-            </div>
-            <div className='bg-white box-shadow p-3 b-radius-1'>
-               <h3>Withdraw</h3>
-               <div  className='m-3'>
-               <label className='block m-1'>Select Coin to receive payment</label> 
-               <select>
-               <option value="">USD THETHER</option>
-               <option value="">BITCOIN</option>
-               <option value="">ETHERUM (ERC-20)</option>
-               </select>
-               </div>
-               <div className='m-2'>
-                <label className='block m-1' htmlFor="client_address">Enter Wallet Address</label>
-                <input type='text' id="client_address" />
-            </div>
-            <div>
-                <button className='btn w-full bg-semi text-white'>Request</button>
-
-
-            </div>
-              
-            </div>
-           
-          
-
-
+      
+        <Deposit/>
+        <Withdrawal />
         </div>
 
         <div className='history'>
             <div className='deposit-history'>
-               <h3 className='text-light-gray '>Deposit History</h3>
+               <h3 className='text-light-gray'>Deposit History</h3>
                <ul>
-                No Deposit History
-                <li></li>
+                {wallet.transactions.length < 1 && <h3>No Deposit History</h3>}
+                
+                {wallet.transactions.map(transaction => (
+                    <li className='flex-justify-space my-3'>
+                        <span className='flex-grid'>
+                            <h4 className='history-h4 text-light-gray'>{usd_format(transaction.amount)}</h4>
+                        </span>
+                        <span className='text-gray flex-grid'>
+                            <p>{transaction.coin_type}</p>
+                        </span>
+                        <span className='flex-grid'>
+                            <span className={transaction.status == "completed"?  "btn" : 'pending-btn btn'}>{transaction.status}</span>
+                        </span>
+                    </li>
+                ))}
+                
                </ul>
             </div>
             <div className='withdraw-history'></div>

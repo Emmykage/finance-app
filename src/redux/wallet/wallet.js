@@ -4,7 +4,7 @@ import { getWallet } from "../actions/wallet";
 
 const initialState = {
     wallet: {},
-    loading: false,
+    loading: true,
     error: false,
     status: '',
     paid: false,
@@ -20,13 +20,13 @@ const walletSlice = createSlice({
             wallet: action.payload,
             loading: false
         }}, 
-        [getWallet.pending]: (state, action) => ({
+        [getWallet.pending]: (state) => ({
             ...state,
             loading: true,
 
 
         }), 
-        [getWallet.rejected]: (state, action) => ({
+        [getWallet.rejected]: (state) => ({
             ...state,
             loading: false
 

@@ -19,9 +19,7 @@ const Timer = ({timer, setTimer}) => {
     }
   }
     
-    console.log(timer)
-
-    const clearTimer = e => {
+      const clearTimer = e => {
       setTimer('5')
 
       if(Ref.current) clearInterval(Ref.current);

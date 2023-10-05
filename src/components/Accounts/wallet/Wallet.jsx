@@ -13,7 +13,7 @@ const Wallet = () => {
     dispatch(getWallet())
  
   },[])
-  console.log(wallet, loading)
+
   return (
     <>
       <div className="wallet-container">
@@ -46,7 +46,7 @@ const Wallet = () => {
         <div className='m-3 gap-2 grid-display grid-display-4'>
           <div className='box-shadow p-1 b-radius-1'>
             <span>Wallet</span>
-            <h2 className='m-1'>${wallet.balance}</h2>
+            <h2 className='m-1'>${wallet.wallet_balance}</h2>
             <div className='flex-justify w-info'>
             <NavLink to={'/account/wallet/details'} className='w-info'>Wallet</NavLink> <span className='flex-justify'><IoMdArrowRoundForward/></span>
 

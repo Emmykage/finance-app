@@ -14,9 +14,9 @@ const usersSlice = createSlice({
   extraReducers: {
     [listUsers.fulfilled]: (state, action) => {
       const response = action.payload;
-      console.log(response)
+
       if(response.message){
-        console.log('error message exists')
+  
        return{
         ...state,
         error: true,
@@ -32,8 +32,8 @@ const usersSlice = createSlice({
       };
     },
     [listUsers.rejected]: (state, action) => {
-      const response = action.payload;
-      console.log(response)
+    
+  
       return {
         ...state,
         error:true,

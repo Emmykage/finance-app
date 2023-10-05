@@ -6,15 +6,22 @@ import default_photo from '../../../assets/user/no-profile-picture-icon-14.jpg';
 import { listUsers } from '../../../redux/actions/users';
 import { userLog } from '../../../redux/auth/user_authentication';
 import Loader from '../../../components/loader/Loader';
+import { usd_format } from '../../../components/misc/USD';
+import { approveTransaction } from '../../../redux/actions/wallet';
 
 const ClientsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { users } = useSelector((state) => state.users);
+  const {loading} = useSelector((state)=> state.transactions)
   useEffect(() => {
     dispatch(listUsers());
     dispatch(userLog());
-  }, []);
+  }, [loading]);
+
+  const handleApprove = (id) => {
+    dispatch(approveTransaction({id, status: "completed" }))
+  }
 
   const user = users.find((user) => user.id == id);
 
@@ -79,6 +86,23 @@ const ClientsPage = () => {
           </span>
         </p>
         <hr />
+        <div>
+          <h2>{usd_format(user.wallet.balance)}</h2>
+
+          <p>{user.wallet.transactions.map(transaction => (
+            <li className='flex-justify-space'> 
+              <span>{transaction.coin_type}</span>
+              <span>{transaction.amount}</span>
+              <span>{transaction.status}</span>
+              <span>{transaction.id}</span>
+              <button className='approve' onClick={()=> handleApprove(transaction.id)}>Approve</button>
+            </li>
+           
+            
+          ))}</p>
+
+          </div>
+          <hr />
         {user.portfolios.length < 1 ? <h3>User has no Portfolios</h3>
 
           : user.portfolios.map((portfolio) => (
@@ -97,6 +121,7 @@ const ClientsPage = () => {
           ))}
 
         <hr />
+       
 
         <span>
           Edit

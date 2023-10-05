@@ -56,8 +56,7 @@ export default function AdminSignUp() {
 
 
     };
-    console.log(formInput)
-    // dispatch(registerUser(formInput));
+
   };
   if (user == null || user == undefined) {
     return (

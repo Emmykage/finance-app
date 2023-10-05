@@ -217,7 +217,10 @@ button{
 .about .reveals p {
   margin: 2px 0;
 }
-
+.history-h4{
+  font-size: 20px;
+  margin: 0;
+}
 .about .mission {
   border-radius: var(--border-radius-2);
   margin: 23px auto;
@@ -284,6 +287,9 @@ h5 {
 
 .my-4 {
   margin: 2rem auto;
+}
+.my-3 {
+  margin: 1rem auto;
 }
 
 .mb-3 {
@@ -510,7 +516,10 @@ table th {
 .marker {
   flex: 0;
 }
-
+.approve{
+  background-color: #04aa6d;
+  padding: 0.7rem 1rem;
+}
 .center {
   align-items: center;
 }
@@ -563,6 +572,12 @@ nav .menu {
 
 .black {
   color: #181a1e;
+}
+.pending-btn{
+  background: orange;
+  padding: 0.7rem 2rem;
+  border-radius: 0.8rem;
+  color: white;
 }
 
 .home-banner {
@@ -641,9 +656,6 @@ nav .menu {
   border-radius: 0.7rem;
   color: var(--color-dark-variant);
   
-}
-.wallet-info input[type="text"]{
-  /* background-color: #026777; */
 }
 .wallet-info select:focus{
   outline: none;

@@ -16,7 +16,6 @@ const AdminLayout = ({ children }) => {
     dispatch(getUser());
     dispatch(userLog())
   }, []);
-  // console.log(user)
   if (loading) {
     return (<Loader />);
   }

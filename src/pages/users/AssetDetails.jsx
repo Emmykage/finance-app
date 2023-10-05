@@ -19,13 +19,13 @@ const UserAssetDetails = () => {
   useEffect(() => {
     dispatch(getAssets());
     dispatch(toggleMenuClose());
-    console.log(timer)
+    
     if(timer == 0){
       setToggle(false)
-      console.log("checked")
+      
     }
   }, [timer]);
-  // if(refTimer.current == 0) {console.log("works")}
+
 
   const asset = offers.find((asset) => asset.id == id);
   if (asset) {
