@@ -6,14 +6,13 @@ import { getWallet } from '../../../redux/actions/wallet';
 import { userLog } from '../../../redux/auth/user_authentication';
 const Wallet = () => {
   const [user] = useOutletContext();
-  const {wallet, loading} = useSelector(state => state.wallet)
+  const {wallet} = useSelector(state => state.wallet)
   const dispatch = useDispatch()
   useEffect(()=> {
     dispatch(userLog())
     dispatch(getWallet())
  
   },[])
-
   return (
     <>
       <div className="wallet-container">

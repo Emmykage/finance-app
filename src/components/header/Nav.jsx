@@ -36,7 +36,7 @@ const Nav = () => {
             <li className="p-li"><NavLink to="/offerings" className={({ isActive }) => (isActive ? activeLink : normalLink)}>offerings</NavLink></li>
             <li className="p-li"><NavLink to="/home" className={({ isActive }) => (isActive ? activeLink : normalLink)}>portfolio</NavLink></li>
             <li className="p-li"><NavLink to="/activities" className={({ isActive }) => (isActive ? activeLink : normalLink)}>activities</NavLink></li>
-            <li className="p-li"><NavLink to="/account" className={({ isActive }) => (isActive ? activeLink : normalLink)}>account</NavLink></li>
+            <li className="p-li"><NavLink to="/account/wallet" className={({ isActive }) => (isActive ? activeLink : normalLink)}>account</NavLink></li>
             <li className="p-li"><a to="/learn" className={({ isActive }) => (isActive ? activeLink : normalLink)}>learn</a></li>
             <li className="p-li"><a className={({ isActive }) => (isActive ? activeLink : normalLink)}>support</a></li>
 

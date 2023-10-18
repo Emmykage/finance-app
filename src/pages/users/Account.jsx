@@ -7,6 +7,7 @@ import Footer from '../../footer/Footer';
 import { toggleMenuClose } from '../../redux/model/nav';
 
 import { getUser } from '../../redux/actions/users';
+import Wallet from '../../components/Accounts/wallet/Wallet';
 
 const Account = () => {
   const { user } = useSelector((state) => state.users);
@@ -26,6 +27,7 @@ const Account = () => {
 
             <AccountRoutes />
           </div>
+          {/* <Wallet/> */}
 
         </div>
         <div className="container">
