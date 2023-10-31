@@ -19,11 +19,21 @@ const transactionSlice = createSlice({
     },
     extraReducers: {
         [createTransaction.fulfilled]: (state, action) => {
-   
+                if(action.payload.error){
+                    return{
+                        ...state,
+                        error: true,
+                        loading: false,
+                        paid: false
+                    }
+                }
             return{
             ...state,
             transaction: action.payload,
-            loading: false
+            loading: false,
+            error: false,
+            paid: true,
+            status: "pay was successful"
             
 
         }}, 
@@ -31,13 +41,17 @@ const transactionSlice = createSlice({
    
             return{
             ...state,
-            loading: true
+            loading: true,
+paid: false
+
 
 
         }}, 
         [createTransaction.rejected]: (state, action) => ({
             ...state,
-            loading: false
+            loading: false,
+            paid: false
+
 
 
         }),

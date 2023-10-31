@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createPortfolio, makePayment } from '../../redux/actions/portfolio';
 import { usd_format } from '../misc/USD';
 import { AiOutlineClose } from 'react-icons/ai';
-import Timer from '../misc/Timer';
 
 const CheckoutModal = ({
   setToggleModal, toggleModal, portfolio, asset,

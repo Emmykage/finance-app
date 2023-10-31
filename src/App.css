@@ -416,15 +416,35 @@ h5 {
 .align-strecth {
   align-items: stretch;
 }
+.items-center {
+  align-items: center;
+}
 
 .bg-black {
   background-color: white;
 }
+.confirm-box{
+  width: 80%;
 
+}
+.justify-between{
+  justify-content: space-between;
+}
+.justify-around{
+  justify-content: space-around;
+}
 .text-dark {
   color: var(--color-dark);
 }
-
+.flex{
+  display: flex;
+}
+.bg-green{
+  background-color: #04aa6d;
+}
+.justify-center{
+  justify-content: center;
+}
 .hide-display {
   height: 0;
   overflow: hidden;

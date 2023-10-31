@@ -14,6 +14,7 @@
   opacity: 0;
   pointer-events: none;
   transition: all 0.4s ease-in;
+  z-index: 10;
 }
 
 .modal-container.show {
@@ -33,7 +34,27 @@ td {
   background-color: white;
   padding: 1.2rem;
   border-radius: 1rem;
-  min-height: 680px;
+  
+}
+.withdraw-confirmation{
+  /* height: min-content; */
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+  z-index: 99;
+  text-align: center;
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  min-height: 180px;
+  
+}
+.confirm-btn-cancel{
+  background: var(--color-danger);
+}
+.confirm-btn-cancel:hover{
+  background: gray;
+  color: white;
 }
 
 .modal h3 {
