@@ -130,5 +130,8 @@ export default function AdminLogin() {
       </ThemeProvider>
     );
   }
-  navigation('/admin/dashboard');
+  else{
+    navigation('/admin/dashboard');
+
+  }
 }
