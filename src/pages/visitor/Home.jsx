@@ -77,7 +77,7 @@ const VHome = () => {
           
           <div className='backfiller slide1 flex border rounded-base'>
             <div className='flex-1 text-white'></div>
-            <div className='flex-1 p-2 text-white' data-aos="fade-rigt">
+            <div className='flex-1 p-2 text-white'>
               <h4 className='my-2'>Pioneering Credibility</h4>
               <p>Trust is the cornerstone of our foundation. At invest edge, we pride ourselves on a track record of unwavering credibility. Our transparent and proven investment strategies have consistently delivered results, earning the confidence of seasoned investors and newcomers alike.</p>
 
