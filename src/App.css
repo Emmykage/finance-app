@@ -57,7 +57,6 @@ body {
   max-width: 1800px;
   min-height: calc(100vh - 175px);
   margin: auto;
-  /* background-color: var(--color-white); */
 }
 
 .p-1{
@@ -218,7 +217,10 @@ body {
 .justify-around{
   justify-content: space-around;
 }
-
+.graph{
+  max-width: 600px;
+  height: 300px;
+}
 .justify-between{
   justify-content: space-between;
 }
@@ -227,6 +229,15 @@ body {
 }
 .flex-1{
   flex: 1;
+}
+.w-max-400{
+  max-width: 400px;
+}
+.w-max-900{
+  max-width: 900px;
+}
+.w-max-1100{
+  max-width: 1100;
 }
 .flex-2{
   flex: 2;
@@ -242,6 +253,9 @@ body {
 }
 .rounded-base{
   border-radius: 11px;
+}
+.rounded-lg{
+  border-radius: 1rem;
 }
 .text-lg{
   font-size: 18px;
@@ -273,6 +287,9 @@ body {
 .w-full{
   width: 100%;
 }
+.h-full{
+  height: 100%;
+}
 .w-max-800{
   width: 100%;
   max-width: 800px;
@@ -301,7 +318,7 @@ button{
   font-weight: 600;
 }
 .box-shadow{
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6) ;
+  box-shadow: 0px 0 3px 0px rgba(0, 0, 0, 0.6) ;
 }
 .dark-text {
   color: var(--color-background-dark);
@@ -1686,7 +1703,9 @@ hr {
   row-gap: 48px;
   column-gap: 2%;
 }
-
+.offering-background{
+  background: linear-gradient(black, var(--header-bg));
+}
 .offering .offering-tabs > div {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.26);
   background-color: #04aa6d;
@@ -1739,8 +1758,30 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
+  h2{
+    font-size: 1.5rem;
+  }
   .home .text-4xl{
     font-size: 22px ;
+  }
+  .show-fig .flex{
+    flex-direction: column;
+
+  }
+  .show-fig.p-5{
+    padding: 1rem;
+  }
+  .show-fig .p-2{
+    padding: 0;
+  }
+  .backfiller{
+    text-align: center;
+  }
+  .backfiller .blank{
+    display: none;
+  }
+  .backfiller h4{
+    font-size: 28px;
   }
   .m-4 {
     margin: 2px;
