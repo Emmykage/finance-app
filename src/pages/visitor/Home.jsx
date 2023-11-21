@@ -75,7 +75,7 @@ const VHome = () => {
         <hr />
         <div className='home-ad text-white'>
           
-          <div className='backfiller slide1 flex border rounded-base' data-aos-duration="2500" >
+          <div className='backfiller slide1 flex border rounded-base'>
             <div className='flex-1 text-white'></div>
             <div className='flex-1 p-2 text-white' data-aos="fade-rigt">
               <h4 className='my-2'>Pioneering Credibility</h4>
