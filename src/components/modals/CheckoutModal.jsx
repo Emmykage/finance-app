@@ -26,9 +26,7 @@ const CheckoutModal = ({
   const handleSubmit = () => {
     if (portfolio.amount > asset.minimum_investment) {
       dispatch(createPortfolio(portfolio));
-      } else {
-
-    }
+      }
   };
  
   const toggle = () => {

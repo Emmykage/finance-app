@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const VisitorHeader = () => (
   <header>
@@ -17,10 +18,10 @@ const VisitorHeader = () => (
                     Diversify your portfolio with private market investment offerings once only reserved for the 1%.
 
                     </p>
-                <a className="btn">
+                <NavLink to={'/auth/login'} className="btn">
                     Get Started
 
-                    </a>
+                    </NavLink>
 
               </div>
               <div className="investment-right-banner">

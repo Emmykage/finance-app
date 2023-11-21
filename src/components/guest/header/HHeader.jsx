@@ -1,5 +1,6 @@
 import React from 'react';
 import investmentPhoto from '../../../assets/image/investment-photos/how-it-works.jpg';
+import { NavLink } from 'react-router-dom';
 
 const HHeader = () => (
   <header>
@@ -17,11 +18,11 @@ const HHeader = () => (
                 <p>
                     Diversify your portfolio with private market investment offerings once only reserved for the 1%.
                     </p>
-                <a className="btn">
+                <NavLink to={'/auth/login'} className="btn">
 
                     Get Started
 
-                    </a>
+                    </NavLink>
 
               </div>
               <div className="investment-right-banner howitworks border">

@@ -5,12 +5,11 @@ import PrivateEquity from '../../assets/image/svg-icon/private-equity.svg';
 import PrivateCredit from '../../assets/image/svg-icon/private-credit.svg';
 import Crypto from '../../assets/image/svg-icon/crypto.svg';
 import ShortTermNote from '../../assets/image/svg-icon/short-term-note.svg';
-import StructuredNote from '../../assets/image/svg-icon/structured-notes.svg';
 import DiversifiedFunds from '../../assets/image/svg-icon/diversified-funds.svg';
 import Transportation from '../../assets/image/svg-icon/transportation.svg';
 import Art from '../../assets/image/svg-icon/art.svg';
 import PercentageChat from '../charts/Percentage';
-import AnnualReturn from '../charts/AnnualReturn';
+import { NavLink, Outlet } from 'react-router-dom';
 
 const PerformancePlatform = () => (
   <div className="performance">
@@ -47,21 +46,21 @@ const PerformancePlatform = () => (
 
       <div className="chart-table">
         <div className="title">
-          <span className="active">
+          <NavLink to={'/performance/annual_return'}>
             Net annualized return
-          </span>
-          <span>
+          </NavLink>
+          <NavLink to={'/performance/history'}>
             payment history
-          </span>
-          <span>
+          </NavLink>
+          <NavLink to={'/performance/performance'}>
             Performance
-          </span>
+          </NavLink>
 
         </div>
 
-        <div className="text-center">
+        <div className="chart-box text-center">
           {/* <h2>Insights Chart</h2> */}
-          <AnnualReturn />
+          <Outlet />
         </div>
       </div>
     </div>

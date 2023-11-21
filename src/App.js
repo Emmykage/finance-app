@@ -48,6 +48,10 @@ import Earnings from './components/Accounts/wallet/Earnings';
 import Royalties from './components/Accounts/wallet/Royalties';
 import WalletDetails from './components/Accounts/wallet/WalletDetails';
 import Investments from './components/Accounts/wallet/Investments';
+import Investment from './pages/visitor/Investment';
+import History from './components/charts/History';
+import PerformanceChart from './components/charts/Performance';
+import AnnualReturn from './components/charts/AnnualReturn';
 
 function App() {
   return (
@@ -81,16 +85,14 @@ function App() {
         </Route>
 
         <Route path="/" element={<GuestLayOut><VHome /></GuestLayOut>} />
+        <Route path="/investment" element={<GuestLayOut><Investment /></GuestLayOut>} />
+
         <Route path="/how-it-works" element={<GuestLayOut><HowItWorks /></GuestLayOut>} />
-        <Route
-          path="/performance"
-          element={(
-            <GuestLayOut>
-              <Performance />
-              {' '}
-            </GuestLayOut>
-)}
-        />
+        <Route path="/performance" element={(<GuestLayOut><Performance/></GuestLayOut>)}>
+          <Route path='history' element={<History/>}/>
+          <Route path='performance' element={<PerformanceChart/>}/>
+          <Route path='annual_return' element={<AnnualReturn/>}/>
+        </Route>
         <Route path="/about" element={<GuestLayOut><About /></GuestLayOut>} />
         <Route path="/asset-details/:id" element={<GuestLayOut><AssetDetails /></GuestLayOut>} />
         <Route path="admin">

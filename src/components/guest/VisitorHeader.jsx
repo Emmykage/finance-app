@@ -1,5 +1,6 @@
 import React from 'react';
 import VNav from '../../header/VNav';
+import { NavLink } from 'react-router-dom';
 
 const VisitorHeader = () => (
   <header>
@@ -12,16 +13,16 @@ const VisitorHeader = () => (
             <div className="investment flex-justify-space">
               <div className="investment-left-banner">
                 <h1 className="">
-                    Start Investment Today
-                    </h1>
+                    Start Investment Todays
+                </h1>
                 <p>
-                    Diversify your portfolio with private market investment offerings once only reserved for the 1%.
+                    Diversify your portfolio with priverate market investment offerings once only reserved for the 1%.
 
                     </p>
-                <a className="btn">
+                <NavLink to={'/auth/login'} className="btn">
                     Get Started
 
-                    </a>
+                    </NavLink>
 
               </div>
               <div className="investment-right-banner">

@@ -17,7 +17,7 @@ const VNav = () => {
           <Menu onClick={() => dispatch(toggleMenuOpen())} sx={{ fontSize: 39 }} />
         </div>
         <div className="logo">
-          <h2>InvestEdge</h2>
+          <NavLink to={'/'}><h2>InvestEdge</h2></NavLink> 
         </div>
         <div className={navOpen ? 'nav-bar flex-justify-space toggleMenu' : 'nav-bar flex-justify-space'}>
           <div className="close-menu">
@@ -25,10 +25,12 @@ const VNav = () => {
 
           </div>
           <ul className="nav-links flex-justify-start">
-            <li className="p-li"><NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)}>Investment</NavLink></li>
+          {/* <li className="p-li"><NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)}>Investment</NavLink></li> */}
+
+            <li className="p-li"><NavLink to="/investment" className={({ isActive }) => (isActive ? activeLink : normalLink)}>Investment</NavLink></li>
             <li className="p-li"><NavLink to="/how-it-works" className={({ isActive }) => (isActive ? activeLink : normalLink)}>How it works</NavLink></li>
             {/* <li className='p-li'><NavLink to={'/account'}>account</NavLink></li> */}
-            <li className="p-li"><NavLink to="/performance" className={({ isActive }) => (isActive ? activeLink : normalLink)}>Performance</NavLink></li>
+            <li className="p-li"><NavLink to="/performance/annual_return" className={({ isActive }) => (isActive ? activeLink : normalLink)}>Performance</NavLink></li>
 
             <li className="p-li"><NavLink to="/about" className={({ isActive }) => (isActive ? activeLink : normalLink)}>About</NavLink></li>
 
