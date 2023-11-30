@@ -6,6 +6,7 @@ function VisitorOffer({ assets, loading }) {
   const getStarted = (id) => {
     navigation(`/asset-details/${id}`);
   };
+
   if(loading){
     return(
       <Loader/>

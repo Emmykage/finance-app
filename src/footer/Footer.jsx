@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => (
   <footer>
@@ -8,33 +9,33 @@ const Footer = () => (
           <div>
             <ul>
               <h3>Offerings</h3>
-              <li>
-                <a>How it works</a>
+              <li className='p-1 text-white'>
+                <NavLink to={'/how-it-works'} className={'text-white'}>How it works</NavLink>
                 {' '}
               </li>
-              <li>
+              <li className='py-1 text-white'>
                 {' '}
-                <a>Yieldstreet Prism Fund</a>
+                <NavLink to={'/'} className={'text-white'}>InvestEdge Prism Fund</NavLink>
               </li>
-              <li>
+              <li className='py-1 text-white'>
                 {' '}
-                <a>Yieldstreet IRA</a>
+                <NavLink to={'#'}  className={'text-white'}>Yieldstreet IRA</NavLink>
               </li>
-              <li>
+              <li className='py-1 text-white'>
                 {' '}
-                <a>Short Term Notes</a>
+                <NavLink to={'#'}  className={'text-white'}>Short Term Notes</NavLink>
               </li>
-              <li>
-                <a>Real Estate Finance</a>
+              <li className='py-1 text-white'>
+                <NavLink to={'#'}  className={'text-white'}>Real Estate Finance</NavLink>
                 {' '}
               </li>
-              <li>
+              <li className='py-1 text-white'>
                 {' '}
-                <a>Sample portfolios</a>
+                <NavLink to={'#'}  className={'text-white'}>Sample portfolios</NavLink>
               </li>
-              <li>
+              <li className='py-1 text-white'>
                 {' '}
-                <a>Art investing</a>
+                <NavLink to={'#'} className={'text-white'}>Art investing</NavLink>
               </li>
 
             </ul>

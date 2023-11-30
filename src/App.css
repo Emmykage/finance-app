@@ -985,6 +985,14 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif 'Arial Na
   outline: none;
 }
 
+.text-blue{
+  color: blue;
+}
+
+.text-green{
+  color: green;
+}
+
 .text-gray {
   color: var(--color-info-dark);
 }
@@ -1706,7 +1714,7 @@ hr {
 .offering-background{
   background: linear-gradient(black, var(--header-bg));
 }
-.offering .offering-tabs > div {
+.offering .offering-tabs > div, .offering .offering-tabs > a {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.26);
   background-color: #04aa6d;
   display: flex;
@@ -1756,8 +1764,21 @@ hr {
 .get-started .proceed h3 {
   font-size: 2rem;
 }
+.assets-subhead{
+  background: linear-gradient(gray, white);
+}
+
+@media screen and (max-width: 1200px ){
+  .container-fit{
+    max-width:1800 ;
+    padding: 1rem;
+  }
+}
+
+
 
 @media screen and (max-width: 768px) {
+ 
   h2{
     font-size: 1.5rem;
   }
@@ -2053,5 +2074,13 @@ hr {
     margin: auto;
     padding: 8px;
   }
+  .offering{
+    padding: 0.8rem;
+  }
+
+  .offering .offering-tabs > div, .offering .offering-tabs > a {
+    padding: 0;
+  }
+
 }
 

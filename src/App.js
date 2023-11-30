@@ -33,7 +33,7 @@ import AssetDetails from './pages/visitor/AssetDetails';
 import UserLayout from './layouts/UserLayout';
 import Loader from './components/loader/Loader';
 import InvestAssetDetails from './pages/users/InvestAssetDetails';
-import CheckoutModal from './components/modals/CheckoutModal';
+// import CheckoutModal from './components/modals/CheckoutModal';
 import Orders from './pages/Admin/orders/Orders';
 import Assets from './pages/Admin/assets/Assets';
 import AlertMessages from './pages/Admin/messages/AlertMessages';
@@ -52,6 +52,8 @@ import Investment from './pages/visitor/Investment';
 import History from './components/charts/History';
 import PerformanceChart from './components/charts/Performance';
 import AnnualReturn from './components/charts/AnnualReturn';
+import RealEstate from './pages/component/offers/RealEstate';
+import Crypto from './pages/component/offers/Crypto';
 
 function App() {
   return (
@@ -86,7 +88,8 @@ function App() {
 
         <Route path="/" element={<GuestLayOut><VHome /></GuestLayOut>} />
         <Route path="/investment" element={<GuestLayOut><Investment /></GuestLayOut>} />
-
+        <Route path='/real_estates' element={<GuestLayOut><RealEstate/></GuestLayOut>}/>
+        <Route path='/crypto' element={<GuestLayOut><Crypto/></GuestLayOut>}/>
         <Route path="/how-it-works" element={<GuestLayOut><HowItWorks /></GuestLayOut>} />
         <Route path="/performance" element={(<GuestLayOut><Performance/></GuestLayOut>)}>
           <Route path='history' element={<History/>}/>

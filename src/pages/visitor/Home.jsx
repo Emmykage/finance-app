@@ -26,7 +26,7 @@ const VHome = () => {
 
       <div className="content-container">
        
-        <div className='show-fig bg-gray-light-trans p-5  w-max-1170 grid grid-2 justify-between gap-1 m-auto'>
+        <div className='rounded-lg show-fig bg-gray-light-trans p-5  w-max-1170 grid grid-2 justify-between gap-1 m-auto'>
         <div className='flex-1 flex  wrap p-2'>
           <div className='flex flex-1 items-center'>
             <span className='text-4xl'>
@@ -89,9 +89,9 @@ const VHome = () => {
             </div>
             
           </div>
-          <div className='my-2 slide2 backfiller border rounded-base flex' data-aos-duration="2500">
+          <div className='my-2 slide2 backfiller border rounded-base flex'>
             
-            <div className='flex-1 p-2 data-aos="fade-left" '>
+            <div className='flex-1 p-2' data-aos="fade-left">
 
             
             <h4 className='my-2'>Innovative Investment Strategies</h4>
@@ -137,7 +137,7 @@ const VHome = () => {
             <div className='w-max-400'>
               <h4>A track record of strong investor return</h4>
               <p className='text-sm'>We publish returns on each of our matured investment -- more than 300 since inception</p>
-              <a href="" className="btn">
+              <a href="" className="btn block">
                 View track record
               </a>
             </div>
@@ -166,7 +166,7 @@ const VHome = () => {
               <h4>Led by a team of seasoned professionals</h4>
               <p className='text-sm'>Our team of 25+ investment professionals analyze billions of dollars in deals each year — approving less than 10% of all opportunities they evaluate.</p>
               <NavLink to="how-it-works" className="btn block">
-                How it workss
+                How it works
               </NavLink>
             </div>
          

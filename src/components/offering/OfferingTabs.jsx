@@ -2,12 +2,10 @@ import React from 'react'
 import RealEstate from '../../assets/image/svg-icon/realestate.svg';
 import VentureCapital from '../../assets/image/svg-icon/venture-capital.svg';
 import PrivateEquity from '../../assets/image/svg-icon/private-equity.svg';
-import PrivateCredit from '../../assets/image/svg-icon/private-credit.svg';
 import Crypto from '../../assets/image/svg-icon/crypto.svg';
-import ShortTermNote from '../../assets/image/svg-icon/short-term-note.svg';
-import DiversifiedFunds from '../../assets/image/svg-icon/diversified-funds.svg';
 import Transportation from '../../assets/image/svg-icon/transportation.svg';
 import Art from '../../assets/image/svg-icon/art.svg';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -16,11 +14,15 @@ const OfferingTabs = () => {
   return (
     <div className='offering'>
         <div className="offering-tabs">
-        <div>
-          <img src={RealEstate} />
-          {' '}
-          <p>Real Estate</p>
-        </div>
+          <NavLink to={"/real_estates"}>
+     
+              <img src={RealEstate} />
+              {' '}
+              <p>Real Estate</p>
+          
+
+          </NavLink>
+        
 
         {/* <div><a><img src={RealEstate} /> <p>Real Estate</p></a></div> */}
 
@@ -34,26 +36,13 @@ const OfferingTabs = () => {
           {' '}
           <p>Private Equity</p>
         </div>
-        <div>
-          <img src={PrivateCredit} />
-          {' '}
-          <p>Private Credit</p>
-        </div>
-        <div>
+       
+        <NavLink to={'crypto'}>
           <img src={Crypto} />
           {' '}
           <p>Crypto</p>
-        </div>
-        <div>
-          <img src={ShortTermNote} />
-          {' '}
-          <p>Short Term Note</p>
-        </div>
-        <div>
-          <img src={DiversifiedFunds} />
-          {' '}
-          <p>Diversified Funds</p>
-        </div>
+        </NavLink>
+       
         <div>
           <img src={Transportation} />
           {' '}

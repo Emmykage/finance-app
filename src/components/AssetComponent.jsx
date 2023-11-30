@@ -107,7 +107,7 @@ const AssetComp = ({ asset }) => (
                 <p>
                     {asset.overview_description}
 
-                  </p>
+                </p>
                 <li>
                     <p>
                       {asset.overview_note}
