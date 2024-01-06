@@ -54,6 +54,10 @@ import PerformanceChart from './components/charts/Performance';
 import AnnualReturn from './components/charts/AnnualReturn';
 import RealEstate from './pages/component/offers/RealEstate';
 import Crypto from './pages/component/offers/Crypto';
+import PortfolioItems from './pages/Admin/clients/PortfolioItems';
+import Portfolios from './pages/Admin/Portfolios';
+import Settings from './pages/Admin/settings/Settings';
+import PortfolioComponent from './components/Portfolio';
 
 function App() {
   return (
@@ -71,7 +75,7 @@ function App() {
           <Route path="payments" element={<Payments />} />
           <Route path="important" element={<Important />} />
         </Route>
-        <Route path="account" element={<Account />}>
+        <Route path="account" element={<Account/>}>
           <Route path="bank_account" element={<><BankAccount /></>} />
           <Route path="investment_preference" element={<><InvestmentPreference /></>} />
           <Route path="investor_account" element={<><InvestorAccount /></>} />
@@ -99,16 +103,20 @@ function App() {
         <Route path="/about" element={<GuestLayOut><About /></GuestLayOut>} />
         <Route path="/asset-details/:id" element={<GuestLayOut><AssetDetails /></GuestLayOut>} />
         <Route path="admin">
+          <Route path='portfolios/:id' element={<AdminLayout><Portfolios/></AdminLayout>}/>
           <Route path="dashboard" element={<AdminLayout><AHome /></AdminLayout>} />
           <Route path="add_asset" element={<AdminLayout><AddAsset /></AdminLayout>} />
           <Route path="client/:id" element={<AdminLayout><ClientsPage /></AdminLayout>} />
+          <Route path="client/:id/portfolio/:portfolio_id" element={<AdminLayout><PortfolioItems /></AdminLayout>} />
           <Route path="clients" element={<AdminLayout><Clients /></AdminLayout>} />
           <Route path="orders" element={<AdminLayout><Orders /></AdminLayout>} />
+          <Route path="orders/:id" element={<AdminLayout><PortfolioComponent /></AdminLayout>} />
           <Route path="assets" element={<AdminLayout><Assets /></AdminLayout>} />
           <Route path="assets/:id" element={<AdminLayout><AssetView /></AdminLayout>} />
           <Route path="messages" element={<AdminLayout><AlertMessages /></AdminLayout>} />
           <Route path="analytics" element={<AdminLayout><Analytics /></AdminLayout>} />
           <Route path="reports" element={<AdminLayout><Reports /></AdminLayout>} />
+          <Route path="settings" element={<AdminLayout><Settings /></AdminLayout>} />
 
         </Route>
         <Route path="/get_started" element={<GetStarted />} />

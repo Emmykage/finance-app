@@ -53,8 +53,6 @@ nav .nav {
 
 .nav .nav-links li a.active::after {
   width: 100%;
-
-  /* color: green; */
 }
 
 .nav .nav-links li a:hover::after {

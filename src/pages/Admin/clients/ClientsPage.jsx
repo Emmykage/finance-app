@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './client.css';
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import default_photo from '../../../assets/user/no-profile-picture-icon-14.jpg';
 import { listUsers } from '../../../redux/actions/users';
@@ -8,12 +8,14 @@ import { userLog } from '../../../redux/auth/user_authentication';
 import Loader from '../../../components/loader/Loader';
 import { usd_format } from '../../../components/misc/USD';
 import { approveTransaction } from '../../../redux/actions/wallet';
+import Transaction from '../../../components/client/Transaction';
 
 const ClientsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { users } = useSelector((state) => state.users);
   const {loading} = useSelector((state)=> state.transactions)
+
   useEffect(() => {
     dispatch(listUsers());
     dispatch(userLog());
@@ -24,7 +26,6 @@ const ClientsPage = () => {
   }
 
   const user = users.find((user) => user.id == id);
-
   if (user == undefined) {
     return (
       <Loader />
@@ -87,19 +88,14 @@ const ClientsPage = () => {
         </p>
         <hr />
         <div>
-          <h2>{usd_format(user.wallet.balance)}</h2>
+          <h2>{usd_format(user.wallet.wallet_balance)}</h2>
 
           <p>{user.wallet.transactions.map(transaction => (
-            <li className='flex-justify-space'> 
-              <span>{transaction.coin_type}</span>
-              <span>{transaction.amount}</span>
-              <span>{transaction.status}</span>
-              <span>{transaction.id}</span>
-              <button className='approve' onClick={()=> handleApprove(transaction.id)}>Approve</button>
-            </li>
+           <Transaction transaction={transaction} handleApprove={handleApprove}/>
            
             
-          ))}</p>
+          ))}
+          </p>
 
           </div>
           <hr />
@@ -107,15 +103,45 @@ const ClientsPage = () => {
 
           : user.portfolios.map((portfolio) => (
             <div className="asset-infos">
-              <a href="" />
+              <li className='text-left box-shadow rounded-base my-1'>
+                <div className='flex rounded-base'>
+                    <div className='portfolio-img flex-1 p-3'>
+                        <img src={portfolio.asset.image_url} alt="" className='rounded-base' />
 
-              <div className="asset-info flex-space">
-                <span>{portfolio.asset.asset_type}</span>
-                <span>
-                  $
-                  {portfolio.amount}
-                </span>
-              </div>
+                    </div>
+                    <div className='flex-2 p-3 '>
+                        <div className='flex '>
+
+                      
+                            <div className='flex-1' >
+                        
+                            <h4>{portfolio.asset.name}</h4>
+                            <p><i class="fa fa-map-marker icon"></i>{portfolio.asset.address}</p>
+                                
+                            </div>
+                            <div><span className='text-lg font-medium text-green' >Profits: </span> <span className='text-lg font-medium'>{usd_format(portfolio.investment_interest)}</span></div>
+                        </div>
+                        <div className='flex justify-between'>
+                            <div className='flex-1'>
+                          
+                             <span className='text-xl font-semibold'>{portfolio.asset.price}</span>
+      
+                            </div>
+                            <div className='flex-1 flex justify-between'>
+                                <span className='capitalize text-sm'><i class="fa fa-bed"></i> {portfolio.asset.payment_schedule}</span>
+                                <span className='text-sm'><i class="fa fa-tint"></i> {portfolio.asset.term} Terms</span>
+                                <span className='text-sm'><i class="fa fa-expand"></i> {portfolio.asset.minimum_investment}min</span>
+                            </div>
+                        </div>
+                        <div class="text-right p-2 flex justify-between">
+                            <span></span>
+                            <NavLink to={`/admin/client/${id}/portfolio/${portfolio.id}`} className="btn inline-block p-1 text-white">view interest</NavLink>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </li>
 
             </div>
           ))}

@@ -6,7 +6,7 @@ import { TfiShine } from 'react-icons/tfi';
 import { NavLink } from 'react-router-dom';
 import img from '../../assets/user/no-profile-picture-icon-14.jpg';
 
-const Right = () => (
+const Right = ({user}) => (
   <div className="right">
     <div className="top">
       <button id="menu-btn">
@@ -20,8 +20,8 @@ const Right = () => (
       <div className="profile">
         <div className="info">
           <p>
-            Hey,
-            <b>Yankee</b>
+            Hey, 
+            <b className='capitalize'> {user.last_name}</b>
           </p>
           <small className="text-muted">Admin</small>
         </div>

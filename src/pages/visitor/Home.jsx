@@ -22,7 +22,7 @@ const VHome = () => {
   }, []);
   return (
     <div className='home'>
-      <HomeHeader />
+      <HomeHeader/>
 
       <div className="content-container">
        

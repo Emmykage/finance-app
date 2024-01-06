@@ -4,6 +4,7 @@ import {IoMdArrowRoundForward} from 'react-icons/io'
 import { useDispatch, useSelector } from 'react-redux';
 import { getWallet } from '../../../redux/actions/wallet';
 import { userLog } from '../../../redux/auth/user_authentication';
+import { usd_format } from '../../misc/USD';
 const Wallet = () => {
   const [user] = useOutletContext();
   const {wallet} = useSelector(state => state.wallet)
@@ -45,7 +46,7 @@ const Wallet = () => {
         <div className='m-3 gap-2 grid-display grid-display-4'>
           <div className='box-shadow p-1 b-radius-1'>
             <span>Wallet</span>
-            <h2 className='m-1'>${wallet.wallet_balance}</h2>
+            <h2 className='m-1'>{usd_format(wallet.wallet_balance)}</h2>
             <div className='flex-justify w-info'>
             <NavLink to={'/account/wallet/details'} className='w-info'>Wallet</NavLink> <span className='flex-justify'><IoMdArrowRoundForward/></span>
 
@@ -53,7 +54,7 @@ const Wallet = () => {
           </div>
            <div className='box-shadow p-1 b-radius-1'>
             <span>Investments/Portfolio</span>
-            <h2 className='m-1'>$00.00</h2>
+            <h2 className='m-1'>{usd_format(user.total_asset)}</h2>
             <div className='flex-justify w-info'>
             <NavLink to={'/account/wallet/investment'} className='w-info'>Investments</NavLink> <span className='flex-justify'><IoMdArrowRoundForward/></span>
 

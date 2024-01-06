@@ -55,7 +55,7 @@ paid: false
 
 
         }),
-        [approveTransaction.fulfilled]: (state, action) => {
+        [approveTransaction.fulfilled]: (state) => {
      
             return{
             ...state,

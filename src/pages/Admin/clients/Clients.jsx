@@ -10,6 +10,7 @@ const Clients = () => {
   useEffect(() => {
     dispatch(listUsers());
   }, []);
+
   if (users.length < 1) {
     return (
       <div>
@@ -22,16 +23,31 @@ const Clients = () => {
     <div className="client">
       <div className="">
         <ul className="client-row">
-          {users.map((user) => (
-            <li key={user.id} className="p-1 m-2 b-radius-2 space-flex border flex-justify-space border-light">
-              <span>
-                Client Name:
+          <table>
+            <thead>
+              <tr>
+                <th>Client</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+            {users.map((user) => (
+            <tr key={user.id} className="">
+              <td className={`${user.role == "admin" && "text-red"} font-medium`}>
+            
                 {`${user.first_name} ${user.last_name}`}
-              </span>
-              <span><NavLink to={`/admin/client/${user.id}`}>View</NavLink></span>
-            </li>
+              </td>
+              <td><NavLink to={`/admin/client/${user.id}`}>View</NavLink></td>
+            </tr>
 
           ))}
+
+              <tr>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          
 
         </ul>
       </div>

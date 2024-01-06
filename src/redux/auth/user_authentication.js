@@ -44,6 +44,7 @@ const userSlice = createSlice({
           loading: false,
         };
       }
+
       if (response.error) {
         return {
           ...state,

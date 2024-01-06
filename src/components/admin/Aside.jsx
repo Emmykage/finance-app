@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsFillGrid1X2Fill } from 'react-icons/bs';
 import { AiOutlineClose, AiOutlinePlus, AiOutlineUser } from 'react-icons/ai';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { BiLogOut } from 'react-icons/bi';
 import { MdOutlineInventory, MdOutlineReport } from 'react-icons/md';
 import { GiReceiveMoney } from 'react-icons/gi';
@@ -9,20 +9,33 @@ import { IoAnalyticsSharp, IoAddSharp } from 'react-icons/io5';
 import { RiMessageLine } from 'react-icons/ri';
 import { FiSettings } from 'react-icons/fi';
 import LOGO from '../../assets/image/logo.png';
+import { userLog } from '../../redux/auth/user_authentication';
+import { useDispatch } from 'react-redux';
 
 const Aside = () => {
+  const dispatch = useDispatch();
+  const navigation = useNavigate();
+
+
+  const handleLogout = () => {
+    localStorage.setItem("edge_auth", null)
+    dispatch(userLog())
+    navigation("/auth/admin_sign_up")
+  }
   const activeLink = 'active';
   const normalLink = '';
   return (
     <aside>
       <div className="top">
         <div className="logo">
+          <NavLink className="flex items-center" to={"/admin/dashboard"}>
           <img src={LOGO} alt="logo" />
           <h2>
             {' '}
             <span className="danger">Edge</span>
             {' '}
           </h2>
+          </NavLink>
         </div>
         <div className="close" id="close-btn">
           <span>
@@ -68,7 +81,7 @@ const Aside = () => {
           <span><AiOutlinePlus /></span>
           <h3>Add Products</h3>
         </NavLink>
-        <NavLink className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+        <NavLink className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={handleLogout}>
           <span><BiLogOut /></span>
           <h3>Logout</h3>
         </NavLink>

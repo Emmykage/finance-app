@@ -39,7 +39,7 @@ const AdminLayout = ({ children }) => {
         {children}
       </main>
 
-      <Right />
+      <Right user={user.user}/>
 
     </div>
   );

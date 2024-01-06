@@ -43,6 +43,7 @@ const usersSlice = createSlice({
     },
 
     [getUser.fulfilled]: (state, action) => {
+
       if (action.payload.message) {
         return {
           ...state,

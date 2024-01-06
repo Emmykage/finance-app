@@ -21,7 +21,7 @@ const AssetView = () => {
       <div className="content-container asset-view">
         <div className="">
           <div className="grid-display-assets border-b">
-            <span>Asset Class: </span>
+            <span>Asset Type: </span>
             <span>
               {' '}
               {asset.asset_type}

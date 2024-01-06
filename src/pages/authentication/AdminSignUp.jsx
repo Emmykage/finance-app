@@ -16,6 +16,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { userLog } from '../../redux/auth/user_authentication';
+import { registerUser } from '../../redux/actions/auth';
 
 function Copyright(props) {
   return (
@@ -54,8 +55,10 @@ export default function AdminSignUp() {
         role: "admin"
       },
 
+      
 
     };
+    dispatch(registerUser(formInput))
 
   };
   if (user == null || user == undefined) {

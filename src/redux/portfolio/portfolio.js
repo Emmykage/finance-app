@@ -1,9 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { createPortfolio, getPortfolios, makePayment } from '../actions/portfolio';
+import { createPortfolio, getPortfolio, getPortfolios, getRecentPortfolios, makePayment } from '../actions/portfolio';
 
 const initialState = {
   portfolios: [],
+  recent_portfolios: [],
   new_portfolio: {},
+  portfolio: {},
   loading: false,
   error: false,
   status: '',
@@ -34,6 +36,17 @@ const portfolioSlice = createSlice({
       ...state,
       status: '',
       loading: true,
+    }),
+    [getPortfolio.fulfilled]: (state, action) => ({
+      ...state,
+      portfolio: action.payload,
+      loading: true
+
+    }),
+    [getRecentPortfolios.fulfilled]: (state, action) => ({
+      ...state,
+      recent_portfolios: action.payload,
+      loading: false
     }),
     [makePayment.fulfilled]: (state, action) => {
       if (action.payload.paid) {

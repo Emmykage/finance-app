@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined';
+import { useDispatch, useSelector } from 'react-redux';
+import { getRecentPortfolios } from '../../redux/actions/portfolio';
+import { NavLink } from 'react-router-dom';
+// import portfolio from '../../redux/portfolio/portfolio';
 
-const AHome = () => (
+const AHome = () => {
+  const dispatch = useDispatch()
+  const {recent_portfolios} = useSelector(state => state.portfolios)
+  useEffect(()=> {
+    dispatch(getRecentPortfolios())
+  },[])
+  return(
   <>
     <div>
       <h1>Dashboard</h1>
@@ -81,47 +91,29 @@ const AHome = () => (
         <table>
           <thead>
             <tr>
-              <th>Product Name</th>
-              <th>Product Number</th>
+              <th></th>
+              <th>Amount</th>
               <th>Payment</th>
-              <th>Status</th>
+              <th>total Int</th>
               <th />
             </tr>
 
           </thead>
           <tbody>
-            <tr>
 
-              <td>New York Boulevad</td>
-              <td>85631</td>
-              <td>Due</td>
-              <td className="warning">Pending</td>
-              <td className="primary">Details</td>
-            </tr>
-            <tr>
+            {recent_portfolios.length < 1 ? <td className='text-center'><h2 className='w-full'>there are no portfolios</h2></td> : recent_portfolios.map(portfolio => (
+              <>
+               <tr className='text-left'>
+                <td>{portfolio.asset.title}</td>
+                <td>{portfolio.amount}</td>
+                <td>{portfolio.paid ? "Due" : "Pending"}</td>
+                <td className="warning">{portfolio.investment_interest}</td>
+                <td className="primary"><NavLink to={`/admin/portfolios/2`}>Details</NavLink></td>
+                </tr>
+                
+              </>
+            ) )}
 
-              <td>New York Boulevad</td>
-              <td>85631</td>
-              <td>Due</td>
-              <td className="warning">Pending</td>
-              <td className="primary">Details</td>
-            </tr>
-            <tr>
-
-              <td>New York Boulevad</td>
-              <td>85631</td>
-              <td>Due</td>
-              <td className="warning">Pending</td>
-              <td className="primary">Details</td>
-            </tr>
-            <tr>
-
-              <td>New York Boulevad</td>
-              <td>85631</td>
-              <td>Due</td>
-              <td className="warning">Pending</td>
-              <td className="primary">Details</td>
-            </tr>
           </tbody>
 
         </table>
@@ -131,5 +123,6 @@ const AHome = () => (
 
   </>
 );
+            }
 
 export default AHome;

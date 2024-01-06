@@ -10,6 +10,7 @@ const listUsers = createAsyncThunk('user/get_clients', async () => {
       Authorization: `Bearer ${token()}`,
     },
   }).then((res) => res.json());
+  console.log(response)
   return response;
 });
 
@@ -23,6 +24,7 @@ const getUser = createAsyncThunk('user/get_account', async () => {
     },
 
   }).then((res) => res.json());
+
   return response;
 });
 export { listUsers, getUser };
