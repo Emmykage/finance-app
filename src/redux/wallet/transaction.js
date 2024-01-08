@@ -42,10 +42,9 @@ const transactionSlice = createSlice({
             return{
             ...state,
             loading: true,
-paid: false
-
-
-
+            
+            paid: false
+            
         }}, 
         [createTransaction.rejected]: (state, action) => ({
             ...state,

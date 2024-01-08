@@ -559,8 +559,8 @@ main .recent-orders a {
   width: 100%;
   padding: 0.82rem 0.6rem;
   outline: #363949;
-  border: 1px solid #363949;
-  border-radius: 1rem;
+  border: 1px solid #afb0b7;
+  border-radius: 4px;
 }
 
 .assets-forms form option {
@@ -577,7 +577,7 @@ main .recent-orders a {
   margin: 1rem 0;
   padding: 0.8rem 1rem;
   border: 1px solid #d2e1f1;
-  border-radius: var(--border-radius-2);
+  /* border-radius: var(--border-radius-2); */
 }
 
 .right .top button {

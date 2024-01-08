@@ -284,7 +284,7 @@ body {
 .m-h-300{
   min-height: 300px;
 }
-.grid
+
 .w-full{
   width: 100%;
 }
@@ -948,6 +948,11 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif 'Arial Na
 .fit-container {
   width: 80%;
   margin: auto;
+}
+
+input{
+  border: 1px solid #58959e;
+  color: #303234;
 }
 
 .flex-1 {

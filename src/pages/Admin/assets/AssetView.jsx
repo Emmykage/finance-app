@@ -12,6 +12,8 @@ const AssetView = () => {
     dispatch(getAssets());
   }, []);
   const asset = offers.find((offer) => offer.id == id);
+  console.log(asset)
+
   if (loading) {
     <Loader />;
   } else if (error) {
@@ -20,50 +22,59 @@ const AssetView = () => {
     return (
       <div className="content-container asset-view">
         <div className="">
-          <div className="grid-display-assets border-b">
+          <div className="grid-display-assets border-b py-2">
             <span>Asset Type: </span>
             <span>
               {' '}
               {asset.asset_type}
             </span>
           </div>
+          <div  className="grid-display-assets border-b py-2">
+            <span>
+              Asset Category: 
+            </span>
+            <span>
+            
+              {asset.asset_category}
+            </span>
+          </div>
 
-          <div className="grid-display-assets border-b">
+          <div className="grid-display-assets border-b py-2">
             <span>Asset Title: </span>
             <span>
               {' '}
               {asset.title}
             </span>
           </div>
-          <div className="grid-display-assets border-b">
+          <div className="grid-display-assets border-b py-2">
             <span>Description: </span>
             <span>{ asset.description}</span>
           </div>
-          <div className="grid-display-assets border-b">
+          <div className="grid-display-assets border-b py-2">
             <span>minimum_investment: </span>
             <span>{ asset.minimum_investment}</span>
           </div>
-          <div className="grid-display-assets border-b">
+          <div className="grid-display-assets border-b py-2">
             <span>Term: </span>
             <span>{asset.minimum_investment}</span>
           </div>
-          <div className="grid-display-assets border-b">
+          <div className="grid-display-assets border-b py-2">
             <span>Payment Schedule: </span>
             <span>{asset.payment_schedule}</span>
           </div>
-          <div className="grid-display-assets border-b">
+          <div className="grid-display-assets border-b py-2">
             <span>Overview Description: </span>
             <span>{asset.overview_description}</span>
           </div>
-          <div className="grid-display-assets border-b">
+          <div className="grid-display-assets border-b py-2">
             <span>Overview note: </span>
             <span>{asset.overview_note}</span>
           </div>
-          <div className="grid-display-assets border-b">
+          <div className="grid-display-assets border-b py-2">
             <span>Share in Excess: </span>
             <span>{asset.share_in_excess}</span>
           </div>
-          <div className="grid-display-assets border-b">
+          <div className="grid-display-assets border-b py-2">
             <span>Annual Flat Expense in %: </span>
             <span>{asset.annual_flat_expense}</span>
           </div>

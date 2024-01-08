@@ -23,7 +23,7 @@ const Right = ({user}) => (
             Hey, 
             <b className='capitalize'> {user.last_name}</b>
           </p>
-          <small className="text-muted">Admin</small>
+          <small className="text-muted">{user.role}</small>
         </div>
         <div className="profile-photo">
           <img src={img} alt="" />

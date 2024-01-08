@@ -20,7 +20,7 @@ const PortfolioItems = () => {
 
     },[loadingInterest])
 
-
+console.log(portfolio)
 if(loading || loadingInterest){
     return(
         <h3 className='text-gray font-bold text-center my-5'>Loading...</h3>
@@ -37,8 +37,11 @@ if(loading || loadingInterest){
             ))}
         </div>
         <form onSubmit={handleSubmit}>
-            <input type="number" name="interest" value={interest} onChange={(e)=> setInterest(e.target.value)} required/>
-            <button className="btn">Add Interest</button>
+            <div className='bg-gree'>
+                <input className='w-full p-1 rounded-sm' type="number" name="interest" value={interest} onChange={(e)=> setInterest(e.target.value)} required/>
+
+            </div>
+            <button className="btn block my-1">Add Interest</button>
         </form>
     </div>
   )

@@ -6,7 +6,7 @@ const initialState = {
   recent_portfolios: [],
   new_portfolio: {},
   portfolio: {},
-  loading: false,
+  loading: true,
   error: false,
   status: '',
   paid: false,
@@ -26,13 +26,13 @@ const portfolioSlice = createSlice({
       loading: false,
       new_portfolio: action.payload,
     }),
-    [createPortfolio.rejected]: (state, action) => ({
+    [createPortfolio.rejected]: (state) => ({
       ...state,
       status: 'failed to purchased an asset Check your internet connection',
       loading: false,
       error: true,
     }),
-    [createPortfolio.pending]: (state, action) => ({
+    [createPortfolio.pending]: (state) => ({
       ...state,
       status: '',
       loading: true,
@@ -40,7 +40,7 @@ const portfolioSlice = createSlice({
     [getPortfolio.fulfilled]: (state, action) => ({
       ...state,
       portfolio: action.payload,
-      loading: true
+      loading: false
 
     }),
     [getRecentPortfolios.fulfilled]: (state, action) => ({

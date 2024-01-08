@@ -11,14 +11,14 @@ const Investments = () => {
   useEffect(()=> {
     dispatch(getPortfolios())
   },[])
-  console.log(portfolios)
+//   console.log(portfolios)
   return (
     <div className='portfolios p-3 w-3-4'>
         <ul className=''>
             {portfolios.length < 1 ? (<h2 className='text-center'>You have no portfolios</h2>) : portfolios.map((portfolio) => (
-                <li className='text-left box-shadow rounded-base my-1'>
+                <li className='text-left box-shadow rounded-base'>
                 <div className='flex rounded-base'>
-                    <div className='portfolio-img flex-1 p-1'>
+                    <div className='portfolio-img flex-1 p-1 text-center'>
                         <img src={portfolio.asset.image_url ? portfolio.asset.image_url : portfolio_icon } alt="" className='rounded-base w-full' />
 
                     </div>

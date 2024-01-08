@@ -8,6 +8,7 @@ import { userLog } from '../../../redux/auth/user_authentication';
 import Loader from '../../../components/loader/Loader';
 import { usd_format } from '../../../components/misc/USD';
 import { approveTransaction } from '../../../redux/actions/wallet';
+import portfolio_icon from "../../../assets/image/portfolio_icon_4021806.png"
 import Transaction from '../../../components/client/Transaction';
 
 const ClientsPage = () => {
@@ -63,13 +64,13 @@ const ClientsPage = () => {
           <li className="flex-space ">
             <span>Mobile: </span>
             {' '}
-            <span> +1 703 544 3435</span>
+            <span> {user.mobile_no ? user.mobile_no : "N/A"}</span>
 
           </li>
           <li className="flex-space ">
             <span>Address: </span>
             {' '}
-            <span> John Doe</span>
+            <span> {user.address ? user.address : "N/A"}</span>
 
           </li>
         </ul>
@@ -78,17 +79,21 @@ const ClientsPage = () => {
       <hr />
 
       <div className="asset-details">
-        <p>
-          <span>
-            total inestment
-          </span>
-          <span>
-            value: 200000
-          </span>
-        </p>
+      <h2>{usd_format(user.wallet.wallet_balance)}</h2>
+        
         <hr />
         <div>
-          <h2>{usd_format(user.wallet.wallet_balance)}</h2>
+        <p>
+          <span className='font-bold'>
+            Total Inestment: 
+          </span>
+
+          <span>
+            {usd_format(user.total_asset)}
+     
+          </span>
+        </p>
+          
 
           <p>{user.wallet.transactions.map(transaction => (
            <Transaction transaction={transaction} handleApprove={handleApprove}/>
@@ -106,7 +111,7 @@ const ClientsPage = () => {
               <li className='text-left box-shadow rounded-base my-1'>
                 <div className='flex rounded-base'>
                     <div className='portfolio-img flex-1 p-3'>
-                        <img src={portfolio.asset.image_url} alt="" className='rounded-base' />
+                        <img src={portfolio.asset.image_url ? portfolio.asset.image_url : portfolio_icon } alt="" className='rounded-base' />
 
                     </div>
                     <div className='flex-2 p-3 '>

@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function UserOffer({ assets }) {
+  console.log(assets)
   const navigation = useNavigate();
   const getStarted = (id) => {
     navigation(`/details/${id}`);
@@ -31,7 +32,7 @@ function UserOffer({ assets }) {
                   <span className="text-gray type">{offer.asset_type}</span>
                   <h3>{offer.title}</h3>
                   <p>
-                    {offer.description}
+                    {offer.asset_category}
                     {' '}
                   </p>
                   <ul>
