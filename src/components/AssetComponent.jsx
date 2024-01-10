@@ -1,5 +1,5 @@
 import React from 'react';
-import commercial from '../assets/image/investment-photos/realestate/Commercial-real-estate.webp'
+import commercial from '../assets/image/investment-photos/realestate/Commercial-real-estate.webp';
 
 const AssetComp = ({ asset }) => (
   <>
@@ -17,17 +17,17 @@ const AssetComp = ({ asset }) => (
               <p className="flex-space">
                 <span>Ann'l management fee</span>
                 <span>
-                    {asset.annual_mangt_fee}
-                    %
-                  </span>
+                  {asset.annual_mangt_fee}
+                  %
+                </span>
 
               </p>
               <p className="flex-space">
                 <span>Ann'l management fee</span>
                 <span>
-                    {asset.annual_mangt_fee}
-                    %
-                  </span>
+                  {asset.annual_mangt_fee}
+                  %
+                </span>
 
               </p>
               <p className="flex-space">
@@ -50,10 +50,10 @@ const AssetComp = ({ asset }) => (
               <p className="flex-space">
                 <span>Target term</span>
                 <span>
-                    {asset.term}
-                    {' '}
-                    months
-                  </span>
+                  {asset.term}
+                  {' '}
+                  months
+                </span>
 
               </p>
 
@@ -105,21 +105,21 @@ const AssetComp = ({ asset }) => (
             <div className="flex-grid">
               <ul>
                 <p>
-                    {asset.overview_description}
+                  {asset.overview_description}
 
                 </p>
                 <li>
-                    <p>
-                      {asset.overview_note}
-                    </p>
-                  </li>
+                  <p>
+                    {asset.overview_note}
+                  </p>
+                </li>
                 <li>
-                    <p>
-                      <strong>  Proven business plan:</strong>
-                      {' '}
-                      Since the Sponsor acquired the property in March 2022, it has achieved a 13% organic increase in effective rent — prior to the completion of any unit renovations. Rents are expected to continue to increase as unit renovations commence.
-</p>
-                  </li>
+                  <p>
+                    <strong>  Proven business plan:</strong>
+                    {' '}
+                    Since the Sponsor acquired the property in March 2022, it has achieved a 13% organic increase in effective rent — prior to the completion of any unit renovations. Rents are expected to continue to increase as unit renovations commence.
+                  </p>
+                </li>
 
                 <p>More than 16 months since acquisition, consider investing in this seasoned offering with your retirement account.</p>
 
@@ -127,8 +127,8 @@ const AssetComp = ({ asset }) => (
 
             </div>
             <div className="flex-grid">
-              <div className="overview-img" >
-              <img src={commercial} alt="Real estate images" />
+              <div className="overview-img">
+                <img src={commercial} alt="Real estate images" />
               </div>
 
             </div>

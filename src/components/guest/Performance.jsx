@@ -1,7 +1,7 @@
 import React from 'react';
 
-import PercentageChat from '../charts/Percentage';
 import { NavLink, Outlet } from 'react-router-dom';
+import PercentageChat from '../charts/Percentage';
 import OfferingTabs from '../offering/OfferingTabs';
 
 const PerformancePlatform = () => (
@@ -39,13 +39,13 @@ const PerformancePlatform = () => (
 
       <div className="chart-table">
         <div className="title">
-          <NavLink to={'/performance/annual_return'}>
+          <NavLink to="/performance/annual_return">
             Net annualized return
           </NavLink>
-          <NavLink to={'/performance/history'}>
+          <NavLink to="/performance/history">
             payment history
           </NavLink>
-          <NavLink to={'/performance/performance'}>
+          <NavLink to="/performance/performance">
             Performance
           </NavLink>
 
@@ -61,8 +61,8 @@ const PerformancePlatform = () => (
     <div className="offering">
       <h2>Individual offering performance</h2>
       <p>Monitor returns across the lifecycle of your investments through regular performance updates.</p>
-      <OfferingTabs/>
-    
+      <OfferingTabs />
+
     </div>
     <div className="investor-insights">
       <h2>Investor Insights</h2>

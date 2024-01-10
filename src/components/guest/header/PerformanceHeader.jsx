@@ -19,27 +19,27 @@ const PerformaceHeader = () => (
             <div className="offer-details gap-5 flex-justify-space">
               <div className="offer-card">
                 <span>
-                    12.7%
-            </span>
+                  12.7%
+                </span>
                 <p>
-                    The weighted average annualized target return for all open offerings.*
-            </p>
+                  The weighted average annualized target return for all open offerings.*
+                </p>
               </div>
               <div className="offer-card">
                 <span>
-                    $3B+
-            </span>
+                  $3B+
+                </span>
                 <p>
-                    Total invested on the platform.
-            </p>
+                  Total invested on the platform.
+                </p>
               </div>
               <div className="offer-card">
                 <span>
-                    $1.8B+
-            </span>
+                  $1.8B+
+                </span>
                 <p>
-                    Total dollars returned to investors.
-            </p>
+                  Total dollars returned to investors.
+                </p>
               </div>
 
             </div>

@@ -12,7 +12,7 @@ const AssetView = () => {
     dispatch(getAssets());
   }, []);
   const asset = offers.find((offer) => offer.id == id);
-  console.log(asset)
+  console.log(asset);
 
   if (loading) {
     <Loader />;
@@ -29,12 +29,12 @@ const AssetView = () => {
               {asset.asset_type}
             </span>
           </div>
-          <div  className="grid-display-assets border-b py-2">
+          <div className="grid-display-assets border-b py-2">
             <span>
-              Asset Category: 
+              Asset Category:
             </span>
             <span>
-            
+
               {asset.asset_category}
             </span>
           </div>

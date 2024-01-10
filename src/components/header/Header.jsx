@@ -13,8 +13,8 @@ const Header = ({ first_name }) => (
           <div className="content-holder">
             <div className="user-name">
               <h1>
-              {first_name}
-            </h1>
+                {first_name}
+              </h1>
             </div>
 
             <div className="hero-details">
@@ -31,33 +31,33 @@ const Header = ({ first_name }) => (
           <ul>
             <li>
               <div className="flex-justify-row align">
-              <div className="check"><CheckCircleOutlinedIcon className="r-icon" /></div>
-              <div className="nav-info"><p>Account type selection</p></div>
-              <div className="arror marker"><ArrowForwardIosOutlinedIcon /></div>
+                <div className="check"><CheckCircleOutlinedIcon className="r-icon" /></div>
+                <div className="nav-info"><p>Account type selection</p></div>
+                <div className="arror marker"><ArrowForwardIosOutlinedIcon /></div>
 
-            </div>
-            </li>
-            <li>
-              <div className="flex-justify-row align">
-              <div className="check"><CheckCircleOutlinedIcon className="r-icon" /></div>
-              <div className="nav-info">
-                <p>
-                  verify your identity
-                    <br />
-                  Tell us a bit about yourself
-                  </p>
               </div>
-              <div className="arror marker"><ArrowForwardIosOutlinedIcon /></div>
-
-            </div>
             </li>
             <li>
               <div className="flex-justify-row align">
-              <div className="check"><CheckCircleOutlinedIcon className="r-icon" /></div>
-              <div className="nav-info"><p>make your first investment</p></div>
-              <div className="arror marker"><ArrowForwardIosOutlinedIcon /></div>
+                <div className="check"><CheckCircleOutlinedIcon className="r-icon" /></div>
+                <div className="nav-info">
+                  <p>
+                    verify your identity
+                    <br />
+                    Tell us a bit about yourself
+                  </p>
+                </div>
+                <div className="arror marker"><ArrowForwardIosOutlinedIcon /></div>
 
-            </div>
+              </div>
+            </li>
+            <li>
+              <div className="flex-justify-row align">
+                <div className="check"><CheckCircleOutlinedIcon className="r-icon" /></div>
+                <div className="nav-info"><p>make your first investment</p></div>
+                <div className="arror marker"><ArrowForwardIosOutlinedIcon /></div>
+
+              </div>
             </li>
 
           </ul>

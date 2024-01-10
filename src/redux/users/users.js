@@ -5,7 +5,8 @@ const initialState = {
   users: [],
   user: {},
   loading: true,
-  error: false,message: null
+  error: false,
+  message: null,
 };
 
 const usersSlice = createSlice({
@@ -15,35 +16,29 @@ const usersSlice = createSlice({
     [listUsers.fulfilled]: (state, action) => {
       const response = action.payload;
 
-      if(response.message){
-  
-       return{
-        ...state,
-        error: true,
-        loading:false
-       }
+      if (response.message) {
+        return {
+          ...state,
+          error: true,
+          loading: false,
+        };
       }
       return {
         ...state,
         users: response,
         error: false,
-        loading:false
+        loading: false,
 
       };
     },
-    [listUsers.rejected]: (state, action) => {
-    
-  
-      return {
-        ...state,
-        error:true,
-        loading: false
+    [listUsers.rejected]: (state, action) => ({
+      ...state,
+      error: true,
+      loading: false,
 
-      };
-    },
+    }),
 
     [getUser.fulfilled]: (state, action) => {
-
       if (action.payload.message) {
         return {
           ...state,

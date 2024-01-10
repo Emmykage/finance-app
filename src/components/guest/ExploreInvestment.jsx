@@ -53,7 +53,7 @@ const ExploreInvestment = () => (
 &nbsp;
               <strong>
                 Top-tier investment managers: &nbsp;
-                    </strong>
+              </strong>
               Access institutional-quality investments without institutional costs.
 
             </p>
@@ -87,7 +87,7 @@ const ExploreInvestment = () => (
               <strong>Highly-vetted:</strong>
               {' '}
               All investments pass a four-step due diligence process.
-</p>
+            </p>
             <p>
               <span>&#x2713;</span>
               {' '}
@@ -95,7 +95,7 @@ const ExploreInvestment = () => (
               <strong>Dedicated support: </strong>
               {' '}
               Our investor relations team is available to answer your questions at any time.
-</p>
+            </p>
           </div>
           <a href="" className="btn">
             learn more
@@ -175,8 +175,8 @@ const ExploreInvestment = () => (
               <p>The ease of use of the platform, and the complete transparency are top features to me </p>
               <div className="bottom">
                 <h3>
-                    Australia H
-                  </h3>
+                  Australia H
+                </h3>
                 {/* <span>Investor since 2021</span> */}
 
               </div>
@@ -221,10 +221,9 @@ const ExploreInvestment = () => (
             <h4 className="ad-header">
               Curate exclusive opportunities
 
-                        </h4>
+            </h4>
             <p className>
               We partner with third-party managers to bring you opportunities normally only available to institutions. We have also developed an extensive network of partnerships with experienced originators.
-
 
             </p>
 

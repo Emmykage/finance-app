@@ -58,16 +58,27 @@ import PortfolioItems from './pages/Admin/clients/PortfolioItems';
 import Portfolios from './pages/Admin/Portfolios';
 import Settings from './pages/Admin/settings/Settings';
 import PortfolioComponent from './components/Portfolio';
+import Support from './pages/visitor/Support';
+import NotFound from './pages/NotFound';
+import SupportDeposit from './components/support/SupportDeposit';
+import SupportAccount from './components/support/SupportAccount';
+import SupportCapital from './components/support/SupportCapital';
+import SupportInvest from './components/support/SupportInvest';
+import SupportManage from './components/support/SupportManage';
+import SupportSecurity from './components/support/SupportSecurity';
+import Learn from './pages/users/Learn';
 
 function App() {
   return (
     <div className="App">
 
       <Routes>
+        <Route path='*' element={<NotFound/>}/>
         <Route path="/chart" element={<PercentageChat />} />
         <Route path="/home" element={<UserLayout><Home /></UserLayout>} />
         <Route path="invest_asset" element={<UserLayout><InvestAssetDetails /></UserLayout>} />
         <Route path="/offerings" element={<UserLayout><Offerings /></UserLayout>} />
+        <Route path="/learn" element={<UserLayout><Learn /></UserLayout>} />
         <Route path="/details/:id" element={<UserLayout><UserAssetDetails /></UserLayout>} />
         <Route path="activities" element={<Activities />}>
           <Route path="" element={<Messages />} />
@@ -75,7 +86,7 @@ function App() {
           <Route path="payments" element={<Payments />} />
           <Route path="important" element={<Important />} />
         </Route>
-        <Route path="account" element={<Account/>}>
+        <Route path="account" element={<Account />}>
           <Route path="bank_account" element={<><BankAccount /></>} />
           <Route path="investment_preference" element={<><InvestmentPreference /></>} />
           <Route path="investor_account" element={<><InvestorAccount /></>} />
@@ -92,18 +103,26 @@ function App() {
 
         <Route path="/" element={<GuestLayOut><VHome /></GuestLayOut>} />
         <Route path="/investment" element={<GuestLayOut><Investment /></GuestLayOut>} />
-        <Route path='/real_estates' element={<GuestLayOut><RealEstate/></GuestLayOut>}/>
-        <Route path='/crypto' element={<GuestLayOut><Crypto/></GuestLayOut>}/>
+        <Route path="/real_estates" element={<GuestLayOut><RealEstate /></GuestLayOut>} />
+        <Route path="/crypto" element={<GuestLayOut><Crypto /></GuestLayOut>} />
         <Route path="/how-it-works" element={<GuestLayOut><HowItWorks /></GuestLayOut>} />
-        <Route path="/performance" element={(<GuestLayOut><Performance/></GuestLayOut>)}>
-          <Route path='history' element={<History/>}/>
-          <Route path='performance' element={<PerformanceChart/>}/>
-          <Route path='annual_return' element={<AnnualReturn/>}/>
+        <Route path="/performance" element={(<GuestLayOut><Performance /></GuestLayOut>)}>
+          <Route path="history" element={<History />} />
+          <Route path="performance" element={<PerformanceChart />} />
+          <Route path="annual_return" element={<AnnualReturn />} />
         </Route>
+        <Route path="/support" element={<GuestLayOut><Support /></GuestLayOut>} />
+        <Route path="/support/get-started" element={<GuestLayOut><SupportDeposit /></GuestLayOut>} />
+        <Route path="/support/set-up-account" element={<GuestLayOut><SupportAccount /></GuestLayOut>} />
+        <Route path="/support/explore" element={<GuestLayOut><SupportAccount /></GuestLayOut>} />
+        <Route path="/support/capital" element={<GuestLayOut><SupportCapital /></GuestLayOut>} />
+        <Route path="/support/investment" element={<GuestLayOut><SupportInvest /></GuestLayOut>} />
+        <Route path="/support/manage-portfolio" element={<GuestLayOut><SupportManage /></GuestLayOut>} />
+        <Route path="/support/get-support-security" element={<GuestLayOut><SupportSecurity /></GuestLayOut>} />
         <Route path="/about" element={<GuestLayOut><About /></GuestLayOut>} />
         <Route path="/asset-details/:id" element={<GuestLayOut><AssetDetails /></GuestLayOut>} />
         <Route path="admin">
-          <Route path='portfolios/:id' element={<AdminLayout><Portfolios/></AdminLayout>}/>
+          <Route path="portfolios/:id" element={<AdminLayout><Portfolios /></AdminLayout>} />
           <Route path="dashboard" element={<AdminLayout><AHome /></AdminLayout>} />
           <Route path="add_asset" element={<AdminLayout><AddAsset /></AdminLayout>} />
           <Route path="client/:id" element={<AdminLayout><ClientsPage /></AdminLayout>} />

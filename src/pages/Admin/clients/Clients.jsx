@@ -27,27 +27,26 @@ const Clients = () => {
             <thead>
               <tr>
                 <th>Client</th>
-                <th></th>
+                <th />
               </tr>
             </thead>
             <tbody>
-            {users.map((user) => (
-            <tr key={user.id} className="">
-              <td className={`${user.role == "admin" && "text-red"} font-medium`}>
-            
-                {`${user.first_name} ${user.last_name}`}
-              </td>
-              <td><NavLink to={`/admin/client/${user.id}`}>View</NavLink></td>
-            </tr>
+              {users.map((user) => (
+                <tr key={user.id} className="">
+                  <td className={`${user.role == 'admin' && 'text-red'} font-medium`}>
 
-          ))}
+                    {`${user.first_name} ${user.last_name}`}
+                  </td>
+                  <td><NavLink to={`/admin/client/${user.id}`}>View</NavLink></td>
+                </tr>
+
+              ))}
 
               <tr>
-                <td></td>
+                <td />
               </tr>
             </tbody>
           </table>
-          
 
         </ul>
       </div>

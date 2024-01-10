@@ -17,7 +17,7 @@ const VNav = () => {
           <Menu onClick={() => dispatch(toggleMenuOpen())} sx={{ fontSize: 39 }} />
         </div>
         <div className="logo">
-          <NavLink to={'/'}><h2>InvestEdge</h2></NavLink> 
+          <NavLink to="/"><h2>InvestEdge</h2></NavLink>
         </div>
         <div className={navOpen ? 'nav-bar flex-justify-space toggleMenu' : 'nav-bar flex-justify-space'}>
           <div className="close-menu">
@@ -25,7 +25,7 @@ const VNav = () => {
 
           </div>
           <ul className="nav-links flex-justify-start">
-          {/* <li className="p-li"><NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)}>Investment</NavLink></li> */}
+            {/* <li className="p-li"><NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)}>Investment</NavLink></li> */}
 
             <li className="p-li"><NavLink to="/investment" className={({ isActive }) => (isActive ? activeLink : normalLink)}>Investment</NavLink></li>
             <li className="p-li"><NavLink to="/how-it-works" className={({ isActive }) => (isActive ? activeLink : normalLink)}>How it works</NavLink></li>
@@ -36,7 +36,7 @@ const VNav = () => {
 
           </ul>
           <div className="log-in flex-justify">
-            <a className="mobile-only">Help Center</a>
+            <NavLink to="/support" className="mobile-only">Help Center</NavLink>
             <div className="auth-div">
               <NavLink to="/auth/sign_up">Sign Up</NavLink>
               <NavLink to="/auth/login">login</NavLink>

@@ -88,7 +88,7 @@ nav .nav {
 }
 
 .heroBanner-inner-container.about .heroBanner-right {
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
 }
 
 .heroBanner-inner-container .heroBanner-right ul {
@@ -136,7 +136,9 @@ nav .log-in a {
   margin-right: 1rem;
   transition: alll 0.3s ease;
 }
-
+.hero-details p{
+  line-height: 1.8rem;
+}
 .auth-div {
   margin-right: 1rem;
 }
@@ -220,6 +222,24 @@ header img {
 
   /* background-color: red; */
 }
+.content-holder-inner{
+  max-width: 470px;
+}
+.support-right{
+  max-width: 470px;
+}
+.support-cont{
+  display: flex;
+  gap: 2%;
+  border: 1px solid rgb(203, 200, 200);
+  border-radius: 0.6rem;
+  padding: 1.7rem 0.4rem;
+  background: rgba(58, 57, 57, 0.449);
+}
+.support-cont img {
+  width: 60px;
+  height: 60px;
+}
 
 .heroBanner-left.about .content-holder {
   /* background-color: green; */
@@ -238,7 +258,7 @@ header img {
 }
 
 .about .btn-div {
-  padding: 13px;
+  padding: 13px 0;
 
   /* background-color: red; */
 }

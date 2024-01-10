@@ -10,8 +10,6 @@ const Nav = () => {
   const normalLink = '';
   const dispatch = useDispatch();
   const navigation = useNavigate();
-
-  // const {isOpen} = useSelector((state) => state.menu)
   const { navOpen } = useSelector((state) => state.nav_toggle);
   const handleLogout = () => {
     localStorage.setItem('edge_auth', null);
@@ -25,7 +23,10 @@ const Nav = () => {
           <Menu onClick={() => dispatch(toggleMenuOpen())} sx={{ fontSize: 39 }} />
         </div>
         <div className="logo">
+          <NavLink to={'/home'}>
           <h2>InvestEdge</h2>
+          </NavLink>
+          
         </div>
         <div className={navOpen ? 'nav-bar flex-justify-space toggleMenu' : 'nav-bar flex-justify-space'}>
           <div className="close-menu">
@@ -37,8 +38,8 @@ const Nav = () => {
             <li className="p-li"><NavLink to="/home" className={({ isActive }) => (isActive ? activeLink : normalLink)}>portfolio</NavLink></li>
             <li className="p-li"><NavLink to="/activities" className={({ isActive }) => (isActive ? activeLink : normalLink)}>activities</NavLink></li>
             <li className="p-li"><NavLink to="/account/wallet" className={({ isActive }) => (isActive ? activeLink : normalLink)}>account</NavLink></li>
-            <li className="p-li"><a to="/learn" className={({ isActive }) => (isActive ? activeLink : normalLink)}>learn</a></li>
-            <li className="p-li"><a className={({ isActive }) => (isActive ? activeLink : normalLink)}>support</a></li>
+            <li className="p-li"><NavLink to="/learn" className={({ isActive }) => (isActive ? activeLink : normalLink)}>learn</NavLink></li>
+            <li className="p-li"><NavLink to='/support' className={({ isActive }) => (isActive ? activeLink : normalLink)}>support</NavLink></li>
 
           </ul>
           <div className="log-in flex-justify">

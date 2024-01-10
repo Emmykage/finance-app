@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const Earnings = () => {
-  return (
-    <div>Earnings</div>
-  )
-}
+const Earnings = () => (
+  <div>Earnings</div>
+);
 
-export default Earnings
+export default Earnings;

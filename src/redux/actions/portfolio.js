@@ -27,7 +27,7 @@ const getPortfolio = createAsyncThunk('portfolios/get_portfolio', async (id) => 
     },
 
   }).then((res) => res.json());
-  console.log(response)
+  console.log(response);
   return response;
 });
 
@@ -44,18 +44,18 @@ const getPortfolios = createAsyncThunk('portfolio/get_portfolios', async () => {
   return response;
 });
 
-const getRecentPortfolios = createAsyncThunk('portfolio/recent_portfolios', async() => {
+const getRecentPortfolios = createAsyncThunk('portfolio/recent_portfolios', async () => {
   const response = await fetch(`${baseUrl}portfolios/all_portfolios`, {
     method: 'GET',
     headers: {
       'Content-type': 'application/json',
-      Authorization: `Bearer ${token()}`
-    }
-  }).then((res) => res.json())
-  console.log(response)
+      Authorization: `Bearer ${token()}`,
+    },
+  }).then((res) => res.json());
+  console.log(response);
 
-  return response
-})
+  return response;
+});
 
 const makePayment = createAsyncThunk('portfolio/make_payment', async (id) => {
   const response = await fetch(`${baseUrl}portfolios/${id}`, {
@@ -70,4 +70,6 @@ const makePayment = createAsyncThunk('portfolio/make_payment', async (id) => {
   return response;
 });
 
-export {getPortfolio, createPortfolio, getPortfolios, makePayment, getRecentPortfolios };
+export {
+  getPortfolio, createPortfolio, getPortfolios, makePayment, getRecentPortfolios,
+};

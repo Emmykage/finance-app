@@ -1,20 +1,22 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Loader from "../loader/Loader"
+import Loader from '../loader/Loader';
+
 function VisitorOffer({ assets, loading }) {
   const navigation = useNavigate();
   const getStarted = (id) => {
     navigation(`/asset-details/${id}`);
   };
 
-  if(loading){
-    return(
-      <Loader/>
-    )
+  if (loading) {
+    return (
+      <Loader />
+    );
   }
+  console.log(assets)
   return (
     <div>
-      
+
       <div className="offer-cards">
         {assets.length < 1 && <h2>No offers available check with us in a few days</h2>}
         {assets.map((offer) => (
@@ -27,8 +29,8 @@ function VisitorOffer({ assets, loading }) {
                   <div className="xyz">
                     <div className="tiny-icon-div">
                       <div className="tiny-c">
-                          <p>New</p>
-                        </div>
+                        <p>New</p>
+                      </div>
 
                     </div>
 
@@ -38,25 +40,26 @@ function VisitorOffer({ assets, loading }) {
                 <div>
                   <span className="text-gray type">{offer.asset_type}</span>
                   <h3>{offer.title}</h3>
-                  <p>
-                    {offer.description}
+                  <p> -
+                    {offer.asset_category}
                     {' '}
                   </p>
                   <ul>
                     <li>
                       <span>Min. investment</span>
                       <span>
-                          ${offer.minimum_investment}
-                          K
-</span>
+                        $
+                        {offer.minimum_investment}
+                        K
+                      </span>
                     </li>
                     <li>
                       <span>Term</span>
                       <span>
-                          {offer.term}
-                          {' '}
-                          Months
-</span>
+                        {offer.term}
+                        {' '}
+                        Months
+                      </span>
                     </li>
                     <li>
                       <span>Payment Schedule</span>

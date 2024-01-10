@@ -1,6 +1,6 @@
 import React from 'react';
-import investmentPhoto from '../../../assets/image/investment-photos/how-it-works.jpg';
 import { NavLink } from 'react-router-dom';
+import investmentPhoto from '../../../assets/image/investment-photos/how-it-works.jpg';
 
 const HHeader = () => (
   <header>
@@ -13,16 +13,16 @@ const HHeader = () => (
             <div className="investment flex-justify-space">
               <div className="investment-left-banner">
                 <h1 className="">
-                    How it works
-                    </h1>
+                  How it works
+                </h1>
                 <p>
-                    Diversify your portfolio with private market investment offerings once only reserved for the 1%.
-                    </p>
-                <NavLink to={'/auth/login'} className="btn">
+                  Diversify your portfolio with private market investment offerings once only reserved for the 1%.
+                </p>
+                <NavLink to="/auth/login" className="btn">
 
-                    Get Started
+                  Get Started
 
-                    </NavLink>
+                </NavLink>
 
               </div>
               <div className="investment-right-banner howitworks border">

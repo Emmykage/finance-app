@@ -8,9 +8,9 @@ import usersSlice from './users/users';
 import assetSlice from './assets/assets';
 import faqSlice from './questions/question';
 import portfolioSlice from './portfolio/portfolio';
-import transactionSlice from './wallet/transaction'
-import walletSlice from "./wallet/wallet"
-import modalSlice from './actions/modals'
+import transactionSlice from './wallet/transaction';
+import walletSlice from './wallet/wallet';
+import modalSlice from './actions/modals';
 import interestSlice from './portfolio/interest';
 
 const rootReducer = combineReducers({
@@ -23,7 +23,7 @@ const rootReducer = combineReducers({
   transactions: transactionSlice,
   wallet: walletSlice,
   toggleModal: modalSlice,
-  interests: interestSlice
+  interests: interestSlice,
 
 });
 const store = configureStore({ reducer: rootReducer }, applyMiddleware(thunk, logger));

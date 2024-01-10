@@ -9,33 +9,33 @@ const Footer = () => (
           <div>
             <ul>
               <h3>Offerings</h3>
-              <li className='p-1 text-white'>
-                <NavLink to={'/how-it-works'} className={'text-white'}>How it works</NavLink>
+              <li className="p-1 text-white">
+                <NavLink to="/how-it-works" className="text-white">How it works</NavLink>
                 {' '}
               </li>
-              <li className='py-1 text-white'>
+              <li className="py-1 text-white">
                 {' '}
-                <NavLink to={'/'} className={'text-white'}>InvestEdge Prism Fund</NavLink>
+                <NavLink to="/" className="text-white">InvestEdge Prism Fund</NavLink>
               </li>
-              <li className='py-1 text-white'>
+              <li className="py-1 text-white">
                 {' '}
-                <NavLink to={'#'}  className={'text-white'}>Yieldstreet IRA</NavLink>
+                <NavLink to="#" className="text-white">Yieldstreet IRA</NavLink>
               </li>
-              <li className='py-1 text-white'>
+              <li className="py-1 text-white">
                 {' '}
-                <NavLink to={'#'}  className={'text-white'}>Short Term Notes</NavLink>
+                <NavLink to="#" className="text-white">Short Term Notes</NavLink>
               </li>
-              <li className='py-1 text-white'>
-                <NavLink to={'#'}  className={'text-white'}>Real Estate Finance</NavLink>
+              <li className="py-1 text-white">
+                <NavLink to="#" className="text-white">Real Estate Finance</NavLink>
                 {' '}
               </li>
-              <li className='py-1 text-white'>
+              <li className="py-1 text-white">
                 {' '}
-                <NavLink to={'#'}  className={'text-white'}>Sample portfolios</NavLink>
+                <NavLink to="#" className="text-white">Sample portfolios</NavLink>
               </li>
-              <li className='py-1 text-white'>
+              <li className="py-1 text-white">
                 {' '}
-                <NavLink to={'#'} className={'text-white'}>Art investing</NavLink>
+                <NavLink to="#" className="text-white">Art investing</NavLink>
               </li>
 
             </ul>

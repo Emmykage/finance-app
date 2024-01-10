@@ -14,7 +14,6 @@ const Activities = () => {
   const auth_user = useSelector((state) => state.user);
   const user = useSelector((state) => state.users);
 
-
   const dispatch = useDispatch();
   const navigation = useNavigate();
   const handleLogout = () => {
@@ -27,14 +26,16 @@ const Activities = () => {
   useEffect(() => {
     dispatch(getUser());
   }, []);
-  auth_user.user == null && navigation('/auth/login')
+  auth_user.user == null && navigation('/auth/login');
   const activeLink = 'active-link';
   const normalLink = '';
   if (user.error) {
     return (
-      <div className='warn-info'>
+      <div className="warn-info">
         <span className="text-center text-dark block p-4">
-          Something went wrong please <NavLink onClick={handleLogout}>sign in</NavLink>
+          Something went wrong please
+          {' '}
+          <NavLink onClick={handleLogout}>sign in</NavLink>
         </span>
       </div>
     );

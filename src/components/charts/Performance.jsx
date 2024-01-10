@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-const PerformanceChart = () => {
-  return (
-    <div><h3>Chart</h3> </div>
-  )
-}
+const PerformanceChart = () => (
+  <div>
+    <h3>Chart</h3>
+    {' '}
+  </div>
+);
 
-export default PerformanceChart
+export default PerformanceChart;

@@ -12,14 +12,14 @@ const initialState = {
 
   },
   {
-    title: "Can I redeem my mutual fund shares at any time",
-    answer: "In most cases, you can redeem mutual fund shares on any business day at the fund's net asset value (NAV), but it's important to check the specific redemption policies of the fund."
+    title: 'Can I redeem my mutual fund shares at any time',
+    answer: "In most cases, you can redeem mutual fund shares on any business day at the fund's net asset value (NAV), but it's important to check the specific redemption policies of the fund.",
   },
   {
-    title: "What is the difference between ETFs and mutual funds",
-    answer: "ETFs are similar to mutual funds in that they pool investors' money to invest in a diversified portfolio. However, ETFs trade on exchanges like stocks, whereas mutual funds are priced once a day at the NAV."
-  }
-],
+    title: 'What is the difference between ETFs and mutual funds',
+    answer: "ETFs are similar to mutual funds in that they pool investors' money to invest in a diversified portfolio. However, ETFs trade on exchanges like stocks, whereas mutual funds are priced once a day at the NAV.",
+  },
+  ],
 
 };
 

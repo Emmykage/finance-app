@@ -13,7 +13,7 @@ const PerformanceHeader = () => (
             <div className="user-name">
               <h1 className="">
                 Yankee
-                </h1>
+              </h1>
             </div>
 
             <div className="hero-details user-name">

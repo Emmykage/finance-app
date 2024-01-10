@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import './modal.css';
 import { useDispatch, useSelector } from 'react-redux';
+import { AiOutlineClose } from 'react-icons/ai';
 import { createPortfolio, makePayment } from '../../redux/actions/portfolio';
 import { usd_format } from '../misc/USD';
-import { AiOutlineClose } from 'react-icons/ai';
 
 const CheckoutModal = ({
   setToggleModal, toggleModal, portfolio, asset,
 }) => {
-  const [timer, setTimer] = useState('00')
+  const [timer, setTimer] = useState('00');
   const { loading, paid, new_portfolio } = useSelector((state) => state.portfolios);
   const handleConfirmation = () => {
     if (new_portfolio.id) {
       dispatch(makePayment(new_portfolio.id));
-
     }
   };
   let display = '';
@@ -26,16 +25,16 @@ const CheckoutModal = ({
   const handleSubmit = () => {
     if (portfolio.amount > asset.minimum_investment) {
       dispatch(createPortfolio(portfolio));
-      }
+    }
   };
- 
+
   const toggle = () => {
     setToggleModal(!toggleModal);
   };
   return (
     <div className={`modal-container dark-text flex-justify-center ${display}`}>
       <div className="modal checkout">
-        <div className="close-btn-div"><button onClick={toggle}><AiOutlineClose className='close-btn'/></button></div>
+        <div className="close-btn-div"><button onClick={toggle}><AiOutlineClose className="close-btn" /></button></div>
         <div className="checkoutModal ">
           <div className="grid-display-assets border-b p-1">
             {' '}

@@ -17,7 +17,7 @@ const Offerings = () => {
 
   return (
     <div className="content-container p-tx5">
-      <TopInfo/>
+      <TopInfo />
       <UserOffer assets={offers} />
 
     </div>

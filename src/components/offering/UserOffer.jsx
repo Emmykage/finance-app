@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function UserOffer({ assets }) {
-  console.log(assets)
+  console.log(assets);
   const navigation = useNavigate();
   const getStarted = (id) => {
     navigation(`/details/${id}`);
@@ -20,8 +20,8 @@ function UserOffer({ assets }) {
                   <div className="xyz">
                     <div className="tiny-icon-div">
                       <div className="tiny-c">
-                          <p>New</p>
-                        </div>
+                        <p>New</p>
+                      </div>
 
                     </div>
 
@@ -39,17 +39,18 @@ function UserOffer({ assets }) {
                     <li>
                       <span>Min. investment</span>
                       <span>
-                          ${offer.minimum_investment}
-                          K
-</span>
+                        $
+                        {offer.minimum_investment}
+                        K
+                      </span>
                     </li>
                     <li>
                       <span>Term</span>
                       <span>
-                          {offer.term}
-                          {' '}
-                          Months
-</span>
+                        {offer.term}
+                        {' '}
+                        Months
+                      </span>
                     </li>
                     <li>
                       <span>Payment Schedule</span>

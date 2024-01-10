@@ -13,12 +13,15 @@ const AccountRoutes = () => {
 
       <div className="account-nav">
         <ul className="flex-justify-space_around">
-           <li className=''>
+          <li className="">
             <NavLink
-                        className={({isActive}) => (isActive ? activeLink : normalLink )}
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
 
-            to={'/account/wallet'}>Wallets</NavLink>
-        </li> 
+              to="/account/wallet"
+            >
+              Wallets
+            </NavLink>
+          </li>
           <li className="">
             <NavLink
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
@@ -35,7 +38,7 @@ const AccountRoutes = () => {
               Bank accounts
             </NavLink>
           </li>
-         
+
           <li className="">
             <NavLink
               className={({ isActive }) => (isActive ? activeLink : normalLink)}

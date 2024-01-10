@@ -1,40 +1,37 @@
-import { createSlice } from "@reduxjs/toolkit"
-import { createInterest } from "../actions/interest"
+import { createSlice } from '@reduxjs/toolkit';
+import { createInterest } from '../actions/interest';
 
 const initialState = {
-    interests: [] ,
-    interest: {},
-    loading: false,
-    error: true
-}
+  interests: [],
+  interest: {},
+  loading: false,
+  error: true,
+};
 
 const interestSlice = createSlice({
-    name: "interst",
-    initialState,
-    extraReducers: {
-        [createInterest.fulfilled]: (state, action) => {
+  name: 'interst',
+  initialState,
+  extraReducers: {
+    [createInterest.fulfilled]: (state, action) => ({
+      ...state,
+      interest: action.payload,
+      loading: false,
+    }),
+    [createInterest.pending]: (state) => ({
 
-            return{
-                ...state,
-                interest: action.payload,
-                loading: false
-            }
-        },
-        [createInterest.pending]: (state) => ({
+      ...state,
+      loading: true,
+      error: false,
 
-                ...state,
-                loading: true,
-                error: false
-   
-        }),
-        [createInterest.rejected]: (state) => ({
+    }),
+    [createInterest.rejected]: (state) => ({
 
-            ...state,
-            loading: false,
-            error: true
+      ...state,
+      loading: false,
+      error: true,
 
-    })
-    }
-})
+    }),
+  },
+});
 
-export default interestSlice.reducer
+export default interestSlice.reducer;

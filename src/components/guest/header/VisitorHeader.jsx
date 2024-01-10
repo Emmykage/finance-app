@@ -12,54 +12,54 @@ const VisitorHeader = () => (
             <div className="investment flex-justify-space">
               <div className="investment-left-banner">
                 <h1 className="">
-                    Start Investment Today
-                    </h1>
+                  Start Investment Today
+                </h1>
                 <p>
-                    Diversify your portfolio with private market investment offerings once only reserved for the 1%.
+                  Diversify your portfolio with private market investment offerings once only reserved for the 1%.
 
-                    </p>
-                <NavLink to={'/auth/login'} className="btn">
-                    Get Started
+                </p>
+                <NavLink to="/auth/login" className="btn">
+                  Get Started
 
-                    </NavLink>
+                </NavLink>
 
               </div>
               <div className="investment-right-banner">
                 <div className="investment-cards">
-                    <div className="investment-card">
-                        <span> 12.72%</span>
-                        <p>
-                          The weighted average annualized target return for all open offerings.*
+                  <div className="investment-card">
+                    <span> 12.72%</span>
+                    <p>
+                      The weighted average annualized target return for all open offerings.*
 
-                </p>
-
-                      </div>
-                    <div className="investment-card">
-                        <span> 12.72%</span>
-                        <p>
-                          The weighted average annualized target return for all open offerings.*
-
-                </p>
-
-                      </div>
-                    <div className="investment-card">
-                        <span> 12.72%</span>
-                        <p>
-                          The weighted average annualized target return for all open offerings.*
-
-                </p>
-
-                      </div>
-                    <div className="investment-card">
-                        <span> 12.72%</span>
-                        <p>
-                          The weighted average annualized target return for all open offerings.*
-
-                </p>
-
-                      </div>
+                    </p>
 
                   </div>
+                  <div className="investment-card">
+                    <span> 12.72%</span>
+                    <p>
+                      The weighted average annualized target return for all open offerings.*
+
+                    </p>
+
+                  </div>
+                  <div className="investment-card">
+                    <span> 12.72%</span>
+                    <p>
+                      The weighted average annualized target return for all open offerings.*
+
+                    </p>
+
+                  </div>
+                  <div className="investment-card">
+                    <span> 12.72%</span>
+                    <p>
+                      The weighted average annualized target return for all open offerings.*
+
+                    </p>
+
+                  </div>
+
+                </div>
 
               </div>
 

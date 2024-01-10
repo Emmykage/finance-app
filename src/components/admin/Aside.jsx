@@ -8,33 +8,32 @@ import { GiReceiveMoney } from 'react-icons/gi';
 import { IoAnalyticsSharp, IoAddSharp } from 'react-icons/io5';
 import { RiMessageLine } from 'react-icons/ri';
 import { FiSettings } from 'react-icons/fi';
+import { useDispatch } from 'react-redux';
 import LOGO from '../../assets/image/logo.png';
 import { userLog } from '../../redux/auth/user_authentication';
-import { useDispatch } from 'react-redux';
 
 const Aside = () => {
   const dispatch = useDispatch();
   const navigation = useNavigate();
 
-
   const handleLogout = () => {
-    localStorage.setItem("edge_auth", null)
-    dispatch(userLog())
-    navigation("/auth/admin_sign_up")
-  }
+    localStorage.setItem('edge_auth', null);
+    dispatch(userLog());
+    navigation('/auth/admin_sign_up');
+  };
   const activeLink = 'active';
   const normalLink = '';
   return (
     <aside>
       <div className="top">
         <div className="logo">
-          <NavLink className="flex items-center" to={"/admin/dashboard"}>
-          <img src={LOGO} alt="logo" />
-          <h2>
-            {' '}
-            <span className="danger">Edge</span>
-            {' '}
-          </h2>
+          <NavLink className="flex items-center" to="/admin/dashboard">
+            <img src={LOGO} alt="logo" />
+            <h2>
+              {' '}
+              <span className="danger">Edge</span>
+              {' '}
+            </h2>
           </NavLink>
         </div>
         <div className="close" id="close-btn">

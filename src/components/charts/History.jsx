@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const History = () => {
-  return (
-    <div>
-        <h3>History</h3>
-    </div>
-  )
-}
+const History = () => (
+  <div>
+    <h3>History</h3>
+  </div>
+);
 
-export default History
+export default History;

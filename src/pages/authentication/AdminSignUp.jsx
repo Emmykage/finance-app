@@ -52,14 +52,11 @@ export default function AdminSignUp() {
         last_name: data.get('lastName'),
         email: data.get('email'),
         password: data.get('password'),
-        role: "admin"
+        role: 'admin',
       },
 
-      
-
     };
-    dispatch(registerUser(formInput))
-
+    dispatch(registerUser(formInput));
   };
   if (user == null || user == undefined) {
     return (
@@ -147,8 +144,8 @@ export default function AdminSignUp() {
                 <Grid item>
                   <NavLink to="/auth/admin_login">
                     <Link variant="body2">
-                    Already have an account? Sign in
-                  </Link>
+                      Already have an account? Sign in
+                    </Link>
                   </NavLink>
                 </Grid>
               </Grid>

@@ -75,32 +75,32 @@ export default function AdminLogin() {
               <Grid container spacing={2}>
 
                 <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                />
-              </Grid>
+                  <TextField
+                    required
+                    fullWidth
+                    id="email"
+                    label="Email Address"
+                    name="email"
+                    autoComplete="email"
+                  />
+                </Grid>
                 <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="new-password"
-                />
-              </Grid>
+                  <TextField
+                    required
+                    fullWidth
+                    name="password"
+                    label="Password"
+                    type="password"
+                    id="password"
+                    autoComplete="new-password"
+                  />
+                </Grid>
                 <Grid item xs={12}>
-                <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
-                />
-              </Grid>
+                  <FormControlLabel
+                    control={<Checkbox value="allowExtraEmails" color="primary" />}
+                    label="I want to receive inspiration, marketing promotions and updates via email."
+                  />
+                </Grid>
               </Grid>
               {loading && <p>loading...</p>}
               {error && <p className="text-red py-1">{message}</p>}
@@ -111,17 +111,17 @@ export default function AdminLogin() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-              Login
+                Login
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>
-                <NavLink to="/auth/admin_sign_up">
+                  <NavLink to="/auth/admin_sign_up">
 
-                  <Link variant="body2">
-                    Do not have an account? Sign Up
-                  </Link>
-                </NavLink>
-              </Grid>
+                    <Link variant="body2">
+                      Do not have an account? Sign Up
+                    </Link>
+                  </NavLink>
+                </Grid>
               </Grid>
             </Box>
           </Box>
@@ -130,8 +130,6 @@ export default function AdminLogin() {
       </ThemeProvider>
     );
   }
-  else{
-    navigation('/admin/dashboard');
 
-  }
+  navigation('/admin/dashboard');
 }
