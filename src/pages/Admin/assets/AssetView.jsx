@@ -12,7 +12,6 @@ const AssetView = () => {
     dispatch(getAssets());
   }, []);
   const asset = offers.find((offer) => offer.id == id);
-  console.log(asset);
 
   if (loading) {
     <Loader />;

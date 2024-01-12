@@ -27,7 +27,6 @@ const getPortfolio = createAsyncThunk('portfolios/get_portfolio', async (id) => 
     },
 
   }).then((res) => res.json());
-  console.log(response);
   return response;
 });
 
@@ -52,7 +51,6 @@ const getRecentPortfolios = createAsyncThunk('portfolio/recent_portfolios', asyn
       Authorization: `Bearer ${token()}`,
     },
   }).then((res) => res.json());
-  console.log(response);
 
   return response;
 });

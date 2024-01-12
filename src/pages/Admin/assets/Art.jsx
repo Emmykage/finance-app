@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { createAsset } from '../../../redux/actions/assets';
 
 const Art = () => {
   const dispatch = useDispatch();
   const [toggleForm, setToggleForm] = useState('false');
-
+  const {status, message} = useSelector(state => state.assets)
   const [assetForm, setAssetForm] = useState({
     asset_category: '', minimum_investment: null, term: '', asset_type: 'Art', title: '', description: '', share_in_excess: '', annual_mangt_fee: '', annual_flat_expense: '', overview_description: '', overview_note: '',
   });
@@ -15,21 +15,26 @@ const Art = () => {
       ...assetForm,
       [e.target.name]: e.target.value,
     });
+
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(assetForm)
     dispatch(createAsset(assetForm));
+    setAssetForm({asset_category: '', minimum_investment: null, term: '', asset_type: 'Art', title: '', description: '', share_in_excess: '', annual_mangt_fee: '', annual_flat_expense: '', overview_description: '', overview_note: ''})
   };
   return (
     <div className="asset-div mx-5">
+      <div className='flex justify-between'>
       <span onClick={() => setToggleForm(!toggleForm)}>Add Art</span>
-      <form onSubmit={handleSubmit} className={toggleForm && 'hide-form'}>
 
-        <div>
-          <label>Asset</label>
+      </div>
+      
+      <form onSubmit={handleSubmit} className={toggleForm && 'hide-form'}>
+      <div>
+          <label>Art Category</label>
           <input type="text" id="asset_category" name="asset_category" value={assetForm.asset_category} onChange={handleInput} />
         </div>
+        
         <div>
           <label>Min. Investment</label>
           <input type="text" id="minimum_investment" name="minimum_investment" value={assetForm.minimum_investment} onChange={handleInput} />

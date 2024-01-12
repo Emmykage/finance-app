@@ -7,6 +7,8 @@ const initialState = {
   loading: true,
   offers: [],
   error: false,
+  status: "",
+  message: null
 };
 
 const assetSlice = createSlice({
@@ -15,23 +17,45 @@ const assetSlice = createSlice({
   extraReducers: {
     [createAsset.fulfilled]: (state, action) => {
       const response = action.payload;
+      console.log(action)
+      if(response.message){
+        return {
+          ...state,
+          loading: false,
+          message: response,
+          error: true,
+          message: response.message,
+          status: "failed"
+        };
+
+      }else{
+
+   
       return {
         ...state,
         loading: false,
         assets: response.assets,
         error: false,
+        message: "Asset has been created",
+        status: "success"
       };
+    }
     },
     [createAsset.pending]: (state) => ({
       ...state,
       loading: true,
       error: false,
+      message: "asset created",
+      status: "pending",
+      message: "pending"
 
     }),
     [createAsset.rejected]: (state, action) => ({
       ...state,
       loading: false,
       error: false,
+      message: "asset failed to create",
+      status: "failed"
     }),
     [getAssets.fulfilled]: (state, action) => ({
       ...state,

@@ -5,12 +5,11 @@ import AccountRoutes from '../../components/Accounts/AccountRoutes';
 import Nav from '../../components/header/Nav';
 import Footer from '../../footer/Footer';
 import { toggleMenuClose } from '../../redux/model/nav';
-
 import { getUser } from '../../redux/actions/users';
-import Wallet from '../../components/Accounts/wallet/Wallet';
+import Loader from '../../components/loader/Loader';
 
 const Account = () => {
-  const { user } = useSelector((state) => state.users);
+  const { user, loading } = useSelector((state) => state.users);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getUser());
@@ -19,19 +18,22 @@ const Account = () => {
 
   return (
     <div className="main-container">
+  
       <Nav />
+   
+     
 
       <div className="container account-container">
         <div>
           <div className="flex-justify">
-
+         
             <AccountRoutes />
           </div>
-          {/* <Wallet/> */}
 
         </div>
         <div className="container">
-          <Outlet context={[user]} />
+          {loading ? <Loader/> : <Outlet context={[user]} />}
+          
         </div>
       </div>
       <Footer />

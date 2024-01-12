@@ -19,7 +19,6 @@ const PortfolioItems = () => {
     dispatch(getPortfolio(portfolio_id));
   }, [loadingInterest]);
 
-  console.log(portfolio);
   if (loading || loadingInterest) {
     return (
       <h3 className="text-gray font-bold text-center my-5">Loading...</h3>

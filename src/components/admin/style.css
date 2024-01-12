@@ -522,7 +522,7 @@ main .recent-orders a {
 }
 
 .assets-forms span {
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   font-weight: 600;
   border: 1px solid rgb(247, 247, 247);
   width: 100%;

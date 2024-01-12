@@ -8,7 +8,6 @@ const WithdrawConfirmation = ({ withdraw, toggleWithdrawal }) => {
   const handleconfirmation = () => {
     dispatch(createTransaction(withdraw));
   };
-  // console.log(withdraw)
   return (
     <div className={`modal-container flex-justify-center ${toggleWithdrawal && 'show'} `}>
       <div className="modal withdraw-confirmation flex justify-center items-center">

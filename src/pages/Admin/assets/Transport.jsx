@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { createAsset } from '../../../redux/actions/assets';
 
 const Transport = () => {
   const dispatch = useDispatch();
   const [toggleForm, setToggleForm] = useState('false');
+  const {status, message} = useSelector(state => state.assets)
 
   const [assetForm, setAssetForm] = useState({
     asset_category: '', minimum_investment: null, term: '', asset_type: 'Transportation', title: '', description: '', share_in_excess: '', annual_mangt_fee: '', annual_flat_expense: '', overview_description: '', overview_note: ''
   });
+  useEffect(()=>{
+
+  },[])
   const handleInput = (e) => {
     setAssetForm({
 
@@ -19,10 +23,17 @@ const Transport = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(createAsset(assetForm));
+    setAssetForm({asset_category: '', minimum_investment: null, term: '', asset_type: 'Art', title: '', description: '', share_in_excess: '', annual_mangt_fee: '', annual_flat_expense: '', overview_description: '', overview_note: ''})
+
   };
   return (
     <div className="asset-div mx-5">
+      <div className='flex justify-between'>
       <span onClick={() => setToggleForm(!toggleForm)}>Add Transport</span>
+
+      
+      </div>
+      
       <form onSubmit={handleSubmit} className={toggleForm && 'hide-form'}>
 
         <div>

@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function UserOffer({ assets }) {
-  console.log(assets);
   const navigation = useNavigate();
   const getStarted = (id) => {
     navigation(`/details/${id}`);
@@ -13,14 +12,14 @@ function UserOffer({ assets }) {
         {assets.map((offer) => (
           <>
 
-            <div className="card black" key={offer.id}>
+            <div className="card black cursor-pointer " key={offer.id}>
               <span onClick={() => getStarted(offer.id)}>
 
                 <div className="card-img offer-card-div">
                   <div className="xyz">
                     <div className="tiny-icon-div">
                       <div className="tiny-c">
-                        <p>New</p>
+                        <p className=''>New</p>
                       </div>
 
                     </div>

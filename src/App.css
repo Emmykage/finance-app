@@ -227,8 +227,9 @@ body {
 .items-center{
   align-items: center;
 }
-.flex-1{
-  flex: 1;
+
+.p-0{
+  padding: 0;
 }
 .w-max-400{
   max-width: 400px;
@@ -239,12 +240,7 @@ body {
 .w-max-1100{
   max-width: 1100;
 }
-.flex-2{
-  flex: 2;
-}
-.flex-3{
-  flex: 3;
-}
+
 .rounded-xs{
   border-radius: 6px;
 }
@@ -604,12 +600,18 @@ h5 {
 .mr-5 {
   margin-right: 2.5rem;
 }
-
+.left-10{
+  left: 10px;
+}
 .flex-025{
   flex-basis: 25%;
 }
 .flex-030{
   flex-basis: 30%;
+}
+
+.z-index-90{
+  z-index: 90;
 }
 
 .p-tx5 {
@@ -977,19 +979,35 @@ input{
   border: 1px solid #58959e;
   color: #303234;
 }
-
+.hide{
+  display: none;
+}
+.show{
+  display: flex;
+}
 .flex-1 {
   flex: 1;
-  min-width: 3rem;
+  /* min-width: 3rem; */
 }
-
-.flex-2 {
+.border-green{
+  border: 1px solid green;
+}
+.border-red{
+  border: 1px solid red;
+}
+.shadow-green{
+  box-shadow: 0 0 3px 0 green;
+}
+.shadow-red{
+  box-shadow: 0 0 3px 0 red;
+}
+.flex-2{
   flex: 2;
 }
-
-.flex-3 {
+.flex-3{
   flex: 3;
 }
+
 
 .wallet-container {
   margin-bottom: 23px;
@@ -1026,7 +1044,7 @@ input{
 }
 
 .text-green{
-  color: green;
+  color: green !important;
 }
 
 .text-gray {
@@ -1046,9 +1064,17 @@ input{
   font-size: 0.9rem;
   color: #677483;
 }
-
+.nowrap{
+  flex-wrap: nowrap;
+}
 .text-red {
-  color: red;
+  color: red !important;
+}
+.min-600{
+  min-width: 600px;
+}
+.max-600{
+  max-width: 600px;
 }
 
 h6 {
@@ -1183,7 +1209,9 @@ h6 {
   font-size: 16px;
   line-height: 22px;
 }
-
+.cursor-pointer{
+  cursor: pointer;
+  }
 .prop-width {
   width: 80%;
 }
@@ -1820,6 +1848,9 @@ hr {
 }
 .mt-2{
   margin-top: 1rem;
+}
+.fixed{
+  position: fixed;
 }
 
 @media screen and (max-width: 1200px ){

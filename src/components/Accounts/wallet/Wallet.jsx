@@ -7,14 +7,15 @@ import { userLog } from '../../../redux/auth/user_authentication';
 import { usd_format } from '../../misc/USD';
 
 const Wallet = () => {
-  const [user] = useOutletContext();
+  // const [user] = useOutletContext();
+  const { user, loading } = useSelector((state) => state.users);
+
   const { wallet } = useSelector((state) => state.wallet);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(userLog());
     dispatch(getWallet());
   }, []);
-
   console.log(user)
   return (
     <>
@@ -68,6 +69,7 @@ const Wallet = () => {
           </div>
           <div className="box-shadow p-1 b-radius-1">
             <span>Earnings</span>
+
             <h2 className="m-1">{usd_format(user.wallet.net_earnings)}</h2>
             <div className="flex-justify w-info">
               <NavLink to="/account/wallet/earnings" className="w-info">Transactions</NavLink>

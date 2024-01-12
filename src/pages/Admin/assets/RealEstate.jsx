@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { createAsset } from '../../../redux/actions/assets';
 
 const RealEstate = () => {
   const dispatch = useDispatch();
   const [toggleForm, setToggleForm] = useState('false');
+  const {status, message} = useSelector(state => state.assets)
 
   const [assetForm, setAssetForm] = useState({
     asset_category: '', minimum_investment: null, term: '', asset_type: 'Real Estate', title: '', description: '', share_in_excess: '', annual_mangt_fee: '', annual_flat_expense: '', overview_description: '', overview_note: '',
@@ -19,11 +20,15 @@ const RealEstate = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(createAsset(assetForm));
+    // setAssetForm({asset_category: '', minimum_investment: null, term: '', asset_type: 'Art', title: '', description: '', share_in_excess: '', annual_mangt_fee: '', annual_flat_expense: '', overview_description: '', overview_note: ''})
+
   };
   return (
     <div className="asset-div border">
-
+      <div className='flex justify-between'>
       <span onClick={() => setToggleForm(!toggleForm)}>Add Real Estate</span>
+      </div>
+
       <form onSubmit={handleSubmit} className={toggleForm && 'hide-form'}>
 
         <div>

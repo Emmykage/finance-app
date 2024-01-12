@@ -13,10 +13,8 @@ const Withdrawal = () => {
   useEffect(() => {
     if (!error && paid) {
       dispatch(closeWithdrawalModal());
-      console.log('please close');
     }
   }, [loading, paid, !error]);
-  console.log(loading, paid, error);
   const dispatch = useDispatch();
 
   const handleWithdrawalInput = (e) => {

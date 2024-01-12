@@ -13,7 +13,6 @@ function VisitorOffer({ assets, loading }) {
       <Loader />
     );
   }
-  console.log(assets)
   return (
     <div>
 

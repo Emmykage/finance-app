@@ -111,7 +111,7 @@ const VHome = () => {
 
           <div className="border slide4 backfiller my-2 rounded-base flex" data-aos="fade-left">
             <div className="flex-1 p-2" data-aos="fade-up">
-              <h4 className="my-2"> Your Investment Odyssey Begins Here:</h4>
+              <h4 className="my-2"> Your Investment Odyssey Begins Here</h4>
               <p> Every click with InvestEdge is a step into a world of unparalleled possibilities. Start your investment odyssey with a company that combines credibility, innovation, and a relentless pursuit of excellence. Your financial journey begins at the intersection of trust and innovation.</p>
 
             </div>

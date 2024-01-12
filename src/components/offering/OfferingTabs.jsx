@@ -10,9 +10,9 @@ import Art from '../../assets/image/svg-icon/art.svg';
 const OfferingTabs = () => (
   <div className="offering">
     <div className="offering-tabs">
-      <NavLink to="/real_estates">
+      <NavLink to="/real_estates" className={"text-white"}>
 
-        <img src={RealEstate} />
+        <img src={RealEstate} className={"text-white"} />
         {' '}
         <p>Real Estate</p>
 
@@ -31,7 +31,7 @@ const OfferingTabs = () => (
         <p>Private Equity</p>
       </div>
 
-      <NavLink to="crypto">
+      <NavLink to="crypto" className={"text-white"}>
         <img src={Crypto} />
         {' '}
         <p>Crypto</p>
