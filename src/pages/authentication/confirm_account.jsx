@@ -55,7 +55,7 @@ export default function ConfirmAccount() {
     };
     dispatch(userSession(formInput));
   };
-  if (user == null || user == undefined) {
+  if (user.token == null || user.token == undefined) {
     return (
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
@@ -68,7 +68,7 @@ export default function ConfirmAccount() {
               alignItems: 'center',
             }}
           >
-            <NavLink to="/">Visit Site</NavLink>
+            {/* <NavLink to="/">Visit Site</NavLink> */}
 
             <Typography component="h1" variant="h5">
               Confirm Account
@@ -97,13 +97,11 @@ export default function ConfirmAccount() {
                     autoComplete="new-password"
                   />
                 </Grid>
-                <Grid item xs={12}>
-                  <FormControlLabel
-                    control={<Checkbox value="allowExtraEmails" color="primary" />}
-                    label="I want to receive inspiration, marketing promotions and updates via email."
-                  />
-                </Grid>
+               
               </Grid>
+              {loading && <p>loading...</p>}
+              {error && <p className="text-red py-1">{message}</p>}
+             
               <Button
                 type="submit"
                 fullWidth
@@ -121,6 +119,8 @@ export default function ConfirmAccount() {
         </Container>
       </ThemeProvider>
     );
-  }
+  }else{
   navigation('/home');
+  }
+
 }

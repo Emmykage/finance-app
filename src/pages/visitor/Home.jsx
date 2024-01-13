@@ -12,6 +12,7 @@ import sponsor from '../../assets/image/investment-photos/Investments-6f0beeb40e
 import 'aos/dist/aos.css';
 import OfferingTabs from '../../components/offering/OfferingTabs';
 import Testimonials from '../../components/testimonials/Testimonials';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const VHome = () => {
   const { offers } = useSelector((state) => state.assets);
@@ -152,7 +153,7 @@ const VHome = () => {
               <p className="text-sm">
                 We offer strategies from some of the most prominent investment managers in the world.
               </p>
-              <a href="#" className="btn block">Explore investment</a>
+              <NavLink to={"investment#visitor_offers"} className="btn block">Explore investment</NavLink>
             </div>
           </div>
           <div className="grid grid-2 gap-2 items-center p-2 py-3">

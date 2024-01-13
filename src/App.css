@@ -58,6 +58,12 @@ body {
   min-height: calc(100vh - 175px);
   margin: auto;
 }
+.bg-primary{
+  background: #04aa6d;
+}
+.btn-bg{
+  color: white;
+}
 
 .p-1{
   padding: 0.5rem;

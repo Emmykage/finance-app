@@ -6,6 +6,7 @@ import PrivateEquity from '../../assets/image/svg-icon/private-equity.svg';
 import Crypto from '../../assets/image/svg-icon/crypto.svg';
 import Transportation from '../../assets/image/svg-icon/transportation.svg';
 import Art from '../../assets/image/svg-icon/art.svg';
+import { CiLock } from 'react-icons/ci';
 
 const OfferingTabs = () => (
   <div className="offering">
@@ -16,6 +17,7 @@ const OfferingTabs = () => (
         {' '}
         <p>Real Estate</p>
 
+
       </NavLink>
 
       {/* <div><a><img src={RealEstate} /> <p>Real Estate</p></a></div> */}
@@ -23,12 +25,14 @@ const OfferingTabs = () => (
       <div>
         <img src={VentureCapital} />
         {' '}
-        <p>Venture Capital</p>
+        <p className='mr-2'>Venture Capital</p>
+        <CiLock />
       </div>
       <div>
         <img src={PrivateEquity} />
         {' '}
-        <p>Private Equity</p>
+        <p className='mr-2'>Private Equity</p>
+        <CiLock />
       </div>
 
       <NavLink to="crypto" className={"text-white"}>
@@ -40,12 +44,13 @@ const OfferingTabs = () => (
       <div>
         <img src={Transportation} />
         {' '}
-        <p>Transportation</p>
+        <p className='mr-2'>Transportation</p>
+        <CiLock />
       </div>
       <div>
         <img src={Art} />
         {' '}
-        <p>Art</p>
+        <p className='mr-2'>Art</p> <CiLock className='font-bold' />
       </div>
 
     </div>

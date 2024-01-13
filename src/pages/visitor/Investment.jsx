@@ -8,6 +8,7 @@ import { toggleMenuClose } from '../../redux/model/nav';
 import VisitorHeader from '../../components/guest/header/VisitorHeader';
 import { getAssets } from '../../redux/actions/assets';
 import TopInfo from '../../components/pageComponents/TopInfo';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Investment = () => {
   const { offers } = useSelector((state) => state.assets);
@@ -24,7 +25,7 @@ const Investment = () => {
         <TopInfo />
         <hr />
         <div>
-          <h4 className="text-gray">Some of Our Offers</h4>
+          <h4 className="text-gray" id='visitor_offers'>Some of Our Offers</h4>
           <VisitorOffer assets={offers} />
         </div>
 
@@ -117,6 +118,7 @@ const Investment = () => {
             </div>
             <div className="small-info">
               <span>
+                <AnchorLink href="#visitor_offers">visitor_offers</AnchorLink>
                 * The weighted average annualized target return is calculated based on the average target return, weighted by the size of each offering of all currently open offerings on the YieldStreet Platform (except for the Yieldstreet Prism Fund), including those that are only visible to logged-in members. This weighted average annualized target return is presented for informational purposes only, is hypothetical and is neither a guarantee nor a prediction or projection of future performance of any single offering or any portfolio of investments in Yieldstreet offerings. The weighted average annualized target return consists of the target return for each individual open offering; in cases where the target return is expressed as a range, this calculation uses the midpoint. "Annual interest," "Annualized Return" or "Target Returns" represents a projected annual target rate of interest or annualized target return, and not returns or interest actually obtained by fund investors. Unless otherwise specified, target interest or returns are based on an analysis performed by Yieldstreet of the potential inflows and outflows related to the transactions in which the strategy or fund has engaged and/or is anticipated to engage in over the estimated term of the fund. There is no guarantee that targeted interest or returns will be realized or achieved or that an investment will be successful. Actual performance may deviate from these expectations materially, including due to market or economic factors, portfolio management decisions, modeling error, or other reasons. Furthermore, this calculation is not weighted by time of investment, does not reflect actual returns, and assumes an investment in all the currently open offerings. An investor who has not made such investment or is not eligible to make such investment(s) cannot expect to rely on this average as a reliable indicator or estimate of possible results of an actual investment program.
 
               </span>
