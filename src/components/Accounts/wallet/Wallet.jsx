@@ -16,7 +16,6 @@ const Wallet = () => {
     dispatch(userLog());
     dispatch(getWallet());
   }, []);
-  console.log(user)
   return (
     <>
       <div className="wallet-container">

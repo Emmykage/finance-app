@@ -12,6 +12,7 @@ import transactionSlice from './wallet/transaction';
 import walletSlice from './wallet/wallet';
 import modalSlice from './actions/modals';
 import interestSlice from './portfolio/interest';
+import messageSlice from './messages/message'
 
 const rootReducer = combineReducers({
   user: userSlice,
@@ -24,6 +25,7 @@ const rootReducer = combineReducers({
   wallet: walletSlice,
   toggleModal: modalSlice,
   interests: interestSlice,
+  messages: messageSlice
 
 });
 const store = configureStore({ reducer: rootReducer }, applyMiddleware(thunk, logger));

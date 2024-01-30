@@ -356,7 +356,7 @@ main .recent-orders table:hover {
 main table tbody td {
   background: transparent;
   height: 2.8rem;
-  border-bottom: 1px solid var(--color-light);
+  border-bottom: 1px solid var(--color-light) !important;
   color: var(--color-dark-variant);
 }
 

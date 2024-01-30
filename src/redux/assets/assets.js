@@ -17,7 +17,6 @@ const assetSlice = createSlice({
   extraReducers: {
     [createAsset.fulfilled]: (state, action) => {
       const response = action.payload;
-      console.log(action)
       if(response.message){
         return {
           ...state,

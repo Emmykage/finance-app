@@ -9,7 +9,6 @@ import { IoMdClose } from 'react-icons/io';
 const AddAsset = () => {
   const {status, message} = useSelector(state => state.assets)
   const [show, setShow] = useState({display: "hide", border: "none", text: ""})
-  console.log(status)
   useEffect(()=> {
     if(status == "success"){
       setShow({display: "show", border: "shadow-green", text: "text-green"})

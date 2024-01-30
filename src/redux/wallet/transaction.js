@@ -16,6 +16,9 @@ const transactionSlice = createSlice({
     loadTransaction: (state) => ({
       ...state,
     }),
+    reset: (state)  => ({
+      status: ""
+    })
   },
   extraReducers: {
     [createTransaction.fulfilled]: (state, action) => {
@@ -25,6 +28,8 @@ const transactionSlice = createSlice({
           error: true,
           loading: false,
           paid: false,
+          message: "Transaction failed: Limited Funds",
+          status: "failed"
         };
       }
       return {
@@ -33,7 +38,8 @@ const transactionSlice = createSlice({
         loading: false,
         error: false,
         paid: true,
-        status: 'pay was successful',
+        message: 'Transaction was successful',
+        status: "success"
 
       };
     },
@@ -70,4 +76,4 @@ const transactionSlice = createSlice({
 });
 
 export default transactionSlice.reducer;
-export const { loadTransaction } = transactionSlice.actions;
+export const { loadTransaction, reset } = transactionSlice.actions;

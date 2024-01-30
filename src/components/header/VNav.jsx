@@ -2,7 +2,6 @@ import React from 'react';
 import { Menu, Close } from '@mui/icons-material/';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { toggleMenu } from '../../redux/menu';
 import { toggleMenuClose, toggleMenuOpen } from '../../redux/model/nav';
 
 const VNav = () => {

@@ -4,14 +4,15 @@ import WithdrawConfirmation from '../../modals/WithdrawConfirmation';
 import { closeWithdrawalModal, openWithdrawalModal } from '../../../redux/actions/modals';
 
 const Withdrawal = () => {
-  const { loading, paid, error } = useSelector((state) => state.transactions);
-  const { toggleWithdrawal } = useSelector((state) => state.toggleModal);
+  const { loading, paid, error, status } = useSelector((state) => state.transactions);
+  const { toggleWithdrawal, data } = useSelector((state) => state.toggleModal);
+
   const [withdraw, setWithdraw] = useState({
     coin_type: 'USD THETHER', amount: '', wallet_address: '', transaction_type: 'withdraw',
   });
 
   useEffect(() => {
-    if (!error && paid) {
+    if (status == "success") {
       dispatch(closeWithdrawalModal());
     }
   }, [loading, paid, !error]);
@@ -26,7 +27,13 @@ const Withdrawal = () => {
   };
   const handleWithdrawalModal = (e) => {
     e.preventDefault();
-    dispatch(openWithdrawalModal());
+    const formData = new FormData()
+    formData.append('transaction[coin_type]', e.target.coin_type.value)
+    formData.append('transaction[amount]', e.target.amount.value)
+    formData.append('transaction[transaction_type]', "withdraw")
+    // formData.append('transaction[receipt]', e.target.receipt.files[0])
+    // dispatch(createTransaction(formData));
+    dispatch(openWithdrawalModal(formData));
   };
 
   return (
@@ -51,12 +58,24 @@ const Withdrawal = () => {
             <label className="block m-1" htmlFor="client_address">Enter Wallet Address</label>
             <input type="text" id="client_address" name="wallet_address" value={withdraw.wallet_address} onChange={handleWithdrawalInput} required />
           </div>
+
+          <div>
+            <ul className='text-norm list-circle'>
+                <li className='text-sm'>Locate the pending withdrawal request or transaction in your account history.</li>
+                <li className='text-sm'>Verify that all necessary information and documentation are provided to support the withdrawal.</li>
+                <li className='text-sm'>If required, check for any communication from the admin regarding additional steps or confirmation.</li>
+                <li className='text-sm'>Await confirmation from the admin for the withdrawal to proceed.</li>
+                <li className='text-sm'>Once confirmed, the funds will be processed and transferred to your designated </li>
+                
+
+            </ul>
+          </div>
           <div>
             <button className="btn w-full bg-semi text-white">Request</button>
           </div>
         </form>
       </div>
-      <WithdrawConfirmation withdraw={withdraw} toggleWithdrawal={toggleWithdrawal} />
+      <WithdrawConfirmation withdraw={data} toggleWithdrawal={toggleWithdrawal} />
 
     </>
   );

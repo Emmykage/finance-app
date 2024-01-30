@@ -2,24 +2,29 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createTransaction } from '../../../redux/actions/wallet';
 import Loader from '../../loader/Loader';
+import DepositModal from '../../modals/DepositModal';
 
 const Deposit = () => {
   const { loading } = useSelector((state) => state.transactions);
-  const [deposit, setDeposit] = useState({
-    coin_type: 'USD THETHER', amount: '', transaction_type: 'deposit', wallet_address: '',
-  });
+  const [toggleDeposit, setToggleDeposit] = useState(false)
+  const [deposit, setDeposit] = useState("")
+
+  
+
   const dispatch = useDispatch();
 
-  const handleDepositInput = (e) => {
-    setDeposit({
-      ...deposit,
-      [e.target.name]: e.target.value,
-
-    });
-  };
+ 
   const handleDeposit = (e) => {
     e.preventDefault();
-    dispatch(createTransaction(deposit));
+    const formData = new FormData()
+    formData.append('transaction[coin_type]', e.target.coin_type.value)
+    formData.append('transaction[amount]', e.target.amount.value)
+    formData.append('transaction[transaction_type]', "deposit")
+    formData.append('transaction[receipt]', e.target.receipt.files[0])
+    // dispatch(openWithdrawalModal(formData));
+    setToggleDeposit(true)
+    setDeposit(formData)
+    // dispatch(createTransaction(formData));
   };
   if (loading) {
     return (
@@ -35,7 +40,7 @@ const Deposit = () => {
           <div className="m-3">
 
             <label className="block m-1">Select Coin</label>
-            <select name="coin_type" value={deposit.coin_type} onChange={handleDepositInput} required>
+            <select name="coin_type" required>
               <option value="USD THETHER" selected>USD THETHER</option>
               <option value="BITCOIN">BITCOIN</option>
               <option value="ETHERUM">ETHERUM (ERC-20)</option>
@@ -43,7 +48,7 @@ const Deposit = () => {
           </div>
           <div>
             <label className="block m-1" htmlFor="amount">Enter Amount</label>
-            <input type="number" placeholder="Enter Amount in USD" name="amount" value={deposit.amount} onChange={handleDepositInput} required />
+            <input type="number" placeholder="Enter Amount in USD" name="amount" required />
 
           </div>
           <div className="m-2">
@@ -51,11 +56,15 @@ const Deposit = () => {
             <span className="block text-center bg-light p-2 b-radius-1">bc1qusn333vtanazyywdvr5u5mwk5eq32h5n5lpchr</span>
 
           </div>
+          <div className='my-1'>
+                    <input type="file" name='receipt' className='border w-full py-1 border-gray-light rounded' />
+                </div>
           <hr />
           <p className="text-norm">Kindly make your deposit to the wallet address above, then click on continue to submit your payment screenshot</p>
           <button className="btn w-full bg-semi text-white">continue</button>
         </form>
       </div>
+      <DepositModal toggleModal={toggleDeposit} setToggleModal={setToggleDeposit} deposit={deposit} />
 
     </div>
   );

@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUser } from '../../redux/actions/users';
+import { getMessages } from '../../redux/actions/message';
 
-const Messages = () => (
+const Messages = () => {
+  const {messages} = useSelector(state => state.messages)
+  const dispatch = useDispatch()
+  useEffect(()=> {
+    dispatch(getMessages())
+  },[])
+  console.log(messages)
+  return(
   <div className="activity-container">
     <h5>Message</h5>
     <div className="top">
@@ -24,5 +34,6 @@ const Messages = () => (
 
   </div>
 );
+}
 
 export default Messages;

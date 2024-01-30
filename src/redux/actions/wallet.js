@@ -6,11 +6,11 @@ const createTransaction = createAsyncThunk('transaction/create_transaction', asy
   const response = await fetch(`${baseUrl}transactions`, {
     method: 'POST',
     headers: {
-      'Content-type': 'application/json',
+      // 'Content-type': 'application/json',
       Authorization: `Bearer ${token()}`,
     },
 
-    body: JSON.stringify(data),
+    body: data,
   }).then((res) => res.json());
   return response;
 });

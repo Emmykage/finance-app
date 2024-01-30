@@ -5,15 +5,25 @@ import { usd_format } from '../../misc/USD';
 import Loader from '../../loader/Loader';
 import Deposit from './Deposit';
 import Withdrawal from './Withdrawal';
+import { IoCloseSharp } from "react-icons/io5";
+import { reset } from '../../../redux/wallet/transaction';
 
 const WalletDetails = () => {
   const { wallet, loading } = useSelector((state) => state.wallet);
   const transaction_loading = useSelector((state) => state.transactions);
-
+  const {status, message} = useSelector((state) => state.transactions);
+  const [notification, setNotification] =  useState({show:"hidden", shadow:  ""})
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getWallet());
+    if(status == "success"){
+      setNotification({show: 'flex', text: "text-green", shadow: "shadow-green"})
+      setInterval(()=> {setNotification({show: "hidden"}); dispatch(reset()) }, 5000)
+    }else if(status == "failed"){
+      setNotification({show: "flex", text: "text-red", shadow: "shadow-red"})
+
+    }
   }, [transaction_loading.loading]);
 
   if (loading) {
@@ -22,7 +32,13 @@ const WalletDetails = () => {
     );
   }
   return (
-    <div className="wallet-info">
+    <div className="wallet-info relative">
+      <div className={`${notification.show}  w-full`}>
+        <div className={`${notification.show} bg-white items-center gap-3 bg- px-5 w-350 ${notification.shadow} justify-between rounded-sm`}>
+          <p className={`${notification.text}`}>{message}</p><span className='' onClick={()=> setNotification({show: "hidden"})}><IoCloseSharp className='text-2xl text-gray'/></span>
+
+        </div>
+      </div>
       <div className="grid-display grid-display-2 gap-2 m-4">
 
         <Deposit />

@@ -67,6 +67,9 @@ import SupportInvest from './components/support/SupportInvest';
 import SupportManage from './components/support/SupportManage';
 import SupportSecurity from './components/support/SupportSecurity';
 import Learn from './pages/users/Learn';
+import ComposeMessage from './pages/Admin/messages/ComposeMessage';
+import DepositPage from './pages/users/DepositPage';
+import WithdrawPage from './pages/users/WithdrawPage';
 
 function App() {
   return (
@@ -100,6 +103,8 @@ function App() {
           </Route>
           {/* <Route path='wallet' element={<Account><Wallet/></Account>}/> */}
         </Route>
+        <Route path='deposit' element={<DepositPage/>}/>
+        <Route path='withdraw' element={<WithdrawPage/>}/>
 
         <Route path="/" element={<GuestLayOut><VHome /></GuestLayOut>} />
         <Route path="/investment" element={<GuestLayOut><Investment /></GuestLayOut>} />
@@ -133,6 +138,7 @@ function App() {
           <Route path="assets" element={<AdminLayout><Assets /></AdminLayout>} />
           <Route path="assets/:id" element={<AdminLayout><AssetView /></AdminLayout>} />
           <Route path="messages" element={<AdminLayout><AlertMessages /></AdminLayout>} />
+          <Route path="messages/compose_message" element={<AdminLayout><ComposeMessage /></AdminLayout>} />
           <Route path="analytics" element={<AdminLayout><Analytics /></AdminLayout>} />
           <Route path="reports" element={<AdminLayout><Reports /></AdminLayout>} />
           <Route path="settings" element={<AdminLayout><Settings /></AdminLayout>} />
