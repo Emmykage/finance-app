@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { usd_format } from '../misc/USD';
 
 function UserOffer({ assets }) {
   const navigation = useNavigate();
@@ -28,36 +29,36 @@ function UserOffer({ assets }) {
 
                 </div>
                 <div>
-                  <span className="text-gray type">{offer.asset_type}</span>
-                  <h3>{offer.title}</h3>
-                  <p>
+                  <span className="text-gray type uppercase">{offer.asset_type}</span>
+                  <h3 className="uppercase text-lg text-gray-var font-bold">{offer.title}</h3>
+                  <p className="capitalize">
                     {offer.asset_category}
                     {' '}
                   </p>
                   <ul>
                     <li>
-                      <span>Min. investment</span>
-                      <span>
-                        $
-                        {offer.minimum_investment}
-                        K
+                      <span className='text-sm'>Min. investment</span>
+                      <span className='text-sm font-semibold'>
+                        
+                        {usd_format(offer.minimum_investment)}
+                        
                       </span>
                     </li>
                     <li>
-                      <span>Term</span>
-                      <span>
+                      <span className='text-sm'>Term</span>
+                      <span className='text-sm font-semibold'>
                         {offer.term}
                         {' '}
                         Months
                       </span>
                     </li>
                     <li>
-                      <span>Payment Schedule</span>
-                      <span>{offer.payment_schedule}</span>
+                      <span className='text-sm'>Payment Schedule</span>
+                      <span className='text-sm font-semibold'>{offer.payment_schedule}</span>
                     </li>
                     <li>
-                      <span>Tax document</span>
-                      <span>{offer.tax_document}</span>
+                      <span className='text-sm'>Tax document</span>
+                      <span className='text-sm font-semibold'>{offer.tax_document}</span>
                     </li>
 
                   </ul>

@@ -32,7 +32,7 @@ console.log(latest_deals)
           </div>
           <div className="home-banner-details">
             <h3 className="m-4">Access tailored private market recommendations</h3>
-            <p className="m-4">
+            <p className="m-4 text-sm text-gray-var font-semibold">
               Tap into the collective wisdom of our investment teams. Answer a few key questions to get a customizable set of investment recommendations in just 2-3 minutes.
 
             </p>
@@ -51,10 +51,10 @@ console.log(latest_deals)
                 <img src={OFFERING} />
               </div>
               <div className="flex-1 mx-2">
-                <span>
+                <span className='text-sm'>
                   15
                 </span>
-                <p>Open offerings</p>
+                <p className='text-sm'>Open offerings</p>
               </div>
             </div>
             <div className="platform flex-grid flex-justify-row">
@@ -62,10 +62,10 @@ console.log(latest_deals)
                 <img src={ASSET} alt="chart" />
               </div>
               <div className="flex-1 mx-2">
-                <span>
+                <span className='text-sm'>
                   15
-                </span>
-                <p>Open assets classes</p>
+                </span >
+                <p className='text-sm font-medium'>Open assets classes</p>
               </div>
             </div>
             <div className="platform flex-grid flex-justify-row">
@@ -73,10 +73,10 @@ console.log(latest_deals)
                 <img src={OFFERING} />
               </div>
               <div className="flex-1 mx-2">
-                <span>
+                <span className='text-sm'>
                   8.6%
                 </span>
-                <p>Open offerings</p>
+                <p className='text-sm'>Open offerings</p>
               </div>
             </div>
 
@@ -85,17 +85,17 @@ console.log(latest_deals)
                 <img src={TOTAL} />
               </div>
               <div className="flex-1 mx-2">
-                <span>
+                <span className='text-sm'>
                   15
                 </span>
-                <p>Open offerings</p>
+                <p className='text-sm'>Open offerings</p>
               </div>
             </div>
 
           </div>
         </div>
         <div className="table-div m-4">
-          <table>
+          <table className='shadow'>
             <thead>
 
               <tr>
@@ -122,21 +122,21 @@ console.log(latest_deals)
             </thead>
             <tbody>
               {latest_deals.map(deal => (
-                     <tr>
-                     <td>{deal.asset_type}</td>
-                     <td>{deal.asset_type} </td>
-                     <td>9%</td>
-                     <td>{deal.term} Months</td>
-                     <td>{ usd_format(deal.minimum_investment)}</td>
+                     <tr className='text-sm text-gray-var'>
+                     <td className='text-sm text-gray-var'>{deal.asset_type}</td>
+                     <td className='text-sm text-gray-var' >{deal.asset_type} </td>
+                     <td className='text-sm text-gray-var'>9%</td>
+                     <td className='text-sm text-gray-var'>{deal.term} Months</td>
+                     <td className='text-sm text-gray-var'>{ usd_format(deal.minimum_investment)}</td>
                    </tr>
                 
               ))}
                    <tr>
-                <td>consumer Goods</td>
-                <td>private Credit </td>
-                <td>9%</td>
-                <td>35 Months</td>
-                <td>10,000</td>
+                <td className='text-sm text-gray-var'>consumer Goods</td>
+                <td className='text-sm text-gray-var'>private Credit </td>
+                <td className='text-sm text-gray-var'>9%</td>
+                <td className='text-sm text-gray-var'>35 Months</td>
+                <td className='text-sm text-gray-var'>10,000</td>
               </tr>
          
 
@@ -148,10 +148,10 @@ console.log(latest_deals)
             <img src={CHART_PIC} alt="chart" />
           </div>
           <div className="flex-3">
-            <h3>
+            <h3 className='text-lg text-dark'>
               Simulate a portfolio of alternatives
             </h3>
-            <p>
+            <p className='text-sm font-semibold text-gray-var'>
               With our simulator you can demo how a diversified set of alternatives can provide stable income as well as long term growth for your portfolio.
             </p>
 
