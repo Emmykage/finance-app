@@ -7,20 +7,25 @@ const RealEstate = () => {
   const [toggleForm, setToggleForm] = useState('false');
   const {status, message} = useSelector(state => state.assets)
 
-  const [assetForm, setAssetForm] = useState({
-    asset_category: '', minimum_investment: null, term: '', asset_type: 'Real Estate', title: '', description: '', share_in_excess: '', annual_mangt_fee: '', annual_flat_expense: '', overview_description: '', overview_note: '',
-  });
-  const handleInput = (e) => {
-    setAssetForm({
-
-      ...assetForm,
-      [e.target.name]: e.target.value,
-    });
-  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(createAsset(assetForm));
-    // setAssetForm({asset_category: '', minimum_investment: null, term: '', asset_type: 'Art', title: '', description: '', share_in_excess: '', annual_mangt_fee: '', annual_flat_expense: '', overview_description: '', overview_note: ''})
+    const formData = new FormData()
+    formData.append('asset[asset_category]', e.target.asset_category.value)
+    formData.append('asset[minimum_investment]', e.target.minimum_investment.value)
+    formData.append('asset[term]', e.target.term.value)
+    formData.append('asset[title]', e.target.title.value)
+    formData.append('asset[description]', e.target.description.value)
+    formData.append('asset[share_in_excess]', e.target.share_in_excess.value)
+    formData.append('asset[annual_mangt_fee]', e.target.annual_flat_expense.value)
+    formData.append('asset[overview_description]', e.target.overview_description.value)
+    formData.append('asset[overview_note]', e.target.overview_note.value)
+    formData.append('asset[asset_category]', e.target.asset_category.value)
+    formData.append('asset[return]', e.target.return.value)
+    formData.append('asset[image]', e.target.image.files[0])
+
+    const data = Object.fromEntries(formData)
+    console.log(data)
+    dispatch(createAsset(formData));
 
   };
   return (
@@ -32,22 +37,24 @@ const RealEstate = () => {
       <form onSubmit={handleSubmit} className={toggleForm && 'hide-form'}>
 
         <div>
-          <label>Real Estate Category</label>
-          <input type="text" id="asset_category" name="asset_category" value={assetForm.asset_category} onChange={handleInput} />
+          <label className='text-sm'>Real Estate Category</label>
+          <input type="text" id="asset_category" name="asset_category"  />
         </div>
         <div>
-          <label>Min. Investment</label>
-          <input type="text" id="minimum_investment" name="minimum_investment" value={assetForm.minimum_investment} onChange={handleInput} />
+          <label className='text-sm'>Min. Investment</label>
+          <input type="text" id="minimum_investment" name="minimum_investment" />
         </div>
-
         <div>
-          <label>Payment Schedule</label>
+          <label className='text-sm'>Target Return</label>
+          <input type="text" id="return" name="return" required />
+        </div>
+        <div>
+          <label className='text-sm'>Payment Schedule</label>
           {/* <input type="text" name="payment_schedule" value={assetForm.payment_schedule} onChange={handleInput} /> */}
           <select
             name="payment_schedule"
             id="payment_schedule"
-            value={assetForm.payment_schedule}
-            onChange={handleInput}
+           
           >
             <option value="event Based">Event based </option>
             <option value="monthly">Monthly </option>
@@ -60,45 +67,50 @@ const RealEstate = () => {
         <h3>Details</h3>
         <div>
           {' '}
-          <labal>Title</labal>
-          <input type="text" name="title" value={assetForm.title} onChange={handleInput} />
+          <labal className='text-sm'>Title</labal>
+          <input type="text" name="title"  />
         </div>
         <div>
           {' '}
-          <labal>Description</labal>
-          <input type="text" name="description" value={assetForm.description} onChange={handleInput} />
+          <labal className='text-sm'>Description</labal>
+          <input type="text" name="description" />
         </div>
         <h4>Return & Management fees</h4>
         <div>
           {' '}
-          <labal>Annual Management fee</labal>
-          <input type="number" name="annual_mangt_fee" value={assetForm.annual_mangt_fee} onChange={handleInput} />
+          <labal className='text-sm'>Annual Management fee</labal>
+          <input type="number" name="annual_mangt_fee" />
         </div>
         <div>
           {' '}
-          <labal>Share In Excess Profit</labal>
-          <input type="number" name="share_in_excess" value={assetForm.share_in_excess} onChange={handleInput} />
+          <labal className='text-sm'>Share In Excess Profit</labal>
+          <input type="number" name="share_in_excess" />
         </div>
 
         <h4>Schedule</h4>
         <div>
-          <label>Term</label>
-          <input type="text" name="term" id="term" value={assetForm.term} onChange={handleInput} />
+          <label className='text-sm'>Term</label>
+          <input type="text" name="term" id="term"  />
         </div>
         <h4>Structure</h4>
         <div>
-          <label>Annual Flat Expense</label>
-          <input type="number" name="annual_flat_expense" id="term" value={assetForm.annual_flat_expense} onChange={handleInput} />
+          <label className='text-sm'>Annual Flat Expense</label>
+          <input type="number" name="annual_flat_expense" id="annual_flat_expense" />
+        </div>
+
+        <div>
+          <label className='text-sm'>image upload</label>
+          <input type="file" name="image" id="image"/>
         </div>
 
         <h3>Overview</h3>
         <div>
-          <label>Description</label>
-          <textarea onChange={handleInput} name="overview_description" id="" cols="30" rows="10" value={assetForm.overview_description} />
+          <label className='text-sm'>Description</label>
+          <textarea  name="overview_description" id="" cols="30" rows="10" />
         </div>
         <div>
-          <label>Overview note</label>
-          <textarea onChange={handleInput} name="overview_note" id="" cols="30" rows="10" value={assetForm.overview_note} />
+          <label className='text-sm'>Overview note</label>
+          <textarea  name="overview_note" id="" cols="30" rows="10" />
         </div>
 
         <button className="btn" type="submit"> create assets</button>

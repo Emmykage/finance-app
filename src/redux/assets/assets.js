@@ -5,6 +5,7 @@ const initialState = {
 
   assets: [],
   loading: true,
+  latest_deals: [],
   offers: [],
   error: false,
   status: "",
@@ -60,6 +61,7 @@ const assetSlice = createSlice({
       ...state,
       loading: false,
       offers: action.payload,
+      latest_deals: action.payload.slice(0, 4),
       error: false,
     }),
     [getAssets.rejected]: (state, action) => ({
@@ -73,18 +75,19 @@ const assetSlice = createSlice({
       error: false,
 
     }),
+    
 
   },
 
-  // reducers: {
-  //     getAssets: (state) => {
-  //         return{
-  //             ...state,
-  //             assets: state.assets
-  //         }
+  reducers: {
+      latest_deals: (state) => {
+          return{
+              ...state,
+              assets: state.assets.slice(0, 4)
+          }
 
-  //     }
-  // }
+      }
+  }
 });
 
 export default assetSlice.reducer;

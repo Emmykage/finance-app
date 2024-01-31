@@ -18,6 +18,7 @@ const AssetDetails = () => {
   }, []);
 
   const asset = offers.find((asset) => asset.id == id);
+
   return (
     <>
       <AssetHeader />

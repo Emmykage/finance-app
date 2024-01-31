@@ -105,18 +105,18 @@ const AssetComp = ({ asset }) => {
 
             <div className="overview-info flex-stretch gap-5">
               <div className="flex-grid">
-                <ul>
-                  <p>
+                <ul className='text-justify '>
+                  <p className='text-sm'>
                     {asset.description}
 
                   </p>
                   <li>
-                    <p>
+                    <p className='text-sm'>
                       {asset.overview_description}
                     </p>
                   </li>
                   <li>
-                    <p>
+                    <p className='text-sm'>
                       <strong>  Proven business plan:</strong>
                       {' '}
                       {asset.overview_note}                  </p>
@@ -129,7 +129,7 @@ const AssetComp = ({ asset }) => {
               </div>
               <div className="flex-grid">
                 <div className="overview-img">
-                  <img src={commercial} alt="Real estate images" />
+                  <img src={asset.image_url ? asset.image_url : commercial} alt="Real estate images" className='w-full h-full' />
                 </div>
 
               </div>

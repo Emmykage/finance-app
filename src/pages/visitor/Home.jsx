@@ -12,8 +12,7 @@ import sponsor from '../../assets/image/investment-photos/Investments-6f0beeb40e
 import 'aos/dist/aos.css';
 import OfferingTabs from '../../components/offering/OfferingTabs';
 import Testimonials from '../../components/testimonials/Testimonials';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-
+import teamPhoto from '../../assets/image/investment-photos/Innovation-Endeavors-Team-45.webp'
 const VHome = () => {
   const { offers } = useSelector((state) => state.assets);
   const dispatch = useDispatch();
@@ -166,7 +165,9 @@ const VHome = () => {
             </div>
 
             <div className="graph">
-              <h3>Teams photos</h3>
+              <div>
+                <img src={teamPhoto} alt=""  className='w-full'/>
+              </div>
 
             </div>
           </div>

@@ -24,7 +24,6 @@ const UserAssetDetails = () => {
       setToggle(false);
     }
   }, [timer]);
-
   const asset = offers.find((asset) => asset.id == id);
   if (asset) {
     return (

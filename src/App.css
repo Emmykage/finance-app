@@ -317,6 +317,9 @@ body {
 .text-left{
   text-align: left;
 }
+.text-justify{
+  text-align: justify;
+}
 
 .m-auto{
   margin: auto;
@@ -485,7 +488,7 @@ button{
 }
 
 .asset-details .overview .overview-info .overview-img {
-  height: 300px;
+  height: 700px;
 }
 
 /* ======================About========================== */
@@ -1089,9 +1092,9 @@ input{
 .text-blue{
   color: blue;
 }
-.text-dark{
+/* .text-dark{
   color: #181a1e;
-}
+} */
 .ml-2{
   margin-left: 1rem;
 }
@@ -1114,6 +1117,10 @@ input{
 
 .outline-none{
   outline: none;
+}
+
+.text-gray-var{
+  color: #637381;
 }
 
 .text-gray {
@@ -1740,6 +1747,9 @@ footer {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 }
 
+.border-gray-light{
+  border: 1px solid #919090;
+}
 .lock-icon {
   display: flex;
   justify-content: center;
@@ -1798,12 +1808,12 @@ footer {
   padding: 0 0 3rem;
 }
 
-.performance h1,
+/* .performance h1,
 .performance h2,
 .performance h3,
 .performance h4 {
-  font-weight: 400;
-}
+  font-weight: 700;
+} */
 
 .performance .insight .flex-left {
   display: flex;

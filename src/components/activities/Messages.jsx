@@ -16,7 +16,27 @@ const Messages = () => {
     <div className="top">
       {/* <span>Important</span> */}
       <h2>Empty</h2>
-      <p>No Messages available</p>
+     
+      <table className='border-gray-light bg-white rounded-sm'>
+        <thead>
+          <tr className='text-sm text-gray-var border-b'>
+            <td> Subject</td>
+            <td> Message</td>
+            <td> Date</td>
+          </tr>
+        </thead>
+        <tbody>
+          {messages.length < 1 ?  <p>No Messages available</p> :  messages.map((message) => (
+             <tr>
+              <td>{message.title}</td>
+              <td>{message.body}</td>
+          
+             </tr>
+     
+          ))}
+         
+        </tbody>
+      </table>
 
     </div>
     <div className="bottom">

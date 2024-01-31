@@ -10,13 +10,17 @@ import ICONCHART from '../../assets/image/advice-chart.svg';
 import { toggleMenuClose } from '../../redux/model/nav';
 import Questions from '../../components/pageComponents/Questions';
 import { getQuestions } from '../../redux/questions/question';
+import { getAssets } from '../../redux/actions/assets';
+import { usd_format } from '../../components/misc/USD';
 
 const Home = () => {
   const { faqs } = useSelector((state) => state.questions);
-
+  const {latest_deals} = useSelector(state => state.assets)
+console.log(latest_deals)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(toggleMenuClose());
+    dispatch(getAssets())
     dispatch(getQuestions());
   }, []);
   return (
@@ -117,13 +121,24 @@ const Home = () => {
 
             </thead>
             <tbody>
-              <tr>
+              {latest_deals.map(deal => (
+                     <tr>
+                     <td>{deal.asset_type}</td>
+                     <td>{deal.asset_type} </td>
+                     <td>9%</td>
+                     <td>{deal.term} Months</td>
+                     <td>{ usd_format(deal.minimum_investment)}</td>
+                   </tr>
+                
+              ))}
+                   <tr>
                 <td>consumer Goods</td>
                 <td>private Credit </td>
                 <td>9%</td>
                 <td>35 Months</td>
                 <td>10,000</td>
               </tr>
+         
 
             </tbody>
           </table>

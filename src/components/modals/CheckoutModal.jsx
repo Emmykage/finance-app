@@ -23,7 +23,7 @@ const CheckoutModal = ({
   const dispatch = useDispatch();
   if (toggleModal) { display = 'show'; }
   const handleSubmit = () => {
-    if (portfolio.amount > asset.minimum_investment) {
+    if (portfolio.amount > parseInt(asset.minimum_investment)) {
       dispatch(createPortfolio(portfolio));
     }
   };
@@ -40,12 +40,12 @@ const CheckoutModal = ({
             {' '}
             <span>Asset Title</span>
             {' '}
-            <span>{asset.title}</span>
+            <span className=' text-sm text-gray-var'>{asset.title}</span>
           </div>
           <div className="grid-display-assets border-b p-1">
             {' '}
             <span>Asset Type</span>
-            <span>
+            <span className=' text-sm text-gray-var'>
               {' '}
               {asset.asset_type}
             </span>
@@ -55,23 +55,23 @@ const CheckoutModal = ({
           <div className="grid-display-assets border-b p-1">
             <span>Description</span>
             {' '}
-            <span>{asset.description}</span>
+            <span className='text-justify text-sm text-gray-var '>{asset.description}</span>
           </div>
           <div className="grid-display-assets border-b p-1">
             <span> Term</span>
-            <span>{asset.term}</span>
+            <span className='text-justify text-sm text-gray-var '>{asset.term}</span>
           </div>
           <div className="grid-display-assets border-b p-1">
             <span>Payment Schedule</span>
-            <span>{asset.payment_schedule}</span>
+            <span className='text-justify text-sm text-gray-var '>{asset.payment_schedule}</span>
           </div>
           <div className="grid-display-assets border-b p-1">
             <span>Share In Excess(%)</span>
-            <span>{asset.share_in_excess}</span>
+            <span className='text-justify text-sm text-gray-var '>{asset.share_in_excess}</span>
           </div>
           <div className="grid-display-assets border-b p-1">
             <span>Deposit (USD)</span>
-            <span>{portfolio.amount < asset.minimum_investment ? <p className="red-text">you cant proceed with this payment </p> : usd_format(portfolio.amount)}</span>
+            <span className='text-justify text-sm text-gray-var '>{portfolio.amount < parseInt(asset.minimum_investment) ? <p className="red-text">you cant proceed with this payment </p> : usd_format(portfolio.amount)}</span>
           </div>
 
         </div>

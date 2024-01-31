@@ -6,21 +6,21 @@ import OfferingTabs from '../offering/OfferingTabs';
 
 const PerformancePlatform = () => (
   <div className="performance">
-    <div className="platform-performance flex-justify-space">
-      <div className="left flex-grid">
-        <h2>Platform performance</h2>
-        <p>
+    <div className="platform-performance flex justify-between gap-2">
+      <div className="left flex-grid p-4 shadow">
+        <h4>Platform performance</h4>
+        <p className='text-sm text-gray'>
           Since inception, we have unlocked more than 400 private market opportunities for investors.
         </p>
         <a>View latest Quarterly Portfolio Snapshot</a>
 
       </div>
-      <div className="right flex-grid">
-        <h4>Portfolio overview</h4>
-        <span>By dollars invested</span>
-        <div className=" portfolio-chart">
+      <div className="flex-grid py-4 px-2 shadow">
+        <h4 className='text-dark font-bold'>Portfolio overview</h4>
+        <span className='text-gray-var'>By dollars invested</span>
+        <div className=" portfolio-chart my-2">
           {/* <h2 className='center'>Portfolio overview chart</h2> */}
-          <PercentageChat />
+          <PercentageChat  />
         </div>
       </div>
 
@@ -69,36 +69,36 @@ const PerformancePlatform = () => (
       <p>OUr members rate us as one of the best investing platforms in the game</p>
       <div className="flex-space gap-2 ">
         <div className="flex-grid text-center order insight">
-          <div className="border insight flex-justify-center">
+          <div className="border-gray-light insight flex-justify-center">
             <h3 className="align-center">
               430,851
             </h3>
 
           </div>
-          <p>TOTAL MEMBERS</p>
+          <p className='text-dark text-sm'>TOTAL MEMBERS</p>
 
         </div>
-        <div className="flex-grid text-center insight">
-          <div className="border insight flex-justify-center">
+        <div className="flex-grid text-center insight ">
+          <div className="border-gray-light insight flex-justify-center">
             <h3>
               8.3
             </h3>
 
           </div>
-          <p>AVERAGE # OF INVESTMENTS PER INVESTOR</p>
+          <p className='text-dark text-sm'>AVERAGE # OF INVESTMENTS PER INVESTOR</p>
 
         </div>
         <div className="flex-grid text-center">
-          <div className="border insight flex-justify-center">
-            <h3>
+          <div className="border-gray-light insight flex-justify-center">
+            <h4 className='text-lg text-dark'>
               Real Estate, Short Term Notes,
               <br />
               {' '}
               Private Credit
-            </h3>
+            </h4>
 
           </div>
-          <p>POPULAR ASSET CLASSES</p>
+          <p className='text-dark text-sm'>POPULAR ASSET CLASSES</p>
 
         </div>
       </div>
