@@ -1034,6 +1034,7 @@ input{
 }
 .show{
   display: flex;
+  /* position: relative; */
 }
 .flex-1 {
   flex: 1;
